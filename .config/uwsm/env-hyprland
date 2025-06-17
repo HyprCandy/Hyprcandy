@@ -1,0 +1,17 @@
+export AQ_DRM_DEVICES="/dev/dri/card0:/dev/dri/card1
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_TYPE=wayland
+export XDG_SESSION_DESKTOP=Hyprland
+export HYPRCURSOR_THEME=miku-cursor-linux
+export HYPRCURSOR_SIZE=18
+env = GDK_BACKEND,wayland,x11,*
+
+env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+
+env = QT_QPA_PLATFORM,wayland;xcb
+
+env = QT_QPA_PLATFORMTHEME,gtk3
+
+env = CLUTTER_BACKEND,wayland
+
+env = HYPRCURSOR_SIZE,18

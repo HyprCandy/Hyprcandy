@@ -1,0 +1,45 @@
+@import url("colors.css");
+
+window {
+  	background: @blur_background;
+	border-radius: 15px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: @background;
+	box-shadow: 0 0 10px rgba(255, 254, 254, 0)
+}
+
+#box {
+  /* Define attributes of the box surrounding icons here */
+  padding: 4
+}
+
+#active {
+	/* This is to underline the button representing the currently active window */
+	border-bottom: none;
+	border-color: rgba(255, 254, 254, 0)
+}
+
+button, image {
+	background: none;
+	border-style: none;
+	box-shadow: none;
+	color: rgba(255, 254, 254, 0);
+}
+
+button {
+	padding: 1;
+	margin-left: 1;
+	margin-right: 1;
+	color: rgba(255, 254, 254, 0);
+	font-size: 8px;
+}
+
+button:hover {
+	background-color: rgba(255, 255, 255, 0.15);
+	border-radius: 30px;
+}
+
+button:focus {
+	box-shadow: 0 0 10px rgba(255, 254, 254, 0)
+}

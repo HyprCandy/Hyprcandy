@@ -1,0 +1,19 @@
+export XCURSOR_THEME=miku-cursor-linux
+export XCURSOR_SIZE=18
+export MOZ_ENABLE_WAYLAND=1
+export GDK_BACKEND=wayland
+export QT_QPA_PLATFORM=wayland
+export CLUTTER_BACKEND=wayland
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_QPA_PLATFORMTHEME=gtk3
+
+env = GDK_BACKEND,wayland,x11,*
+
+env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+
+env = QT_QPA_PLATFORM,wayland;xcb
+
+env = QT_QPA_PLATFORMTHEME,gtk3
+
+env = CLUTTER_BACKEND,wayland

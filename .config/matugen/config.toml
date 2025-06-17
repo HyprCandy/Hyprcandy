@@ -1,0 +1,56 @@
+[config]
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/waybar/colors.css'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi-colors.rasi'
+output_path = '~/.config/rofi/colors.rasi'
+
+[templates.pywalfox]
+input_path = '~/.config/matugen/templates/pywalfox-colors.json'
+output_path = '~/.cache/wal/colors.json'
+post_hook = 'pywalfox update'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/wlogout/colors.css'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+#post_hook = "kitty @ set-colors -a -c ~/.config/kitty/colors.conf"
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+
+[templates.nautilus]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/nautilus/colors.css'
+
+[templates.qt5ct]
+input_path = '~/.config/matugen/templates/darker.conf'
+output_path = '~/.config/qt5ct/colors/matugen.conf'
+
+[templates.qt6ct]
+input_path = '~/.config/matugen/templates/darker.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
+
+[templates.nwgdock]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/nwg-dock-hyprland/colors.css'
+
+[templates.sequences]
+input_path = '~/.config/matugen/templates/sequences'
+output_path = '~/.cache/wal/sequences'

@@ -1,0 +1,291 @@
+@import 'colors.css';
+/* GTK NAMED COLORS ---------------- use responsibly! */
+@define-color destructive_bg_color @red_4;
+@define-color destructive_fg_color white;
+@define-color success_bg_color @green_5;
+@define-color success_fg_color white;
+@define-color warning_bg_color #cd9309;
+@define-color warning_fg_color rgba(0, 0, 0, 0.8);
+@define-color error_bg_color @red_4;
+@define-color error_fg_color white;
+@define-color window_bg_color @blur_background8;
+@define-color window_fg_color white;
+@define-color view_bg_color @blur_background8;
+@define-color view_fg_color white;
+@define-color headerbar_bg_color @blur_background8;
+@define-color headerbar_fg_color white;
+@define-color headerbar_border_color white;
+@define-color headerbar_backdrop_color @window_bg_color;
+@define-color headerbar_shade_color rgba(0, 0, 6, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 12, 0.9);
+@define-color sidebar_bg_color #2e2e32;
+@define-color sidebar_fg_color white;
+@define-color sidebar_backdrop_color #28282c;
+@define-color sidebar_shade_color rgba(0, 0, 6, 0.25);
+@define-color sidebar_border_color rgba(0, 0, 6, 0.36);
+@define-color secondary_sidebar_bg_color #28282c;
+@define-color secondary_sidebar_fg_color white;
+@define-color secondary_sidebar_backdrop_color #252529;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 6, 0.25);
+@define-color secondary_sidebar_border_color rgba(0, 0, 6, 0.36);
+@define-color card_bg_color @window_bg_color;
+@define-color card_fg_color white;
+@define-color card_shade_color rgba(0, 0, 6, 0.36);
+@define-color dialog_bg_color #36363a;
+@define-color dialog_fg_color white;
+@define-color thumbnail_bg_color #39393d;
+@define-color thumbnail_fg_color white;
+@define-color shade_color rgba(0, 0, 6, 0.25);
+@define-color scrollbar_outline_color rgba(0, 0, 12, 0.95);
+@define-color popover_bg_color @window_bg_color;
+@define-color popover_fg_color white;
+@define-color popover_shade_color rgba(0, 0, 6, 0.25);
+
+/* More customizations */
+
+windowcontrols > button > image { /* GTK4 */
+  color: transparent;
+  min-width: 1px;
+  min-height: 1px;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0 5px;
+  opacity: 0.8;
+}
+
+button.titlebutton { /* GTK3 */
+  color: transparent;
+  min-width: 1px;
+  min-height: 1px;
+  border-radius: 100%;
+  padding: 0;
+  margin: 0 5px;
+  opacity: 0.8;
+}
+
+button.titlebutton.close,
+windowcontrols > button.close > image {
+  background-color: @primary_fixed;
+  border: none;
+}
+
+button.titlebutton.close:hover,
+windowcontrols > button.close:hover > image {
+  color: @background;
+  opacity: 0.5;
+}
+
+button.titlebutton.maximize,
+windowcontrols > button.maximize > image {
+  background-color: #33c848;
+  border: 1px solid #3e9948;
+}
+
+button.titlebutton.maximize:hover,
+windowcontrols > button.maximize:hover > image {
+  color: #0b650d;
+  opacity: 0.5;
+}
+
+button.titlebutton.minimize,
+windowcontrols > button.minimize > image {
+  background-color: #ffba40;
+  border: 1px solid #dd9d30;
+}
+
+button.titlebutton.minimize:hover,
+windowcontrols > button.minimize:hover > image {
+  color: #9a5711;
+  opacity: 0.5;
+}
+
+/************
+ * Popovers *
+ ************/
+GraniteWidgetsPopOver {
+  border: 1px solid @scrim;
+  background: @background;
+  color: #C3C7D1; }
+  GraniteWidgetsPopOver .button {
+    background-image: none;
+    background: none;
+    border: none; }
+    GraniteWidgetsPopOver .button:active, GraniteWidgetsPopOver .button:active:hover {
+      color: @source_color; }
+  GraniteWidgetsPopOver > .frame {
+    border: none; }
+  GraniteWidgetsPopOver .sidebar.view, GraniteWidgetsPopOver iconview.sidebar {
+    border: none;
+    background: none; }
+
+GraniteWidgetsStaticNotebook .frame {
+  border: none; }
+
+.popover_bg {
+  background-color: @background;
+  background-image: none;
+  border: 1px solid @scrim;
+  color: #C3C7D1; }
+
+/***************
+ * Popovers   *
+ ***************/
+popover.background {
+  background-color: @background;
+  font: initial; }
+  popover.background > arrow,
+  popover.background > contents {
+    background: linear-gradient(to bottom, @background, @background);
+    background-clip: padding-box;
+    border: 0 solid #414348;
+    box-shadow: 0 0 0 0;
+    color: #C3C7D1; }
+    popover.background > arrow label.dim-label, popover.background > arrow label.separator, popover.background > arrow .titlebar label.subtitle, .titlebar popover.background > arrow label.subtitle,
+    popover.background > arrow headerbar label.subtitle,
+    headerbar popover.background > arrow label.subtitle, popover.background > arrow label.title-2, popover.background > arrow .text-button:not(.suggested-action),
+    popover.background > contents label.dim-label,
+    popover.background > contents label.separator,
+    popover.background > contents .titlebar label.subtitle,
+    .titlebar popover.background > contents label.subtitle,
+    popover.background > contents headerbar label.subtitle,
+    headerbar popover.background > contents label.subtitle,
+    popover.background > contents label.title-2,
+    popover.background > contents .text-button:not(.suggested-action) {
+      color: #C3C7D1; }
+  popover.background:backdrop {
+    background-color: @background;
+    box-shadow: none; }
+  popover.background > contents {
+    padding: 8px;
+    border-radius: 2px; }
+    popover.background > contents > list,
+    popover.background > contents > .view,
+    popover.background > contents > iconview,
+    popover.background > contents > toolbar {
+      border-style: none;
+      background-color: @background; }
+    popover.background > contents separator {
+      background-color: @secondary;
+      margin: 0; }
+    popover.background > contents list separator {
+      margin: 0; }
+  .osd popover.background, popover.background.touch-selection, popover.background.magnifier {
+    background-color: @on_primary; }
+    .osd popover.background > arrow,
+    .osd popover.background > contents, popover.background.touch-selection > arrow,
+    popover.background.touch-selection > contents, popover.background.magnifier > arrow,
+    popover.background.magnifier > contents {
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: none; }
+
+magnifier {
+  background-color: rgb(170, 170, 170); }
+
+/**********************
+ * Popover Base Menus *
+ **********************/
+popover.menu {
+  padding: 0; }
+  popover.menu box.inline-buttons {
+    padding: 0 12px; }
+    popover.menu box.inline-buttons button.image-button.model {
+      background-color: @background;
+      background-image: none;
+      box-shadow: none;
+      border: none;
+      text-shadow: none;
+      -gtk-icon-shadow: none;
+      min-height: 30px;
+      min-width: 30px;
+      padding: 0;
+      border: none;
+      outline: none;
+      transition: none; }
+      popover.menu box.inline-buttons button.image-button.model:selected {
+        background: image(@secondary); }
+  popover.menu box.circular-buttons {
+    padding: 12px 12px 6px; }
+    popover.menu box.circular-buttons button.circular.image-button.model {
+      padding: 11px; }
+      popover.menu box.circular-buttons button.circular.image-button.model:focus {
+        background-color: @primary;
+        border-color: #2a2d37; }
+  popover.menu > arrow, popover.menu.background > contents {
+    background-color: @background;
+    color: #C3C7D1;
+    padding: 5px; }
+    popover.menu > arrow .view, popover.menu > arrow iconview, popover.menu.background > contents .view, popover.menu.background > contents iconview {
+      background-color: @background; }
+      popover.menu > arrow .view row, popover.menu > arrow iconview row, popover.menu.background > contents .view row, popover.menu.background > contents iconview row {
+        margin: 0; }
+  popover.menu.background separator {
+    margin: 6px 0; }
+  popover.menu accelerator {
+    color: alpha(currentColor,0.55); }
+    popover.menu accelerator:dir(ltr) {
+      margin-left: 12px; }
+    popover.menu accelerator:dir(rtl) {
+      margin-right: 12px; }
+  popover.menu check:hover, popover.menu check:active,
+  popover.menu radio:hover,
+  popover.menu radio:active {
+    background-color: @background; }
+  popover.menu radio {
+    border-color: #414348; }
+    popover.menu radio:active {
+      border-color: rgba(65, 67, 72, 0.5); }
+  popover.menu arrow.left,
+  popover.menu radio.left,
+  popover.menu check.left {
+    margin-left: -2px;
+    margin-right: 6px; }
+  popover.menu arrow.right,
+  popover.menu radio.right,
+  popover.menu check.right {
+    margin-left: 6px;
+    margin-right: -2px; }
+  popover.menu modelbutton, popover.menu.background > contents .view row, popover.menu.background > contents iconview row {
+    min-height: 30px;
+    min-width: 40px;
+    padding: 0 12px;
+    border-radius: 15px; }
+    popover.menu modelbutton:selected, popover.menu.background > contents .view row:selected, popover.menu.background > contents iconview row:selected {
+      color: #C3C7D1;
+      background-color: @on_primary; }
+    popover.menu modelbutton:selected:active, popover.menu.background > contents .view row:selected:active, popover.menu.background > contents iconview row:selected:active {
+      background-color: @on_primary; }
+  popover.menu label.title {
+    font-weight: bold;
+    padding: 4px 32px; }
+
+/***********
+ * Hyprland *
+ ***********/
+ 
+.sidebar-pane, .sidebar-pane:backdrop,
+.sidebar,
+.sidebar:backdrop,
+.navigation-sidebar,
+.navigation-sidebar:backdrop,
+placessidebar,
+placessidebar:backdrop {
+  background: @blur_background8; }
+.sidebar-pane .top-bar, .sidebar-pane .top-bar headerbar,
+.sidebar .top-bar,
+.sidebar .top-bar headerbar,
+.navigation-sidebar .top-bar,
+.navigation-sidebar .top-bar headerbar,
+placessidebar .top-bar,
+placessidebar .top-bar headerbar {
+  background: @blur_background8; }
+
+.content-pane {
+  background-color: @blur_background8; }
+
+.background, .background:backdrop, .view, iconview, .view:backdrop, iconview:backdrop {
+  background-color: @blur_background8; }
+
+window {
+  background-color: @blur_background8; }
+
+/*# sourceMappingURL=gtk-dark.css.map */
