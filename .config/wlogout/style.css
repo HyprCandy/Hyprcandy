@@ -27,7 +27,7 @@ by Stephan Raabe (2023)
 }
 
 window {
-	background: url("/home/angel/.config/background");
+	background-image: url("/home/USERNAME/.confg/background");
 	background-size: cover;
 	font-size: 16pt;
 	color: #cdd6f4;
@@ -67,7 +67,7 @@ button:hover {
 
 /* Adjust the size of the icon or content inside the button */
 button span {
-    font-size: 1.2em; /* Increase the font size */
+    font-size: 1em; /* Increase the font size */
 }
 
 /*
