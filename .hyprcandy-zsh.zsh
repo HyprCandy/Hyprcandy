@@ -5,10 +5,6 @@
 #  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 #fi
 
-
-# Path to your oh-my-zsh installation.
-export ZSH="/usr/share/oh-my-zsh"
-
 # Uncomment the following line if pasting URLs and other text is messed up.
 DISABLE_MAGIC_FUNCTIONS="true"
 
@@ -54,6 +50,48 @@ export LESS_TERMCAP_me="$(tput sgr0 2> /dev/null)"
 # shells instead of the default "last window closed" history.
 
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+# Key bindings for history substring search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+bindkey '^[OA' history-substring-search-up
+bindkey '^[OB' history-substring-search-down
+
+# Aliases
+alias ll="ls -alF"
+alias la="ls -A"
+alias l="ls -CF"
+alias ..="cd .."
+alias ...="cd ../.."
+alias grep="grep --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
+alias update="sudo pacman -Syu"
+alias install="sudo pacman -S"
+alias search="pacman -Ss"
+alias remove="sudo pacman -R"
+alias autoremove="sudo pacman -Rs $(pacman -Qtdq)"
+alias cls="clear"
+alias h="history"
+alias j="jobs -l"
+alias df="df -h"
+alias du="du -h"
+alias mkdir="mkdir -pv"
+alias wget="wget -c"
+
+# Git aliases
+alias g="git"
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gl="git pull"
+alias gs="git status"
+alias gd="git diff"
+alias gco="git checkout"
+alias gb="git branch"
+alias glog="git log --oneline --graph --decorate"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
