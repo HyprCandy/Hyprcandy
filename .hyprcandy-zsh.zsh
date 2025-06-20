@@ -82,7 +82,7 @@ alias mkdir="mkdir -pv"
 alias wget="wget -c"
 
 # Git aliases
-alias g="git"
+alias g="git clone"
 alias ga="git add ."
 alias gc="git commit -m"
 alias gp="git push"
