@@ -83,8 +83,8 @@ alias wget="wget -c"
 
 # Git aliases
 alias g="git"
-alias ga="git add"
-alias gc="git commit"
+alias ga="git add ."
+alias gc="git commit -m "latest commit""
 alias gp="git push"
 alias gl="git pull"
 alias gs="git status"
