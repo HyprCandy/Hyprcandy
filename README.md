@@ -1,7 +1,7 @@
 # HyprCandy
 HyprCandy is a feature rich Hyprland configuretion for Arch and Arch-based distributions with sytemwide color generation for GTK and QT6 applications plus other Hyprland elements along with other other quality of life settings.
 
-Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time. It was mighty stressful, but I'm glad I got it done. 
+Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time. It was mighty stressful at the start especislly when writing the install script, but I'm glad I got it done. 
 
 If you like my setup, you can purchase a copy of the [install scipt](https://mirukai.gumroad.com/l/cxsyj) which helps with my younger siblings' schooling or grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) 🙂.
 
