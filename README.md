@@ -3,7 +3,7 @@ HyprCandy is a feature rich Hyprland configuretion for Arch and Arch-based distr
 
 I'm not a programmer so it took ages to learn how to set up everything. It's been a STRESSFUL, yet fun process. If you like this, I'd appreciate your show of appreciation 😄
 
-You can checkout the little showcase below or head on over to the installation repo [here](https://github.com/HyprCandy/hyprcandyinstal)
+You can checkout the little showcase below or head on over to the installation repo [here](https://github.com/HyprCandy/hyprcandyinstall)
 
 ## Window Color Showcase
 Just a few of the possible window colors
