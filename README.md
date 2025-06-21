@@ -1,6 +1,8 @@
 # HyprCandy
 HyprCandy is a feature rich Hyprland configuretion for Arch and Arch-based distributions with sytemwide color generation for GTK and QT6 applications plus other Hyprland elements along with other other quality of life settings.
-I'm not a programmer so it took ages to learn everything I needed to know in order to share this but due to my love for Hyprland I managed to push through and I guess looking back it's been a fun process. If you like this, I'd appreciate your show of appreciation 🤑😄
+
+I'm not a programmer so it took ages to learn how to set up everything. It's been a STRESSFUL, yet fun process. If you like this, I'd appreciate your show of appreciation 😄
+
 You can checkout the little showcase below or head on over to the installation repo [here](https://github.com/HyprCandy/hyprcandyinstal)
 
 ## Window Color Showcase
@@ -23,3 +25,8 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 
 ## Hyprlock
 ![pic9](https://github.com/user-attachments/assets/321a7b75-f395-4438-9c20-9167b8358761)
+
+## Custom Fish and Zsh
+You can customize them further added even more plugins andaliases
+![pic10](https://github.com/user-attachments/assets/73d1606f-dfe6-4fad-8507-d326185d9fd2)
+![pic11](https://github.com/user-attachments/assets/13e9b676-c436-4bdb-ad3d-9a421b9052a2)
