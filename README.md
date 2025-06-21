@@ -33,6 +33,9 @@ You can customize them further adding even more plugins and personal aliases
 
 ## Inspirations
 I got some inspiration from:
+
 [HYDE Project](https://github.com/HyDE-Project/HyDE.git)
+
 [ML4W](https://github.com/mylinuxforwork/dotfiles.git)
+
 and others...
