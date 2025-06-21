@@ -5,7 +5,7 @@ I'm not a programmer so it took ages to learn how to set up everything during my
 
 You can checkout the little showcase below or head on over to the installation repo [here](https://github.com/HyprCandy/hyprcandyinstall)
 
-## Window Color Showcase
+## Color Showcase
 Just a few of the possible window colors
 
 ![pic1](https://github.com/user-attachments/assets/04696f79-2c34-4210-ba93-1c4643f021b5) 
