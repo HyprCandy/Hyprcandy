@@ -5,8 +5,8 @@ If you like my work, you can [sponsor the project](https://ko-fi.com/ianmking) o
 
 Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time. It was stressful abut worthwhile in the end. Anyway checkout the little showcase below:
 
-## Some Window Colors
-Just a few of the possible window colors
+## Some System Colors
+Just a few of the possible system colors
 
 ![pic1](https://github.com/user-attachments/assets/04696f79-2c34-4210-ba93-1c4643f021b5) 
 ![pic2](https://github.com/user-attachments/assets/f6b63f5d-b658-4707-830b-bc7a7136ea61)
