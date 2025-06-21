@@ -27,6 +27,6 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 ![pic9](https://github.com/user-attachments/assets/321a7b75-f395-4438-9c20-9167b8358761)
 
 ## Custom Fish and Zsh
-You can customize them further added even more plugins andaliases
+You can customize them further adding even more plugins and personal aliases
 ![pic10](https://github.com/user-attachments/assets/73d1606f-dfe6-4fad-8507-d326185d9fd2)
 ![pic11](https://github.com/user-attachments/assets/13e9b676-c436-4bdb-ad3d-9a421b9052a2)
