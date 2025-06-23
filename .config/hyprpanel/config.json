@@ -185,7 +185,7 @@
   "theme.bar.menus.buttons.radius": "0.4em",
   "theme.bar.menus.slider.slider_radius": "0.3rem",
   "theme.bar.menus.scroller.radius": "0.7em",
-  "theme.bar.layer": "background",
+  "theme.bar.layer": "overlay",
   "theme.bar.enableShadow": false,
   "theme.bar.shadow": "2px 2px 2px 2px #16161e",
   "theme.bar.shadowMargins": "0px 4px 4px 0px",
