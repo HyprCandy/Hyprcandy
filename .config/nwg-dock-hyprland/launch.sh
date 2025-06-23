@@ -11,11 +11,11 @@ if [ ! -f $HOME/.config/ml4w/settings/dock-disabled ]; then
     sleep 0.5
     prefer_dark_theme="$(grep 'gtk-application-prefer-dark-theme' "$config" | sed 's/.*\s*=\s*//')"
     if [ $prefer_dark_theme == 0 ]; then
-        style="style-dark.css"
+        style="style.css"
     else
-        style="style-dark.css"
+        style="style.css"
     fi
-    nwg-dock-hyprland -lp start -i 32 -w 10 -mb 6 -ml 10 -mr 10  -x -r -s $style -c  "rofi -show drun"
+    nwg-dock-hyprland -lp start -i 28 -w 10 -mb 6 -ml 10 -mr 10  -x -r -s $style -c  "rofi -show drun"
 else
     echo ":: Dock disabled"
 fi
