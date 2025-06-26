@@ -21,7 +21,7 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 ![pic7](https://github.com/user-attachments/assets/f35f1a64-ff36-4e9c-b077-e6e1a87fd30d)
 
 ## Wlogout Theme
-![pic8](https://github.com/user-attachments/assets/bb6ffe6f-5e4f-4d5b-8afd-e0a7124fee16)
+![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
 
 ## Hyprlock
 ![pic9](https://github.com/user-attachments/assets/321a7b75-f395-4438-9c20-9167b8358761)
