@@ -3,6 +3,10 @@ HyprCandy is a feature rich Hyprland configuration for Arch and Arch-based distr
 
 If you like my work, get a copy of the [install script](https://mirukai.gumroad.com/l/cxsyj) or grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) or you can [support my work](https://ko-fi.com/ianmking) or just pread the word of this cohesive Hyprland setup 🙂.
 
+Subscribe in advance for future tips and tricks video for my setup if you get it or just want to learn more 🙃: [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
+Chat on [Discord](https://discordapp.com/users/1022924035987878022)
+Chat on [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6)
+
 Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time. It was stressful abut worthwhile in the end. Anyway checkout the little showcase below:
 
 ## Some System Colors
