@@ -25,6 +25,7 @@ sleep $_sleep1
 systemctl --user stop pipewire
 systemctl --user stop wireplumber
 systemctl --user stop background-watcher
+systemctl --user stop hyprpanel-idle-monitor
 systemctl --user stop xdg-desktop-portal
 systemctl --user stop xdg-desktop-portal-gnome
 systemctl --user stop xdg-desktop-portal-gtk
@@ -42,6 +43,7 @@ sleep $_sleep3
 systemctl --user start pipewire
 systemctl --user start wireplumber
 systemctl --user start background-watcher
+systemctl --user start hyprpanel-idle-monitor
 systemctl --user start xdg-desktop-portal
 systemctl --user start xdg-desktop-portal-hyprland
 systemctl --user start xdg-desktop-portal-gtk
