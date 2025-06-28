@@ -3,7 +3,7 @@ HyprCandy is a cohesively themed Hyprland configuration for Arch and Arch-based 
 
 Features : 
 
-• Automatic idle-inhbitor activated when hyprpanel is not runnig whenever you want extra screen space since you won't be able to activate it through hyprpanel's idle-inhibitor button. This is great for lighter resource usage while still being able to keep your device awake.
+• Automatic idle-inhbitor activated when hyprpanel is not running whenever you want extra screen space since you won't be able to activate it through hyprpanel's idle-inhibitor button. This is great for lighter resource usage while still being able to keep your device awake.
 
 • System-wide color generation for GTK and QT6 applications plus other Hyprland elements along with other other quality of life settings.
 
