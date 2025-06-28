@@ -1,5 +1,5 @@
 # HyprCandy
-HyprCandy is a feature rich Hyprland configuration for Arch and Arch-based distributions 
+HyprCandy is a cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
 Features : 
 
