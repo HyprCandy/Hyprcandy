@@ -1,6 +1,8 @@
 # HyprCandy
 HyprCandy is a cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
+![pic1](https://github.com/user-attachments/assets/04696f79-2c34-4210-ba93-1c4643f021b5) 
+
 ## Features & How to reach me or support : 
 
 • Automatic idle-inhbitor activated when hyprpanel is not running whenever you want extra screen space since you won't be able to activate it through hyprpanel's idle-inhibitor button. This is great for lighter resource usage while still being able to keep your device awake.
@@ -20,10 +22,8 @@ Chat on [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6)
 
 Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time. It was stressful abut worthwhile in the end. Anyway checkout the little showcase below:
 
-## Some System Colors
+## More System Colors (There's more beyond these as well)
 Just a few of the possible system colors
-
-![pic1](https://github.com/user-attachments/assets/04696f79-2c34-4210-ba93-1c4643f021b5) 
 ![pic2](https://github.com/user-attachments/assets/f6b63f5d-b658-4707-830b-bc7a7136ea61)
 ![pic3](https://github.com/user-attachments/assets/eb01c726-19a6-4cc1-831a-f956534c047f)
 ![pic4](https://github.com/user-attachments/assets/77945628-35e1-4ff5-8830-3ac1e826eba4)
