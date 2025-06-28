@@ -1,5 +1,13 @@
 # HyprCandy
-HyprCandy is a feature rich Hyprland configuration for Arch and Arch-based distributions with system-wide color generation for GTK and QT6 applications plus other Hyprland elements along with other other quality of life settings. The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
+HyprCandy is a feature rich Hyprland configuration for Arch and Arch-based distributions 
+
+Features : 
+
+• Automatic idle-inhbitor activated when hyprpanel is not runnig whenever you want extra screen space since you won't be able to activate it through hyprpanel's idle-inhibitor button. This is great for lighter resource usage while still being able to keep your device awake.
+
+• System-wide color generation for GTK and QT6 applications plus other Hyprland elements along with other other quality of life settings.
+
+• The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
 
 If you like my work, get a copy of the [install script](https://mirukai.gumroad.com/l/cxsyj) or grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) or you can [support my work](https://ko-fi.com/ianmking) or just pread the word of this cohesive Hyprland setup 🙂.
 
