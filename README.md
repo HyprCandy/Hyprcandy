@@ -9,9 +9,9 @@ HyprCandy is a cohesively themed Hyprland configuration for Arch and Arch-based 
 
 • The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
 
-NOTE: I wrote systemd services for these features so you'd have to run the script for them to work but other configs should work fine without my setup if you don't want it ... I think 😅
-
 If you like my work, get a copy of the [install script](https://mirukai.gumroad.com/l/cxsyj) or grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) or you can [support my work](https://ko-fi.com/ianmking) or just pread the word of this cohesive Hyprland setup 🙂.
+
+NOTE: I wrote systemd services for these features so you'd have to run the script for them to work but other configs should work fine without my setup if you don't want it ... I think
 
 Subscribe in advance for future tips and tricks video for my setup if you get it or just want to learn more 🙃: [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
