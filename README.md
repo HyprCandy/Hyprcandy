@@ -1,5 +1,5 @@
 # HyprCandy
-HyprCandy is a cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
+➡[HyprCandy](https://mirukai.gumroad.com/l/cxsyj)⬅ is a cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
 ![pic1](https://github.com/user-attachments/assets/04696f79-2c34-4210-ba93-1c4643f021b5) 
 
