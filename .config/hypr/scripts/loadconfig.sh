@@ -1,3 +1,3 @@
 #!/bin/bash
 hyprctl reload
-notify-send "Config reloaded"
+notify-send "Hyprland reloaded" -t 2000
