@@ -157,7 +157,7 @@
   "theme.osd.opacity": 80,
   "theme.notification.opacity": 100,
   "theme.bar.menus.menu.media.card.tint": 0,
-  "menus.dashboard.powermenu.avatar.image": "/home/angel/Pictures/pngs/2.png",
+  "menus.dashboard.powermenu.avatar.image": "$HOME/Pictures/HyprCandy/Logo/HyprCandy.png",
   "bar.clock.format": "%I:%M:%S %p",
   "bar.systray.customIcons": {},
   "theme.bar.buttons.modules.hyprsunset.enableBorder": false,
