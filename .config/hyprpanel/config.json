@@ -1,7 +1,7 @@
 {
   "wallpaper.pywal": true,
   "theme.matugen": true,
-  "wallpaper.image": "/home/angel/HyprCandy-Images/Background (window)/All-Fluid/graphite-window.jpg",
+  "wallpaper.image": "/home/king/Pictures/HyprCandy/Candy-Images/Graphite/piercing.png",
   "theme.matugen_settings.scheme_type": "content",
   "theme.matugen_settings.variation": "monochrome_1",
   "theme.bar.buttons.enableBorders": false,
@@ -31,7 +31,7 @@
   "theme.bar.margin_sides": "0.6em",
   "theme.bar.margin_top": "0.6em",
   "theme.bar.border.location": "full",
-  "theme.bar.border_radius": "1em",
+  "theme.bar.border_radius": "1.6em",
   "theme.bar.margin_bottom": "0em",
   "theme.bar.border.width": "0.2em",
   "menus.transition": "crossfade",
