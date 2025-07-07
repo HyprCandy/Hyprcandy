@@ -1,7 +1,7 @@
 {
   "wallpaper.pywal": true,
   "theme.matugen": true,
-  "wallpaper.image": "/home/king/Pictures/HyprCandy/Candy-Images/Graphite/piercing.png",
+  "wallpaper.image": "$HOME/Pictures/HyprCandy/Candy-Images/Graphite/piercing.png",
   "theme.matugen_settings.scheme_type": "content",
   "theme.matugen_settings.variation": "monochrome_1",
   "theme.bar.buttons.enableBorders": false,
