@@ -2,8 +2,7 @@
 plugins = [
     "scratchpads"
 ]
-
 [scratchpads.term]
 animation = "fromTop"
-command = "kitty"
-class = "kitty"
+command = "kitty --class=kitty-scratchpad"
+class = "kitty-scratchpad"
