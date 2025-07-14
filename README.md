@@ -44,7 +44,7 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 ## Custom Fish and Zsh
 You can customize them further adding even more plugins and personal aliases
 ![pic10](https://github.com/user-attachments/assets/73d1606f-dfe6-4fad-8507-d326185d9fd2)
-![pic11](https://github.com/user-attachments/assets/13e9b676-c436-4bdb-ad3d-9a421b9052a2)
+<img width="1366" height="768" alt="pic11" src="https://github.com/user-attachments/assets/e27b76f9-55c6-40bb-8675-1d9c37f38f3a" />
 
 ## Inspirations
 I got some inspiration from:
