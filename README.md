@@ -39,7 +39,7 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 ![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
 
 ## Hyprlock
-![pic9](https://github.com/user-attachments/assets/321a7b75-f395-4438-9c20-9167b8358761)
+<img width="1366" height="768" alt="pic9" src="https://github.com/user-attachments/assets/22d6c08e-c12d-49be-989c-7620fde2335c" />
 
 ## Custom Fish and Zsh
 You can customize them further adding even more plugins and personal aliases
