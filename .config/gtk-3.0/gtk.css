@@ -8,11 +8,11 @@
 @define-color warning_fg_color rgba(0, 0, 0, 0.8);
 @define-color error_bg_color @red_4;
 @define-color error_fg_color white;
-@define-color window_bg_color @blur_background8;
+@define-color window_bg_color @inverse_on_surface;
 @define-color window_fg_color white;
-@define-color view_bg_color @blur_background8;
+@define-color view_bg_color @inverse_on_surface;
 @define-color view_fg_color white;
-@define-color headerbar_bg_color @blur_background8;
+@define-color headerbar_bg_color @inverse_on_surface;
 @define-color headerbar_fg_color white;
 @define-color headerbar_border_color white;
 @define-color headerbar_backdrop_color @window_bg_color;
@@ -269,7 +269,7 @@ popover.menu {
 .navigation-sidebar:backdrop,
 placessidebar,
 placessidebar:backdrop {
-  background: @blur_background8; }
+  background: @inverse_on_surface; }
 .sidebar-pane .top-bar, .sidebar-pane .top-bar headerbar,
 .sidebar .top-bar,
 .sidebar .top-bar headerbar,
@@ -277,15 +277,15 @@ placessidebar:backdrop {
 .navigation-sidebar .top-bar headerbar,
 placessidebar .top-bar,
 placessidebar .top-bar headerbar {
-  background: @blur_background8; }
+  background: @inverse_on_surface; }
 
 .content-pane {
-  background-color: @blur_background8; }
+  background-color: @inverse_on_surface; }
 
 .background, .background:backdrop, .view, iconview, .view:backdrop, iconview:backdrop {
-  background-color: @blur_background8; }
+  background-color: @inverse_on_surface; }
 
 window {
-  background-color: @blur_background8; }
+  background-color: @inverse_on_surface; }
 
 /*# sourceMappingURL=gtk-dark.css.map */

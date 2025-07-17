@@ -1,0 +1,8 @@
+[Icon Theme]
+Name=Hicolor
+Comment=Default icon theme
+Directories=256x256/apps
+
+[256x256/apps]
+Size=256
+Type=Fixed 

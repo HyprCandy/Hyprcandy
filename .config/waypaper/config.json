@@ -1,0 +1,5 @@
+{
+  "wallpaper": {
+    "command": "~/.config/hyprcandy/hooks/wallpaper_update_hook.sh"
+  }
+}

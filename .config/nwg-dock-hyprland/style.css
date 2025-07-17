@@ -1,11 +1,11 @@
 @import url("colors.css");
 
 window {
-  	background: @blur-background;
-	border-radius: 16px;
+	border-radius: 12px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: @primary;
+	border-color: @source_color;
+	opacity: 0.9
 }
 
 #box {
@@ -36,9 +36,9 @@ button {
 
 button:hover {
 	background-color: rgba(255, 255, 255, 0.15);
-	border-radius: 30px;
+	border-radius: 12px;
 }
 
 button:focus {
-	box-shadow: transparent
+	/*box-shadow: transparent*/
 }

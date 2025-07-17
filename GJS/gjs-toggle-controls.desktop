@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GJS Toggle Controls
+Comment=System toggle controls and presets
+Exec=gjs /home/king/Documents/waybar/GJS/toggle-main.js
+Icon=HyprCandy
+Terminal=false
+Categories=System;Settings;
+StartupWMClass=gjs 

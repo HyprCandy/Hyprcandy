@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GJS Media Player
+Comment=Media player controls for MPRIS-compatible players
+Exec=gjs /home/king/Documents/waybar/GJS/src/main.js
+Icon=HyprCandy
+Terminal=false
+Categories=AudioVideo;Audio;Player;
+StartupWMClass=gjs 
