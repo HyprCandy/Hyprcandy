@@ -120,7 +120,7 @@ tooltip label {
 
 #workspaces button:hover {
   color: @hover-fg;
-  background: @hover-bg;
+  background: rgba(255, 255, 255, 0.15);
   text-shadow: none;
 }
 
@@ -393,7 +393,7 @@ tooltip label {
 
 #custom-power:hover {
   color: @hover-fg;
-  background: @hover-bg;
+  background: rgba(255, 255, 255, 0.15);
   text-shadow: none;
   box-shadow: none;
 }
