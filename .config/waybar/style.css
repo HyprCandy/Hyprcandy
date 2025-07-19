@@ -111,6 +111,7 @@ tooltip label {
 
 #workspaces button {
   color: @module-fg;
+  background: transparent;
   border-radius: 8px;
   box-shadow: none;
   margin: 2px 0;
@@ -134,9 +135,20 @@ tooltip label {
   padding: 0 6px;
 }
 
-#workspaces button.occupied {
-  /*background: @active-bg;*/
-  background: @on_primary;
+/* Occupied workspace (persistent with windows but not focused) */
+#workspaces button.persistent:not(.active):not(.empty) {
+  color: @primary;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 2px 0;
+  padding: 0 4px;
+}
+
+/* Urgent workspace (has urgent/notification windows) */
+#workspaces button.urgent {
+  color: @critical;
+  background: rgba(255, 0, 0, 0.2);
+  border: 1px solid @critical;
 }
 
 #custom-right1 {
