@@ -3,9 +3,8 @@
 window {
 	border-radius: 12px;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 3px;
 	border-color: @source_color;
-	opacity: 0.9
 }
 
 #box {
