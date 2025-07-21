@@ -16,7 +16,7 @@
 window#waybar {
   background: none;
   border: 2px solid @source_color;
-  border-radius: 8px;
+  border-radius: 0px;
 }
 
 /* ───────────────────────────────────────────────────────────┤ background ├───
@@ -24,7 +24,7 @@ window#waybar {
 window#waybar > box {
   background: @blur_background;
   margin: 2px;
-  border-radius: 8px
+  border-radius: 0px
 }
 
 /* ─────────────────────────────────────────────────────────────┤ tooltips ├───
@@ -138,7 +138,7 @@ tooltip label {
 /* Occupied workspace (persistent with windows but not focused) */
 #workspaces button.persistent:not(.active):not(.empty) {
   color: @primary;
-  background: rgba(255, 255, 255, 0.1);
+  background: @blur_background;
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 2px 0;
   padding: 0 4px;
