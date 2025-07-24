@@ -83,115 +83,44 @@
 
   // ─────────────────────────────────────────────────────────┤ workspaces ├───
 
-  "hyprland/workspaces": {
-    "on-scroll-up": "hyprctl dispatch workspace -1",
-    "on-scroll-down": "hyprctl dispatch workspace +1",
-    "persistent-workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
-    }
+"hyprland/workspaces": {
+  "on-scroll-up": "hyprctl dispatch workspace -1",
+  "on-scroll-down": "hyprctl dispatch workspace +1",
+  "persistent-workspaces": {
+    "1": [],
+    "2": [],
+    "3": [],
+    "4": [],
+    "5": []
   },
-
+  "format": "{icon}",
+  "format-icons": {
+    "active": "",
+    "empty": "",
+    "persistent": "󱕦"
+  },
+},
   // ─────────────────────────────────────────────────────────────┤ window ├───
 
   "hyprland/window": {
     "swap-icon-label": false,
-    "format": "{}",
+    "format": "<span>",
+    "icon": true,
+    "icon-size": 16,
     "tooltip": false,
-    "min-length": 5,
+    "min-length": 0,
+    "max-length": 0,
 
     "rewrite": {
       // ────────────────────────────────────────────────────────── desktop ───
       "": 
-        "<span foreground='#8aadf4'> </span> Hyprland",
+        "<span foreground='#8aadf4'> </span>",
 
       // ───────────────────────────────────────────────────────── terminal ───
 
       "~": "  Terminal",
       "zsh": "  Terminal",
       "kitty": "  Terminal",
-
-      "tmux(.*)": 
-        "<span foreground='#a6da95'> </span> Tmux",
-
-      // ────────────────────────────────────────────────────────── browser ───
-
-      "(.*)Mozilla Firefox": 
-        "<span foreground='#ed8796'>󰈹 </span> Firefox",
-      "(.*) — Mozilla Firefox": 
-        "<span foreground='#ed8796'>󰈹 </span> $1",
-
-      "(.*)Zen Browser": 
-        "<span foreground='#f5a97f'>󰺕 </span> Zen Browser",
-      "(.*) — Zen Browser": 
-        "<span foreground='#f5a97f'>󰺕 </span> $1",
-
-      // ────────────────────────────────────────────────────── development ───
-
-      "(.*) - Visual Studio Code": 
-        "<span foreground='#8aadf4'>󰨞 </span> $1",
-      "(.*)Visual Studio Code": 
-        "<span foreground='#8aadf4'>󰨞 </span> Visual Studio Code",
-
-      "nvim": 
-        "<span foreground='#a6da95'> </span> Neovim",
-      "nvim (.*)": 
-        "<span foreground='#a6da95'> </span> $1",
-
-      "vim": 
-        "<span foreground='#a6da95'> </span> Vim",
-      "vim (.*)": 
-        "<span foreground='#a6da95'> </span> $1",
-
-      // ──────────────────────────────────────────────────────────── media ───
-
-      "(.*)Spotify": 
-        "<span foreground='#a6da95'> </span> Spotify",
-      "(.*)Spotify Premium": 
-        "<span foreground='#a6da95'> </span> Spotify Premium",
-
-      "OBS(.*)": 
-        "<span foreground='#a5adcb'>󰻃 </span> OBS Studio",
-
-      "VLC media player": 
-        "<span foreground='#f5a97f'>󰕼 </span> VLC Media Player",
-      "(.*) - VLC media player": 
-        "<span foreground='#f5a97f'>󰕼 </span> $1",
-
-      "(.*) - mpv": 
-        "<span foreground='#c6a0f6'> </span> $1",
-
-      "qView": "󰋩  qView",
-
-      "(.*).jpg": "󰋩  $1.jpg",
-      "(.*).png": "󰋩  $1.png",
-      "(.*).svg": "󰋩  $1.svg",
-
-      // ─────────────────────────────────────────────────────────── social ───
-
-      "• Discord(.*)": "Discord$1",
-      "(.*)Discord(.*)": 
-        "<span foreground='#8aadf4'> </span> $1Discord$2",
-
-      "vesktop": 
-        "<span foreground='#8aadf4'> </span> Discord",
-
-      // ──────────────────────────────────────────────────────── documents ───
-
-      "ONLYOFFICE Desktop Editors": 
-        "<span foreground='#ed8796'> </span> OnlyOffice Desktop",
-
-      "(.*).docx": 
-        "<span foreground='#8aadf4'>󰈭 </span> $1.docx",
-      "(.*).xlsx": 
-        "<span foreground='#a6da95'>󰈜 </span> $1.xlsx",
-      "(.*).pptx": 
-        "<span foreground='#f5a97f'>󰈨 </span> $1.pptx",
-      "(.*).pdf": 
-        "<span foreground='#ed8796'> </span> $1.pdf",
 
       // ─────────────────────────────────────────────────────────── system ───
       "Authenticate": "  Authenticate"
@@ -241,11 +170,11 @@
   "custom/distro": {
     "format": " ",
     "tooltip": true,
-    "tooltip-format": "Clcik(left-Player : right-Settings)|Scroll(up-Weather : down-Keybinds)",
+    "tooltip-format": "Clcik(left-Player : right-Settings)|Scroll(down-Weather : up-Keybinds)",
     "on-click": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/media-main.js",
-    "on-click-right": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/toggle-main.js",
-    "on-scroll-up": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/weather-main.js",
-    "on-scroll-down": "DRI_PRIME=1 ~/.config/hypr/scripts/keybindings.sh"
+    "on-click-right": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/candy-main.js",
+    "on-scroll-down": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/weather-main.js",
+    "on-scroll-up": "DRI_PRIME=1 ~/.config/hypr/scripts/keybindings.sh"
   },
 
   // ─────────────────────────────────────────────────────┤ idle inhibitor ├───
