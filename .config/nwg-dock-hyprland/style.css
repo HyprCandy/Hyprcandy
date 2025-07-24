@@ -1,43 +1,41 @@
-@import url("colors.css");
+@import 'colors.css';
 
-window {
+window.background {
+  background: @blur_background;
 	border-radius: 12px;
 	border-style: solid;
-	border-width: 3px;
-	border-color: @source_color;
+	border-width: 2px;
+	border-color: @primary_fixed_dim;
 }
 
 #box {
   /* Define attributes of the box surrounding icons here */
-  padding: 4px
+  padding: 4px;
 }
 
 #active {
 	/* This is to underline the button representing the currently active window */
-	border-bottom: none;
-	border-color: transparent
+	border-bottom: none
 }
 
 button, image {
 	background: none;
 	border-style: none;
 	box-shadow: none;
-	color: transparent;
 }
 
 button {
 	padding: 2px;
 	margin-left: 1px;
 	margin-right: 1px;
-	color: transparent;
 	font-size: 8px;
 }
 
 button:hover {
-	background-color: rgba(255, 255, 255, 0.15);
-	border-radius: 12px;
+	background-color: @on_primary /*rgba(255, 255, 255, 0.15)*/;
+	border-radius: 30px;
 }
 
 button:focus {
-	/*box-shadow: transparent*/
+	box-shadow: none;
 }
