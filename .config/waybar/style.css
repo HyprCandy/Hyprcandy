@@ -16,7 +16,7 @@
 window#waybar {
   background: none;
   border: 2px solid @source_color;
-  border-radius: 0px;
+  border-radius: 20px;
 }
 
 /* ───────────────────────────────────────────────────────────┤ background ├───
@@ -24,7 +24,7 @@ window#waybar {
 window#waybar > box {
   background: @blur_background;
   margin: 2px;
-  border-radius: 0px
+  border-radius: 20px
 }
 
 /* ─────────────────────────────────────────────────────────────┤ tooltips ├───
@@ -123,6 +123,7 @@ tooltip label {
   color: @hover-fg;
   background: rgba(255, 255, 255, 0.15);
   text-shadow: none;
+  margin: 2px 0;
 }
 
 #workspaces button.active {
@@ -131,15 +132,15 @@ tooltip label {
   background: @on_primary;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-  margin: 2px;
-  padding: 0 6px;
+  margin: 2px 0;
+  padding: 0 4px;
 }
 
 /* Occupied workspace (persistent with windows but not focused) */
 #workspaces button.persistent:not(.active):not(.empty) {
   color: @primary;
-  background: @blur_background;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid @on_primary;
   margin: 2px 0;
   padding: 0 4px;
 }
@@ -322,7 +323,7 @@ tooltip label {
 /* ───────────────────────────────────────────────────────────┤ media info ├───
 */
 #mpris {
-  background: @blur_background;
+  background: rgba(255, 255, 255, 0.1);
   padding: 0 8px 0 8px;
   border-radius: 8px
 }
