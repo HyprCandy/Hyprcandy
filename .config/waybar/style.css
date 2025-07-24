@@ -43,7 +43,7 @@ tooltip label {
 /* ──────────────────────────────────────────────────────────────┤ general ├───
 */
 #custom-theme,
-#workspaces,
+#tray,
 #window,
 #custom-temperature,
 #memory,
@@ -105,64 +105,68 @@ tooltip label {
 }
 
 #workspaces {
-  background: @transparent;
-  border-radius: 8px
+  background: @blur_background8;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 5px;
+  border-radius: 20px;
+  border: 1px solid @primary_fixed_dim;
 }
 
 #workspaces button {
   color: @module-fg;
-  background: transparent;
   border-radius: 8px;
   box-shadow: none;
-  margin: 2px 0;
-  padding: 0 2px;
+  margin-right: 10px;
   transition: none;
 }
 
 #workspaces button:hover {
-  color: @hover-fg;
-  background: rgba(255, 255, 255, 0.15);
+  color: @primary;
+  background: @transparent;
   text-shadow: none;
-  margin: 2px 0;
 }
 
 #workspaces button.active {
-  color: @primary;
-  /*background: @active-bg;*/
-  background: @on_primary;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.4);
-  margin: 2px 0;
-  padding: 0 4px;
+  color: @on_primary;
+  background: @primary_fixed_dim;
+  text-shadow: 0 0 2px @blur_background;
+  box-shadow: 0 0 2px 1px @blur_background;
+  margin: 2px;
 }
 
 /* Occupied workspace (persistent with windows but not focused) */
 #workspaces button.persistent:not(.active):not(.empty) {
   color: @primary;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid @on_primary;
-  margin: 2px 0;
-  padding: 0 4px;
+  background: @transparent;
+  margin: 2px;
+  padding: 0 5px;
 }
 
 /* Urgent workspace (has urgent/notification windows) */
 #workspaces button.urgent {
   color: @critical;
-  background: rgba(255, 0, 0, 0.2);
-  border: 1px solid @critical;
+  text-shadow: 0 0 2px @blur_background;
+  box-shadow: 0 0 2px 1px @blur_background;
+  margin: 2px;
 }
 
 #custom-right1 {
   color: @background;
   background: @transaparent;
-  text-shadow: 3px 0 2px rgba(0, 0, 0, 0.4);
   margin-bottom: 0;
+  margin-right: -10px;
 }
 
 /* ──────────────────────────────────────────────────────────┤ temperature ├───
 */
 #custom-paddc {
-  padding-right: 22px;
+  padding-right: 20px;
 }
 
 #custom-left2 {
@@ -394,9 +398,8 @@ tooltip label {
 }
 
 #custom-power {
-  color: @primary;
-  /*background: @power;*/
-  background: @on_primary;
+  color: @on_primary;
+  background: @primary_fixed_dim;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
   box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
@@ -406,7 +409,7 @@ tooltip label {
 
 #custom-power:hover {
   color: @hover-fg;
-  background: rgba(255, 255, 255, 0.15);
+  background: @blur_background8;
   text-shadow: none;
   box-shadow: none;
 }
@@ -424,7 +427,7 @@ tooltip label {
 
 * {
   font-family: "JetBrainsMono Nerd Font";
-  font-size: 10px;
+  font-size: 11px;
   font-weight: bold;
 }
 
