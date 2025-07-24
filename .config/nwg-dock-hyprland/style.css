@@ -2,7 +2,7 @@
 
 window.background {
   background: @blur_background;
-	border-radius: 12px;
+	border-radius: 20px;
 	border-style: solid;
 	border-width: 2px;
 	border-color: @primary_fixed_dim;
@@ -33,7 +33,7 @@ button {
 
 button:hover {
 	background-color: @on_primary /*rgba(255, 255, 255, 0.15)*/;
-	border-radius: 30px;
+	border-radius: 20px;
 }
 
 button:focus {
