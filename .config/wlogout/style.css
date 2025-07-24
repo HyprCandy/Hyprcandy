@@ -27,7 +27,7 @@ by Stephan Raabe (2023)
 }
 
 window {
-	background-image: url("/home/king/.config/background.png");
+	background-image: url("/home/$USERNAME/.config/background.png");
 	background-size: cover;
 	font-size: 16pt;
 	color: #cdd6f4;
