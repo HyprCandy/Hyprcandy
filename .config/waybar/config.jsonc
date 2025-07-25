@@ -178,7 +178,7 @@
   "custom/distro": {
     "format": " ",
     "tooltip": true,
-    "tooltip-format": "Click(left-Player : right-Settings)|Scroll(down-Weather : up-Keybinds)",
+    "tooltip-format": "Clcik(left-Player : right-Settings)|Scroll(down-Weather : up-Keybinds)",
     "on-click": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/media-main.js",
     "on-click-right": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/candy-main.js",
     "on-scroll-down": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/weather-main.js",
@@ -324,6 +324,7 @@
       "headset": "󰋋"
     },
 
+    "tooltip": false,
     "tooltip-format": "Device: {desc}",
     "on-click": "~/.config/waybar/scripts/volume-control.sh -o m",
     "on-scroll-up": "~/.config/waybar/scripts/volume-control.sh -o i",
