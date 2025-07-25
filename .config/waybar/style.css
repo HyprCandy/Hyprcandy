@@ -113,7 +113,7 @@ tooltip label {
   margin-top: 0px;
   margin-bottom: 0px;
   margin-left: 0px;
-  margin-right: 5px;
+  margin-right: 6px;
   border-radius: 20px;
   border: 1px solid @primary_fixed_dim;
 }
@@ -161,6 +161,20 @@ tooltip label {
   background: @transaparent;
   margin-bottom: 0;
   margin-right: -10px;
+}
+
+/* ───────────────────────────────────────────────────────────┤ window ├───
+*/
+#window {
+  margin-right: 6px;
+}
+
+/* ───────────────────────────────────────────────────────────┤ tray ├───
+*/
+#tray {
+  background: rgba(255, 255, 255, 0.1);
+  margin-left: 6px;
+  border-radius: 20px;
 }
 
 /* ──────────────────────────────────────────────────────────┤ temperature ├───
@@ -329,7 +343,7 @@ tooltip label {
 #mpris {
   background: rgba(255, 255, 255, 0.1);
   padding: 0 8px 0 8px;
-  border-radius: 8px
+  border-radius: 20px;
 }
 
 #mpris:hover {
