@@ -100,13 +100,14 @@
     "persistent": "󱕦"
   },
 },
+
   // ─────────────────────────────────────────────────────────────┤ window ├───
 
   "hyprland/window": {
     "swap-icon-label": false,
-    "format": "<span>",
+    "format": "",
     "icon": true,
-    "icon-size": 16,
+    "icon-size": 14,
     "tooltip": false,
     "min-length": 0,
     "max-length": 0,
@@ -125,6 +126,13 @@
       // ─────────────────────────────────────────────────────────── system ───
       "Authenticate": "  Authenticate"
     }
+  },
+
+  // ──────────────────────────────────────────────────────────────┤ tray ├───
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 6
   },
   
   // ────────────────────────────────────────────────────────┤ temperature ├───
@@ -301,7 +309,7 @@
     "tooltip-format": "Playing: {title} - {artist}",
     "tooltip-format-paused": "Paused: {title} - {artist}",
     "min-length": 5,
-    "max-length": 35
+    "max-length": 25
   },
 
   // ──────────────────────────────────────────────────────┤ output device ├───
