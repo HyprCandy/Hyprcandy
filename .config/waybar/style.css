@@ -16,7 +16,7 @@
 window#waybar {
   background: none;
   border: 2px solid @primary_fixed_dim;
-  border-radius: 20px
+  border-radius: 20px;
 }
 
 /* ───────────────────────────────────────────────────────────┤ background ├───
