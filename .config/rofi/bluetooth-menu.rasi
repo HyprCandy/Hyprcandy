@@ -1,12 +1,28 @@
 /* Bluetooth menu */
 
 @theme "~/.config/rofi/theme.rasi"
+@import "~/.config/rofi/colors.rasi"
 
 configuration {
   font:                     "JetBrainsMono Nerd Font 8";
   hover-select:             true;
   me-select-entry:          "MousePrimary";
   me-accept-entry:          "!MousePrimary";
+}
+
+/* 
+  bg - background
+  fg - foreground
+  br - border
+*/
+
+* {
+  main-bg:        @on-primary;
+  main-fg:        @primary;
+  main-br:        @primary-fixed-dim;
+  input-bg:       @on-primary;
+  select-bg:      @primary-fixed-dim;
+  select-fg:      @on-primary;
 }
 
 /* Window */
