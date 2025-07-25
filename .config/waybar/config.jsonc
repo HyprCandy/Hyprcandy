@@ -218,7 +218,7 @@
 
     "calendar": {
       "mode": "month",
-      "mode-mon-col": 6,
+      "mode-mon-col": 7,
       "on-click-right": "mode",
 
       "format": {
