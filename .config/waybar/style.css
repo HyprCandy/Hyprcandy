@@ -449,6 +449,7 @@ tooltip label,
 #window label,
 #mpris {
   font-weight: normal;
+  font-size: 10px;
 }
 
 /* ──────────────────────────────────────────────────┤ left & right arrows ├───
