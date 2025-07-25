@@ -10,16 +10,16 @@
   // ──────────────────────────────────────────────────────────┤ positions ├───
 
   "modules-left": [
-    //"custom/theme",         // theme switcher
+    //"custom/theme",       // theme switcher
     //"custom/left1",
 
     "hyprland/workspaces",  // workspaces
-    "custom/right1",
+    //"custom/right1",
 
     "custom/paddw",
-    "hyprland/window",       // window title
-    "custom/right1",
-    "tray"
+    "tray",       	    // system tray
+    //"custom/right1",
+    "hyprland/window"
   ],
 
   "modules-center": [
@@ -101,38 +101,23 @@
   },
 },
 
+  // ──────────────────────────────────────────────────────────────┤ tray ├───
+
+  "tray": {
+    "icon-size": 14,
+    "spacing": 6
+  },
+
   // ─────────────────────────────────────────────────────────────┤ window ├───
 
   "hyprland/window": {
     "swap-icon-label": false,
     "format": "",
     "icon": true,
-    "icon-size": 14,
+    "icon-size": 15,
     "tooltip": false,
     "min-length": 0,
     "max-length": 0,
-
-    "rewrite": {
-      // ────────────────────────────────────────────────────────── desktop ───
-      "": 
-        "<span foreground='#8aadf4'> </span>",
-
-      // ───────────────────────────────────────────────────────── terminal ───
-
-      "~": "  Terminal",
-      "zsh": "  Terminal",
-      "kitty": "  Terminal",
-
-      // ─────────────────────────────────────────────────────────── system ───
-      "Authenticate": "  Authenticate"
-    }
-  },
-
-  // ──────────────────────────────────────────────────────────────┤ tray ├───
-
-  "tray": {
-    "icon-size": 14,
-    "spacing": 6
   },
   
   // ────────────────────────────────────────────────────────┤ temperature ├───
