@@ -422,8 +422,8 @@ tooltip label {
 }
 
 #custom-power:hover {
-  color: @hover-fg;
-  background: @blur_background8;
+  color: @primary_fixed_dim;
+  background: rgba(255, 255, 255, 0.1);
   text-shadow: none;
   box-shadow: none;
 }
