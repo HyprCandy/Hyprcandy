@@ -43,8 +43,8 @@ tooltip label {
 /* ──────────────────────────────────────────────────────────────┤ general ├───
 */
 #custom-theme,
-#tray,
 #window,
+#tray,
 #custom-temperature,
 #memory,
 #cpu,
@@ -155,25 +155,25 @@ tooltip label {
   margin: 2px;
 }
 
-#custom-right1 {
+/*#custom-right1 {
   color: @primary_fixed_dim;
   background: @transaparent;
   margin-bottom: 0;
-  margin-right: -10px;
-}
-
-/* ───────────────────────────────────────────────────────────┤ window ├───
-*/
-#window {
-  margin-right: 6px;
-}
+  margin-right: -6px;
+}*/
 
 /* ───────────────────────────────────────────────────────────┤ tray ├───
 */
 #tray {
   background: rgba(255, 255, 255, 0.1);
-  margin-left: 6px;
   border-radius: 20px;
+}
+
+
+/* ───────────────────────────────────────────────────────────┤ window ├───
+*/
+#window {
+  margin-left: 6px;
 }
 
 /* ──────────────────────────────────────────────────────────┤ temperature ├───
