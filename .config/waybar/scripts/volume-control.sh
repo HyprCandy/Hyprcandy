@@ -33,7 +33,7 @@ icon() {
 
 send_notification() {
   icon
-  notify-send -a "state" -r 91190 -i "$icon" -h int:value:"$vol" "Volume: ${vol}%" -u low
+  notify-send -a "state" -r 91190 -i "$icon" -h int:value:"$vol" "Volume: ${vol}%" -u low -t 700
 }
 
 notify_mute() {
