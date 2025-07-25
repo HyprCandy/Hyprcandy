@@ -105,7 +105,7 @@ tooltip label {
 }
 
 #workspaces {
-  background: @blur_background8;
+  background: @on_primary;
   padding-top: 0px;
   padding-bottom: 0px;
   padding-left: 0px;
@@ -170,13 +170,13 @@ tooltip label {
 }
 
 #custom-left2 {
-  color: @on_primary;
+  color: @on_primary_fixed_variant;
   background: @transparent;
   padding-left: 3px;
 }
 
 #custom-temperature {
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
   padding: 0 0 0 1px;
 }
 
@@ -184,7 +184,7 @@ tooltip label {
 */
 #custom-left3 {
   color: @on_primary;
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
   padding-left: 3px;
 }
 
@@ -221,7 +221,7 @@ tooltip label {
 /* ──────────────────────────────────────────────────────────┤ distro icon ├───
 */
 #custom-left5 {
-  color: @on_primary;
+  color: @on_primary_fixed_variant;
   background: @transparent;
   text-shadow: none;
   margin-bottom: -2px;
@@ -231,14 +231,14 @@ tooltip label {
 #custom-distro {
   color: @primary;
   /*background: @distro-bg;*/
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
   margin: 0 -1px -2px 0;
   padding: 0 0 0 3px;
   text-shadow: 0 0 1.5px rgba(0, 0, 0, 1);
 }
 
 #custom-right2 {
-  color: @on_primary;
+  color: @on_primary_fixed_variant;
   background: @transparent;
   text-shadow: none;
   margin-bottom: -2px;
@@ -283,13 +283,13 @@ tooltip label {
 
 #custom-right4 {
   color: @on_primary;
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
 }
 
 /* ────────────────────────────────────────────────────────────────┤ wi-fi ├───
 */
 #custom-wifi {
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
   padding: 0 8px 0 5px;
 }
 
@@ -300,7 +300,7 @@ tooltip label {
 /* ────────────────────────────────────────────────────────────┤ bluetooth ├───
 */
 #bluetooth {
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
   padding-right: 5px;
 }
 
@@ -312,7 +312,7 @@ tooltip label {
 */
 #custom-update {
   padding-right: 8px;
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
 }
 
 #custom-update:hover {
@@ -320,7 +320,7 @@ tooltip label {
 }
 
 #custom-right5 {
-  color: @on_primary;
+  color: @on_primary_fixed_variant;
   background: @transparent;
 }
 
@@ -355,26 +355,26 @@ tooltip label {
 /* ───────────────────────────────────────────────────────────┤ brightness ├───
 */
 #custom-left7 {
-  color: @background;
+  color: @on_primary;
   background: @scrim;
   padding-left: 2px;
 }
 
 #backlight {
-  background: @background;
+  background: @on_primary;
 }
 
 /* ──────────────────────────────────────────────────────────────┤ battery ├───
 */
 #custom-left8 {
-  color: @on_primary;
-  background: @background;
+  color: @on_primary_fixed_variant;
+  background: @on_primary;
   padding-left: 2px;
 }
 
 #battery {
   color: @module-fg;
-  background: @on_primary;
+  background: @on_primary_fixed_variant;
 }
 
 #battery.warning {
@@ -392,7 +392,7 @@ tooltip label {
 /* ─────────────────────────────────────────────────────────┤ power button ├───
 */
 #custom-leftin2 {
-  color: @on_primary;
+  color: @on_primary_fixed_variant;
   background: @transparent;
   margin-bottom: -1px;
 }
