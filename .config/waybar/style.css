@@ -45,9 +45,9 @@ tooltip label {
 #custom-theme,
 #window,
 #tray,
-#custom-temperature,
-#memory,
-#cpu,
+#custom-keybinds,
+#custom-settings,
+#custom-player,
 #idle_inhibitor,
 #clock,
 #custom-wifi,
@@ -188,7 +188,7 @@ tooltip label {
   padding-left: 3px;
 }
 
-#custom-temperature {
+#custom-keybinds {
   background: @on_primary_fixed_variant;
   padding: 0 0 0 1px;
 }
@@ -201,18 +201,18 @@ tooltip label {
   padding-left: 3px;
 }
 
-#memory {
+#custom-settings {
   background: @on_primary;
   padding: 0 0 0 1px;
 }
 
-#memory.warning {
+/*#memory.warning {
   color: @warning;
 }
 
 #memory.critical {
   color: @critical;
-}
+}*/
 
 /* ──────────────────────────────────────────────────────────────────┤ cpu ├───
 */
@@ -222,7 +222,7 @@ tooltip label {
   padding-left: 3px;
 }
 
-#cpu {
+#custom-player {
   background: @scrim;
 }
 
