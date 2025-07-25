@@ -283,9 +283,9 @@ placessidebar .top-bar headerbar {
   background-color: @inverse_on_surface; }
 
 .background, .background:backdrop, .view, iconview, .view:backdrop, iconview:backdrop {
-  background-color: @inverse_on_surface; }
+  background-color: @inverse_on_surface 85%; }
 
 window {
-  background-color: @inverse_on_surface; }
+  background-color: @blur_background8 20%; }
 
 /*# sourceMappingURL=gtk-dark.css.map */
