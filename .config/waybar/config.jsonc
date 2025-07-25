@@ -26,13 +26,16 @@
     "rofi",
     "custom/paddc",
     "custom/left2",
-    "custom/temperature",   // temperature
+    "custom/keybinds",
+    //"custom/temperature",   // temperature
 
     "custom/left3",
-    "memory",               // memory
+    "custom/settings",
+    //"memory",               // memory
 
     "custom/left4",
-    "cpu",                  // cpu
+    "custom/player",
+    //"cpu",                  // cpu
     "keybinds",		    // keybinds
     "custom/leftin1",
 
@@ -120,15 +123,38 @@
     "max-length": 0,
   },
   
-  // ────────────────────────────────────────────────────────┤ temperature ├───
+  // ────────────────────────────────────────────────────────┤ keybinds ├───
 
-  "custom/temperature": {
-    "exec": "~/.config/waybar/scripts/cpu-temp.sh",
-    "return-type": "json",
-    "format": "{}",
-    "interval": 5,
-    "min-length": 8,
-    "max-length": 8
+  "custom/keybinds": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "Keybinds",
+    //"interval": 5,
+    "on-click": "DRI_PRIME=1 ~/.config/hypr/scripts/keybindings.sh",
+    "min-length": 7,
+    "max-length": 7
+  },
+  
+  // ────────────────────────────────────────────────────────┤ settings ├───
+
+  "custom/settings": {
+    "format": " ",
+    "tooltip": true,
+    "tooltip-format": "Settings",
+    "on-click": "gjs ~/.ultracandy/GJS/candy-main.js",
+    "min-length": 7,
+    "max-length": 7
+  },
+
+  // ────────────────────────────────────────────────────────┤ player ├───
+
+  "custom/player": {
+    "format": "󰝚 ",
+    "tooltip": true,
+    "tooltip-format": "Media Player",
+    "on-click": "gjs ~/.ultracandy/GJS/media-main.js",
+    "min-length": 7,
+    "max-length": 7
   },
 
   // ─────────────────────────────────────────────────────────────┤ memory ├───
@@ -163,11 +189,8 @@
   "custom/distro": {
     "format": " ",
     "tooltip": true,
-    "tooltip-format": "Clcik(left-Player : right-Settings)|Scroll(down-Weather : up-Keybinds)",
-    "on-click": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/media-main.js",
-    "on-click-right": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/candy-main.js",
-    "on-scroll-down": "DRI_PRIME=1 gjs ~/.ultracandy/GJS/weather-main.js",
-    "on-scroll-up": "DRI_PRIME=1 ~/.config/hypr/scripts/keybindings.sh"
+    "tooltip-format": "Weather",
+    "on-click": "gjs ~/.ultracandy/GJS/weather-main.js"
   },
 
   // ─────────────────────────────────────────────────────┤ idle inhibitor ├───
