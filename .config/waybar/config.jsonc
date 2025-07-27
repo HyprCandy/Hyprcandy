@@ -34,7 +34,7 @@
     //"memory",               // memory
 
     "custom/left4",
-    "custom/player",
+    "custom/weather",
     //"cpu",                  // cpu
     "keybinds",		    // keybinds
     "custom/leftin1",
@@ -141,18 +141,18 @@
     "format": " ",
     "tooltip": true,
     "tooltip-format": "Settings",
-    "on-click": "gjs ~/.ultracandy/GJS/candy-main.js",
+    "on-click": "gjs ~/.ultracandy/GJS/toggle-main.js",
     "min-length": 7,
     "max-length": 7
   },
 
-  // ────────────────────────────────────────────────────────┤ player ├───
+  // ────────────────────────────────────────────────────────┤ weather ├───
 
   "custom/player": {
     "format": "󰝚 ",
     "tooltip": true,
     "tooltip-format": "Media Player",
-    "on-click": "gjs ~/.ultracandy/GJS/media-main.js",
+    "on-click": "gjs ~/.ultracandy/GJS/weather-main.js",
     "min-length": 7,
     "max-length": 7
   },
@@ -188,9 +188,7 @@
 
   "custom/distro": {
     "format": " ",
-    "tooltip": true,
-    "tooltip-format": "Weather",
-    "on-click": "gjs ~/.ultracandy/GJS/weather-main.js"
+    "tooltip": false
   },
 
   // ─────────────────────────────────────────────────────┤ idle inhibitor ├───
