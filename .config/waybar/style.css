@@ -47,7 +47,7 @@ tooltip label {
 #tray,
 #custom-keybinds,
 #custom-settings,
-#custom-player,
+#custom-weather,
 #idle_inhibitor,
 #clock,
 #custom-wifi,
@@ -176,7 +176,7 @@ tooltip label {
   margin-left: 6px;
 }
 
-/* ──────────────────────────────────────────────────────────┤ temperature ├───
+/* ──────────────────────────────────────────────────────────┤ keybinds ├───
 */
 #custom-paddc {
   padding-right: 20px;
@@ -193,7 +193,7 @@ tooltip label {
   padding: 0 0 0 1px;
 }
 
-/* ───────────────────────────────────────────────────────────────┤ memory ├───
+/* ───────────────────────────────────────────────────────────┤ settings ├───
 */
 #custom-left3 {
   color: @on_primary;
@@ -214,7 +214,7 @@ tooltip label {
   color: @critical;
 }*/
 
-/* ──────────────────────────────────────────────────────────────────┤ cpu ├───
+/* ─────────────────────────────────────────────────────────────┤ weather ├───
 */
 #custom-left4 {
   color: @scrim;
@@ -222,7 +222,7 @@ tooltip label {
   padding-left: 3px;
 }
 
-#custom-player {
+#custom-weather {
   background: @scrim;
 }
 
