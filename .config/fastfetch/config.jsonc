@@ -21,96 +21,96 @@
           "format": "{5} {2}",
           //"format": "{5} {1} Type {2}",
           "key": "PC 󰇺 ",
-          "keyColor": "31"
+          "keyColor": "35"
       },
       {
           "type": "cpu",
           "format": "{1} @ {7} GHz",
           "key": " ├  ",
-          "keyColor": "31"
+          "keyColor": "35"
       },
       {
           "type": "gpu",
           "format": "{1} {2}",            
           "key": " ├ 󰢮 ",
-          "keyColor": "32"
+          "keyColor": "33"
       },
       {
           "type": "memory",
           "key": " ├  ",
-          "keyColor": "33"
+          "keyColor": "32"
       },
       {
           "type": "swap",
           "key": " ├ 󰓡 ",
-          "keyColor": "33"
+          "keyColor": "32"
       },
       {
           "type": "disk",
           "key": " ├ 󰋊 ",                                                      
-          "keyColor": "31"
+          "keyColor": "34"
       },
       {
         "type": "os",
         "key": "OS  ",
-        "keyColor": "32"  // = color1
+        "keyColor": "31"  // = color1
       },
       {
           "type": "kernel",
           "key": " ├  ",
-          "keyColor": "32"
+          "keyColor": "31"
       },
       {
           "type": "shell",
           "key": " ├  ",
-          "keyColor": "31"
+          "keyColor": "34"
       },
       {
           "type": "packages",
           "key": " ├ 󰏗 ",                                                      
-          "keyColor": "31"
+          "keyColor": "34"
       },
       {
           "type": "disk",
           "folders": "/",
           "key": " ├ 󱦟 ",                                                      
-          "keyColor": "33",
+          "keyColor": "32",
           "format": "{days} days"
       },
       {
           "type": "uptime",
           "key": " ├ 󱦟 ",                                                      
-          "keyColor": "33"
+          "keyColor": "32"
       }, 
       {
           "type": "wm",
           "key": "WM 󱫐 ",
-          "keyColor": "32"
+          "keyColor": "33"
       },
       {
           "type": "wmtheme",
           "key": " ├ 󰉼 ",
-          "keyColor": "32"
+          "keyColor": "33"
       },
       {
           "type": "icons",
           "key": " ├ 󰀻 ",
-          "keyColor": "32"
+          "keyColor": "33"
       },
       {
           "type": "cursor",
           "key": " ├  ",
-          "keyColor": "31"
+          "keyColor": "35"
       },
       {
           "type": "terminal",
           "key": " ├  ",
-          "keyColor": "31"
+          "keyColor": "35"
       },
       {
           "type": "terminalfont",
           "key": " ├ 󱗃 ",
-          "keyColor": "31"
+          "keyColor": "35"
       },
       {
         "type": "custom",
@@ -118,7 +118,7 @@
       },
       {
         "type": "colors",
-        "paddingLeft": 2,
+        "paddingLeft": 1,
         "symbol": "star"
       },
       "break",

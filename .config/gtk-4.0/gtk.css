@@ -258,6 +258,190 @@ popover.menu {
     font-weight: bold;
     padding: 4px 32px; }
 
+/*****************
+ * Progressbars *
+*****************/
+progressbar progress{
+  background-color: @primary;
+}
+
+/************
+ * Tooltips *
+ ************/
+tooltip {
+  font-size: 12px;
+  padding: 2px;
+  /* not working */
+  border-radius: 5px;
+  box-shadow: none;
+  text-shadow: 0 1px black; }
+  tooltip.background {
+    background-color: @inverse_on_surface;
+    background-clip: padding-box;
+    border: 1px solid rgba(255, 255, 255, 0.1); }
+  tooltip decoration {
+    background-color: @inverse_on_surface; }
+  tooltip * {
+    padding: 2px;
+    background-color: @inverse_on_surface;
+    color: white; }
+    
+    columnview.view,
+treeview.view {
+  border-left-color: #414348;
+  border-top-color: #414348; }
+  columnview.view:selected:focus, columnview.view:selected,
+  treeview.view:selected:focus,
+  treeview.view:selected {
+    border-radius: 0;
+    outline-color: #ed254e; }
+  columnview.view:disabled,
+  treeview.view:disabled {
+    color: #6d7077; }
+    columnview.view:disabled:selected,
+    treeview.view:disabled:selected {
+      color: #84868b; }
+      columnview.view:disabled:selected:backdrop,
+      treeview.view:disabled:selected:backdrop {
+        color: rgba(76, 79, 86, 0.85); }
+  columnview.view.separator,
+  treeview.view.separator {
+    min-height: 2px;
+    color: #414348; }
+  columnview.view:backdrop,
+  treeview.view:backdrop {
+    border-left-color: #2c2f35;
+    border-top: #2c2f35; }
+  columnview.view:drop(active),
+  treeview.view:drop(active) {
+    box-shadow: none; }
+  columnview.view > dndtarget:drop(active),
+  treeview.view > dndtarget:drop(active) {
+    border-style: solid none;
+    border-width: 1px;
+    border-color: #1b1d22; }
+    columnview.view > dndtarget:drop(active).after,
+    treeview.view > dndtarget:drop(active).after {
+      border-top-style: none; }
+    columnview.view > dndtarget:drop(active).before,
+    treeview.view > dndtarget:drop(active).before {
+      border-bottom-style: none; }
+  columnview.view.expander,
+  treeview.view.expander {
+    min-width: 16px;
+    min-height: 16px;
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+    color: #91959d; }
+    columnview.view.expander:dir(rtl),
+    treeview.view.expander:dir(rtl) {
+      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl"); }
+    columnview.view.expander:hover,
+    treeview.view.expander:hover {
+      color: #C3C7D1; }
+    columnview.view.expander:selected,
+    treeview.view.expander:selected {
+      color: #c2c3c5; }
+      columnview.view.expander:selected:hover,
+      treeview.view.expander:selected:hover {
+        color: #ffffff; }
+    columnview.view.expander:checked,
+    treeview.view.expander:checked {
+      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+      
+      columnview.view.progressbar,
+  treeview.view.progressbar {
+    border: 1px solid #1b1d22;
+    border-radius: 4px;
+    background-color: #32363e;
+    background-image: linear-gradient(to bottom, #32363e, #1b1d22);
+    box-shadow: inset 0 1px rgba(255, 255, 255, 0.15), 0 1px rgba(0, 0, 0, 0.1); }
+    columnview.view.progressbar:selected:focus, columnview.view.progressbar:selected,
+    treeview.view.progressbar:selected:focus,
+    treeview.view.progressbar:selected {
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.05);
+      background-image: image(@inverse_on_surface); }
+      columnview.view.progressbar:selected:focus:backdrop, columnview.view.progressbar:selected:backdrop,
+      treeview.view.progressbar:selected:focus:backdrop,
+      treeview.view.progressbar:selected:backdrop {
+        background-color: #1f2128; }
+  columnview.view.trough,
+  treeview.view.trough {
+    background-color: rgba(195, 199, 209, 0.1); }
+    columnview.view.trough:selected:focus, columnview.view.trough:selected,
+    treeview.view.trough:selected:focus,
+    treeview.view.trough:selected {
+      background-color: #1b1d22; }
+  columnview.view > header > button,
+  treeview.view > header > button {
+    color: #babeca;
+    background-color: @inverse_on_surface;
+    font-weight: bold;
+    text-shadow: none;
+    box-shadow: none; }
+    columnview.view > header > button:hover,
+    treeview.view > header > button:hover {
+      color: #bfc3ce;
+      box-shadow: none;
+      transition: none; }
+    columnview.view > header > button:active,
+    treeview.view > header > button:active {
+      color: #C3C7D1;
+      transition: none; }
+    columnview.view > header > button sort-indicator,
+    treeview.view > header > button sort-indicator {
+      min-height: 16px;
+      min-width: 16px; }
+      columnview.view > header > button sort-indicator.ascending,
+      treeview.view > header > button sort-indicator.ascending {
+        -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+      columnview.view > header > button sort-indicator.descending,
+      treeview.view > header > button sort-indicator.descending {
+        -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+  columnview.view button.dnd:active, columnview.view button.dnd:selected, columnview.view button.dnd:hover, columnview.view button.dnd,
+  columnview.view header.button.dnd:active,
+  columnview.view header.button.dnd:selected,
+  columnview.view header.button.dnd:hover,
+  columnview.view header.button.dnd,
+  treeview.view button.dnd:active,
+  treeview.view button.dnd:selected,
+  treeview.view button.dnd:hover,
+  treeview.view button.dnd,
+  treeview.view header.button.dnd:active,
+  treeview.view header.button.dnd:selected,
+  treeview.view header.button.dnd:hover,
+  treeview.view header.button.dnd {
+    padding: 0 6px;
+    color: #ed254e;
+    background-image: none;
+    background-color: @surface_bright;
+    border-style: none;
+    border-radius: 0;
+    box-shadow: inset 0 0 0 1px @inverse_on_surface;
+    text-shadow: none;
+    transition: none; }
+  columnview.view acceleditor > label,
+  treeview.view acceleditor > label {
+    background-color: #32363e; }
+    
+    columnview.view > header > button,
+treeview.view > header > button, columnview.view > header > button:hover,
+treeview.view > header > button:hover, columnview.view > header > button:active,
+treeview.view > header > button:active {
+  padding: 0 6px;
+  background-image: none;
+  border-style: none none solid solid;
+  border-color: #414348;
+  border-radius: 0;
+  text-shadow: none; }
+  columnview.view > header > button:disabled,
+  treeview.view > header > button:disabled {
+    border-color: @inverse_on_surface;
+    background-image: none; }
+  columnview.view > header > button:last-child:backdrop,
+  treeview.view > header > button:last-child:backdrop, columnview.view > header > button:last-child,
+  treeview.view > header > button:last-child {
+    border-right-style: none; }
+
 /***********
  * Hyprland *
  ***********/

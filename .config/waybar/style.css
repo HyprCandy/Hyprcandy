@@ -15,7 +15,7 @@
 */
 window#waybar {
   background: none;
-  border: 2px solid @primary_fixed_dim;
+  border: 0px solid @primary_fixed_dim;
   border-radius: 20px;
 }
 
@@ -46,8 +46,8 @@ tooltip label {
 #window,
 #tray,
 #custom-keybinds,
-#custom-settings,
 #custom-weather,
+#custom-settings,
 #idle_inhibitor,
 #clock,
 #custom-wifi,
@@ -193,7 +193,7 @@ tooltip label {
   padding: 0 0 0 1px;
 }
 
-/* ───────────────────────────────────────────────────────────┤ settings ├───
+/* ───────────────────────────────────────────────────────────┤ weather ├───
 */
 #custom-left3 {
   color: @on_primary;
@@ -201,7 +201,7 @@ tooltip label {
   padding-left: 3px;
 }
 
-#custom-settings {
+#custom-weather {
   background: @on_primary;
   padding: 0 0 0 1px;
 }
@@ -214,7 +214,7 @@ tooltip label {
   color: @critical;
 }*/
 
-/* ─────────────────────────────────────────────────────────────┤ weather ├───
+/* ─────────────────────────────────────────────────────────────┤ settings ├───
 */
 #custom-left4 {
   color: @scrim;
@@ -222,7 +222,7 @@ tooltip label {
   padding-left: 3px;
 }
 
-#custom-weather {
+#custom-settings {
   background: @scrim;
 }
 
