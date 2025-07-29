@@ -15,7 +15,7 @@ if [ ! -f $HOME/.config/ml4w/settings/dock-disabled ]; then
     else
         style="style.css"
     fi
-    nwg-dock-hyprland -lp start -i 22 -w 10 -mb 6 -ml 10 -mr 10  -x -r -s $style -c  "rofi -show drun"
+    nwg-dock-hyprland -lp start -i 26 -w 10 -mb 6 -ml 10 -mr 10  -x -r -s $style -c  "rofi -show drun"
 else
     echo ":: Dock disabled"
 fi
