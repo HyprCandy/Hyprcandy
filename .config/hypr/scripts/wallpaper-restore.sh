@@ -40,4 +40,4 @@ fi
 # -----------------------------------------------------
 
 echo ":: Setting wallpaper with source image $wallpaper"
-waypaper --wallpaper "$wallpaper"
+#waypaper --wallpaper "$wallpaper"
