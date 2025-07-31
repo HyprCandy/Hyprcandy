@@ -1,7 +1,8 @@
-# HyprCandy
-➡[HyprCandy](https://mirukai.gumroad.com/l/cxsyj)⬅ is a cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
+# HyprCandy/UltraCandy
+➡[HyprCandy](https://mirukai.gumroad.com/l/cxsyj)/[UltraCandy](https://ko-fi.com/s/f56114285c)⬅ is a systemwide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
-![pic1](https://github.com/user-attachments/assets/04696f79-2c34-4210-ba93-1c4643f021b5) 
+<img width="1366" height="768" alt="screenshot_01082025_002329" src="https://github.com/user-attachments/assets/d0dbc2e1-73c4-41d1-8f98-ecb767357331" /> ![pic1](https://github.com/user-attachments/assets/04696f79-2c34-4210-ba93-1c4643f021b5)
+
 
 ## Features & How to reach me or support : 
 
@@ -24,6 +25,9 @@ Since I'm an aeronautics graduate and not a programmer it took me ages to learn 
 
 ## More System Colors (There's more beyond these as well)
 Just a few of the possible system colors
+<img width="1366" height="768" alt="screenshot_01082025_001242" src="https://github.com/user-attachments/assets/0f0de756-8aa2-46f1-ba65-3bc9c0d45046" />
+<img width="1366" height="768" alt="screenshot_01082025_001445" src="https://github.com/user-attachments/assets/65f6c823-7a4e-497e-8f16-0ed3c2849f88" />
+<img width="1366" height="768" alt="screenshot_01082025_000223" src="https://github.com/user-attachments/assets/fbfd445b-73ad-495c-b9a3-06d3fce63a92" />
 ![pic2](https://github.com/user-attachments/assets/f6b63f5d-b658-4707-830b-bc7a7136ea61)
 ![pic3](https://github.com/user-attachments/assets/eb01c726-19a6-4cc1-831a-f956534c047f)
 ![pic4](https://github.com/user-attachments/assets/77945628-35e1-4ff5-8830-3ac1e826eba4)
