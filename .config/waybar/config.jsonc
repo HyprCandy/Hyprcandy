@@ -141,7 +141,7 @@
     "format": "󰝚 ",
     "tooltip": true,
     "tooltip-format": "Media Player",
-    "on-click": "gjs ~/.ultracandy/GJS/weather-main.js",
+    "on-click": "gjs ~/.hyprcandy/GJS/weather-main.js",
     "min-length": 7,
     "max-length": 7
   },
@@ -152,7 +152,7 @@
     "format": " ",
     "tooltip": true,
     "tooltip-format": "Settings",
-    "on-click": "gjs ~/.ultracandy/GJS/toggle-main.js",
+    "on-click": "gjs ~/.hyprcandy/GJS/toggle-main.js",
     "min-length": 7,
     "max-length": 7
   },
