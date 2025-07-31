@@ -1,5 +1,5 @@
 # HyprCandy/UltraCandy
-➡[HyprCandy](https://mirukai.gumroad.com/l/cxsyj)/[UltraCandy](https://ko-fi.com/s/f56114285c)⬅ is a systemwide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features. I recommend hyprpanel on HyprCandy and waybar for UltraCandy users. 
+➡[HyprCandy](https://mirukai.gumroad.com/l/cxsyj)/[UltraCandy](https://ko-fi.com/s/f56114285c)⬅ is a system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features. I recommend hyprpanel on HyprCandy and waybar for UltraCandy users. 
 
 UltraCandy with waybar option plus settings app
 <img width="1366" height="768" alt="screenshot_01082025_002329" src="https://github.com/user-attachments/assets/d0dbc2e1-73c4-41d1-8f98-ecb767357331" /> <img width="1366" height="768" alt="screenshot_31072025_235812" src="https://github.com/user-attachments/assets/3e210212-53b0-43ec-b5e2-3441fa83870b" />
@@ -10,9 +10,9 @@ HyprCandy with hyprpanel option plus settings app
 
 ## Features & How to reach me or support : 
 
-• Automatic idle-inhbitor activated when hyprpanel is not running whenever you want extra screen space since you won't be able to activate it through hyprpanel's idle-inhibitor button. This is great for lighter resource usage while still being able to keep your device awake.
+• Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
-• System-wide color generation for GTK and QT6 applications plus other Hyprland elements along with other other quality of life settings.
+• System-wide color generation for GTK3/4 and QT6 applications plus other Hyprland elements along with other other quality of life settings.
 
 • The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
 
