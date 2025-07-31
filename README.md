@@ -41,7 +41,11 @@ Hyprcandy
 Application Finder
 ![pic6](https://github.com/user-attachments/assets/97acb3b4-1551-4fcb-bff1-8467a23df02b)
 Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
-![pic7](https://github.com/user-attachments/assets/f35f1a64-ff36-4e9c-b077-e6e1a87fd30d)
+<img width="1366" height="768" alt="screenshot_01082025_014531" src="https://github.com/user-attachments/assets/f514378e-0e4c-4d4d-bbc7-3cfd52962a50" />
+<img width="274" height="655" alt="screenshot_01082025_014634" src="https://github.com/user-attachments/assets/b007a478-d9a0-455c-89de-bd35525e8786" />
+<img width="292" height="663" alt="screenshot_01082025_014712" src="https://github.com/user-attachments/assets/d10c9cd9-51a7-4991-8d7b-a72018ddf5ff" />
+<img width="464" height="576" alt="screenshot_01082025_014737" src="https://github.com/user-attachments/assets/15382adc-dc69-4b48-aaa7-579ed2b34a24" />
+
 
 ## Wlogout Theme
 ![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
