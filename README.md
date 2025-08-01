@@ -27,6 +27,9 @@ Chat on [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6)
 
 Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time before creating this repo. It was stressful abut worthwhile in the end. Anyway checkout the little showcase below:
 
+## Update
+In the terminal run "hyprcandy" or "ultracandy" based on the version you use.
+
 ## More System Colors (There's more beyond these as well)
 Just a few of the possible system colors and automatic sddm background application
 
