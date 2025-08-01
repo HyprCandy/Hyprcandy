@@ -1,5 +1,5 @@
 # HyprCandy/UltraCandy
-➡[UltraCandy](https://ko-fi.com/s/f56114285c)/[HyprCandy](https://mirukai.gumroad.com/l/cxsyj)⬅ is a system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features. I recommend hyprpanel on HyprCandy and waybar for UltraCandy users. 
+➡[UltraCandy](https://ko-fi.com/s/f56114285c)/[HyprCandy](https://github.com/HyprCandy/hyprcandyinstall.git)⬅ is a system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features. I recommend hyprpanel on HyprCandy and waybar for UltraCandy users. 
 
 UltraCandy with waybar option plus settings app
 <img width="1366" height="768" alt="screenshot_01082025_002329" src="https://github.com/user-attachments/assets/d0dbc2e1-73c4-41d1-8f98-ecb767357331" /> <img width="1366" height="768" alt="screenshot_31072025_235812" src="https://github.com/user-attachments/assets/3e210212-53b0-43ec-b5e2-3441fa83870b" />
