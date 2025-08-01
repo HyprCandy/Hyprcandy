@@ -29,6 +29,7 @@ Since I'm an aeronautics graduate and not a programmer it took me ages to learn 
 
 ## More System Colors (There's more beyond these as well)
 Just a few of the possible system colors and automatic sddm background application
+
 UltraCandy
 <img width="1366" height="768" alt="screenshot_01082025_001242" src="https://github.com/user-attachments/assets/0f0de756-8aa2-46f1-ba65-3bc9c0d45046" />
 <img width="1366" height="768" alt="screenshot_01082025_001445" src="https://github.com/user-attachments/assets/65f6c823-7a4e-497e-8f16-0ed3c2849f88" />
