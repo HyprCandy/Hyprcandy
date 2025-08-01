@@ -137,10 +137,10 @@
 
   // ────────────────────────────────────────────────────────┤ weather ├───
 
-  "custom/player": {
-    "format": "󰝚 ",
+  "custom/weather": {
+    "format": " ",
     "tooltip": true,
-    "tooltip-format": "Media Player",
+    "tooltip-format": "Weather",
     "on-click": "gjs ~/.hyprcandy/GJS/weather-main.js",
     "min-length": 7,
     "max-length": 7
