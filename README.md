@@ -1,5 +1,5 @@
 # HyprCandy/UltraCandy
-➡[UltraCandy](https://ko-fi.com/s/f56114285c)/[HyprCandy](https://github.com/HyprCandy/hyprcandyinstall.git)⬅ is a system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features. I recommend hyprpanel on HyprCandy and waybar for UltraCandy users. 
+➡[UltraCandy](https://ko-fi.com/s/f56114285c)/free [HyprCandy](https://github.com/HyprCandy/hyprcandyinstall.git)⬅ is a system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features. I recommend hyprpanel on HyprCandy and waybar for UltraCandy users. 
 
 UltraCandy with waybar option plus settings app
 <img width="1366" height="768" alt="screenshot_01082025_002329" src="https://github.com/user-attachments/assets/d0dbc2e1-73c4-41d1-8f98-ecb767357331" /> <img width="1366" height="768" alt="screenshot_31072025_235812" src="https://github.com/user-attachments/assets/3e210212-53b0-43ec-b5e2-3441fa83870b" />
@@ -16,7 +16,7 @@ HyprCandy with hyprpanel option plus settings app
 
 • The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
 
-If you like my work, run the free HyprCandy [install script](https://mirukai.gumroad.com/l/cxsyj) or grab the UltraCandy [install script](https://ko-fi.com/s/f56114285c). You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) or you can [support my work](https://ko-fi.com/ianmking) or just spread the word of this cohesive Hyprland setup 🙂.
+If you like my work, run the free HyprCandy [install script](https://github.com/HyprCandy/hyprcandyinstall.git) or grab the UltraCandy [install script](https://ko-fi.com/s/f56114285c). You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) or you can [support my work](https://ko-fi.com/ianmking) or just spread the word of this cohesive Hyprland setup 🙂.
 
 NOTE: I wrote systemd services for these features so you'd have to run the script for them to work but other configs should work fine without my setup if you don't want it ... I think
 
