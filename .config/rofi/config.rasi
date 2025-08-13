@@ -15,11 +15,11 @@ configuration {
     font:                       "JetBrainsMono Nerd Font Propo 11";
     show-icons:                 true;
     icon-theme:                 "Tela circle black";
-    display-drun:                " ";
-    display-run:                 " ";
-    display-filebrowser:         "  ";
-    display-window:              "  ";
-	drun-display-format:        "{name}";
+    display-drun:               " ";
+    display-run:                " ";
+    display-filebrowser:        " ";
+    display-window:             " ";
+    drun-display-format:        "{name}";
     hover-select:               false;
     scroll-method:              1;
     me-select-entry:            "";
@@ -90,10 +90,10 @@ textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         "  ";
-    padding:                     1em 0.3em 0em 0em;
-    text-color:                  @foreground;
+    padding:                     1em;
+    text-color:                  @on-pimary-fixed-variant;
     border-radius:               2em 0em 0em 2em;
-    background-color:            @background;
+    background-color:            @color11;
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
 }
 
@@ -102,8 +102,8 @@ entry {
     border-radius:               0em 2em 2em 0em;
     spacing:                     1em;
     padding:                     1em;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @on-primary-fixed-variant;
+    text-color:                  @color11;
     cursor:                      text;
     placeholder:                 "Search";
     placeholder-color:           inherit;
@@ -122,8 +122,8 @@ listview {
     padding:                     1.5em;
     spacing:                     0.5em;
     enabled:                     true;
-    columns:                     6;
-    lines:                       3;
+    columns:                     5;
+    lines:                       4;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -150,13 +150,13 @@ mode-switcher {
 button {
     cursor:                      pointer;
     border-radius:               2em;
-    background-color:            @background;
-    text-color:                  @foreground;
+    background-color:            @color11;
+    text-color:                  @background;
 }
 
 button selected {
-    background-color:            @scrim;
-    text-color:                  @foreground;
+    background-color:            @on-primary-fixed-variant;
+    text-color:                  @color11;
 }
 
 
@@ -171,9 +171,9 @@ element {
 }
 
 element selected.normal {
-    background-color:            @scrim;
-    text-color:                  @foreground;
-    border-radius:               1.5em;
+    background-color:            @on-primary-fixed-variant;
+    text-color:                  @color11;
+    border-radius:               @border-radius;
 }
 
 element normal.normal {
@@ -213,7 +213,7 @@ element alternate.urgent {
 
 element alternate.active {
     background-color:            inherit;
-    text-color:                  @foreground;
+    text-color:                  @color11;
 }
 
 element-icon {
