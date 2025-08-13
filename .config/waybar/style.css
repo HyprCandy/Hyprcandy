@@ -23,7 +23,7 @@ window#waybar {
 */
 window#waybar > box {
   background: @blur_background;
-  margin: 2px;
+  margin: 4.5px;
   border-radius: 20px
 }
 
