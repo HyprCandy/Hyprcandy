@@ -89,7 +89,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "  ";
+    str:                         " ";
     padding:                     1em;
     text-color:                  @on-primary-fixed-variant;
     border-radius:               2em 0em 0em 2em;
