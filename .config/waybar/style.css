@@ -15,7 +15,7 @@
 */
 window#waybar {
   background: none;
-  border: 0px solid @primary_fixed_dim;
+  border: 0px solid /*@on_primary_fixed_variant; */@primary_fixed_dim;
   border-radius: 20px;
 }
 
@@ -47,7 +47,7 @@ tooltip label {
 #tray,
 #custom-keybinds,
 #custom-weather,
-#custom-settings,
+#custom-player,
 #idle_inhibitor,
 #clock,
 #custom-wifi,
@@ -119,24 +119,25 @@ tooltip label {
 
 #workspaces button {
   color: @module-fg;
-  border-radius: 8px;
-  box-shadow: none;
-  margin-right: 10px;
   transition: none;
+  border-radius: 8px;
+  margin: 2px;
+  padding: 0 5px;
 }
 
 #workspaces button:hover {
   color: @primary;
   background: @transparent;
   text-shadow: none;
+  margin: 2px;
+  padding: 0 5px;
 }
 
 #workspaces button.active {
   color: @on_primary;
   background: @primary_fixed_dim;
-  text-shadow: 0 0 2px @blur_background;
-  box-shadow: 0 0 2px 1px @blur_background;
   margin: 2px;
+  padding: 0 5px;
 }
 
 /* Occupied workspace (persistent with windows but not focused) */
@@ -150,9 +151,8 @@ tooltip label {
 /* Urgent workspace (has urgent/notification windows) */
 #workspaces button.urgent {
   color: @critical;
-  text-shadow: 0 0 2px @blur_background;
-  box-shadow: 0 0 2px 1px @blur_background;
   margin: 2px;
+  padding: 0 5px;
 }
 
 /*#custom-right1 {
@@ -169,8 +169,51 @@ tooltip label {
   border-radius: 20px;
 }
 
+/* ──────────────────────────────────────────────────────────┤ tray popovers ├───
+*/
 
-/* ───────────────────────────────────────────────────────────┤ window ├───
+/* Tray popover windows */
+popover {
+  background: @on_primary;
+  border: 1.5px solid @source_color;
+  border-radius: 10px;
+  font-size: 11px;
+  min-width: 180px;
+  padding: 4px;
+}
+
+/* Tray popover labels and text */
+popover label,
+popover menuitem {
+  color: @main-fg;
+  font-size: 10px;
+  padding: 3px 6px;
+  min-height: 20px;
+}
+
+/* Tray popover menu items */
+popover menuitem:hover {
+  background: @primary_fixed_dim;
+  color: @on_primary;
+}
+
+/* Specific tray application styling */
+.waybar .tray popover {
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: normal;
+}
+
+/* Alternative selectors to try */
+#tray popover,
+window.popup {
+  font-size: 11px;
+}
+
+window.popup * {
+  font-size: 10px;
+}
+
+/* ────────────────────────────────────────────────────────────┤ window ├───
 */
 #window {
   margin-left: 6px;
@@ -193,7 +236,7 @@ tooltip label {
   padding: 0 0 0 1px;
 }
 
-/* ───────────────────────────────────────────────────────────┤ weather ├───
+/* ─────────────────────────────────────────────────────────┤ weather ├───
 */
 #custom-left3 {
   color: @on_primary;
@@ -214,7 +257,7 @@ tooltip label {
   color: @critical;
 }*/
 
-/* ─────────────────────────────────────────────────────────────┤ settings ├───
+/* ──────────────────────────────────────────────────────────────────┤ media ├───
 */
 #custom-left4 {
   color: @scrim;
@@ -222,7 +265,7 @@ tooltip label {
   padding-left: 3px;
 }
 
-#custom-settings {
+#custom-player {
   background: @scrim;
 }
 
@@ -495,14 +538,14 @@ tooltip label,
 
 /* ───────────────────────────────────────────────────────────┤ workspaces ├───
 */
-#workspaces button {
+/*#workspaces button {
   border-radius: 8px;
-  padding: 0 2px;
+  padding: 0 5px;
 }
 
 #workspaces button.active {
-  padding: 0 6px;
-}
+  padding: 0 5px;
+}*/
 
 /* ─────────────────────────────────────────────────────────┤ power button ├───
 */
