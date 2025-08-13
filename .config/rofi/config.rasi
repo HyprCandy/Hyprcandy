@@ -91,7 +91,7 @@ textbox-prompt-colon {
     expand:                      false;
     str:                         "  ";
     padding:                     1em;
-    text-color:                  @on-pimary-fixed-variant;
+    text-color:                  @on-primary-fixed-variant;
     border-radius:               2em 0em 0em 2em;
     background-color:            @color11;
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
