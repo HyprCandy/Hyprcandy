@@ -25,7 +25,7 @@ window#waybar > box {
   background: @blur_background;
   margin: 4.5px;
   border-radius: 20px;
-  padding: 5px;
+  padding: 3.5px;
   border: 2px solid @on_primary_fixed_variant;
 }
 
