@@ -22,11 +22,11 @@ window#waybar {
 /* ───────────────────────────────────────────────────────────┤ background ├───
 */
 window#waybar > box {
-  background: none;
+  background: @blur_background;
   margin: 4.5px;
   border-radius: 20px;
   padding: 3.0px;
-  border: 0px solid @on_primary_fixed_variant;
+  border: 2px solid @on_primary_fixed_variant;
 }
 
 /* ─────────────────────────────────────────────────────────────┤ tooltips ├───
@@ -167,7 +167,7 @@ tooltip label {
 /* ───────────────────────────────────────────────────────────┤ tray ├───
 */
 #tray {
-  background: rgba(255, 255, 255, 0.1);
+  background: @on_primary;
   border-radius: 20px;
 }
 
@@ -218,6 +218,7 @@ window.popup * {
 /* ────────────────────────────────────────────────────────────┤ window ├───
 */
 #window {
+  border-radius: 30px;
   margin-left: 6px;
 }
 
