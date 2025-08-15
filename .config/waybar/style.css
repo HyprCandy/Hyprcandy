@@ -22,11 +22,11 @@ window#waybar {
 /* ───────────────────────────────────────────────────────────┤ background ├───
 */
 window#waybar > box {
-  background: @blur_background;
+  background: none;
   margin: 4.5px;
   border-radius: 20px;
-  padding: 3.5px;
-  border: 2px solid @on_primary_fixed_variant;
+  padding: 3.0px;
+  border: 0px solid @on_primary_fixed_variant;
 }
 
 /* ─────────────────────────────────────────────────────────────┤ tooltips ├───
@@ -74,7 +74,7 @@ tooltip label {
 #custom-left7,
 #custom-left8 {
   margin-bottom: 0;
-  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.5);
+  text-shadow: -2px 0 2px rgba(0, 0, 0, 0.0);
 }
 
 #custom-right1,
@@ -84,7 +84,7 @@ tooltip label {
 #custom-right5 {
   margin-bottom: 0;
   padding-right: 3px;
-  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 0 2px rgba(0, 0, 0, 0.0);
 }
 
 /* ───────────────────────────────────────────────────────┤ theme switcher ├───
@@ -459,8 +459,8 @@ window.popup * {
 #custom-power {
   color: @on_primary;
   background: @primary_fixed_dim;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.0);
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.0);
   border-radius: 10px;
   margin: 2px 2px 2px 0px;
   padding: 0 6px 0 9px;
