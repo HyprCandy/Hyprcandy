@@ -34,7 +34,7 @@
     //"memory",               // memory
 
     "custom/left4",
-    "custom/settings",
+    "custom/player",
     //"cpu",                  // cpu
     "keybinds",		    // keybinds
     "custom/leftin1",
@@ -117,7 +117,7 @@
     "swap-icon-label": false,
     "format": "",
     "icon": true,
-    "icon-size": 15,
+    "icon-size": 16,
     "tooltip": false,
     "min-length": 0,
     "max-length": 0,
@@ -129,66 +129,67 @@
     "format": " ",
     "tooltip": true,
     "tooltip-format": "Keybinds",
-    //"interval": 5,
     "on-click": "DRI_PRIME=1 ~/.config/hypr/scripts/keybindings.sh",
     "min-length": 7,
     "max-length": 7
   },
-
+  
   // ────────────────────────────────────────────────────────┤ weather ├───
 
   "custom/weather": {
     "format": " ",
     "tooltip": true,
     "tooltip-format": "Weather",
-    "on-click": "gjs ~/.hyprcandy/GJS/weather-main.js",
+    "on-click": "gjs ~/.ultracandy/GJS/weather-main.js",
     "min-length": 7,
     "max-length": 7
   },
 
-  // ────────────────────────────────────────────────────────┤ settings ├───
+  // ────────────────────────────────────────────────────────┤ player ├───
 
-  "custom/settings": {
-    "format": " ",
+  "custom/player": {
+    "format": "󰝚 ",
     "tooltip": true,
-    "tooltip-format": "Settings",
-    "on-click": "gjs ~/.hyprcandy/GJS/toggle-main.js",
+    "tooltip-format": "Media Player",
+    "on-click": "gjs ~/.ultracandy/GJS/media-main.js",
     "min-length": 7,
     "max-length": 7
   },
 
   // ─────────────────────────────────────────────────────────────┤ memory ├───
 
-  "memory": {
-    "states": {
-      "warning": 75,
-      "critical": 90
-    },
+  //"memory": {
+    //"states": {
+     // "warning": 75,
+     // "critical": 90
+   // },
 
-    "format": "󰘚 {percentage}%",
-    "format-critical": "󰀦 {percentage}%",
-    "tooltip": false,
+   // "format": "󰘚 {percentage}%",
+   // "format-critical": "󰀦 {percentage}%",
+   // "tooltip": false,
     // "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
-    "interval": 5,
-    "min-length": 7,
-    "max-length": 7
-  },
+   // "interval": 5,
+   // "min-length": 7,
+   // "max-length": 7
+ // },
 
   // ────────────────────────────────────────────────────────────────┤ cpu ├───
 
-  "cpu": {
-    "format": "󰍛 {usage}%",
-    "tooltip": true,
-    "interval": 5,
-    "min-length": 6,
-    "max-length": 6
-  },
+  //"cpu": {
+   // "format": "󰍛 {usage}%",
+   // "tooltip": true,
+   // "interval": 5,
+   // "min-length": 6,
+   // "max-length": 6
+ // },
 
   // ──────────────────────────────────────────────────────────────┤ distro ├───
 
   "custom/distro": {
     "format": " ",
-    "tooltip": false
+    "tooltip": true,
+    "tooltip-format": "Candy-Settings",
+    "on-click": "gjs ~/.ultracandy/GJS/candy-main.js"
   },
 
   // ─────────────────────────────────────────────────────┤ idle inhibitor ├───
@@ -254,7 +255,7 @@
     "format": "{}",
     "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
     "on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
-    "interval": 1,
+    "interval": 300,
     "min-length": 1,
     "max-length": 1
   },
@@ -292,7 +293,7 @@
     "return-type": "json",
     "format": "{}",
     "on-click": "~/.config/waybar/scripts/system-update.sh up",
-    "interval": 60,
+    "interval": 3600,
     "min-length": 1,
     "max-length": 1
   },
