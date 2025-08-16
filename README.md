@@ -47,6 +47,11 @@ Monochrome theme apply's a black/graphite theme to everything for all background
 Hyprcandy
 <img width="1366" height="768" alt="screenshot_01082025_005207" src="https://github.com/user-attachments/assets/e3766b0a-1cb6-4c03-a590-bcaf15ce03d5" />
 
+## Custom Fish and Zsh with Starship
+You can customize them further adding even more plugins and personal aliases
+<img width="1366" height="768" alt="screenshot_17082025_010106" src="https://github.com/user-attachments/assets/120ef128-13d1-4f1b-8d74-ef05198c2a06" />
+
+
 ## Control Center Plus Media-Player and Weather Widgets
 
 <img width="1366" height="768" alt="screenshot_17082025_014134" src="https://github.com/user-attachments/assets/3c6a17ea-c36e-4a01-a424-eee3d75bfb3b" />
@@ -72,11 +77,6 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 
 ## Hyprlock
 <img width="1366" height="768" alt="screenshot_17082025_015033" src="https://github.com/user-attachments/assets/6c2a6e7f-0966-4365-8101-cea4d5482896" />
-
-
-## Custom Fish and Zsh with Starship
-You can customize them further adding even more plugins and personal aliases
-<img width="1366" height="768" alt="screenshot_17082025_010106" src="https://github.com/user-attachments/assets/120ef128-13d1-4f1b-8d74-ef05198c2a06" />
 
 
 ## Inspirations
