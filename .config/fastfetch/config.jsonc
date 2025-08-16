@@ -4,122 +4,100 @@
     "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | shuf -n 1)",
     "height": 15,
       "padding": {
-      "top": 2
+      "top": 4,
+      "left": 0
       }
   },
   "display": {
-        "separator": "   "
+        "separator": "  "
   },
-  "modules": [
-      {
-        "type": "custom",
-        "format": " ┌─────────────────────────  ✝ 👑 ✝  ─────────────────────────┐"
-      },
-      {
-          "type": "host",
-          "format": "{5} {2}",
-          //"format": "{5} {1} Type {2}",
-          "key": "PC 󰇺 ",
-          "keyColor": "35"
-      },
-      {
-          "type": "cpu",
-          "format": "{1} @ {7}",
-          "key": " ├  ",
-          "keyColor": "35"
-      },
-      {
-          "type": "gpu",
-          "format": "{1} {2}",            
-          "key": " ├ 󰢮 ",
-          "keyColor": "33"
-      },
-      {
-          "type": "memory",
-          "key": " ├  ",
-          "keyColor": "32"
-      },
-      {
-          "type": "swap",
-          "key": " ├ 󰓡 ",
-          "keyColor": "32"
-      },
-      {
-          "type": "disk",
-          "key": " ├ 󰋊 ",                                                      
-          "keyColor": "34"
-      },
-      {
-        "type": "os",
-        "key": "OS  ",
-        "keyColor": "31"  // = color1
-      },
-      {
-          "type": "kernel",
-          "key": " ├  ",
-          "keyColor": "31"
-      },
-      {
-          "type": "shell",
-          "key": " ├  ",
-          "keyColor": "34"
-      },
-      {
-          "type": "packages",
-          "key": " ├ 󰏗 ",                                                      
-          "keyColor": "34"
-      },
-      {
-          "type": "disk",
-          "folders": "/",
-          "key": " ├ 󱦟 ",                                                      
-          "keyColor": "32",
-          "format": "{days} days"
-      },
-      {
-          "type": "uptime",
-          "key": " ├ 󱦟 ",                                                      
-          "keyColor": "32"
-      }, 
-      {
-          "type": "wm",
-          "key": "WM 󱫐 ",
-          "keyColor": "33"
-      },
-      {
-          "type": "wmtheme",
-          "key": " ├ 󰉼 ",
-          "keyColor": "33"
-      },
-      {
-          "type": "icons",
-          "key": " ├ 󰀻 ",
-          "keyColor": "33"
-      },
-      {
-          "type": "cursor",
-          "key": " ├  ",
-          "keyColor": "35"
-      },
-      {
-          "type": "terminal",
-          "key": " ├  ",
-          "keyColor": "35"
-      },
-      {
-          "type": "terminalfont",
-          "key": " ├ 󱗃 ",
-          "keyColor": "35"
-      },
-      {
-        "type": "custom",
-        "format": " └────────────────────────────────────────────────────────────┘"
-      },
-      {
-        "type": "colors",
-        "paddingLeft": 1,
-        "symbol": "circle"
-      },
-      "break",
-  ]
+    "modules": [
+        {
+            "key": "╭───────────╮",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#31} user    {#keys}│",
+            "type": "title",
+            "format": "User: {user-name} | Root: {host-name}"
+        },
+        {
+            "key": "│ {#32}󰇄 device  {#keys}│",
+            "type": "host",
+            "format": "{5} {2}"
+        },
+        {
+            "key": "│ {#34}{icon} distro  {#keys}│",
+            "type": "os"
+        },
+        {
+            "key": "│ {#35} kernel  {#keys}│",
+            "type": "kernel"
+        },
+        {
+            "key": "│ {#36}󱫐 wm      {#keys}│",
+            "type": "wm"
+        },
+        {
+            "key": "│ {#36} cursor  {#keys}│",
+            "type": "cursor"
+        },
+        {
+            "key": "│ {#36}󰀻 icons   {#keys}│",
+            "type": "icons"
+        },
+        {
+            "key": "│ {#31} term    {#keys}│",
+            "type": "terminal"
+        },
+        {
+            "key": "│ {#32} shell   {#keys}│",
+            "type": "shell"
+        },
+        {
+            "key": "│ {#33}󰉉 disk    {#keys}│",
+            "type": "disk"
+        },
+        {
+            "key": "│ {#34}󰍛 memory  {#keys}│",
+            "type": "memory"
+        },
+        {
+            "key": "│ {#34}󰓡 swap    {#keys}│",
+            "type": "swap"
+        },
+        {
+            "key": "│ {#35}󰅐 os-time {#keys}│",
+            "type": "disk",
+            "folders": "/",
+            "format": "{days} days"
+        },
+        {
+            "key": "│ {#35}󰅐 uptime  {#keys}│",
+            "type": "uptime"
+        },
+        {
+            "key": "│ {#36}󰇺 cpu     {#keys}│",
+            "type": "cpu",
+            "showPeCoreCount": true
+        },
+        {
+            "key": "│ {#36}󰇺 gpu     {#keys}│",
+            "type": "gpu",
+            "format": "{1} {2}"
+        },
+        {
+            "key": "├───────────┤",
+            "type": "custom"
+        },
+        {
+            "key": "│ {#39} colors  {#keys}│",
+            "type": "colors",
+            "symbol": "circle"
+        },
+        {
+            "key": "╰───────────╯",
+            "type": "custom"
+        }
+    ]
 }
