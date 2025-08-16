@@ -5,7 +5,8 @@
     "height": 15,
       "padding": {
       "top": 4,
-      "left": 0
+      "left": 0,
+      "right": 1
       }
   },
   "display": {
