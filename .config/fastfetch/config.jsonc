@@ -4,7 +4,7 @@
     "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | shuf -n 1)",
     "height": 15,
       "padding": {
-      "top": 4,
+      "top": 3,
       "left": 0,
       "right": 1
       }
