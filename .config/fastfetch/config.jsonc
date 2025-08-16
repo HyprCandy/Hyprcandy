@@ -20,7 +20,7 @@
         {
             "key": "│ {#31} user    {#keys}│",
             "type": "title",
-            "format": "User: {user-name} | Root: {host-name}"
+            "format": "User  {user-name}  Root  {host-name}"
         },
         {
             "key": "│ {#32}󰇄 device  {#keys}│",
