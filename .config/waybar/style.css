@@ -23,9 +23,12 @@ window#waybar {
 */
 window#waybar > box {
   background: @blur_background;
-  margin: 4.5px;
+  margin-top: 4.5px;
+  margin-left: 4.5px;
+  margin-right: 4.5px;
+  margin-bottom: 0px;
   border-radius: 20px;
-  padding: 3.0px;
+  padding: 4.5px;
   border: 2px solid @on_primary_fixed_variant;
 }
 
@@ -386,7 +389,8 @@ window.popup * {
 /* ───────────────────────────────────────────────────────────┤ media info ├───
 */
 #mpris {
-  background: rgba(255, 255, 255, 0.1);
+  color: @primary_fixed_dim;
+  background: @on_primary_fixed_variant;
   padding: 0 8px 0 8px;
   border-radius: 20px;
 }
