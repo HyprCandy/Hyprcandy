@@ -4,7 +4,9 @@
 ➡[UltraCandy](https://ko-fi.com/s/f56114285c)/[HyprCandy](https://github.com/HyprCandy/hyprcandyinstall.git)⬅ are system-wide, cohesively themed Hyprland configurations for Arch and Arch-based distributions with extra quality of life features with a 'waybar' and 'hyprpanel' option for both. I recommend hyprpanel on the free HyprCandy version. UltraCandy install script is on my ko-fi page.
 
 UltraCandy with waybar option plus settings app
-<img width="1366" height="768" alt="screenshot_01082025_002329" src="https://github.com/user-attachments/assets/d0dbc2e1-73c4-41d1-8f98-ecb767357331" /> <img width="1366" height="768" alt="screenshot_31072025_235812" src="https://github.com/user-attachments/assets/3e210212-53b0-43ec-b5e2-3441fa83870b" />
+<img width="1366" height="768" alt="screenshot_17082025_020238" src="https://github.com/user-attachments/assets/c664c274-c3c4-4c4a-ae5a-671b450ab4bc" />
+<img width="1366" height="768" alt="screenshot_17082025_020311" src="https://github.com/user-attachments/assets/b2706bef-7c3b-42aa-a119-bd4a22d865cf" />
+
 HyprCandy with hyprpanel option plus settings app
 <img width="1366" height="768" alt="screenshot_01082025_005207" src="https://github.com/user-attachments/assets/9c29064f-5873-487b-8581-71644e69a47a" />
 
@@ -36,12 +38,21 @@ In the terminal run "hyprcandy" or "ultracandy" based on the version you use.
 Just a few of the possible system colors and automatic sddm background application
 
 UltraCandy
-<img width="1366" height="768" alt="screenshot_01082025_001242" src="https://github.com/user-attachments/assets/0f0de756-8aa2-46f1-ba65-3bc9c0d45046" />
-<img width="1366" height="768" alt="screenshot_01082025_001445" src="https://github.com/user-attachments/assets/65f6c823-7a4e-497e-8f16-0ed3c2849f88" />
-<img width="1366" height="768" alt="screenshot_01082025_000223" src="https://github.com/user-attachments/assets/fbfd445b-73ad-495c-b9a3-06d3fce63a92" />
+<img width="1366" height="768" alt="screenshot_17082025_014409" src="https://github.com/user-attachments/assets/25f00199-3a98-4407-adbe-ab79dbdf2d0c" />
+Monochrome theme apply's a black/graphite theme to everything for all backgrounds
+<img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/ae6ac6ac-41f9-489a-a6c6-fb7bbafd3201" />
+
 Hyprcandy
 <img width="1366" height="768" alt="screenshot_01082025_005207" src="https://github.com/user-attachments/assets/e3766b0a-1cb6-4c03-a590-bcaf15ce03d5" />
 
+## Control Center Plus Media-Player and Weather Widgets
+
+<img width="1366" height="768" alt="screenshot_17082025_014134" src="https://github.com/user-attachments/assets/3c6a17ea-c36e-4a01-a424-eee3d75bfb3b" />
+
+## Easy switch Between Waybar Bar/Islands Configurations
+The control center makes it easy to switch between islands/bar waybar configuration
+<img width="1366" height="768" alt="screenshot_17082025_013514" src="https://github.com/user-attachments/assets/d1a20d38-cd42-4468-a2aa-34215d80d052" />
+<img width="1366" height="768" alt="screenshot_17082025_013538" src="https://github.com/user-attachments/assets/92fd88bf-d8a2-4c0a-a186-e3e69629b6db" />
 
 ## Rofi Menus
 Application Finder
@@ -56,13 +67,15 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 ## Wlogout Theme
 ![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
 
-## Hyprlock
-<img width="1366" height="768" alt="pic9" src="https://github.com/user-attachments/assets/22d6c08e-c12d-49be-989c-7620fde2335c" />
 
-## Custom Fish and Zsh
+## Hyprlock
+<img width="1366" height="768" alt="screenshot_17082025_015033" src="https://github.com/user-attachments/assets/6c2a6e7f-0966-4365-8101-cea4d5482896" />
+
+
+## Custom Fish and Zsh with Starship
 You can customize them further adding even more plugins and personal aliases
-![pic10](https://github.com/user-attachments/assets/73d1606f-dfe6-4fad-8507-d326185d9fd2)
-<img width="1366" height="768" alt="pic11" src="https://github.com/user-attachments/assets/e27b76f9-55c6-40bb-8675-1d9c37f38f3a" />
+<img width="1366" height="768" alt="screenshot_17082025_010106" src="https://github.com/user-attachments/assets/120ef128-13d1-4f1b-8d74-ef05198c2a06" />
+
 
 ## Inspirations
 I got some inspiration from:
