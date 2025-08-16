@@ -4,6 +4,7 @@
 ➡[UltraCandy](https://ko-fi.com/s/f56114285c)/[HyprCandy](https://github.com/HyprCandy/hyprcandyinstall.git)⬅ are system-wide, cohesively themed Hyprland configurations for Arch and Arch-based distributions with extra quality of life features with a 'waybar' and 'hyprpanel' option for both. I recommend hyprpanel on the free HyprCandy version. UltraCandy install script is on my ko-fi page.
 
 UltraCandy with waybar option plus settings app
+<img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/c83cf9aa-8b98-4c00-bc15-3c1ab115700e" />
 <img width="1366" height="768" alt="screenshot_17082025_020238" src="https://github.com/user-attachments/assets/c664c274-c3c4-4c4a-ae5a-671b450ab4bc" />
 <img width="1366" height="768" alt="screenshot_17082025_020311" src="https://github.com/user-attachments/assets/b2706bef-7c3b-42aa-a119-bd4a22d865cf" />
 
@@ -41,6 +42,7 @@ UltraCandy
 <img width="1366" height="768" alt="screenshot_17082025_014409" src="https://github.com/user-attachments/assets/25f00199-3a98-4407-adbe-ab79dbdf2d0c" />
 Monochrome theme apply's a black/graphite theme to everything for all backgrounds
 <img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/ae6ac6ac-41f9-489a-a6c6-fb7bbafd3201" />
+<img width="1366" height="768" alt="screenshot_17082025_004243" src="https://github.com/user-attachments/assets/1988f4c2-c445-4359-888b-331dd9ee8e53" />
 
 Hyprcandy
 <img width="1366" height="768" alt="screenshot_01082025_005207" src="https://github.com/user-attachments/assets/e3766b0a-1cb6-4c03-a590-bcaf15ce03d5" />
@@ -56,12 +58,12 @@ The control center makes it easy to switch between islands/bar waybar configurat
 
 ## Rofi Menus
 Application Finder
-![pic6](https://github.com/user-attachments/assets/97acb3b4-1551-4fcb-bff1-8467a23df02b)
+<img width="992" height="563" alt="screenshot_17082025_023120" src="https://github.com/user-attachments/assets/2cc10a9d-f849-448a-9511-41037ae692ec" />
 Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
-<img width="1366" height="768" alt="screenshot_01082025_014531" src="https://github.com/user-attachments/assets/f514378e-0e4c-4d4d-bbc7-3cfd52962a50" />
-<img width="274" height="655" alt="screenshot_01082025_014634" src="https://github.com/user-attachments/assets/b007a478-d9a0-455c-89de-bd35525e8786" />
-<img width="292" height="663" alt="screenshot_01082025_014712" src="https://github.com/user-attachments/assets/d10c9cd9-51a7-4991-8d7b-a72018ddf5ff" />
-<img width="464" height="576" alt="screenshot_01082025_014737" src="https://github.com/user-attachments/assets/15382adc-dc69-4b48-aaa7-579ed2b34a24" />
+<img width="727" height="582" alt="screenshot_17082025_023149" src="https://github.com/user-attachments/assets/6503a247-c1ab-414f-8aaf-4ebad9611e92" />
+<img width="404" height="512" alt="screenshot_17082025_023227" src="https://github.com/user-attachments/assets/f6b8c100-89ee-4ebe-8377-97fb339b6294" />
+<img width="245" height="586" alt="screenshot_17082025_023307" src="https://github.com/user-attachments/assets/718f270f-a179-467d-a4cb-e9cd09d446a2" />
+<img width="246" height="587" alt="screenshot_17082025_023330" src="https://github.com/user-attachments/assets/aee8c86a-c405-443b-9154-65d481e81c2e" />
 
 
 ## Wlogout Theme
