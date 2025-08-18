@@ -1,7 +1,7 @@
 # HyprCandy/UltraCandy
 [NOTE] UltraCandy is the complete version & HyprCandy is mainly for testing
 
-➡[UltraCandy](https://ko-fi.com/s/f56114285c)/[HyprCandy](https://github.com/HyprCandy/hyprcandyinstall.git)⬅ are system-wide, cohesively themed Hyprland configurations for Arch and Arch-based distributions with extra quality of life features with a 'waybar' and 'hyprpanel' option for both. I recommend hyprpanel on the free HyprCandy version. UltraCandy install script is on my ko-fi page.
+➡[UltraCandy](https://github.com/HyprCandy/ultracandyinstall.git)/[HyprCandy](https://github.com/HyprCandy/hyprcandyinstall.git)⬅ are system-wide, cohesively themed Hyprland configurations for Arch and Arch-based distributions with extra quality of life features with a 'waybar' and 'hyprpanel' option for both. I recommend hyprpanel on the free HyprCandy version. UltraCandy install script is on my ko-fi page.
 
 UltraCandy with waybar option plus settings app
 <img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/c83cf9aa-8b98-4c00-bc15-3c1ab115700e" />
