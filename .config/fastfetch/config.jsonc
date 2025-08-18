@@ -3,7 +3,7 @@
   "logo": {
     "source": "$(find \"${XDG_CONFIG_HOME:-$HOME/.config}/fastfetch/pngs/\" -name \"*.png\" | shuf -n 1)",
     "height": 15,
-    "width": 33,
+    "width": 35,
       "padding": {
       "top": 3,
       "left": 0,
@@ -19,17 +19,17 @@
             "type": "custom"
         },
         {
-            "key": "│ {#36} user    {#keys}││",
+            "key": "│ {#38} user    {#keys}││",
             "type": "title",
             "format": "User  {user-name}  Root  {host-name}"
         },
         {
-            "key": "│ {#35}󰇄 device  {#keys}││",
+            "key": "│ {#38}󰇄 device  {#keys}││",
             "type": "host",
             "format": "{5} {2}"
         },
         {
-            "key": "│ {#35}{icon} distro  {#keys}││",
+            "key": "│ {#33}{icon} distro  {#keys}││",
             "type": "os"
         },
         {
@@ -37,31 +37,31 @@
             "type": "kernel"
         },
         {
-            "key": "│ {#33}󱫐 wm      {#keys}││",
+            "key": "│ {#35}󱫐 wm      {#keys}││",
             "type": "wm"
         },
         {
-            "key": "│ {#32} cursor  {#keys}││",
+            "key": "│ {#35} cursor  {#keys}││",
             "type": "cursor"
         },
         {
-            "key": "│ {#32}󰀻 icons   {#keys}││",
+            "key": "│ {#36}󰀻 icons   {#keys}││",
             "type": "icons"
         },
         {
-            "key": "│ {#31} term    {#keys}││",
+            "key": "│ {#32} term    {#keys}││",
             "type": "terminal"
         },
         {
-            "key": "│ {#31} shell   {#keys}││",
+            "key": "│ {#32} shell   {#keys}││",
             "type": "shell"
         },
         {
-            "key": "│ {#32}󰏗 packages{#keys}││",
+            "key": "│ {#36}󰏗 packages{#keys}││",
             "type": "packages"
         },
         {
-            "key": "│ {#33}󰉉 disk    {#keys}││",
+            "key": "│ {#35}󰉉 disk    {#keys}││",
             "type": "disk"
         },
         {
@@ -73,22 +73,22 @@
             "type": "swap"
         },
         {
-            "key": "│ {#35}󰅐 os age  {#keys}││",
+            "key": "│ {#33}󰅐 os age  {#keys}││",
             "type": "disk",
             "folders": "/",
             "format": "{days} days"
         },
         {
-            "key": "│ {#35}󰅐 uptime  {#keys}││",
+            "key": "│ {#33}󰅐 uptime  {#keys}││",
             "type": "uptime"
         },
         {
-            "key": "│ {#36}󰇺 cpu     {#keys}││",
+            "key": "│ {#38}󰇺 cpu     {#keys}││",
             "type": "cpu",
             "showPeCoreCount": true
         },
         /*{
-            "key": "│ {#36}󰇺 gpu     {#keys}││",
+            "key": "│ {#32}󰇺 gpu     {#keys}││",
             "type": "gpu",
             "format": "{1} {2}"
         },*/
