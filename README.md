@@ -6,7 +6,6 @@
 UltraCandy with waybar option plus settings app
 <img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/c83cf9aa-8b98-4c00-bc15-3c1ab115700e" />
 <img width="1366" height="768" alt="screenshot_17082025_020238" src="https://github.com/user-attachments/assets/c664c274-c3c4-4c4a-ae5a-671b450ab4bc" />
-<img width="1366" height="768" alt="screenshot_17082025_020311" src="https://github.com/user-attachments/assets/b2706bef-7c3b-42aa-a119-bd4a22d865cf" />
 
 HyprCandy with hyprpanel option plus settings app
 <img width="1366" height="768" alt="screenshot_01082025_005207" src="https://github.com/user-attachments/assets/9c29064f-5873-487b-8581-71644e69a47a" />
@@ -16,6 +15,8 @@ HyprCandy with hyprpanel option plus settings app
 ## Features & How to reach me or support : 
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
+
+• Easy settings changes through the custom control center
 
 • System-wide color generation for GTK3/4 and QT6 applications plus other Hyprland elements along with other other quality of life settings.
 
@@ -40,26 +41,22 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy
 <img width="1366" height="768" alt="screenshot_17082025_014409" src="https://github.com/user-attachments/assets/25f00199-3a98-4407-adbe-ab79dbdf2d0c" />
-Monochrome theme apply's a black/graphite theme to everything for all backgrounds
-<img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/ae6ac6ac-41f9-489a-a6c6-fb7bbafd3201" />
+<img width="1366" height="768" alt="screenshot_17082025_020311" src="https://github.com/user-attachments/assets/b2706bef-7c3b-42aa-a119-bd4a22d865cf" />
+Monochrome theme apply's an onyx theme to every themeable element on all backgrounds
 <img width="1366" height="768" alt="screenshot_17082025_004243" src="https://github.com/user-attachments/assets/1988f4c2-c445-4359-888b-331dd9ee8e53" />
 
-Hyprcandy
-<img width="1366" height="768" alt="screenshot_01082025_005207" src="https://github.com/user-attachments/assets/e3766b0a-1cb6-4c03-a590-bcaf15ce03d5" />
+## Hyprlock
+<img width="1366" height="768" alt="screenshot_18082025_233241" src="https://github.com/user-attachments/assets/d1cfd810-ef8a-43bb-9f20-2c43e28e55b4" />
 
 ## Custom Fish and Zsh with Starship
 You can customize them further adding even more plugins and personal aliases
-<img width="1366" height="768" alt="screenshot_17082025_010106" src="https://github.com/user-attachments/assets/120ef128-13d1-4f1b-8d74-ef05198c2a06" />
+<img width="1366" height="768" alt="screenshot_18082025_235412" src="https://github.com/user-attachments/assets/d210d00c-4987-4ed6-87cc-4eb04e7d1e58" />
 
 
 ## Control Center Plus Media-Player and Weather Widgets
 
 <img width="1366" height="768" alt="screenshot_17082025_014134" src="https://github.com/user-attachments/assets/3c6a17ea-c36e-4a01-a424-eee3d75bfb3b" />
 
-## Easy switch Between Waybar Bar/Islands Configurations
-The control center makes it easy to switch between islands/bar waybar configuration
-<img width="1366" height="768" alt="screenshot_17082025_013514" src="https://github.com/user-attachments/assets/d1a20d38-cd42-4468-a2aa-34215d80d052" />
-<img width="1366" height="768" alt="screenshot_17082025_013538" src="https://github.com/user-attachments/assets/92fd88bf-d8a2-4c0a-a186-e3e69629b6db" />
 
 ## Rofi Menus
 Application Finder
@@ -73,10 +70,6 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 
 ## Wlogout Theme
 ![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
-
-
-## Hyprlock
-<img width="1366" height="768" alt="screenshot_18082025_190831" src="https://github.com/user-attachments/assets/702441e2-0b44-4564-970f-ef0a8e51b4dc" />
 
 
 ## Inspirations
