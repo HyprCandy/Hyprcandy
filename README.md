@@ -45,12 +45,13 @@ UltraCandy
 Monochrome theme apply's an onyx theme to every themeable element on all backgrounds
 <img width="1366" height="768" alt="screenshot_17082025_004243" src="https://github.com/user-attachments/assets/1988f4c2-c445-4359-888b-331dd9ee8e53" />
 
-## Hyprlock
-<img width="1366" height="768" alt="screenshot_18082025_233241" src="https://github.com/user-attachments/assets/d1cfd810-ef8a-43bb-9f20-2c43e28e55b4" />
-
 ## Custom Fish and Zsh with Starship
 You can customize them further adding even more plugins and personal aliases
-<img width="1366" height="768" alt="screenshot_18082025_235412" src="https://github.com/user-attachments/assets/d210d00c-4987-4ed6-87cc-4eb04e7d1e58" />
+<img width="1366" height="768" alt="screenshot_19082025_010917" src="https://github.com/user-attachments/assets/0b175ec7-6d48-4e90-8210-26184f8032f2" />
+
+
+## Hyprlock
+<img width="1366" height="768" alt="screenshot_18082025_233241" src="https://github.com/user-attachments/assets/d1cfd810-ef8a-43bb-9f20-2c43e28e55b4" />
 
 
 ## Control Center Plus Media-Player and Weather Widgets
