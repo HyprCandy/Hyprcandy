@@ -11,12 +11,13 @@ HyprCandy with hyprpanel option plus settings app
 <img width="1366" height="768" alt="screenshot_01082025_005207" src="https://github.com/user-attachments/assets/9c29064f-5873-487b-8581-71644e69a47a" />
 
 
-
-## Features & How to reach me or support : 
+## Features & How to reach me : 
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
-• Easy settings changes through the custom control center
+• Custom control center to easily modify waybar if waybar option is chosen, hyprland windows,the dock, launch hyprpicker, adjust opacty, change dock start icon,enable/disable xray mode  and hyprsunset/hyprshade.
+
+• Extensive rofi menus: wifi, bluetooth, application finder, keybinds, clipboard, emoji-picker, glyph-picker
 
 • System-wide color generation for GTK3/4 and QT6 applications plus other Hyprland elements along with other other quality of life settings.
 
