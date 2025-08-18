@@ -76,7 +76,7 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
 
 
 ## Hyprlock
-<img width="1366" height="768" alt="screenshot_17082025_015033" src="https://github.com/user-attachments/assets/6c2a6e7f-0966-4365-8101-cea4d5482896" />
+<img width="1366" height="768" alt="screenshot_18082025_190831" src="https://github.com/user-attachments/assets/702441e2-0b44-4564-970f-ef0a8e51b4dc" />
 
 
 ## Inspirations
