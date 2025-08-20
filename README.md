@@ -36,6 +36,7 @@ Just a few of the possible system colors and automatic sddm background applicati
 UltraCandy with waybar option plus settings app
 
 [NOTE]Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
+<img width="1366" height="768" alt="screenshot_20082025_122810" src="https://github.com/user-attachments/assets/384f25f7-fda4-4be9-a070-bc94bcfd7384" />
 <img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/c83cf9aa-8b98-4c00-bc15-3c1ab115700e" />
 <img width="1366" height="768" alt="screenshot_17082025_020238" src="https://github.com/user-attachments/assets/c664c274-c3c4-4c4a-ae5a-671b450ab4bc" />
 <img width="1366" height="768" alt="screenshot_17082025_014409" src="https://github.com/user-attachments/assets/25f00199-3a98-4407-adbe-ab79dbdf2d0c" />
