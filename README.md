@@ -35,13 +35,15 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy with waybar option plus settings app
 
-[NOTE]Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/c83cf9aa-8b98-4c00-bc15-3c1ab115700e" />
-<img width="1366" height="768" alt="screenshot_20082025_122810" src="https://github.com/user-attachments/assets/384f25f7-fda4-4be9-a070-bc94bcfd7384" />
 Content theme colors
-<img width="1366" height="768" alt="screenshot_17082025_020238" src="https://github.com/user-attachments/assets/c664c274-c3c4-4c4a-ae5a-671b450ab4bc" />
-<img width="1366" height="768" alt="screenshot_17082025_014409" src="https://github.com/user-attachments/assets/25f00199-3a98-4407-adbe-ab79dbdf2d0c" />
-<img width="1366" height="768" alt="screenshot_17082025_020311" src="https://github.com/user-attachments/assets/b2706bef-7c3b-42aa-a119-bd4a22d865cf" />
+<img width="1366" height="768" alt="screenshot_20082025_192715" src="https://github.com/user-attachments/assets/cd8dc8eb-374d-4f15-8491-e1ad65db5917" />
+<img width="1366" height="768" alt="screenshot_20082025_193707" src="https://github.com/user-attachments/assets/e3581aa0-6c64-4a30-950f-b95389d1e94f" />
+<img width="1366" height="768" alt="screenshot_20082025_194625" src="https://github.com/user-attachments/assets/a054d8ba-8f68-4d99-b0a4-13869b37439b" />
+<img width="1366" height="768" alt="screenshot_20082025_195453" src="https://github.com/user-attachments/assets/db3449c1-57f6-44d7-a662-db404ad7a43b" />
+
+[NOTE]Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
+<img width="1366" height="768" alt="screenshot_20082025_200217" src="https://github.com/user-attachments/assets/ed98269b-952b-4eb9-9f6c-2d6b505e8cf1" />
+
 
 UltraCandy with hyprpanel option plus settings app
 
@@ -51,7 +53,7 @@ UltraCandy with hyprpanel option plus settings app
 
 ## Control Center Plus Media-Player and Weather Widgets
 
-<img width="1366" height="768" alt="screenshot_17082025_014134" src="https://github.com/user-attachments/assets/3c6a17ea-c36e-4a01-a424-eee3d75bfb3b" />
+<img width="1366" height="768" alt="screenshot_20082025_201014" src="https://github.com/user-attachments/assets/87270632-c8f2-4922-8f22-bfaaaef31671" />
 
 
 ## Custom Fish and Zsh with Starship
