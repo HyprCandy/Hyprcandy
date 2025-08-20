@@ -26,7 +26,7 @@ Subscribe in advance for future tips and tricks video for my setup if you get it
 Chat on [Discord](https://discordapp.com/users/1022924035987878022) /
 Chat on [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6)
 
-Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time before creating this repo. It was stressful abut worthwhile in the end. Anyway checkout the little showcase below:
+Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time before creating this repo. It was stressful but worthwhile in the end. Anyway checkout the little showcase below:
 
 
 ## Some System Colors (There's more beyond these as well)
