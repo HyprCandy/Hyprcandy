@@ -37,7 +37,6 @@ UltraCandy with waybar option plus settings app
 
 [NOTE]Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
 <img width="1366" height="768" alt="screenshot_17082025_004449" src="https://github.com/user-attachments/assets/c83cf9aa-8b98-4c00-bc15-3c1ab115700e" />
-<img width="1366" height="768" alt="screenshot_17082025_004243" src="https://github.com/user-attachments/assets/1988f4c2-c445-4359-888b-331dd9ee8e53" />
 <img width="1366" height="768" alt="screenshot_17082025_020238" src="https://github.com/user-attachments/assets/c664c274-c3c4-4c4a-ae5a-671b450ab4bc" />
 <img width="1366" height="768" alt="screenshot_17082025_014409" src="https://github.com/user-attachments/assets/25f00199-3a98-4407-adbe-ab79dbdf2d0c" />
 <img width="1366" height="768" alt="screenshot_17082025_020311" src="https://github.com/user-attachments/assets/b2706bef-7c3b-42aa-a119-bd4a22d865cf" />
@@ -46,6 +45,11 @@ UltraCandy with hyprpanel option plus settings app
 
 [NOTE]Missing features in the hyprpanel custom control center compared to waybar's version can be set directly from hyprpanel
 <img width="1366" height="768" alt="screenshot_20082025_113347" src="https://github.com/user-attachments/assets/b950ec0c-e9c6-44ac-958a-c433b9a5e057" />
+
+
+## Control Center Plus Media-Player and Weather Widgets
+
+<img width="1366" height="768" alt="screenshot_17082025_014134" src="https://github.com/user-attachments/assets/3c6a17ea-c36e-4a01-a424-eee3d75bfb3b" />
 
 
 ## Custom Fish and Zsh with Starship
@@ -58,11 +62,6 @@ Stylized group mode
 
 ## Hyprlock
 <img width="1366" height="768" alt="screenshot_18082025_233241" src="https://github.com/user-attachments/assets/d1cfd810-ef8a-43bb-9f20-2c43e28e55b4" />
-
-
-## Control Center Plus Media-Player and Weather Widgets
-
-<img width="1366" height="768" alt="screenshot_17082025_014134" src="https://github.com/user-attachments/assets/3c6a17ea-c36e-4a01-a424-eee3d75bfb3b" />
 
 
 ## Rofi Menus
