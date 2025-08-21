@@ -3,7 +3,7 @@
 
 ➡[UltraCandy](https://github.com/HyprCandy/ultracandyinstall.git)⬅ is system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
-## Features & How to reach me : 
+## Features: 
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
@@ -16,8 +16,6 @@
 • System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
 
 • The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
-
-• Easy dotfiles update: In the terminal run "ultracandy".
 
 ## Installation
 
@@ -38,6 +36,7 @@ To update dotfiles run this in the terminal:
 ultracandy
 ```
 
+## Contact &support
 ➡ ❣️ If you like my project, your [support](https://ko-fi.com/ianmking) will mean a lot ⬅
 You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/UltraCandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
