@@ -41,6 +41,7 @@ Matugen Content theme colors + Wallust
 <img width="1366" height="768" alt="screenshot_21082025_231507" src="https://github.com/user-attachments/assets/26c18021-f8a0-407a-a29a-dac89e312160" />
 <img width="1366" height="768" alt="screenshot_21082025_220711" src="https://github.com/user-attachments/assets/d4ac9758-0c38-457a-ac8f-2fe3b92253b0" />
 <img width="1366" height="768" alt="screenshot_21082025_222159" src="https://github.com/user-attachments/assets/609c91ce-d0aa-41af-a0c9-2b8cca596af6" />
+<img width="1366" height="768" alt="screenshot_22082025_002305" src="https://github.com/user-attachments/assets/bec0f784-5ae8-49e4-a788-1c6691b8582a" />
 <img width="1366" height="768" alt="screenshot_21082025_215113" src="https://github.com/user-attachments/assets/7e64e528-b9f4-4e51-8762-6c31fddd8911" />
 
 
