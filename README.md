@@ -38,14 +38,14 @@ Just a few of the possible system colors and automatic sddm background applicati
 UltraCandy with waybar option plus settings app
 
 Matugen Content theme colors + Wallust
-<img width="1366" height="768" alt="screenshot_21082025_034752" src="https://github.com/user-attachments/assets/73dce27b-99f9-4c31-860a-9dd2d4fa2cdb" />
-<img width="1366" height="768" alt="screenshot_21082025_033239" src="https://github.com/user-attachments/assets/b31df7da-0520-444a-9b6c-623dc435b86c" />
-<img width="1366" height="768" alt="screenshot_21082025_033113" src="https://github.com/user-attachments/assets/6fd6bcb0-4065-4a02-88bb-79ad93fcb4e2" />
-<img width="1366" height="768" alt="screenshot_21082025_033502" src="https://github.com/user-attachments/assets/b5964992-f08a-4a5b-8849-7dd14b38e728" />
-<img width="1366" height="768" alt="screenshot_21082025_141443" src="https://github.com/user-attachments/assets/612ebdbc-8709-4c04-86a9-5d2123ca02d9" />
+<img width="1366" height="768" alt="screenshot_21082025_231507" src="https://github.com/user-attachments/assets/26c18021-f8a0-407a-a29a-dac89e312160" />
+<img width="1366" height="768" alt="screenshot_21082025_220711" src="https://github.com/user-attachments/assets/d4ac9758-0c38-457a-ac8f-2fe3b92253b0" />
+<img width="1366" height="768" alt="screenshot_21082025_222159" src="https://github.com/user-attachments/assets/609c91ce-d0aa-41af-a0c9-2b8cca596af6" />
+
 
 [NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_21082025_033705" src="https://github.com/user-attachments/assets/31c62d0f-1f78-4511-bb5e-c4bca52ae188" />
+<img width="1366" height="768" alt="screenshot_21082025_225228" src="https://github.com/user-attachments/assets/9bef1a2c-b101-4c49-ba53-a4694489bdf6" />
+<img width="1366" height="768" alt="screenshot_21082025_225645" src="https://github.com/user-attachments/assets/0e9e2fd9-267e-4108-9286-c9d8189ba986" />
 
 UltraCandy with hyprpanel option plus settings app
 
@@ -54,7 +54,7 @@ UltraCandy with hyprpanel option plus settings app
 
 
 ## Control Center Plus Media-Player, System-Monitor and Weather Widgets
-<img width="1366" height="768" alt="screenshot_21082025_190504" src="https://github.com/user-attachments/assets/ba8ee200-aabe-4d15-878f-1c2dee35993a" />
+<img width="1366" height="768" alt="screenshot_21082025_224824" src="https://github.com/user-attachments/assets/f85018c3-c370-4b1a-bff3-c1d3b4dfee37" />
 
 
 ## Custom Fish and Zsh with Starship
@@ -77,8 +77,8 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker, Wifi, Bluetooth
 <img width="416" height="522" alt="screenshot_19082025_211751" src="https://github.com/user-attachments/assets/d3c07da7-c402-46bc-9206-1290490f44fb" />
 <img width="254" height="589" alt="screenshot_19082025_211628" src="https://github.com/user-attachments/assets/f8bdc3d6-4ff0-4b2c-a1f6-ce6ced9d65dd" />
 <img width="252" height="589" alt="screenshot_19082025_211709" src="https://github.com/user-attachments/assets/2c987094-2e4d-4b2c-8be1-a701a7c6fc58" />
-<img width="1366" height="768" alt="screenshot_21082025_105829" src="https://github.com/user-attachments/assets/cb6b6bf4-ec0d-44be-8c8b-49d8ff5bd601" />
-<img width="1366" height="768" alt="screenshot_21082025_105853" src="https://github.com/user-attachments/assets/5ca92c53-f806-4ce7-8029-0f6d1fcf15cb" />
+<img width="1366" height="768" alt="screenshot_21082025_231707" src="https://github.com/user-attachments/assets/c9f0c0c2-ed05-460e-8ed9-bcfb1871d5a7" />
+<img width="1366" height="768" alt="screenshot_21082025_231832" src="https://github.com/user-attachments/assets/7c49b1c3-c88e-4018-9fd0-50b0f80fff5e" />
 
 
 ## Wlogout Theme
