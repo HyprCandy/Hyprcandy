@@ -70,11 +70,13 @@ Stylized group mode
 ## Rofi Menus
 Application Finder
 <img width="1366" height="768" alt="screenshot_19082025_211545" src="https://github.com/user-attachments/assets/4e86936e-dd94-45fc-b5f8-9ab0c479747d" />
-Keybinds, Clipboard, Emoji-Picker, Glyph-Picker
+Keybinds, Clipboard, Emoji-Picker, Glyph-Picker, Wifi, Bluetooth
 <img width="737" height="594" alt="screenshot_19082025_211820" src="https://github.com/user-attachments/assets/21282375-9ad9-468b-8a55-1125911cce3c" />
 <img width="416" height="522" alt="screenshot_19082025_211751" src="https://github.com/user-attachments/assets/d3c07da7-c402-46bc-9206-1290490f44fb" />
 <img width="254" height="589" alt="screenshot_19082025_211628" src="https://github.com/user-attachments/assets/f8bdc3d6-4ff0-4b2c-a1f6-ce6ced9d65dd" />
 <img width="252" height="589" alt="screenshot_19082025_211709" src="https://github.com/user-attachments/assets/2c987094-2e4d-4b2c-8be1-a701a7c6fc58" />
+<img width="1366" height="768" alt="screenshot_21082025_105829" src="https://github.com/user-attachments/assets/cb6b6bf4-ec0d-44be-8c8b-49d8ff5bd601" />
+<img width="1366" height="768" alt="screenshot_21082025_105853" src="https://github.com/user-attachments/assets/5ca92c53-f806-4ce7-8029-0f6d1fcf15cb" />
 
 
 ## Wlogout Theme
