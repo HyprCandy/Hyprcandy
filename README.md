@@ -19,7 +19,27 @@
 
 • Easy dotfiles update: In the terminal run "ultracandy".
 
-If you like my work, run the free HyprCandy [install script](https://github.com/HyprCandy/hyprcandyinstall.git) or grab the UltraCandy [install script](https://ko-fi.com/s/f56114285c). You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) or you can [support my work](https://ko-fi.com/ianmking) or just spread the word of this cohesive Hyprland setup 🙂.
+## Installation
+
+I recommend running the script from Hyprland but it will also work from other DEs or the TTY.
+
+Needed packages: git, hyprland, kitty
+
+Run:
+```shell
+git clone https://github.com/HyprCandy/ultracandyinstall.git && cd ultracandyinstall
+```
+followed by:
+```shell
+bash UltraCandy_installer.sh
+```
+To update dotfiles run this in the terminal:
+```shell
+ultracandy
+```
+
+➡ ❣️ If you like my project, your [support](https://ko-fi.com/ianmking) will mean a lot ⬅
+You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/UltraCandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
 NOTE: I wrote systemd services for these features so you'd have to run the script for them to work but other configs should work fine without my setup if you don't want it ... I think
 
