@@ -9,6 +9,8 @@
 
 • Custom control center to easily modify waybar if waybar option is chosen, hyprland windows,the dock, launch hyprpicker, adjust opacty, change dock start icon,enable/disable xray mode  and hyprsunset/hyprshade. (I like to wsitch to islands mode for dark backgrounds and the blurred bar for lighter backgrounds).
 
+• Custom media-player, weather widget and system-monitor widget
+
 • Extensive rofi menus: wifi, bluetooth, application finder, keybinds, clipboard, emoji-picker, glyph-picker
 
 • System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
@@ -51,9 +53,8 @@ UltraCandy with hyprpanel option plus settings app
 <img width="1366" height="768" alt="screenshot_20082025_113347" src="https://github.com/user-attachments/assets/b950ec0c-e9c6-44ac-958a-c433b9a5e057" />
 
 
-## Control Center Plus Media-Player and Weather Widgets
-
-<img width="1366" height="768" alt="screenshot_21082025_032453" src="https://github.com/user-attachments/assets/0caa4218-a56b-4769-bf33-7911415b61a2" />
+## Control Center Plus Media-Player, System-Monitor and Weather Widgets
+<img width="1366" height="768" alt="screenshot_21082025_190504" src="https://github.com/user-attachments/assets/ba8ee200-aabe-4d15-878f-1c2dee35993a" />
 
 
 ## Custom Fish and Zsh with Starship
