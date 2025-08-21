@@ -7,11 +7,11 @@
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
-• Custom control center to easily modify waybar if waybar option is chosen, hyprland windows,the dock, launch hyprpicker, adjust opacty, change dock start icon,enable/disable xray mode  and hyprsunset/hyprshade.
+• Custom control center to easily modify waybar if waybar option is chosen, hyprland windows,the dock, launch hyprpicker, adjust opacty, change dock start icon,enable/disable xray mode  and hyprsunset/hyprshade. (I like to wsitch to islands mode for dark backgrounds and the blurred bar for lighter backgrounds).
 
 • Extensive rofi menus: wifi, bluetooth, application finder, keybinds, clipboard, emoji-picker, glyph-picker
 
-• System-wide color generation for GTK3/4 and QT6 applications plus other Hyprland elements along with other other quality of life settings.
+• System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
 
 • The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
 
@@ -35,15 +35,14 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy with waybar option plus settings app
 
-Content theme colors
-<img width="1366" height="768" alt="screenshot_20082025_192715" src="https://github.com/user-attachments/assets/cd8dc8eb-374d-4f15-8491-e1ad65db5917" />
-<img width="1366" height="768" alt="screenshot_20082025_193707" src="https://github.com/user-attachments/assets/e3581aa0-6c64-4a30-950f-b95389d1e94f" />
-<img width="1366" height="768" alt="screenshot_20082025_194625" src="https://github.com/user-attachments/assets/a054d8ba-8f68-4d99-b0a4-13869b37439b" />
-<img width="1366" height="768" alt="screenshot_20082025_195453" src="https://github.com/user-attachments/assets/db3449c1-57f6-44d7-a662-db404ad7a43b" />
+Matugen Content theme colors + WWallust
+<img width="1366" height="768" alt="screenshot_21082025_024030" src="https://github.com/user-attachments/assets/e253ca5e-1bf0-4e58-9e2f-b018cb6ed3e3" />
+<img width="1366" height="768" alt="screenshot_21082025_025004" src="https://github.com/user-attachments/assets/252639cc-bf3f-4f8c-b41e-a4d617e2f29b" />
+<img width="1366" height="768" alt="screenshot_21082025_025539" src="https://github.com/user-attachments/assets/14f2ad0c-c05a-4149-9972-9572e88abd4c" />
+<img width="1366" height="768" alt="screenshot_21082025_030701" src="https://github.com/user-attachments/assets/f43d4c3d-2bb4-4d09-8f69-07a7851f6633" />
 
-[NOTE]Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_20082025_200217" src="https://github.com/user-attachments/assets/ed98269b-952b-4eb9-9f6c-2d6b505e8cf1" />
-
+[NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
+<img width="1366" height="768" alt="screenshot_21082025_031103" src="https://github.com/user-attachments/assets/544bd208-2b07-4db5-b9c2-11d674dd7d23" />
 
 UltraCandy with hyprpanel option plus settings app
 
