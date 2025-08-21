@@ -35,14 +35,14 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy with waybar option plus settings app
 
-Matugen Content theme colors + WWallust
-<img width="1366" height="768" alt="screenshot_21082025_024030" src="https://github.com/user-attachments/assets/e253ca5e-1bf0-4e58-9e2f-b018cb6ed3e3" />
-<img width="1366" height="768" alt="screenshot_21082025_025004" src="https://github.com/user-attachments/assets/252639cc-bf3f-4f8c-b41e-a4d617e2f29b" />
-<img width="1366" height="768" alt="screenshot_21082025_025539" src="https://github.com/user-attachments/assets/14f2ad0c-c05a-4149-9972-9572e88abd4c" />
-<img width="1366" height="768" alt="screenshot_21082025_030701" src="https://github.com/user-attachments/assets/f43d4c3d-2bb4-4d09-8f69-07a7851f6633" />
+Matugen Content theme colors + Wallust
+<img width="1366" height="768" alt="screenshot_21082025_034752" src="https://github.com/user-attachments/assets/73dce27b-99f9-4c31-860a-9dd2d4fa2cdb" />
+<img width="1366" height="768" alt="screenshot_21082025_033239" src="https://github.com/user-attachments/assets/b31df7da-0520-444a-9b6c-623dc435b86c" />
+<img width="1366" height="768" alt="screenshot_21082025_033113" src="https://github.com/user-attachments/assets/6fd6bcb0-4065-4a02-88bb-79ad93fcb4e2" />
+<img width="1366" height="768" alt="screenshot_21082025_033502" src="https://github.com/user-attachments/assets/b5964992-f08a-4a5b-8849-7dd14b38e728" />
 
 [NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_21082025_031103" src="https://github.com/user-attachments/assets/544bd208-2b07-4db5-b9c2-11d674dd7d23" />
+<img width="1366" height="768" alt="screenshot_21082025_033705" src="https://github.com/user-attachments/assets/31c62d0f-1f78-4511-bb5e-c4bca52ae188" />
 
 UltraCandy with hyprpanel option plus settings app
 
@@ -52,15 +52,15 @@ UltraCandy with hyprpanel option plus settings app
 
 ## Control Center Plus Media-Player and Weather Widgets
 
-<img width="1366" height="768" alt="screenshot_20082025_201014" src="https://github.com/user-attachments/assets/87270632-c8f2-4922-8f22-bfaaaef31671" />
+<img width="1366" height="768" alt="screenshot_21082025_032453" src="https://github.com/user-attachments/assets/0caa4218-a56b-4769-bf33-7911415b61a2" />
 
 
 ## Custom Fish and Zsh with Starship
 You can customize them further adding even more plugins and personal aliases
 <img width="1366" height="768" alt="screenshot_19082025_211247" src="https://github.com/user-attachments/assets/a8e65373-0465-47ca-abc6-ca57b1c534dd" />
 Stylized group mode
-<img width="1366" height="768" alt="screenshot_20082025_105908" src="https://github.com/user-attachments/assets/f904e5e9-3ed2-43f1-a074-3ef0b9956539" />
-<img width="1366" height="768" alt="screenshot_20082025_105923" src="https://github.com/user-attachments/assets/98beb4ee-af29-4ba4-bc94-6ce451c480f4" />
+<img width="1365" height="694" alt="screenshot_21082025_035455" src="https://github.com/user-attachments/assets/7447d849-0de3-4b9b-8a6e-fd086dba4343" />
+<img width="1366" height="692" alt="screenshot_21082025_035524" src="https://github.com/user-attachments/assets/f00da4ac-9bad-47ce-9d3e-71c08b8a575b" />
 
 
 ## Hyprlock
