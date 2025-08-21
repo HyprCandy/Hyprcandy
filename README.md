@@ -40,6 +40,7 @@ Matugen Content theme colors + Wallust
 <img width="1366" height="768" alt="screenshot_21082025_033239" src="https://github.com/user-attachments/assets/b31df7da-0520-444a-9b6c-623dc435b86c" />
 <img width="1366" height="768" alt="screenshot_21082025_033113" src="https://github.com/user-attachments/assets/6fd6bcb0-4065-4a02-88bb-79ad93fcb4e2" />
 <img width="1366" height="768" alt="screenshot_21082025_033502" src="https://github.com/user-attachments/assets/b5964992-f08a-4a5b-8849-7dd14b38e728" />
+<img width="1366" height="768" alt="screenshot_21082025_141443" src="https://github.com/user-attachments/assets/612ebdbc-8709-4c04-86a9-5d2123ca02d9" />
 
 [NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
 <img width="1366" height="768" alt="screenshot_21082025_033705" src="https://github.com/user-attachments/assets/31c62d0f-1f78-4511-bb5e-c4bca52ae188" />
