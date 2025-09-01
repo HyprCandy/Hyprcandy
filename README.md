@@ -113,3 +113,5 @@ I got some inspiration from:
 [HYDE Project](https://github.com/HyDE-Project/HyDE.git)
 
 and others...
+
+➡[UltraCandy Install Script](https://github.com/HyprCandy/ultracandyinstall.git)⬅
