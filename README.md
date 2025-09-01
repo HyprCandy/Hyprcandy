@@ -57,16 +57,15 @@ Just a few of the possible system colors and automatic sddm background applicati
 UltraCandy with waybar option plus settings app
 
 Matugen Content theme colors + Wallust
-<img width="1366" height="768" alt="screenshot_21082025_231507" src="https://github.com/user-attachments/assets/26c18021-f8a0-407a-a29a-dac89e312160" />
-<img width="1366" height="768" alt="screenshot_21082025_220711" src="https://github.com/user-attachments/assets/d4ac9758-0c38-457a-ac8f-2fe3b92253b0" />
-<img width="1366" height="768" alt="screenshot_21082025_222159" src="https://github.com/user-attachments/assets/609c91ce-d0aa-41af-a0c9-2b8cca596af6" />
-<img width="1366" height="768" alt="screenshot_22082025_002305" src="https://github.com/user-attachments/assets/bec0f784-5ae8-49e4-a788-1c6691b8582a" />
-<img width="1366" height="768" alt="screenshot_21082025_215113" src="https://github.com/user-attachments/assets/7e64e528-b9f4-4e51-8762-6c31fddd8911" />
+<img width="1366" height="768" alt="screenshot_26082025_235625" src="https://github.com/user-attachments/assets/3c791444-bc7d-4a46-967f-18fc1e72540a" />
+<img width="1366" height="768" alt="screenshot_26082025_235946" src="https://github.com/user-attachments/assets/b7a6446e-1fd1-47cf-9385-426c4f9337e5" />
+<img width="1366" height="768" alt="screenshot_27082025_000955" src="https://github.com/user-attachments/assets/e9755d0b-11a9-49d6-84c9-3c29ca7612bf" />
 
 
 [NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_21082025_225228" src="https://github.com/user-attachments/assets/9bef1a2c-b101-4c49-ba53-a4694489bdf6" />
-<img width="1366" height="768" alt="screenshot_21082025_225645" src="https://github.com/user-attachments/assets/0e9e2fd9-267e-4108-9286-c9d8189ba986" />
+<img width="1366" height="768" alt="screenshot_27082025_000444" src="https://github.com/user-attachments/assets/3a1989b3-a849-4304-af3b-b92bbf1b7f01" />
+<img width="1366" height="768" alt="screenshot_27082025_001255" src="https://github.com/user-attachments/assets/5e6fef3a-943a-41c5-bb71-aafc0447f621" />
+
 
 UltraCandy with hyprpanel option plus settings app
 
@@ -75,15 +74,15 @@ UltraCandy with hyprpanel option plus settings app
 
 
 ## Control Center Plus Media-Player, System-Monitor and Weather Widgets
-<img width="1366" height="768" alt="screenshot_21082025_224824" src="https://github.com/user-attachments/assets/f85018c3-c370-4b1a-bff3-c1d3b4dfee37" />
+<img width="1366" height="768" alt="screenshot_01092025_161242" src="https://github.com/user-attachments/assets/b1191958-a035-4f83-924f-9d81ecd21dca" />
 
 
 ## Custom Fish and Zsh with Starship
 You can customize them further adding even more plugins and personal aliases
-<img width="1366" height="768" alt="screenshot_19082025_211247" src="https://github.com/user-attachments/assets/a8e65373-0465-47ca-abc6-ca57b1c534dd" />
+<img width="1366" height="768" alt="screenshot_01092025_161547" src="https://github.com/user-attachments/assets/4805c9f4-2803-4a27-85c8-f2888ca0b04f" />
+
 Stylized group mode
-<img width="1365" height="694" alt="screenshot_21082025_035455" src="https://github.com/user-attachments/assets/7447d849-0de3-4b9b-8a6e-fd086dba4343" />
-<img width="1366" height="692" alt="screenshot_21082025_035524" src="https://github.com/user-attachments/assets/f00da4ac-9bad-47ce-9d3e-71c08b8a575b" />
+<img width="1366" height="768" alt="screenshot_01092025_161804" src="https://github.com/user-attachments/assets/8eb31126-2b59-4109-8c2c-5ce47d5d8efe" />
 
 
 ## Hyprlock
@@ -98,8 +97,8 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker, Wifi, Bluetooth
 <img width="416" height="522" alt="screenshot_19082025_211751" src="https://github.com/user-attachments/assets/d3c07da7-c402-46bc-9206-1290490f44fb" />
 <img width="254" height="589" alt="screenshot_19082025_211628" src="https://github.com/user-attachments/assets/f8bdc3d6-4ff0-4b2c-a1f6-ce6ced9d65dd" />
 <img width="252" height="589" alt="screenshot_19082025_211709" src="https://github.com/user-attachments/assets/2c987094-2e4d-4b2c-8be1-a701a7c6fc58" />
-<img width="1366" height="768" alt="screenshot_21082025_231707" src="https://github.com/user-attachments/assets/c9f0c0c2-ed05-460e-8ed9-bcfb1871d5a7" />
-<img width="1366" height="768" alt="screenshot_21082025_231832" src="https://github.com/user-attachments/assets/7c49b1c3-c88e-4018-9fd0-50b0f80fff5e" />
+<img width="1366" height="768" alt="screenshot_01092025_161447" src="https://github.com/user-attachments/assets/19df2e48-ff80-40f8-ade1-ba90a85d298f" />
+<img width="1366" height="768" alt="screenshot_01092025_161458" src="https://github.com/user-attachments/assets/47c9b1ec-17c2-44e4-b033-80ee58aef7e6" />
 
 
 ## Wlogout Theme
