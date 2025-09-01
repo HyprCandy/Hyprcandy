@@ -1,5 +1,5 @@
 # UltraCandy
-[NOTE] UltraCandy is the complete version & HyprCandy is now mainly for testing
+[NOTE] UltraCandy is the complete version & HyprCandy is now mainly for testing [Screenshots included below]
 
 ➡[UltraCandy](https://github.com/HyprCandy/ultracandyinstall.git)⬅ is system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
