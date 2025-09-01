@@ -86,6 +86,10 @@ Stylized group mode
 <img width="1366" height="768" alt="screenshot_01092025_161804" src="https://github.com/user-attachments/assets/8eb31126-2b59-4109-8c2c-5ce47d5d8efe" />
 
 
+## Wlogout Theme
+![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
+
+
 ## Hyprlock
 <img width="1366" height="768" alt="screenshot_01092025_235826" src="https://github.com/user-attachments/assets/73fec12f-1fbf-48cd-a082-04fa3618b39a" />
 
@@ -100,10 +104,6 @@ Keybinds, Clipboard, Emoji-Picker, Glyph-Picker, Wifi, Bluetooth
 <img width="252" height="589" alt="screenshot_19082025_211709" src="https://github.com/user-attachments/assets/2c987094-2e4d-4b2c-8be1-a701a7c6fc58" />
 <img width="1366" height="768" alt="screenshot_01092025_161447" src="https://github.com/user-attachments/assets/19df2e48-ff80-40f8-ade1-ba90a85d298f" />
 <img width="1366" height="768" alt="screenshot_01092025_161458" src="https://github.com/user-attachments/assets/47c9b1ec-17c2-44e4-b033-80ee58aef7e6" />
-
-
-## Wlogout Theme
-![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
 
 
 ## Inspirations
