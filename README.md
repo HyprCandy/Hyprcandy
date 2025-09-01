@@ -87,7 +87,7 @@ Stylized group mode
 
 
 ## Hyprlock
-<img width="1366" height="768" alt="screenshot_18082025_233241" src="https://github.com/user-attachments/assets/d1cfd810-ef8a-43bb-9f20-2c43e28e55b4" />
+<img width="1366" height="768" alt="screenshot_01092025_235826" src="https://github.com/user-attachments/assets/73fec12f-1fbf-48cd-a082-04fa3618b39a" />
 
 
 ## Rofi Menus
