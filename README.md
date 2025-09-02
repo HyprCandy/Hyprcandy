@@ -77,6 +77,10 @@ UltraCandy with hyprpanel option plus settings app
 [NOTE]Missing features in the hyprpanel custom control center compared to waybar's version can be set directly from hyprpanel
 <img width="1366" height="768" alt="screenshot_20082025_113347" src="https://github.com/user-attachments/assets/b950ec0c-e9c6-44ac-958a-c433b9a5e057" />
 
+## Sway Notifications Center
+SwayNC integrated to follow the system theme
+<img width="1366" height="768" alt="screenshot_02092025_152342" src="https://github.com/user-attachments/assets/2bc85f6d-969c-4d60-acd7-d5898b8f2b6b" />
+
 
 ## Control Center Plus Media-Player, System-Monitor and Weather Widgets
 <img width="1366" height="768" alt="screenshot_01092025_161242" src="https://github.com/user-attachments/assets/b1191958-a035-4f83-924f-9d81ecd21dca" />
