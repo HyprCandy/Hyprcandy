@@ -1,6 +1,7 @@
 # UltraCandy
 [NOTE] UltraCandy is the complete version & HyprCandy is now mainly for testing [Screenshots included below]
-Chat on [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD) - no posts on YouTube yet
+
+Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD) - no posts on YouTube yet
 
 ➡[UltraCandy](https://github.com/HyprCandy/ultracandyinstall.git)⬅ is system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
