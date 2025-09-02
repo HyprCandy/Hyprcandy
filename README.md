@@ -1,5 +1,6 @@
 # UltraCandy
 [NOTE] UltraCandy is the complete version & HyprCandy is now mainly for testing [Screenshots included below]
+Chat on [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD) - no posts on YouTube yet
 
 ➡[UltraCandy](https://github.com/HyprCandy/ultracandyinstall.git)⬅ is system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
 
@@ -36,16 +37,12 @@ To update dotfiles run this in the terminal:
 ultracandy
 ```
 
-## Contact &support
+## Support
 ➡ ❣️ If you like my project, your [support](https://ko-fi.com/ianmking) will mean a lot ⬅
 You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/UltraCandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
 NOTE: I wrote systemd services for these features so you'd have to run the script for them to work but other configs should work fine without my setup if you don't want it ... I think
 
-Subscribe in advance for future tips and tricks video for my setup if you get it or just want to learn more 🙃: [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
-
-Chat on [Discord](https://discordapp.com/users/1022924035987878022) /
-Chat on [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6)
 
 Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time before creating this repo. It was stressful but worthwhile in the end. Anyway checkout the little showcase below:
 
