@@ -57,7 +57,7 @@ Just a few of the possible system colors and automatic sddm background applicati
 UltraCandy with waybar option plus settings app
 
 Matugen Content theme colors + Wallust
-<img width="1366" height="768" alt="screenshot_02092025_101200" src="https://github.com/user-attachments/assets/2cee49c8-b08d-41c4-a66a-b21859c7c1a3" />
+<img width="1366" height="768" alt="screenshot_02092025_102740" src="https://github.com/user-attachments/assets/42be4092-664d-45d4-9a8c-6a44374d241d" />
 <img width="1366" height="768" alt="screenshot_01092025_214156" src="https://github.com/user-attachments/assets/54096c76-653e-4483-98b7-53062c400d53" />
 <img width="1366" height="768" alt="screenshot_02092025_071709" src="https://github.com/user-attachments/assets/188ea8f0-2438-4b69-acbe-2f5b005b5072" />
 <img width="1366" height="768" alt="screenshot_27082025_002240" src="https://github.com/user-attachments/assets/e7e9292c-f9bf-4c4f-b004-9766ee437786" />
@@ -67,7 +67,7 @@ Matugen Content theme colors + Wallust
 
 
 [NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_02092025_095500" src="https://github.com/user-attachments/assets/7c372225-a504-4f75-a661-11cbcf4ee996" />
+<img width="1366" height="768" alt="screenshot_02092025_103011" src="https://github.com/user-attachments/assets/d7b5b612-4b6b-46a6-b890-24c580de970d" />
 <img width="1366" height="768" alt="screenshot_27082025_000444" src="https://github.com/user-attachments/assets/3a1989b3-a849-4304-af3b-b92bbf1b7f01" />
 <img width="1366" height="768" alt="screenshot_27082025_001255" src="https://github.com/user-attachments/assets/5e6fef3a-943a-41c5-bb71-aafc0447f621" />
 
