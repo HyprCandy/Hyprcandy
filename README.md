@@ -58,6 +58,8 @@ UltraCandy with waybar option plus settings app
 
 Matugen Content theme colors + Wallust
 <img width="1366" height="768" alt="screenshot_01092025_214156" src="https://github.com/user-attachments/assets/54096c76-653e-4483-98b7-53062c400d53" />
+<img width="1366" height="768" alt="screenshot_02092025_071709" src="https://github.com/user-attachments/assets/188ea8f0-2438-4b69-acbe-2f5b005b5072" />
+<img width="1366" height="768" alt="screenshot_27082025_002240" src="https://github.com/user-attachments/assets/e7e9292c-f9bf-4c4f-b004-9766ee437786" />
 <img width="1366" height="768" alt="screenshot_26082025_235625" src="https://github.com/user-attachments/assets/3c791444-bc7d-4a46-967f-18fc1e72540a" />
 <img width="1366" height="768" alt="screenshot_26082025_235946" src="https://github.com/user-attachments/assets/b7a6446e-1fd1-47cf-9385-426c4f9337e5" />
 <img width="1366" height="768" alt="screenshot_27082025_000955" src="https://github.com/user-attachments/assets/e9755d0b-11a9-49d6-84c9-3c29ca7612bf" />
