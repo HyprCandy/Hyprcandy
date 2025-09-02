@@ -79,7 +79,7 @@ UltraCandy with hyprpanel option plus settings app
 
 ## Sway Notification Center
 SwayNC integrated to follow the system theme
-<img width="1366" height="768" alt="screenshot_02092025_152342" src="https://github.com/user-attachments/assets/2bc85f6d-969c-4d60-acd7-d5898b8f2b6b" />
+<img width="1366" height="768" alt="screenshot_02092025_153918" src="https://github.com/user-attachments/assets/551d0e94-2725-46bc-8744-71bd5a31cfe3" />
 
 
 ## Control Center Plus Media-Player, System-Monitor and Weather Widgets
