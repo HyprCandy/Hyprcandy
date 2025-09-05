@@ -54,6 +54,10 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy with waybar option plus settings app
 
+[NOTE] Updated waybar to be more slightly more compact while maintaining autohiding cava, media-info and system-tray modules
+<img width="1366" height="768" alt="screenshot_06092025_025001" src="https://github.com/user-attachments/assets/2b85f2b7-1c26-4f9a-9b6b-83baf3314894" />
+
+
 Matugen Content theme colors + Wallust
 <img width="1366" height="768" alt="screenshot_02092025_101200" src="https://github.com/user-attachments/assets/c09b12a8-e184-4df9-b20a-f3e312e482ea" />
 <img width="1366" height="768" alt="screenshot_01092025_214156" src="https://github.com/user-attachments/assets/54096c76-653e-4483-98b7-53062c400d53" />
