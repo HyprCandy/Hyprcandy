@@ -79,7 +79,7 @@ SwayNC integrated to follow the system theme
 <img width="1366" height="768" alt="screenshot_07092025_145112" src="https://github.com/user-attachments/assets/23b29273-f4d2-466b-b563-1b3d8e4751ef" />
 
 
-Stylized group mode
+## Stylized group mode
 <img width="1366" height="768" alt="screenshot_07092025_145715" src="https://github.com/user-attachments/assets/5bd9a009-d767-417d-82bc-844f3d0ee433" />
 
 
