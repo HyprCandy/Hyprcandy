@@ -105,6 +105,8 @@ Application Finder, Keybinds, Clipboard, Emoji-Picker, Glyph-Picker, Wifi, Bluet
 ## Inspirations
 I got some inspiration from:
 
+[END-4](https://github.com/end-4/dots-hyprland)
+
 [ML4W](https://github.com/mylinuxforwork/dotfiles.git)
 
 [HYDE Project](https://github.com/HyDE-Project/HyDE.git)
