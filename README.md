@@ -62,7 +62,7 @@ Matugen Content theme colors + Wallust
 <img width="1366" height="768" alt="screenshot_07092025_160841" src="https://github.com/user-attachments/assets/c87f247c-78d1-47f1-b15b-7ddd4469c380" />
 
 [NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_07092025_140946" src="https://github.com/user-attachments/assets/ba0166c0-c882-4c1d-83be-7ac6a510b609" />
+<img width="1366" height="768" alt="screenshot_08092025_202447" src="https://github.com/user-attachments/assets/fe5cd7fe-0fde-4839-a82b-586cc2d2bc25" />
 <img width="1366" height="768" alt="screenshot_07092025_140441" src="https://github.com/user-attachments/assets/4db82728-9d96-4664-8325-fc0af699ae73" />
 
 UltraCandy with hyprpanel option plus settings app
@@ -76,7 +76,7 @@ SwayNC integrated to follow the system theme
 
 
 ## Control Center Plus Media-Player, System-Monitor and Weather Widgets
-<img width="1366" height="768" alt="screenshot_07092025_145112" src="https://github.com/user-attachments/assets/23b29273-f4d2-466b-b563-1b3d8e4751ef" />
+<img width="1366" height="768" alt="screenshot_08092025_202604" src="https://github.com/user-attachments/assets/11254582-e420-4526-ae95-c782ff1fb366" />
 
 
 ## Stylized group mode
