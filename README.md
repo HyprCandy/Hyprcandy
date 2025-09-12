@@ -72,12 +72,15 @@ Dark mode using "Matugen-Monochrome" theme apply's an onyx/graphite theme to eve
 
 UltraCandy with hyprpanel option plus settings app
 
-[NOTE]Missing features in the hyprpanel custom control center compared to waybar's version can be set directly from hyprpanel
+[NOTE]Missing features in the hyprpanel custom control center compared to waybar's version can be set directly from hyprpanel including
 <img width="1366" height="768" alt="screenshot_20082025_113347" src="https://github.com/user-attachments/assets/b950ec0c-e9c6-44ac-958a-c433b9a5e057" />
 
 
 ## Control Center Plus Media-Player, System-Monitor and Weather Widgets
-<img width="1366" height="768" alt="screenshot_08092025_202604" src="https://github.com/user-attachments/assets/11254582-e420-4526-ae95-c782ff1fb366" />
+<img width="1366" height="768" alt="screenshot_12092025_183441" src="https://github.com/user-attachments/assets/f37ea08a-47d2-4634-b0a6-673f2e56869f" />
+
+## Workspaces Overview
+<img width="1366" height="768" alt="screenshot_12092025_021106" src="https://github.com/user-attachments/assets/72452147-9514-48bb-9e2d-643a08c7b8b6" />
 
 
 ## Stylized group mode
