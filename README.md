@@ -4,7 +4,6 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 ➡[UltraCandy](https://github.com/HyprCandy/UltraCandy.git)⬅ is a Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) with extra quality of life features.
 
-[The screenshots haven't been updated]
 
 ## Features: 
 • Light and Dark mode through matugen along with other matugen themeing options 
@@ -22,6 +21,8 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 • System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
 
 • The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
+
+• Hyprexpo workspaces overview
 
 ## Installation
 
