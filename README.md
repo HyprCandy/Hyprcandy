@@ -17,7 +17,7 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 • Waybar, nwg-dock-hyprland and swaync intgrated with the desktop theme
 
-• Extensive rofi menus: wifi, bluetooth, application finder, keybinds, clipboard, emoji-picker, glyph-picker
+• Extensive rofi menus: wifi, bluetooth, application finder, animation-switcher, keybinds, clipboard, emoji-picker, glyph-picker
 
 • System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
 
@@ -59,24 +59,21 @@ Just a few of the possible system colors and automatic sddm background applicati
 UltraCandy with waybar option plus settings app
 
 Matugen Content theme
-<img width="1366" height="768" alt="screenshot_07092025_111148" src="https://github.com/user-attachments/assets/ddc3b694-471a-44e0-9558-2590c398c0a6" />
-<img width="1366" height="768" alt="screenshot_07092025_121824" src="https://github.com/user-attachments/assets/526ede5a-46b9-4e93-97e9-ca525d1230fa" />
-<img width="1366" height="768" alt="screenshot_07092025_002316" src="https://github.com/user-attachments/assets/d68ed1ce-0222-4a94-b88b-e52821723258" />
-<img width="1366" height="768" alt="screenshot_07092025_143521" src="https://github.com/user-attachments/assets/3dbb2ee2-8496-47bb-a5b5-c114b86cb8b0" />
-<img width="1366" height="768" alt="screenshot_07092025_160841" src="https://github.com/user-attachments/assets/c87f247c-78d1-47f1-b15b-7ddd4469c380" />
+<img width="1366" height="768" alt="screenshot_12092025_130239" src="https://github.com/user-attachments/assets/c1a07c8c-604a-4daf-b79c-4fff1b15e340" />
+<img width="1366" height="768" alt="screenshot_12092025_124445" src="https://github.com/user-attachments/assets/0bcdb765-4406-496a-930f-64e9576e4aad" />
+<img width="1366" height="768" alt="screenshot_12092025_124153" src="https://github.com/user-attachments/assets/1d8b0ab8-281a-48a8-ab6e-a039e8682c8c" />
 
-[NOTE]Matugen-Monochrome theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_08092025_202447" src="https://github.com/user-attachments/assets/fe5cd7fe-0fde-4839-a82b-586cc2d2bc25" />
-<img width="1366" height="768" alt="screenshot_07092025_140441" src="https://github.com/user-attachments/assets/4db82728-9d96-4664-8325-fc0af699ae73" />
+Light mode using "Matugen-Fidelity" applies a lightertone to to every QT6 and GTK3/4 window
+<img width="1366" height="768" alt="screenshot_12092025_181625" src="https://github.com/user-attachments/assets/0300aeae-6d50-4ea7-9f99-ad778a7f6c0a" />
+
+Dark mode using "Matugen-Monochrome" theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
+<img width="1366" height="768" alt="screenshot_12092025_130641" src="https://github.com/user-attachments/assets/314ff608-ac63-4062-9812-5dfbcbb7a022" />
+
 
 UltraCandy with hyprpanel option plus settings app
 
 [NOTE]Missing features in the hyprpanel custom control center compared to waybar's version can be set directly from hyprpanel
 <img width="1366" height="768" alt="screenshot_20082025_113347" src="https://github.com/user-attachments/assets/b950ec0c-e9c6-44ac-958a-c433b9a5e057" />
-
-## Sway Notification Center
-SwayNC integrated to follow the system theme
-<img width="1366" height="768" alt="screenshot_07092025_141951" src="https://github.com/user-attachments/assets/56636a61-fb19-434d-9d78-d235149a6331" />
 
 
 ## Control Center Plus Media-Player, System-Monitor and Weather Widgets
@@ -96,14 +93,23 @@ SwayNC integrated to follow the system theme
 
 
 ## Rofi Menus
-Application Finder, Keybinds, Clipboard, Emoji-Picker, Glyph-Picker, Wifi, Bluetooth
-<img width="1366" height="768" alt="screenshot_07092025_111344" src="https://github.com/user-attachments/assets/c59701b8-11c3-4796-be7c-a4c2bc04a60c" />
-<img width="1366" height="768" alt="screenshot_07092025_111401" src="https://github.com/user-attachments/assets/8aa962a5-996b-4b31-aca8-ad24e6dced7b" />
-<img width="1366" height="768" alt="screenshot_07092025_111413" src="https://github.com/user-attachments/assets/b9028528-e90a-4c5f-ad11-36f068765d6c" />
-<img width="1366" height="768" alt="screenshot_07092025_111424" src="https://github.com/user-attachments/assets/f0858b55-9cd6-49f8-9352-62cccd70ec16" />
-<img width="1366" height="768" alt="screenshot_07092025_111443" src="https://github.com/user-attachments/assets/b258a445-5873-4084-9980-a589b31a1a1b" />
-<img width="1366" height="768" alt="screenshot_07092025_171024" src="https://github.com/user-attachments/assets/f1038277-74cb-4cf8-a8ca-48bbe7aa2f1f" />
-<img width="1366" height="768" alt="screenshot_07092025_171038" src="https://github.com/user-attachments/assets/f7f31466-57be-4145-a493-281a1663028f" />
+Application Finder
+<img width="1366" height="768" alt="screenshot_12092025_130914" src="https://github.com/user-attachments/assets/6380e7a9-3490-4363-a3e9-d2476848c543" />
+Keybinds
+<img width="1366" height="768" alt="screenshot_12092025_182212" src="https://github.com/user-attachments/assets/fe1ade33-a6d3-4ee6-a90f-3d88027ffdd0" />
+Animations-Switcher
+<img width="1366" height="768" alt="screenshot_12092025_182007" src="https://github.com/user-attachments/assets/a6fff59e-315e-4f30-b651-0c329ce538c0" />
+Clipboard
+<img width="1366" height="768" alt="screenshot_12092025_130950" src="https://github.com/user-attachments/assets/59f5edfe-ae7e-496a-bf72-2eb6ddef25b8" />
+Emoji-Picker
+<img width="1366" height="768" alt="screenshot_12092025_130934" src="https://github.com/user-attachments/assets/4d406778-4ec9-48c6-8d81-c59f41c9107d" />
+Glyph-Picker
+<img width="1366" height="768" alt="screenshot_12092025_130941" src="https://github.com/user-attachments/assets/101fa6a4-4ab9-43d1-88c5-1eb4d28cf9ab" />
+Wifi
+<img width="1366" height="768" alt="screenshot_12092025_131033" src="https://github.com/user-attachments/assets/7e20d461-9111-48e3-a063-dcbb8a8dbb16" />
+Bluetooth
+<img width="1366" height="768" alt="screenshot_12092025_131043" src="https://github.com/user-attachments/assets/446e10f0-854a-441c-bc41-353e299623dd" />
+
 
 
 ## Inspirations
