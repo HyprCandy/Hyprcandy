@@ -1,17 +1,21 @@
 # UltraCandy
-[NOTE] UltraCandy is the complete version & HyprCandy is now mainly for testing [Screenshots included below]
 
 Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD) - no posts on YouTube yet
 
-➡[UltraCandy](https://github.com/HyprCandy/ultracandyinstall.git)⬅ is system-wide, cohesively themed Hyprland configuration for Arch and Arch-based distributions with extra quality of life features.
+➡[UltraCandy](https://github.com/HyprCandy/UltraCandy.git)⬅ is a Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) with extra quality of life features.
+
+[The screenshots haven't been updated]
 
 ## Features: 
+• Light and Dark mode through matugen along with other matugen themeing options 
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
 • Custom control center to easily modify waybar if waybar option is chosen, hyprland windows,the dock, launch hyprpicker, adjust opacty, change dock start icon,enable/disable xray mode  and hyprsunset/hyprshade. (I like to wsitch to islands mode for dark backgrounds and the blurred bar for lighter backgrounds).
 
 • Custom media-player, weather widget and system-monitor widget
+
+• Waybar, nwg-dock-hyprland and swaync intgrated with the desktop theme
 
 • Extensive rofi menus: wifi, bluetooth, application finder, keybinds, clipboard, emoji-picker, glyph-picker
 
@@ -54,7 +58,7 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy with waybar option plus settings app
 
-Matugen Content theme colors + Wallust
+Matugen Content theme
 <img width="1366" height="768" alt="screenshot_07092025_111148" src="https://github.com/user-attachments/assets/ddc3b694-471a-44e0-9558-2590c398c0a6" />
 <img width="1366" height="768" alt="screenshot_07092025_121824" src="https://github.com/user-attachments/assets/526ede5a-46b9-4e93-97e9-ca525d1230fa" />
 <img width="1366" height="768" alt="screenshot_07092025_002316" src="https://github.com/user-attachments/assets/d68ed1ce-0222-4a94-b88b-e52821723258" />
