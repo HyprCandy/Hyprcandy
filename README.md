@@ -16,7 +16,7 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 • Waybar, nwg-dock-hyprland and swaync intgrated with the desktop theme
 
-• Extensive rofi menus: wifi, bluetooth, application finder, animation-switcher, keybinds, clipboard, emoji-picker, glyph-picker
+• Extensive rofi menus: wifi, bluetooth, application finder, rofi-menus launcher for: animation-switcher, keybinds, clipboard, emoji-picker, glyph-picker
 
 • System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
 
@@ -103,6 +103,8 @@ Keybinds
 <img width="1366" height="768" alt="screenshot_12092025_182212" src="https://github.com/user-attachments/assets/fe1ade33-a6d3-4ee6-a90f-3d88027ffdd0" />
 Animations-Switcher
 <img width="1366" height="768" alt="screenshot_12092025_182007" src="https://github.com/user-attachments/assets/a6fff59e-315e-4f30-b651-0c329ce538c0" />
+Rofi-Menus Launcher
+<img width="1366" height="768" alt="screenshot_13092025_213529" src="https://github.com/user-attachments/assets/03c9463b-9fcd-4e02-ae32-d4b37edfd365" />
 Clipboard
 <img width="1366" height="768" alt="screenshot_12092025_130950" src="https://github.com/user-attachments/assets/59f5edfe-ae7e-496a-bf72-2eb6ddef25b8" />
 Emoji-Picker
@@ -113,7 +115,6 @@ Wifi
 <img width="1366" height="768" alt="screenshot_12092025_131033" src="https://github.com/user-attachments/assets/7e20d461-9111-48e3-a063-dcbb8a8dbb16" />
 Bluetooth
 <img width="1366" height="768" alt="screenshot_12092025_131043" src="https://github.com/user-attachments/assets/446e10f0-854a-441c-bc41-353e299623dd" />
-
 
 
 ## Inspirations
