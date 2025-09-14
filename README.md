@@ -100,6 +100,7 @@ Application Finder
 Utilities Launcher
 <img width="1366" height="768" alt="screenshot_14092025_232748" src="https://github.com/user-attachments/assets/8f29d18a-96dc-4075-81ee-d531e556b692" />
 Keybinds
+
 [NOTE] The following menus had their border colors changed to a dark color
 <img width="1366" height="768" alt="screenshot_12092025_182212" src="https://github.com/user-attachments/assets/fe1ade33-a6d3-4ee6-a90f-3d88027ffdd0" />
 Animations-Switcher
