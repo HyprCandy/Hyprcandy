@@ -98,7 +98,7 @@ UltraCandy with hyprpanel option plus settings app
 Application Finder
 <img width="1366" height="768" alt="screenshot_14092025_232710" src="https://github.com/user-attachments/assets/75a55cb5-bcb9-403b-9131-440db59fd0bf" />
 Utilities Launcher
-<img width="1366" height="768" alt="screenshot_14092025_232748" src="https://github.com/user-attachments/assets/8f29d18a-96dc-4075-81ee-d531e556b692" />
+<img width="1366" height="768" alt="screenshot_14092025_232552" src="https://github.com/user-attachments/assets/ad566d39-2952-4ea1-9c86-cd30a272a130" />
 
 [NOTE] Excluding the wifi and bluetooth menu, the following rofi menus had their border colors changed to a dark color
 
@@ -128,5 +128,3 @@ I got some inspiration from:
 [HYDE Project](https://github.com/HyDE-Project/HyDE.git)
 
 and others...
-
-➡[UltraCandy Install Script](https://github.com/HyprCandy/ultracandyinstall.git)⬅
