@@ -6,6 +6,8 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 
 ## Features: 
+• Extensive rofi menus for wifi, bluetooth, application finder and rofi-utilities launcher for: updates, reinstalling, animation-switcher menu, keybinds menu, clipboard menu, emoji-picker menu, glyph-picker menu
+
 • Light and Dark mode through matugen along with other matugen themeing options 
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
@@ -15,8 +17,6 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 • Custom media-player, weather widget and system-monitor widget
 
 • Waybar, nwg-dock-hyprland and swaync intgrated with the desktop theme
-
-• Extensive rofi menus: wifi, bluetooth, application finder, rofi-menus launcher for: animation-switcher, keybinds, clipboard, emoji-picker, glyph-picker
 
 • System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
 
@@ -57,12 +57,16 @@ Matugen Content theme
 <img width="1366" height="768" alt="screenshot_12092025_130239" src="https://github.com/user-attachments/assets/c1a07c8c-604a-4daf-b79c-4fff1b15e340" />
 <img width="1366" height="768" alt="screenshot_12092025_124445" src="https://github.com/user-attachments/assets/0bcdb765-4406-496a-930f-64e9576e4aad" />
 <img width="1366" height="768" alt="screenshot_12092025_124153" src="https://github.com/user-attachments/assets/1d8b0ab8-281a-48a8-ab6e-a039e8682c8c" />
+<img width="1366" height="768" alt="screenshot_14092025_232431" src="https://github.com/user-attachments/assets/d09ee3c9-bd31-4bd6-af60-1f0c256e5b93" />
 
-Light mode using "Matugen-Fidelity" applies a lightertone to to every QT6 and GTK3/4 window
-<img width="1366" height="768" alt="screenshot_12092025_181625" src="https://github.com/user-attachments/assets/0300aeae-6d50-4ea7-9f99-ad778a7f6c0a" />
+Light mode using "Matugen-Fidelity" applies a lightertone to to every QT6 and GTK3/4 window plus various borders
+[NOTE] Rofi-menus and floating windows maintain a dark border color for better contrast from bright backgrounds or light themed windows
+<img width="1366" height="768" alt="screenshot_14092025_231643" src="https://github.com/user-attachments/assets/d0ca836d-7337-4da6-9d5f-5be062abd996" />
+<img width="1366" height="768" alt="screenshot_14092025_232000" src="https://github.com/user-attachments/assets/63b4e55c-0a0c-4992-ac82-eedcdc340f70" />
 
 Dark mode using "Matugen-Monochrome" theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_12092025_130641" src="https://github.com/user-attachments/assets/314ff608-ac63-4062-9812-5dfbcbb7a022" />
+<img width="1366" height="768" alt="screenshot_14092025_232227" src="https://github.com/user-attachments/assets/25ad6e80-3c9b-4dd4-af22-ed6a2c8e891b" />
+<img width="1366" height="768" alt="screenshot_14092025_232316" src="https://github.com/user-attachments/assets/f4dd5461-394c-4879-b1a9-2ac080f64cc5" />
 
 
 UltraCandy with hyprpanel option plus settings app
@@ -92,13 +96,14 @@ UltraCandy with hyprpanel option plus settings app
 
 ## Rofi Menus
 Application Finder
-<img width="1366" height="768" alt="screenshot_12092025_130914" src="https://github.com/user-attachments/assets/6380e7a9-3490-4363-a3e9-d2476848c543" />
+<img width="1366" height="768" alt="screenshot_14092025_232710" src="https://github.com/user-attachments/assets/75a55cb5-bcb9-403b-9131-440db59fd0bf" />
+Utilities Launcher
+<img width="1366" height="768" alt="screenshot_14092025_232748" src="https://github.com/user-attachments/assets/8f29d18a-96dc-4075-81ee-d531e556b692" />
 Keybinds
+[NOTE] The following menus had their border colors changed to a dark color
 <img width="1366" height="768" alt="screenshot_12092025_182212" src="https://github.com/user-attachments/assets/fe1ade33-a6d3-4ee6-a90f-3d88027ffdd0" />
 Animations-Switcher
 <img width="1366" height="768" alt="screenshot_12092025_182007" src="https://github.com/user-attachments/assets/a6fff59e-315e-4f30-b651-0c329ce538c0" />
-Rofi-Menus Launcher
-<img width="1366" height="768" alt="screenshot_13092025_213529" src="https://github.com/user-attachments/assets/03c9463b-9fcd-4e02-ae32-d4b37edfd365" />
 Clipboard
 <img width="1366" height="768" alt="screenshot_12092025_130950" src="https://github.com/user-attachments/assets/59f5edfe-ae7e-496a-bf72-2eb6ddef25b8" />
 Emoji-Picker
