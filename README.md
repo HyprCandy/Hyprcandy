@@ -99,9 +99,10 @@ Application Finder
 <img width="1366" height="768" alt="screenshot_14092025_232710" src="https://github.com/user-attachments/assets/75a55cb5-bcb9-403b-9131-440db59fd0bf" />
 Utilities Launcher
 <img width="1366" height="768" alt="screenshot_14092025_232748" src="https://github.com/user-attachments/assets/8f29d18a-96dc-4075-81ee-d531e556b692" />
-Keybinds
 
 [NOTE] The following menus had their border colors changed to a dark color
+
+Keybinds
 <img width="1366" height="768" alt="screenshot_12092025_182212" src="https://github.com/user-attachments/assets/fe1ade33-a6d3-4ee6-a90f-3d88027ffdd0" />
 Animations-Switcher
 <img width="1366" height="768" alt="screenshot_12092025_182007" src="https://github.com/user-attachments/assets/a6fff59e-315e-4f30-b651-0c329ce538c0" />
