@@ -77,7 +77,7 @@ UltraCandy with hyprpanel option plus settings app
 <img width="1366" height="768" alt="screenshot_20082025_113347" src="https://github.com/user-attachments/assets/b950ec0c-e9c6-44ac-958a-c433b9a5e057" />
 
 
-## Control Center Plus Media-Player, System-Monitor and Weather Widgets
+## Control-Center, Media-Player, System-Monitor, and Weather widgets
 <img width="1366" height="768" alt="screenshot_12092025_183441" src="https://github.com/user-attachments/assets/f37ea08a-47d2-4634-b0a6-673f2e56869f" />
 
 ## Workspaces Overview
