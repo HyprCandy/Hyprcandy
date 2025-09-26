@@ -54,6 +54,8 @@ Just a few of the possible system colors and automatic sddm background applicati
 UltraCandy with waybar option plus settings app
 
 Matugen Content theme
+<img width="1366" height="768" alt="screenshot_26092025_141152" src="https://github.com/user-attachments/assets/d3ac5567-5594-4eda-9f53-27420ea50627" />
+<img width="1366" height="768" alt="screenshot_26092025_141541" src="https://github.com/user-attachments/assets/2adc066e-1da5-4b2e-906d-f6c277a085f7" />
 <img width="1366" height="768" alt="screenshot_12092025_130239" src="https://github.com/user-attachments/assets/c1a07c8c-604a-4daf-b79c-4fff1b15e340" />
 <img width="1366" height="768" alt="screenshot_12092025_124445" src="https://github.com/user-attachments/assets/0bcdb765-4406-496a-930f-64e9576e4aad" />
 <img width="1366" height="768" alt="screenshot_12092025_124153" src="https://github.com/user-attachments/assets/1d8b0ab8-281a-48a8-ab6e-a039e8682c8c" />
