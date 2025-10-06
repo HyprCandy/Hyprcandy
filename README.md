@@ -54,12 +54,11 @@ Just a few of the possible system colors and automatic sddm background applicati
 UltraCandy with waybar option plus settings app
 
 Matugen Content theme
-<img width="1366" height="768" alt="screenshot_26092025_141152" src="https://github.com/user-attachments/assets/d3ac5567-5594-4eda-9f53-27420ea50627" />
-<img width="1366" height="768" alt="screenshot_26092025_141541" src="https://github.com/user-attachments/assets/2adc066e-1da5-4b2e-906d-f6c277a085f7" />
-<img width="1366" height="768" alt="screenshot_12092025_130239" src="https://github.com/user-attachments/assets/c1a07c8c-604a-4daf-b79c-4fff1b15e340" />
-<img width="1366" height="768" alt="screenshot_12092025_124445" src="https://github.com/user-attachments/assets/0bcdb765-4406-496a-930f-64e9576e4aad" />
-<img width="1366" height="768" alt="screenshot_12092025_124153" src="https://github.com/user-attachments/assets/1d8b0ab8-281a-48a8-ab6e-a039e8682c8c" />
-<img width="1366" height="768" alt="screenshot_14092025_232431" src="https://github.com/user-attachments/assets/d09ee3c9-bd31-4bd6-af60-1f0c256e5b93" />
+<img width="1366" height="768" alt="screenshot_06102025_122324" src="https://github.com/user-attachments/assets/a9ccb721-b345-4694-82c7-2824b03c641e" />
+<img width="1366" height="768" alt="screenshot_06102025_124539" src="https://github.com/user-attachments/assets/3201778f-c58f-4842-ac3f-d14cea27f2ca" />
+<img width="1366" height="768" alt="screenshot_06102025_123743" src="https://github.com/user-attachments/assets/233065b1-8b99-452a-b63b-4f8dc78c323b" />
+<img width="1366" height="768" alt="screenshot_06102025_122727" src="https://github.com/user-attachments/assets/01da8296-a676-40ca-927b-3a8c79d03101" />
+<img width="1366" height="768" alt="screenshot_06102025_123134" src="https://github.com/user-attachments/assets/4b420e2d-e666-4b14-9646-484aeb71e218" />
 
 Light mode using "Matugen-Fidelity" applies a lightertone to to every QT6 and GTK3/4 window plus various borders
 [NOTE] Rofi-menus and floating windows maintain a dark border color for better contrast from bright backgrounds or light themed windows
