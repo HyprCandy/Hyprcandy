@@ -62,10 +62,9 @@ Matugen Content theme
 
 Light mode using "Matugen-Fidelity" applies a lightertone to to every QT6 and GTK3/4 window plus various borders
 [NOTE] Rofi-menus and floating windows maintain a dark border color for better contrast from bright backgrounds or light themed windows
-![WhatsApp Image 2025-09-15 at 21 06 57 (1)](https://github.com/user-attachments/assets/fca9cb07-51fd-4d11-b5d8-9f6847522382)
-![WhatsApp Image 2025-09-15 at 21 06 58](https://github.com/user-attachments/assets/88731ed5-519f-468e-93a5-84bd012b5868)
-![WhatsApp Image 2025-09-15 at 21 06 58 (1)](https://github.com/user-attachments/assets/aa31700a-13e5-4413-a1b0-65a280bbce1e)
-![WhatsApp Image 2025-09-15 at 21 06 58 (2)](https://github.com/user-attachments/assets/e7dc38be-ca38-422c-87f2-074d1c0b7f2d)
+<img width="1366" height="768" alt="screenshot_06102025_125715" src="https://github.com/user-attachments/assets/73cf567b-01be-4c84-b92a-f994ea89c7c8" />
+<img width="1366" height="768" alt="screenshot_06102025_130126" src="https://github.com/user-attachments/assets/fdd0c264-83a9-4dfc-84f7-ae73923e7485" />
+<img width="1366" height="768" alt="screenshot_06102025_125959" src="https://github.com/user-attachments/assets/84a02980-eadd-403a-814e-1de2f5f6082a" />
 
 
 Dark mode using "Matugen-Monochrome" theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
