@@ -68,8 +68,8 @@ Light mode using "Matugen-Fidelity" applies a lightertone to to every QT6 and GT
 
 
 Dark mode using "Matugen-Monochrome" theme apply's an onyx/graphite theme to every QT6 and GTK3/4 window on all backgrounds
-<img width="1366" height="768" alt="screenshot_14092025_232227" src="https://github.com/user-attachments/assets/25ad6e80-3c9b-4dd4-af22-ed6a2c8e891b" />
-<img width="1366" height="768" alt="screenshot_14092025_232316" src="https://github.com/user-attachments/assets/f4dd5461-394c-4879-b1a9-2ac080f64cc5" />
+<img width="1366" height="768" alt="screenshot_06102025_130548" src="https://github.com/user-attachments/assets/138d1803-b061-4239-bcd8-292a44f33994" />
+<img width="1366" height="768" alt="screenshot_06102025_130642" src="https://github.com/user-attachments/assets/439792ce-4dc6-4206-96f6-39e8546bd4bc" />
 
 
 UltraCandy with hyprpanel option plus settings app
