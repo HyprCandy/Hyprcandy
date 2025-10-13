@@ -53,12 +53,10 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy with waybar option plus settings app
 
-Matugen Content theme
-<img width="1366" height="768" alt="screenshot_06102025_122324" src="https://github.com/user-attachments/assets/a9ccb721-b345-4694-82c7-2824b03c641e" />
-<img width="1366" height="768" alt="screenshot_06102025_124539" src="https://github.com/user-attachments/assets/3201778f-c58f-4842-ac3f-d14cea27f2ca" />
-<img width="1366" height="768" alt="screenshot_06102025_123743" src="https://github.com/user-attachments/assets/233065b1-8b99-452a-b63b-4f8dc78c323b" />
-<img width="1366" height="768" alt="screenshot_06102025_122727" src="https://github.com/user-attachments/assets/01da8296-a676-40ca-927b-3a8c79d03101" />
-<img width="1366" height="768" alt="screenshot_06102025_123134" src="https://github.com/user-attachments/assets/4b420e2d-e666-4b14-9646-484aeb71e218" />
+Matugen Content theme with current waybar setup
+<img width="1366" height="768" alt="screenshot_13102025_050902" src="https://github.com/user-attachments/assets/17bd99e5-21d7-4961-a532-aff8b2b35737" />
+<img width="1366" height="768" alt="screenshot_13102025_051227" src="https://github.com/user-attachments/assets/f68c7534-eec0-4195-8712-4572a79a9290" />
+<img width="1366" height="768" alt="screenshot_13102025_051021" src="https://github.com/user-attachments/assets/f33a7d57-1df4-447f-9c0f-22506453298e" />
 
 Light mode using "Matugen-Fidelity" applies a lightertone to to every QT6 and GTK3/4 window plus various borders
 [NOTE] Rofi-menus and floating windows maintain a dark border color for better contrast from bright backgrounds or light themed windows
