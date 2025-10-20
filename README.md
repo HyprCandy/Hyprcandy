@@ -10,6 +10,8 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 • Light and Dark mode through matugen along with other matugen themeing options 
 
+• Hyprexpo-plus overview and hyprbars plugin integration
+
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
 • Custom control center to easily modify waybar if waybar option is chosen, hyprland windows,the dock, launch hyprpicker, adjust opacty, change dock start icon,enable/disable xray mode  and hyprsunset/hyprshade. (I like to wsitch to islands mode for dark backgrounds and the blurred bar for lighter backgrounds).
@@ -52,6 +54,12 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 
 UltraCandy with waybar option plus settings app
+
+Most recent screenshots with hyprbars plugin and hyprexpo-plus overwiew plugin integration
+<img width="1366" height="768" alt="screenshot_20102025_114707" src="https://github.com/user-attachments/assets/a784edd1-b4de-4c5c-ba11-0acbad195546" />
+<img width="1366" height="768" alt="screenshot_20102025_114946" src="https://github.com/user-attachments/assets/f5e7bc6a-63ec-4d01-8cd1-b918acda0200" />
+<img width="1366" height="768" alt="screenshot_20102025_115225" src="https://github.com/user-attachments/assets/f6a7882c-a5e5-4665-af98-b3ebc2d423ec" />
+<img width="1366" height="768" alt="screenshot_20102025_115629" src="https://github.com/user-attachments/assets/026c597f-6ba6-4a6c-b39a-567498b0430b" />
 
 Matugen Content theme with current waybar setup
 <img width="1366" height="768" alt="screenshot_13102025_050902" src="https://github.com/user-attachments/assets/17bd99e5-21d7-4961-a532-aff8b2b35737" />
