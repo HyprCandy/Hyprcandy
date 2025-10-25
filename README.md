@@ -59,6 +59,7 @@ UltraCandy with waybar option plus settings app
 
 Most recent screenshots with hyprbars plugin and hyprexpo-plus overwiew plugin integration plus updates settings apps
 
+<img width="1366" height="768" alt="screenshot_25102025_163437" src="https://github.com/user-attachments/assets/c0999130-0022-4736-b4fe-aadc13dce4de" />
 <img width="1366" height="768" alt="screenshot_20102025_114707" src="https://github.com/user-attachments/assets/a784edd1-b4de-4c5c-ba11-0acbad195546" />
 <img width="1366" height="768" alt="screenshot_20102025_114946" src="https://github.com/user-attachments/assets/f5e7bc6a-63ec-4d01-8cd1-b918acda0200" />
 <img width="1366" height="768" alt="screenshot_21102025_234327" src="https://github.com/user-attachments/assets/6d1033f7-e779-430d-b3f5-04c866bfb9e9" />
