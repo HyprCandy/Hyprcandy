@@ -22,6 +22,8 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 • Waybar, nwg-dock-hyprland and swaync intgrated with the desktop theme
 
+• Dock position tracking for when the dock is manually hidden then relaunched with *ALT+3* or when entering a Hyprland session after a resboot or suspension.
+
 • System-wide color generation through Matugen for GTK3/4 & QT6 applications plus most of waybar if it's chosen and orofi windows while Wallust themes themes the terminal and parts of waybar.
 
 • The background is also cohesively auto-generated and applied for sddm, rofi, wlogout and hyprlock (GDM backgrounds have to be set manually through the 'GDM Settings' app but it's available as an option).
