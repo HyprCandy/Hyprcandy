@@ -14,7 +14,7 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 • Light and Dark mode through matugen along with other matugen themeing options 
 
-• (OPTIONAL) Hyprexpo-plus overview and hyprbars plugin integration. The user simply has to uncomment them in the plugins section at the end of ~/.config/hypr/hyprviz.conf and uncomment the hyprexpo keybind in ~/.config/hyprcustom/custom-keybinds.conf in the #### Actions #### section to toggle on/off the hyprexpo overview. 
+• (OPTIONAL) Hyprexpo-plus overview and hyprbars plugin integration. The user has enable and uncomment them in the plugins section at the end of ~/.config/hypr/hyprviz.conf and uncomment the hyprexpo keybind in ~/.config/hyprcustom/custom-keybinds.conf in the #### Actions #### section to toggle on/off the hyprexpo overview. 
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
@@ -62,7 +62,9 @@ UltraCandy with waybar option (recommneded on my setup) plus swaync, dock, setti
 <img width="1366" height="768" alt="screenshot_09112025_234131" src="https://github.com/user-attachments/assets/b62c2d0b-8893-470c-990f-9f76cc2b4b41" />
 <img width="1366" height="768" alt="screenshot_10112025_000858" src="https://github.com/user-attachments/assets/80d3ecd1-3f21-4b77-8cfc-909c3aa57247" />
 
-Most recent screenshots with optional hyprbars plugin and hyprexpo-plus overwiew plugin enabled/uncommented in configs plus updates settings apps
+Screenshots with optional hyprbars plugin and hyprexpo-plus overwiew plugin enabled/uncommented in configs plus updates settings apps
+
+SwayNC screenshots below are outdated 
 
 <img width="1366" height="768" alt="screenshot_25102025_163437" src="https://github.com/user-attachments/assets/58eb1e0f-2640-4119-9dce-d1e8d48f0ef6" />
 <img width="1366" height="768" alt="screenshot_20102025_114707" src="https://github.com/user-attachments/assets/a784edd1-b4de-4c5c-ba11-0acbad195546" />
