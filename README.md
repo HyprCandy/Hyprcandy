@@ -57,7 +57,7 @@ Since I'm an aeronautics graduate and not a programmer it took me ages to learn 
 Just a few of the possible system colors and automatic sddm background application
 
 
-UltraCandy with waybar option plus settings app
+UltraCandy with waybar option (recommneded on my setup) plus swaync, dock, settings apps and some themed apps
 
 <img width="1366" height="768" alt="screenshot_09112025_234131" src="https://github.com/user-attachments/assets/b62c2d0b-8893-470c-990f-9f76cc2b4b41" />
 <img width="1366" height="768" alt="screenshot_10112025_000858" src="https://github.com/user-attachments/assets/80d3ecd1-3f21-4b77-8cfc-909c3aa57247" />
