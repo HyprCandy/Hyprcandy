@@ -14,7 +14,7 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 • Light and Dark mode through matugen along with other matugen themeing options 
 
-• Hyprexpo-plus overview and hyprbars plugin integration
+• (OPTIONAL) Hyprexpo-plus overview and hyprbars plugin integration. The user simply has to uncomment them in the plugins section at the end of ~/.config/hypr/hyprviz.conf and uncomment the hyprexpo keybind in ~/.config/hyprcustom/custom-keybinds.conf in the #### Actions #### section to toggle on/off the hyprexpo overview. 
 
 • Automatic idle-inhbitor activated when waybar/hyprpanel is toggled off whenever you want extra screen space since you won't be able to activate it through waybar's/hyprpanel's idle-inhibitor button. This is great for lighter resource usage as well while still being able to keep your device awake.
 
