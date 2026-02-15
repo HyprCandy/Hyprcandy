@@ -59,8 +59,9 @@ Just a few of the possible system colors and automatic sddm background applicati
 
 UltraCandy with waybar option (recommneded on my setup) plus swaync, dock, settings apps and some themed apps
 
-<img width="1366" height="768" alt="screenshot_09112025_234131" src="https://github.com/user-attachments/assets/b62c2d0b-8893-470c-990f-9f76cc2b4b41" />
-<img width="1366" height="768" alt="screenshot_10112025_000858" src="https://github.com/user-attachments/assets/80d3ecd1-3f21-4b77-8cfc-909c3aa57247" />
+<img width="1366" height="768" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" />
+<img width="1366" height="768" alt="screenshot_16022026_003523" src="https://github.com/user-attachments/assets/ceb4bcad-58cb-40e9-aa7c-4090ad0b528d" />
+
 
 Screenshots with optional hyprbars plugin and hyprexpo-plus overwiew plugin enabled/uncommented in configs plus updates settings apps
 
