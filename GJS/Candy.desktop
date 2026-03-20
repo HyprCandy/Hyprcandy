@@ -1,0 +1,11 @@
+[Desktop Entry]
+Version=1.0
+Name=Candy Widgets
+Comment=Candy GJS Widgets Collection
+Exec=gjs
+Icon=HyprCandy
+Terminal=false
+Type=Application
+Categories=Utility;
+StartupNotify=false
+NoDisplay=true

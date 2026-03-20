@@ -1,0 +1,3 @@
+window {
+    border-color:                {{colors.on_primary_fixed_variant.default.hex}};
+}

@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 
+# Add near the top, after get_aur_helper
+YELLOW='\033[1;33m'
+NC='\033[0m'
+
+print_warning() { echo -e "${YELLOW}WARNING:${NC} $1"; }
+print_status() { echo "$1"; }
+
 # Check release
 if [ ! -f /etc/arch-release ]; then
   exit 0
@@ -30,17 +37,81 @@ get_aur_helper() {
 get_aur_helper
 export -f pkg_installed
 
+# EDITED: New function to handle cache cleaning
+clean_cache() {
+    echo
+    print_warning "Clearing the cache frees disk space but requires redownloading if you need to downgrade later."
+    echo -e "${YELLOW}󰩺 Would you like to clear your $aur_helper package cache? (n/Y)${NC}"
+    read -r clean_choice
+    case "$clean_choice" in
+        [nN][oO]|[nN])
+            print_status "Cache cleaning skipped."
+            ;;
+        *)
+            if [ -n "$aur_helper" ]; then
+                print_status "󰩺 Cleaning $aur_helper cache..."
+                $aur_helper -Scc
+                print_status "󰸞 $aur_helper cache cleared."
+            fi
+            ;;
+    esac
+}
+
+prompt_reboot() {
+    echo
+    print_warning "A reboot is recommended to ensure all changes take effect properly."
+    echo
+    echo -e "${YELLOW}󰜉 Would you like to reboot now? (n/Y)${NC}"
+    read -r reboot_choice
+    case "$reboot_choice" in
+        [nN][oO]|[nN])
+            print_status "Reboot skipped. Please reboot manually when convenient."
+            ;;
+        *)
+            print_status "󰜉 Rebooting system..."
+            sudo reboot
+            ;;
+    esac
+}
+
 # Trigger upgrade
 if [ "$1" == "up" ]; then
   trap 'pkill -RTMIN+20 waybar' EXIT
+  
+  # Export functions and variables so they're available in the subshell
+  # EDITED: Added clean_cache to exports
+  export -f prompt_reboot print_warning print_status clean_cache
+  export YELLOW NC aur_helper
+  
   command="
-    $0 upgrade
+    $0 upgrade 
     ${aur_helper} -Syu
+    
+    # Check for packages that need rebuilding (requires 'rebuild-detector')
+    if command -v checkrebuild >/dev/null; then
+        echo
+        print_status \"Checking for packages requiring a rebuild...\"
+        # Filter for 'foreign' (AUR) packages that checkrebuild identifies as broken
+        broken_pkgs=\$(checkrebuild | grep '^foreign' | awk '{print \$2}')
+        
+        if [ -n \"\$broken_pkgs\" ]; then
+            print_warning \"Found broken packages: \$broken_pkgs\"
+            print_status \"Rebuilding them now...\"
+            ${aur_helper} -S --rebuild \$broken_pkgs
+        else
+            print_status \"No packages require rebuilding.\"
+        fi
+    fi
+
+    hyprctl reload
     if pkg_installed flatpak; then flatpak update; fi
-    printf '\n'
-    read -n 1 -p 'Press any key to continue...'
+    
+    # EDITED: Trigger the cache cleaner before reboot prompt
+    clean_cache
+    
+    prompt_reboot
     "
-  kitty --title "  System Update" sh -c "${command}"
+  kitty --title "   System Update" sh -c "${command}"
 fi
 
 # Check for AUR updates

@@ -8,7 +8,6 @@
 # by Stephan Raabe (2023) with my minor changes
 # ----------------------------------------------------- 
 */
-
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,filebrowser,window,run";
@@ -24,6 +23,7 @@ configuration {
     scroll-method:              1;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
+    kb-cancel:			"MousePrimary";
     window-format:              "{w} · {c} ·{t}";
 }
 
@@ -34,7 +34,10 @@ configuration {
 @theme "~/.config/rofi/colors.rasi"
 
 /* ---- Load wallpaper ---- */
-@import "~/.config/hyprcandy/cache/current_wallpaper.rasi"
+//@import "~/.config/hyprcandy/cache/current_wallpaper.rasi"//
+
+/* ---- Border color ---- */
+@import "~/.config/rofi/rofi.rasi"
 
 /* ---- Load border width ---- */
 @import "~/.config/hyprcandy/settings/rofi-border.rasi"
@@ -60,8 +63,8 @@ window {
     spacing:                     0em;
     padding:                     0em;
     border:                      @border-width;
-    border-color:                @color11;
-    border-radius:               @border-radius;
+    //border-color:                @color11;
+    border-radius:                @border-radius;
     background-color:            @background;
 }
 
@@ -171,8 +174,8 @@ element {
 }
 
 element selected.normal {
-    background-color:            @on-primary-fixed-variant;
-    text-color:                  @color11;
+    background-color:            @primary-fixed-dim;
+    text-color:                  @color5;
     border-radius:               @border-radius;
 }
 

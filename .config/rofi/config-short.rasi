@@ -24,8 +24,8 @@ configuration {
     scroll-method:              1;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-    
+    kb-cancel:			"MousePrimary";
+    window-format:              "{w} · {c} ·{t}";
 }
 
 /* ---- Load font ---- */
@@ -36,6 +36,9 @@ configuration {
 
 /* ---- Load wallpaper ---- */
 @import "~/.config/hyprcandy/cache/current_wallpaper.rasi"
+
+/* ---- Border color ---- */
+@import "~/.config/rofi/rofi.rasi"
 
 /* ---- Load border width ---- */
 @import "~/.config/hyprcandy/settings/rofi-border.rasi"
@@ -60,7 +63,7 @@ window {
     margin:                       0px; 
     color:                        #FFFFFF;
     border:                       @border-width;
-    border-color:                 @color11;
+    //border-color:                 @color11;
     cursor:                       "default";
     transparency:                 "real";
     location:                     northeast;

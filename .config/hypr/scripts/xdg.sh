@@ -4,47 +4,40 @@
 #  \  /| | | | |  _
 #  /  \| |_| | |_| |
 # /_/\_\____/ \____|
-#
 
-# Setup Timers
-_sleep1="1"
-_sleep2="2"
-_sleep3="3"
+# Kill any stale portal processes not managed by systemd
+killall -e xdg-desktop-portal-hyprland 2>/dev/null
+killall -e xdg-desktop-portal-gtk      2>/dev/null
+killall -e xdg-desktop-portal          2>/dev/null
 
-# Kill all possible running xdg-desktop-portals
-killall -e xdg-desktop-portal-hyprland
-killall -e xdg-desktop-portal-gnome
-killall -e xdg-desktop-portal-gtk
-killall -e xdg-desktop-portal
+sleep 1
 
-# Set required environment variables
-dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=hyprland
-sleep $_sleep1
+# Stop all managed services cleanly
+systemctl --user stop \
+    pipewire \
+    wireplumber \
+    background-watcher \
+    waybar-idle-monitor \
+    waypaper-watcher \
+    xdg-desktop-portal \
+    xdg-desktop-portal-hyprland \
+    xdg-desktop-portal-gtk
 
-# Stop all services
-systemctl --user stop pipewire
-systemctl --user stop wireplumber
-systemctl --user stop background-watcher
-systemctl --user stop hyprpanel-idle-monitor
-systemctl --user stop xdg-desktop-portal
-systemctl --user stop xdg-desktop-portal-gnome
-systemctl --user stop xdg-desktop-portal-gtk
-systemctl --user stop xdg-desktop-portal-hyprland
-sleep $_sleep2
+sleep 1
 
-# Start xdg-desktop-portal-hyprland
-/usr/lib/xdg-desktop-portal &
-/usr/lib/xdg-desktop-portal-hyprland &
-/usr/lib/xdg-desktop-portal-gtk &
-/usr/lib/xdg-desktop-portal-gnome &
-sleep $_sleep3
-
-# Start required services
-systemctl --user start pipewire
-systemctl --user start wireplumber
-systemctl --user start background-watcher
-systemctl --user start hyprpanel-idle-monitor
-systemctl --user start xdg-desktop-portal
+# Start portals in the correct order:
+# hyprland portal first (screen capture, toplevel), then gtk/gnome for file pickers
 systemctl --user start xdg-desktop-portal-hyprland
+sleep 1
 systemctl --user start xdg-desktop-portal-gtk
-systemctl --user start xdg-desktop-portal-gnome
+systemctl --user start xdg-desktop-portal
+
+sleep 1
+
+# Restart audio and other services
+systemctl --user start \
+    pipewire \
+    wireplumber \
+    background-watcher \
+    waybar-idle-monitor \
+    waypaper-watcher

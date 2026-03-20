@@ -1,0 +1,163 @@
+@import 'colors.css';
+/* GTK NAMED COLORS ---------------- use responsibly! */
+@define-color destructive_bg_color @red_4;
+@define-color destructive_fg_color @primary;
+@define-color success_bg_color @green_5;
+@define-color success_fg_color @primary;
+@define-color warning_bg_color #cd9309;
+@define-color warning_fg_color rgba(0, 0, 0, 0.8);
+@define-color error_bg_color @red_4;
+@define-color error_fg_color @primary;
+@define-color accent_color {{colors.primary.default.hex}};
+@define-color accent_fg_color {{colors.on_secondary.default.hex}};
+@define-color accent_bg_color {{colors.primary.default.hex}};
+@define-color window_bg_color @on_secondary;
+@define-color window_fg_color @primary;
+@define-color view_bg_color @window_bg_color;
+@define-color view_fg_color @primary;
+@define-color headerbar_bg_color @window_bg_color;
+@define-color headerbar_fg_color @primary;
+@define-color headerbar_border_color @primary;
+@define-color headerbar_backdrop_color @window_bg_color;
+@define-color headerbar_shade_color rgba(0, 0, 6, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 12, 0.9);
+@define-color sidebar_bg_color @window_bg_color;
+@define-color sidebar_fg_color @window_fg_color;
+@define-color sidebar_backdrop_color @window_bg_color;
+@define-color sidebar_shade_color rgba(0, 0, 6, 0.25);
+@define-color sidebar_border_color rgba(0, 0, 6, 0.36);
+@define-color secondary_sidebar_bg_color @window_bg_color;
+@define-color secondary_sidebar_fg_color @primary;
+@define-color secondary_sidebar_backdrop_color @window_bg_color;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 6, 0.25);
+@define-color secondary_sidebar_border_color rgba(0, 0, 6, 0.36);
+@define-color card_bg_color @window_bg_color;
+@define-color card_fg_color @primary;
+@define-color card_shade_color rgba(0, 0, 6, 0.36);
+@define-color dialog_bg_color @on_secondary;
+@define-color dialog_fg_color @primary;
+@define-color thumbnail_bg_color @window_bg_color;
+@define-color thumbnail_fg_color @primary;
+@define-color shade_color rgba(0, 0, 6, 0.25);
+@define-color scrollbar_outline_color rgba(0, 0, 12, 0.95);
+@define-color popover_bg_color @window_bg_color;
+@define-color popover_fg_color @primary;
+@define-color popover_shade_color rgba(0, 0, 6, 0.25);
+
+/* More customizations */
+
+windowcontrols > button > image { /* GTK4 */
+  color: @inverse_primary;
+  min-width: 1px;
+  min-height: 1px;
+  border-radius: 100 %;
+  padding: 0;
+  margin: 0 5px;
+  opacity: 1;
+}
+
+button.titlebutton { /* GTK3 */
+  color: transparent;
+  min-width: 1px;
+  min-height: 1px;
+  border-radius: 100 %;
+  padding: 0;
+  margin: 0 5px;
+  opacity: 1;
+}
+
+button.titlebutton.close,
+  windowcontrols > button.close > image {
+  color: @inverse_primary;
+  background: @primary;
+}
+
+button.titlebutton.close: hover,
+  windowcontrols > button.close: hover > image {
+  color: @inverse_primary;
+  background: @primary;
+  opacity: 0.5;
+}
+
+button.titlebutton.maximize,
+  windowcontrols > button.maximize > image {
+  background-color: #33c848;
+  border: 1px solid #3e9948;
+}
+
+button.titlebutton.maximize: hover,
+  windowcontrols > button.maximize: hover > image {
+  color: #0b650d;
+  opacity: 0.5;
+}
+
+button.titlebutton.minimize,
+  windowcontrols > button.minimize > image {
+  background-color: #ffba40;
+  border: 1px solid #dd9d30;
+}
+
+button.titlebutton.minimize: hover,
+  windowcontrols > button.minimize: hover > image {
+  color: #9a5711;
+  opacity: 0.5;
+}
+
+/***************
+ * Popovers   *
+ ***************/
+
+popover {
+  border-radius: 20px;
+}
+
+popover.background:backdrop {
+  box-shadow: none;
+}
+
+popover.background>contents separator {
+  background-color: @secondary;
+}
+
+/*****************
+ * Progressbars *
+*****************/
+progressbar progress {
+  background: linear-gradient(45deg, @inverse_primary 0%, @primary_fixed_dim 100%, #9558e1 0%, #16121a 100%);
+}
+
+/************
+ * Tooltips *
+ ************/
+tooltip {
+  font-size: 12px;
+  padding: 2px;
+  /* not working */
+  border-radius: 5px;
+  box-shadow: none;
+  text-shadow: 0 1px black;
+}
+
+tooltip.background {
+  background-color: @on_secondary;
+  background-clip: padding-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tooltip decoration {
+  background-color: @on_secondary;
+}
+
+tooltip * {
+  padding: 2px;
+  background-color: @on_secondary;
+  color: @primary;
+}
+
+/* Dialog action buttons row */
+dialog .dialog-action-area,
+messagedialog > box > box {
+  border-top: 2px solid @primary_fixed_dim;
+  border-radius: 0 0 10px 10px;
+  padding: 10px;
+}

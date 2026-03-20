@@ -157,8 +157,8 @@
 # 'mono' outputs left to right lowest to highest frequencies.
 # 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
 # set 'reverse' to 1 to display frequencies the other way around.
-; channels = stereo
-; mono_option = average
+channels = mono
+mono_option = average
 ; reverse = 0
 
 # Raw output target.
@@ -220,8 +220,8 @@
 # Or defined by hex code '#xxxxxx' (hex code must be within ''). User defined colors requires
 # a terminal that can change color definitions such as Gnome-terminal or rxvt.
 # default is to keep current terminal color
-; background = default
-; foreground = default
+background = default
+foreground = default
 
 # SDL and sdl_glsl only support hex code colors, these are the default:
 ; background = '#111111'
@@ -231,15 +231,15 @@
 # Gradient mode, only hex defined colors are supported,
 # background must also be defined in hex or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
-; gradient = 0
-; gradient_color_1 = '#59cc33'
-; gradient_color_2 = '#80cc33'
-; gradient_color_3 = '#a6cc33'
-; gradient_color_4 = '#cccc33'
-; gradient_color_5 = '#cca633'
-; gradient_color_6 = '#cc8033'
-; gradient_color_7 = '#cc5933'
-; gradient_color_8 = '#cc3333'
+gradient = 1
+gradient_color_1 = '#e2b778'
+gradient_color_2 = '#553d13'
+gradient_color_3 = '#553d13'
+gradient_color_4 = '#e2b778'
+gradient_color_5 = '#553d13'
+gradient_color_6 = '#553d13'
+gradient_color_7 = '#684b1e'
+gradient_color_8 = '#e2b778'
 
 
 
@@ -275,10 +275,9 @@
 # This one is tricky. You can have as much keys as you want.
 # Remember to uncomment more than one key! More keys = more precision.
 # Look at readme.md on github for further explanations and examples.
-; 1 = 1 # bass
-; 2 = 1
+; 1 = 2 # bass
+; 2 = 2
 ; 3 = 1 # midtone
 ; 4 = 1
-; 5 = 1 # treble
-
+; 5 = 0.5 # treble
 

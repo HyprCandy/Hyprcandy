@@ -1,0 +1,83 @@
+{
+    "$schema": "/etc/xdg/swaync/configSchema.json",
+    "positionX": "right",
+    "positionY": "top",
+    "layer": "top",
+    "control-center-layer": "top",
+    "layer-shell": true,
+    "cssPriority": "user",
+    "control-center-margin-top": 8,
+    "control-center-margin-bottom": 8,
+    "control-center-margin-right": 6,
+    "control-center-margin-left": 6,
+    "notification-2fa-action": true,
+    "notification-inline-replies": false,
+    "notification-icon-size": 24,
+    "notification-body-image-height": 80,
+    "notification-body-image-width": 80,
+    "notification-window-width": 300,
+    "timeout": 6,
+    "timeout-low": 3,
+    "timeout-critical": 0,
+    "fit-to-screen": false,
+    "control-center-width": 360,
+    "control-center-height": 720,
+    "keyboard-shortcuts": true,
+    "image-visibility": "when-available",
+    "transition-time": 200,
+    "hide-on-clear": false,
+    "hide-on-action": true,
+    "script-fail-notify": true,
+    "widgets": [
+        "buttons-grid",
+        "volume",
+        "backlight",
+        "dnd",
+        "title",
+        "notifications"
+    ],
+    "widget-config": {
+        "title": {
+            "text": "󱏩",
+            "clear-all-button": true,
+            "button-text": "󰩺"
+        },
+        "dnd": {
+            "text": "󰂠"
+        },
+        "label": {
+            "max-lines": 1,
+            "text": "Notification"
+        },
+        "volume": {
+            "label": "󰕾"
+        },
+        "backlight": {
+            "label": "󰃟"
+        },
+        "buttons-grid": {
+            "actions": [
+                {
+                    "label": "",
+                    "command": "bash -c $HOME/.config/hypr/scripts/screenshot.sh"
+                },
+                {
+                    "label": "",
+                    "command": "bash -c $HOME/.config/swaync/recorder.sh"
+                },
+                {
+                    "label": "",
+                    "command": "bash $HOME/.ultracandy/GJS/toggle-hyprland-settings.sh"
+                },
+                {
+                    "label": "",
+                    "command": "DRI_PRIME=1 equibop"
+                },
+                {
+                    "label": "󰖁",
+                    "command": "bash $HOME/.config/waybar/scripts/volume-control.sh -o m"
+                }
+            ]
+        }
+    }
+}

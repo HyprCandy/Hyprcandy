@@ -7,7 +7,7 @@
 #           |___/                             |___/
 #
 # -----------------------------------------------------
-# Enhanced keybindings search with improved rofi compatibility
+# Enhanced keybindings search with improved rofi compatibility (Dynamic Version)
 # -----------------------------------------------------
 
 # Hyprland Keybindings Display Script
@@ -61,7 +61,32 @@ update_cache_timestamp() {
     echo "$keybinds_mtime" > "$CACHE_TIMESTAMP"
 }
 
-# Function to display help
+# Function to discover categories dynamically from config file
+discover_categories() {
+    local config_file="$1"
+    local categories=()
+    
+    # Check if keybinds file exists
+    if [[ ! -f "$config_file" ]]; then
+        echo "Error: Keybinds file not found: $config_file"
+        return 1
+    fi
+    
+    # Parse the keybinds file to find categories
+    while IFS= read -r line; do
+        # Check for category headers (comments that look like section headers)
+        if [[ "$line" =~ ^[[:space:]]*####[[:space:]]*(.+)[[:space:]]*####[[:space:]]*$ ]]; then
+            category="${BASH_REMATCH[1]}"
+            category=$(echo "$category" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+            categories+=("$category")
+        fi
+    done < "$config_file"
+    
+    # Remove duplicates and sort
+    printf '%s\n' "${categories[@]}" | sort -u
+}
+
+# Function to display help with dynamic categories
 show_help() {
     echo "Usage: $0 [OPTIONS]"
     echo "Display Hyprland keybindings in rofi"
@@ -81,19 +106,53 @@ show_help() {
     echo "  $0 -s \"workspace\"                    # Search for workspace-related keybinds"
     echo "  $0 -f ~/.config/hypr/keybinds.conf    # Use different keybinds file"
     echo ""
-    echo "Available categories (based on your config):"
-    echo "  • Kill active window"
-    echo "  • Rofi Menus"
-    echo "  • Applications"
-    echo "  • Gaps OUT controls"
-    echo "  • Gaps IN controls"
-    echo "  • Border controls"
-    echo "  • Rounding controls"
-    echo "  • Visual presets"
-    echo "  • Workspaces"
-    echo "  • Windows"
-    echo "  • Fn keys"
-    echo "  And more..."
+    echo "Available categories (auto-discovered from config):"
+    
+    # Dynamically discover and display categories
+    local categories=$(discover_categories "$KEYBINDS_FILE")
+    if [[ -n "$categories" ]]; then
+        while IFS= read -r category; do
+            echo "  • $category"
+        done <<< "$categories"
+    else
+        echo "  (No categories found or config file not accessible)"
+    fi
+}
+
+# Function to create compact category list for rofi
+create_compact_category_list() {
+    local categories_array=("$@")
+    local max_width=60  # Adjust for rofi width
+    local current_line=""
+    local line_length=0
+    local result=""
+    
+    for category in "${categories_array[@]}"; do
+        local item="• $category"
+        local item_length=${#item}
+        
+        # Check if adding this item would exceed the line width
+        if [[ $((line_length + item_length + 3)) -gt $max_width ]] && [[ -n "$current_line" ]]; then
+            result="$result\n$current_line"
+            current_line="$item"
+            line_length=$item_length
+        else
+            if [[ -n "$current_line" ]]; then
+                current_line="$current_line   $item"
+                line_length=$((line_length + item_length + 3))
+            else
+                current_line="$item"
+                line_length=$item_length
+            fi
+        fi
+    done
+    
+    # Add the last line
+    if [[ -n "$current_line" ]]; then
+        result="$result\n$current_line"
+    fi
+    
+    echo -e "$result"
 }
 
 # Function to parse keybinds from config file
@@ -115,6 +174,7 @@ parse_keybinds() {
     
     local current_category=""
     local category_counts=()
+    local discovered_categories=()
     
     # Parse the keybinds file
     while IFS= read -r line; do
@@ -125,6 +185,10 @@ parse_keybinds() {
         if [[ "$line" =~ ^[[:space:]]*####[[:space:]]*(.+)[[:space:]]*####[[:space:]]*$ ]]; then
             current_category="${BASH_REMATCH[1]}"
             current_category=$(echo "$current_category" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+            # Add to discovered categories if not already present
+            if [[ ! " ${discovered_categories[@]} " =~ " ${current_category} " ]]; then
+                discovered_categories+=("$current_category")
+            fi
             continue
         fi
         
@@ -158,7 +222,7 @@ parse_keybinds() {
                 action=$(echo "$action" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
                 
                 # Handle variables like $mainMod
-                display_modifier=$(echo "$modifier" | sed -e 's/\$mainMod/󰘳/' -e 's/SUPER/󰘳/' -e 's/ALT/Alt/' -e 's/CTRL/Ctrl/' -e 's/SHIFT/Shift/')
+                display_modifier=$(echo "$modifier" | sed -e 's/\$mainMod//' -e 's/SUPER//' -e 's/ALT/Alt/' -e 's/CTRL/Ctrl/' -e 's/SHIFT/Shift/')
                 
                 # Format key for better display
                 display_key="$key"
@@ -174,9 +238,9 @@ parse_keybinds() {
                 
                 # Add category if we have one
                 if [[ -n "$current_category" ]]; then
-                    printf "%-20s │ %-15s │ %-30s │ %s\n" "$display_modifier" "$display_key" "$display_action" "$current_category" >> "$temp_file"
+                    printf "%-5s │ %-5s │ %-5s │ %s\n" "$display_modifier" "$display_key" "$display_action" "$current_category" >> "$temp_file"
                 else
-                    printf "%-20s │ %-15s │ %s\n" "$display_modifier" "$display_key" "$display_action" >> "$temp_file"
+                    printf "%-5s │ %-5s │ %s\n" "$display_modifier" "$display_key" "$display_action" >> "$temp_file"
                 fi
             fi
         fi
@@ -192,19 +256,33 @@ parse_keybinds() {
     # Sort the keybinds by category, then by modifier
     sort -t'│' -k4,4 -k1,1 "$temp_file" -o "$temp_file" 2>/dev/null || sort "$temp_file" -o "$temp_file"
     
-    # Add header
+    # Create dynamic category list for header
+local category_list=""
+if [[ ${#discovered_categories[@]} -gt 0 ]]; then
+    category_list=$(create_compact_category_list "${discovered_categories[@]}")
+fi
+    
+    # Add header with dynamic categories
     {
-        echo "🎮 Hyprland Keybindings"
-        echo "════════════════════════════════════════════════════════════════════════════════"
+        echo "🎮 Hyprland Keybindings |  is the SUPER key"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        echo "Search for category or keybind specific keywords"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        printf "Categories:$category_list"
+        echo ""
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         if grep -q "│.*│.*│.*│" "$temp_file"; then
-            printf "%-20s │ %-15s │ %-30s │ %s\n" "Modifier" "Key" "Action" "Category"
+            printf "%-5s │ %-5s │ %-5s │ %s\n" "Modifier" "Key" "Action" "Category"
         else
-            printf "%-20s │ %-15s │ %s\n" "Modifier" "Key" "Action"
+            printf "%-5s │ %-5s │ %s\n" "Modifier" "Key" "Action"
         fi
-        echo "════════════════════════════════════════════════════════════════════════════════"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         cat "$temp_file"
-        echo "════════════════════════════════════════════════════════════════════════════════"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         echo "Total keybinds: $(wc -l < "$temp_file")"
+        if [[ ${#discovered_categories[@]} -gt 0 ]]; then
+            echo "Categories found: ${#discovered_categories[@]}"
+        fi
     } > "${temp_file}.formatted"
     
     mv "${temp_file}.formatted" "$temp_file"
@@ -270,7 +348,7 @@ show_in_terminal() {
                 fi
                 
                 # Format the line with colors
-                printf "%-20s ${YELLOW}│${RESET} %-15s ${YELLOW}│${RESET} %s\n" "$modifier" "$key" "$action"
+                printf "%-5s ${YELLOW}│${RESET} %-15s ${YELLOW}│${RESET} %s\n" "$modifier" "$key" "$action"
             else
                 echo "$line"
             fi
@@ -368,7 +446,7 @@ if [[ -n "$CATEGORY_FILTER" || -n "$SEARCH_FILTER" ]]; then
     
     # Add footer with count
     {
-        echo "════════════════════════════════════════════════════════════════════════════════"
+        echo "═════════════════════════════════════════════════════════════"
         echo "Filtered keybinds: $(tail -n +7 "$FILTERED_FILE" | grep -v "════" | wc -l)"
     } >> "$FILTERED_FILE"
     

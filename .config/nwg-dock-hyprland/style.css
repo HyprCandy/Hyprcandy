@@ -1,11 +1,11 @@
 @import 'colors.css';
 
 window.background {
-  background-color: @blur_background;
+    background-color: @blur_background;
 	border-radius: 20px;
 	border-style: solid;
 	border-width: 2px;
-	border-color: @inverse_primary; /*@primary_fixed_dim;*/
+	border-color: @on_primary_fixed_variant; /*@primary_fixed_dim;*/
 }
 
 #box {
@@ -32,7 +32,7 @@ button {
 }
 
 button:hover {
-	background-color: @on_primary /*rgba(255, 255, 255, 0.15)*/;
+	background-color: transparent/*@on_primary rgba(255, 255, 255, 0.15)*/;
 	border-radius: 20px;
 }
 

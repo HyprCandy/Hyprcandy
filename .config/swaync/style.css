@@ -1,0 +1,265 @@
+/* Colors */
+
+@import 'colors.css';
+@define-color background @blur_background;
+@define-color groupbackground @blur_background; /*linear-gradient(45deg, @bordercolor 0%, @scrim 100%);*/
+@define-color buttoncolor @primary_fixed_dim;
+@define-color bordercolor @on_primary_fixed_variant;
+@define-color fontcolor @on_surface;
+@define-color text-color @primary;
+
+* {
+    font-family: "C059 Bold";
+}
+
+/* Control Center - Default (unfocused) state */
+.control-center {
+    border: 2px solid @bordercolor;
+    border-radius: 16.0px;
+    background: @background; /* Your current unfocused color */
+    padding: 0;
+}
+
+.widget {
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+button {
+    border: 0px;
+    border-radius: 8px;
+    min-width: 8px;
+    min-height: 8px;
+    background: @bordercolor;
+    color: @buttoncolor;
+    box-shadow: 0 0 0 2px @primary_fixed_dim inset;
+    transition: all 0.2s ease;
+    opacity: 1;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: all 0.2s ease;
+}
+button:hover {
+    background: @buttoncolor;
+    color: @on_secondary;
+    box-shadow: 0 0 0 2px @on_secondary inset;
+}
+.notification-group-header {
+    font-size: 14px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    margin: 8px;
+    min-width: 0;
+    min-height: 0;
+}
+
+/* Notification */
+.notification {
+    color: @bordercolor;
+    background: @background;
+    border: 3px solid @bordercolor;
+    border-radius: 10px;
+    padding:10px;
+}
+
+.notification-default-action:hover,
+.notification-action:hover {
+    background: @bordercolor;
+}
+
+.notification-group-header {
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.notification-group:active,
+.notification-group:selected,
+.notification-group:focus,
+.notification-group:hover {
+    background: transparent; /* Replace with desired color */
+}
+
+/* Button */
+
+.close-button {
+    background: @on_secondary;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 15px;
+    margin-top: 9px;
+    margin-right: 10px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.close-button:hover {
+    background: @primary;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 15px;
+    margin-top: 9px;
+    margin-right: 10px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+    background: @on_secondary;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 15px;
+    margin-top: 9px;
+    margin-right: 7px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.notification-group-collapse-button:hover,
+.notification-group-close-all-button:hover {
+    background: @primary;
+    text-shadow: none;
+    box-shadow: none;
+    padding: 0;
+    border-radius: 15px;
+    margin-top: 9px;
+    margin-right: 7px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+.notification-group .notification-group-close-button .close-button {
+    font-size: medium;
+    margin: 15px 22px;
+}
+
+/* Volume widget slider styling */
+.widget-volume scale slider {
+    background: @buttoncolor;
+    box-shadow: 0 0 4px 4px @bordercolor, 0 0 0 2px @on_secondary;
+    border-radius: 4px;
+    padding: 0;
+    margin: 0px;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+}
+
+.widget-volume scale highlight {
+    border-radius: 16px;
+    background: linear-gradient(45deg, @primary_fixed_dim 0%, @inverse_primary 100%, #9558e1 0%, #16121a 100%);
+    box-shadow: 0 0 2px 2px @bordercolor, 0 0 0 2px @on_secondary inset;
+}
+
+/* Backlight widget slider styling */
+.widget-backlight scale slider {
+    background: @buttoncolor;
+    box-shadow: 0 0 4px 4px @bordercolor, 0 0 0 2px @on_secondary;
+    border-radius: 4px;
+    padding: 0;
+    margin: 1px;
+    margin-top: 0.5px;
+    margin-bottom: 0.5px;
+}
+
+.widget-backlight scale highlight {
+    border-radius: 16px;
+    background: linear-gradient(45deg, @primary_fixed_dim 0%, @inverse_primary 100%, #9558e1 0%, #16121a 100%);
+    box-shadow: 0 0 2px 2px @bordercolor, 0 0 0 2px @on_secondary inset;
+}
+
+.widget-buttons-grid {
+    font-size: x-small;
+}
+
+.widget-title {
+  margin-right: 20px;
+}
+
+/* === Do Not Disturb === */
+
+.widget-dnd {
+  margin-right: 18px;
+}
+
+.widget-dnd > switch {
+  color: @primary;
+  background: @bordercolor;
+  border-radius: 16px;
+  box-shadow: 0 0 0 2px @on_secondary inset;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+}
+
+.widget-dnd > switch:hover {
+  background: @background;
+  border-radius: 16px;
+  box-shadow: 0 0 0 2px @on_secondary inset;
+}
+
+.widget-dnd > switch:checked {
+  background: linear-gradient(45deg, @primary_fixed_dim 0%, @inverse_primary 100%, #9558e1 0%, #16121a 100%);
+  color: @buttoncolor;
+  border-radius: 16px;
+}
+
+.widget-dnd > switch:checked:hover {
+  background: @background;
+  border-radius: 16px;
+  box-shadow: 0 0 0 2px @on_secondary inset;
+}
+
+.widget-dnd > switch slider {
+  background: @buttoncolor;
+  box-shadow: 0 0 4px 4px @bordercolor, 0 0 0 2px @on_secondary;
+  border-radius: 4px;
+}
+
+.widget-dnd > switch:hover slider {
+  box-shadow: 0 0 4px 4px @bordercolor, 0 0 0 2px @on_secondary;
+  border-radius: 4px;
+}
+
+.widget-dnd > switch:checked slider {
+  background: @buttoncolor;
+  box-shadow: 0 0 4px 4px @bordercolor, 0 0 0 2px @on_secondary;
+  border-radius: 4px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild {
+  background: transparent;
+}
+
+/* ─────────────────────────────────────────────────────────────┤ tooltips ├───
+*/
+tooltip {
+  font-size: 12px;
+  padding: 2px;
+  /* not working */
+  border-radius: 5px;
+  box-shadow: none;
+  text-shadow: 0 1px black;
+}
+
+tooltip.background {
+  background-color: @on_secondary;
+  background-clip: padding-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tooltip decoration {
+  background-color: @on_secondary;
+}
+
+tooltip * {
+  padding: 2px;
+  background-color: @on_secondary;
+  color: @primary;
+}
+
+* {
+    font-size: medium;
+}

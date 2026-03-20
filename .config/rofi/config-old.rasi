@@ -37,6 +37,9 @@ configuration {
 /* ---- Load wallpaper ---- */
 @import "~/.config/hyprcandy/cache/current_wallpaper.rasi"
 
+/* ---- Border color ---- */
+@import "~/.config/rofi/rofi.rasi"
+
 /* ---- Load border width ---- */
 @import "~/.config/hyprcandy/settings/rofi-border.rasi"
 
@@ -60,7 +63,7 @@ window {
     margin:                       0px; 
     color:                        #FFFFFF;
     border:                       @border-width;
-    border-color:                 #FFFFFF;
+    //border-color:                 #FFFFFF;
     cursor:                       "default";
     transparency:                 "real";
     location:                     center;
