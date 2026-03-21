@@ -46,7 +46,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 
 • Hyprexpo workspaces overview
 
-## Installation
+## HyprCandy (Free version) Installation
 
 I recommend running the script from Hyprland but it will also work from other DEs or the TTY.
 
@@ -54,9 +54,9 @@ Needed packages: git, hyprland, kitty
 
 Run:
 ```shell
-git clone https://github.com/HyprCandy/ultracandyinstall.git &&
-cd ultracandyinstall && 
-bash UltraCandy_installer.sh
+git clone https://github.com/HyprCandy/hyprcandyinstall.git &&
+cd hyprcandyinstall && 
+bash HyprCandy_Install.sh
 ```
 
 ## Support
