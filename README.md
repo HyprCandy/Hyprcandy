@@ -16,7 +16,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **Hyprlock & wlogout themes** | ✅ | ✅ |
 | **Hyprviz settings integration** | ✅ | ✅ |
 | **Hyprexpo-plus overview** *(optional plugin)* | ✅ | ✅ |
-| **Dock** | nwg-dock-hyprland | hyprcandy-dock (GJS) |
+| **Dock** | nwg-dock-hyprland | hyprcandy-dock |
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
 | **Media player widget** | Basic | ✨ Advanced |
