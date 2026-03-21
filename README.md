@@ -20,12 +20,12 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
 | **Media player widget** | Basic | ✨ Advanced |
+| **Weather widget** | ❌ | ✅ |
 | **Quickshell overview** (dwindle / master / monocle) | ✅ | ✅ |
 | **Quickshell overview** — Hyprland **scrolling** layout | ❌ | ✅ |
 | **Live GTK4 & QT color reloads** on wallpaper change | ❌ | ✅ |
 | **hyprcandy-dock** — icon drag-to-rearrange | ❌ | ✅ |
 | **hyprcandy-dock** — switcheroo dGPU launch | ❌ | ✅ |
-| **Weather widget** | ❌ | ✅ |
 | **SDDM live background sync** | ❌ | ✅ |
 
 ### 🍬 HyprCandy+ exclusive highlights
