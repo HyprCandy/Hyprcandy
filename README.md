@@ -1,11 +1,27 @@
-# UltraCandy
+# HyprCandy x HyprCandy+
 
 Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD) - no posts on YouTube yet
 
-➡[UltraCandy](https://github.com/HyprCandy/UltraCandy.git)⬅ is a Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) with extra quality of life features.
+HyprCandy is a Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) with extra quality of life features. It's the free version of HyprCandy+ where I aim to make an even more unified Hyprland workflow experience with more custom made packages and sevices.
 
 
-## Features:
+## HyprCandy+ extra features:
+• Custom control center with various edit options plus widgets.
+
+• Quickshell overview that **supports the new scrolling Hyprland layout** along with the other layouts.
+
+• Live color reloads for GTK4 & QT apps on background change (no more need to relaunch programs that support it).
+
+• Custom GNOME like dash-style dock with extra features missing in nwg-dock-hyprland such as: 
+- switcheroo-control on right-click popover menus for devices with hybrid graphics to allow launching programs via the extra discrete GPU(s)
+- icon drag to rearrange support (no longer having to constantly unpin apps an re-pin them in a particular order)
+- trash
+- GTK4/GJS based thus supporting hot color reloads on background changes just like the apps.
+
+• SDDM live background support synced to the desktop background, with customization options in the new control center.
+
+
+## Shared Features:
 • Integration with the Hyprviz Hyprland settings app for all Hyprland related settings.
 
 • Custom UC control center to easily modify extra settings waybar if waybar option is chosen, hyprland windows,the dock, launch hyprpicker, adjust opacty, change dock start icon,enable/disable xray mode  and hyprsunset/hyprshade. (I like to wsitch to islands mode for dark backgrounds and the blurred bar for lighter backgrounds).
