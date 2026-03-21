@@ -75,6 +75,8 @@ Since I'm an aeronautics graduate and not a programmer it took me ages to learn 
   </tr>
 </table>
 
+### Older screenshots below to be updated soon
+
 ### With optional hyprbars + hyprexpo-plus plugins
 
 > SwayNC screenshots below are outdated
@@ -94,8 +96,6 @@ Since I'm an aeronautics graduate and not a programmer it took me ages to learn 
     <td colspan="3"><img width="683" alt="screenshot_21102025_232846" src="https://github.com/user-attachments/assets/29ae2d4f-aa92-497e-87a0-ec10c9799e6a" /></td>
   </tr>
 </table>
-
-### Older screenshots
 
 <table>
   <tr>
