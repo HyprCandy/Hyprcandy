@@ -10,8 +10,7 @@ selected_option=$(echo -e "$actions" | rofi -dmenu -i -config "${config}" || pki
 # Perform actions based on the selected option
 case "$selected_option" in
 *Lock)
-  sleep 0.5
-  hyprlock
+  loginctl lock-session
   ;;
 *Shutdown)
   systemctl poweroff
@@ -26,8 +25,6 @@ case "$selected_option" in
   systemctl hibernate
   ;;
 *Logout)
-  terminate_clients
-  sleep 0.5
-  hyprctl dispatch exit
+  loginctl kill-session "$XDG_SESSION_ID"
   ;;
 esac

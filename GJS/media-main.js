@@ -1,10 +1,5 @@
 #!/usr/bin/env gjs
 
-/**
- * Candy Media Player - Modern 2026 Version
- * Uses playerctl + GStreamer for full audio/video support
- */
-
 imports.gi.versions.Gtk = '4.0';
 imports.gi.versions.Gdk = '4.0';
 imports.gi.versions.GLib = '2.0';
@@ -14,71 +9,55 @@ const scriptDir = GLib.path_get_dirname(imports.system.programInvocationName);
 imports.searchPath.unshift(scriptDir);
 imports.searchPath.unshift(GLib.build_filenamev([scriptDir, 'src']));
 
-const Media = imports['media-modern'];
-const PidUtils = imports['pid-utils'];
-const CssWatcher = imports['css-watcher'];
+let Adw;
+try {
+    imports.gi.versions.Adw = '1';
+    Adw = imports.gi.Adw;
+} catch (e) {
+    Adw = null;
+}
+
+const Media = imports['media'];
 
 const APP_ID = 'Candy.Media';
-const WIDGET_NAME = 'media-player';
-
-let cssWatcher = null;
 
 function onActivate(app) {
-    const winMedia = new Gtk.ApplicationWindow({
+    const winMedia = new (Adw ? Adw.ApplicationWindow : Gtk.ApplicationWindow)({
         application: app,
-        title: 'candy.media',
+        title: 'Media Player',
         default_width: 520,
         default_height: 140,
         resizable: false,
         decorated: false,
     });
-
-    const surface = winMedia.get_surface();
-    if (surface) surface.set_property('name', 'Candy');
-
+    if (winMedia.set_icon_from_file) {
+        try { winMedia.set_icon_from_file(GLib.build_filenamev([GLib.get_home_dir(), '.local/share/icons/HyprCandy.png'])); } catch (e) {}
+    }
     const mediaBox = Media.createMediaBox();
-    winMedia.set_child(mediaBox);
-
-    // Escape key to close
+    if (Adw && winMedia.set_content) {
+        winMedia.set_content(mediaBox);
+    } else {
+        winMedia.set_child(mediaBox);
+    }
+    // Add Escape key handling
     const keyController = new Gtk.EventControllerKey();
-    keyController.connect('key-pressed', (c, k) => {
-        if (k === Gdk.KEY_Escape) winMedia.hide();
+    keyController.connect('key-pressed', (controller, keyval, keycode, state) => {
+        if (keyval === Gdk.KEY_Escape) {
+            winMedia.close();
+        }
         return false;
     });
     winMedia.add_controller(keyController);
-
-    // Register for CSS reload
-    CssWatcher.registerWindow(winMedia);
-
-    // Cleanup on close
-    winMedia.connect('close-request', () => {
-        CssWatcher.unregisterWindow(winMedia);
-        if (cssWatcher) {
-            cssWatcher.stop();
-            cssWatcher = null;
-        }
-        PidUtils.cleanupPid(WIDGET_NAME);
-        return false;
-    });
-
-    winMedia.show();
+    winMedia.set_visible(true);
+    if (winMedia.set_keep_above) winMedia.set_keep_above(true);
     winMedia.present();
-
-    // Start CSS watcher
-    cssWatcher = CssWatcher.createCSSWatcher();
-    cssWatcher.start();
 }
 
 function main() {
-    PidUtils.writePid(WIDGET_NAME);
-
-    const app = new Gtk.Application({
-        application_id: APP_ID,
-        flags: Gio.ApplicationFlags.FLAGS_NONE
-    });
-
+    const ApplicationType = Adw ? Adw.Application : Gtk.Application;
+    const app = new ApplicationType({ application_id: APP_ID });
     app.connect('activate', onActivate);
     app.run([]);
 }
 
-main();
+main(); 

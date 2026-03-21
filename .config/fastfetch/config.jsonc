@@ -20,17 +20,17 @@
             "type": "custom"
         },
         {
-            "key": "│ {#31} admin   {#keys}││ ",
+            "key": "│ {#31} user    {#keys}││ ",
             "type": "title",
-            "format": " {host-name}"
+            "format": "User  {user-name}  Root  {host-name}"
         },
         {
-            "key": "│ {#31}󰇄 device  {#keys}││ ",
+            "key": "│ {#39}󰇄 device  {#keys}││ ",
             "type": "host",
             "format": "{5} {2}"
         },
         {
-            "key": "│ {#39}{icon} distro  {#keys}││ ",
+            "key": "│ {#36}{icon} distro  {#keys}││ ",
             "type": "os"
         },
         {
@@ -38,11 +38,11 @@
             "type": "kernel"
         },
         {
-            "key": "│ {#38}󱫐 wm      {#keys}││ ",
+            "key": "│ {#32}󱫐 wm      {#keys}││ ",
             "type": "wm"
         },
         /*{
-            "key": "│ {#90} cursor  {#keys}││ ",
+            "key": "│ {#36} cursor  {#keys}││ ",
             "type": "cursor"
         },
         {
@@ -62,7 +62,7 @@
             "type": "packages"
         },*/
         {
-            "key": "│ {#32}󰉉 disk    {#keys}││ ",
+            "key": "│ {#37}󰉉 disk    {#keys}││ ",
             "type": "disk"
         },
         {
@@ -74,13 +74,13 @@
             "type": "swap"
         },
         {
-            "key": "│ {#38}󰅐 os age  {#keys}││ ",
+            "key": "│ {#32}󰅐 os age  {#keys}││ ",
             "type": "disk",
             "folders": "/",
             "format": "{days} days"
         },
         {
-            "key": "│ {#37}󰅐 uptime  {#keys}││ ",
+            "key": "│ {#36}󰅐 uptime  {#keys}││ ",
             "type": "uptime"
         },
         {
@@ -102,10 +102,10 @@
             "type": "custom"
         },
         {
-            "key": "│ {#33} colors  {#keys}││                ",
+            "key": "│ {#31} colors  {#keys}││                ",
             "type": "custom",
             "size": 12,
-            "format": "\u001b[31m \u001b[32m \u001b[33m \u001b[34m \u001b[90m \u001b[36m \u001b[37m \u001b[38m \u001b[39m"
+            "format": "\u001b[90m \u001b[31m \u001b[32m \u001b[33m \u001b[37m \u001b[34m \u001b[35m \u001b[36m \u001b[39m"
         },
         {
             "key": "╰───────────╯╰───────────────────────────────────────────────────╯",

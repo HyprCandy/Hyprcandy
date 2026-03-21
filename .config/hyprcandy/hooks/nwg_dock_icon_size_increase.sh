@@ -6,7 +6,7 @@ SETTINGS_FILE="$HOME/.config/hyprcandy/nwg_dock_settings.conf"
 
 # Create settings file if it doesn't exist
 if [ ! -f "$SETTINGS_FILE" ]; then
-    echo "ICON_SIZE=24" > "$SETTINGS_FILE"
+    echo "ICON_SIZE=28" > "$SETTINGS_FILE"
     echo "BORDER_RADIUS=16" >> "$SETTINGS_FILE"
     echo "BORDER_WIDTH=2" >> "$SETTINGS_FILE"
 fi

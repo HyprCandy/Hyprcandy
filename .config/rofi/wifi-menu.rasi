@@ -8,7 +8,6 @@ configuration {
   hover-select:             true;
   me-select-entry:          "MousePrimary";
   me-accept-entry:          "!MousePrimary";
-  kb-cancel:	            "MousePrimary";
 }
 
 /* 
@@ -29,7 +28,7 @@ configuration {
 /* Window */
 
 window {
-  location:                 north;
+  location:                 northeast;
   anchor:                   north;
   y-offset:                 3px;
   width:                    240px;

@@ -1,1 +1,1 @@
-satty
+swappy -f

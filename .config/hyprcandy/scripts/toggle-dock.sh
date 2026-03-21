@@ -27,7 +27,7 @@ if [[ "$1" == "--restore" ]]; then
         pkill -f "nwg-dock-hyprland"
         "$PRESET_HIDDEN" >/dev/null 2>&1
         echo "disabled" > "$AUTO_RELAUNCH_PREF"
-        #notify-send "Dock" "Hidden (Auto-relaunch disabled)" -t 2000 -u low
+        notify-send "Dock" "Hidden (Auto-relaunch disabled)" -t 2000 -u low
         exit 0
     else
         # Dock is dead, restore it and enable auto-relaunch
@@ -35,7 +35,7 @@ if [[ "$1" == "--restore" ]]; then
         SCRIPT="${DOCK_SCRIPTS[$CURRENT_POS]}"
         [ -x "$SCRIPT" ] || { echo "0" > "$STATE_FILE"; SCRIPT="${DOCK_SCRIPTS[0]}"; }
         nohup "$SCRIPT" >/dev/null 2>&1 &
-        #notify-send "Dock" "Visible (Auto-relaunch enabled)" -t 2000 -u low
+        notify-send "Dock" "Visible (Auto-relaunch enabled)" -t 2000 -u low
         exit 0
     fi
 fi

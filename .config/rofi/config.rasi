@@ -8,6 +8,7 @@
 # by Stephan Raabe (2023) with my minor changes
 # ----------------------------------------------------- 
 */
+
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,filebrowser,window,run";
@@ -23,7 +24,6 @@ configuration {
     scroll-method:              1;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
-    kb-cancel:			"MousePrimary";
     window-format:              "{w} · {c} ·{t}";
 }
 
@@ -174,8 +174,8 @@ element {
 }
 
 element selected.normal {
-    background-color:            @primary-fixed-dim;
-    text-color:                  @color5;
+    background-color:            @on-primary-fixed-variant;
+    text-color:                  @color11;
     border-radius:               @border-radius;
 }
 

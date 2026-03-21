@@ -1,0 +1,758 @@
+# ██████╗ █████╗ ███╗   ██╗██████╗ ██╗   ██╗
+#██╔════╝██╔══██╗████╗  ██║██╔══██╗╚██╗ ██╔╝
+#██║     ███████║██╔██╗ ██║██║  ██║ ╚████╔╝ 
+#██║     ██╔══██║██║╚██╗██║██║  ██║  ╚██╔╝  
+#╚██████╗██║  ██║██║ ╚████║██████╔╝   ██║   
+# ╚═════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝    ╚═╝   
+
+#[IMPORTANT]#
+# Add custom settings at the very end of the file.
+# To reset, delete the 'hyprcustom' folder (not just the 'custom.conf' file) before rerunning the script to regenerate the default setup.
+#[IMPORTANT]#
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                           Autostart                         ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+exec-once = hyprpm reload && hyprctl dismissnotify #Reload plugin
+exec-once = ~/.config/hyprcandy/hooks/restart_waybar.sh #Launch bar/panel
+exec-once = systemctl --user start hyprlock-watcher.service #Hyprlock watcher to re-initialize waybar on session resume
+exec-once = systemctl --user import-environment HYPRLAND_INSTANCE_SIGNATURE
+exec-once = systemctl --user start background-watcher #Watches for system background changes to update background.png
+exec-once = systemctl --user start waybar-idle-monitor #Watches bar/panel running status to enable/disable idle-inhibitor
+exec-once = systemctl --user start waypaper-watcher #Watches for system waypaper changes to trigger color generation
+exec-once = systemctl --user start rofi-font-watcher #Watches for system font changes to update rofi-font.rasi
+exec-once = systemctl --user start cursor-theme-watcher #Watches for cursor theme changes
+exec-once = bash -c "mkfifo /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob && tail -f /tmp/$HYPRLAND_INSTANCE_SIGNATURE.wob | wob & disown" &
+exec-once = dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY &
+exec-once = hash dbus-update-activation-environment 2>/dev/null &
+exec-once = systemctl --user import-environment &
+# Start swww
+exec-once = swww-daemon &
+# Start swaync
+exec-once = swaync &
+# Startup
+exec-once = ~/.config/hyprcandy/hooks/startup_services.sh &
+# Start Polkit
+exec-once = systemctl --user start hyprpolkitagent &
+# Dock
+exec-once = ~/.config/hyprcandy/scripts/toggle-dock.sh --login &
+# Using hypridle to start hyprlock
+exec-once = hypridle &
+# Load cliphist history
+exec-once = wl-paste --watch cliphist store
+# Restart xdg
+exec-once = ~/.config/hpr/scripts/xdg.sh
+# Restore wallaper
+exec-once = bash ~/.config/hypr/scripts/wallpaper-restore.sh
+# Restart wallaper service
+exec-once = systemctl --user restart background-watcher
+# Pyprland
+exec-once = /usr/bin/pypr &
+# Overview env rule and startup
+env = QS_NO_RELOAD_POPUP,1
+exec-once = qs -c overview &
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                           Animations                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+source = ~/.config/hypr/conf/animations/vertical.conf
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                        Hypraland-colors                     ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+source = ~/.config/hypr/colors.conf
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                         Env-variables                       ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+# Packages to have full env path access
+env = PATH,$PATH:/usr/local/bin:/usr/bin:/bin:/home/king/.cargo/bin
+
+# After using nwg-look, also change the cursor settings here to maintain changes after every reboot
+env = XCURSOR_THEME,Bibata-Modern-Classic
+env = XCURSOR_SIZE,18
+env = HYPRCURSOR_THEME,Bibata-Modern-Classic
+env = HYPRCURSOR_SIZE,18
+
+# XDG Desktop Portal
+env = XDG_CURRENT_DESKTOP,Hyprland
+env = XDG_SESSION_TYPE,wayland
+env = XDG_SESSION_DESKTOP,Hyprland
+# GTK
+env = GTK_USE_PORTAL,1
+# QT
+env = QT_QPA_PLATFORM,wayland
+env = QT_QPA_PLATFORMTHEME,gtk3
+env = QT_WAYLAND_DISABLE_WINDOWDECORATION,0
+env = QT_AUTO_SCREEN_SCALE_FACTOR,1
+# GDK
+env = GDK_DEBUG,portals
+env = GDK_SCALE,1
+# Toolkit Backend
+env = GDK_BACKEND,wayland
+env = CLUTTER_BACKEND,wayland
+# Mozilla
+env = MOZ_ENABLE_WAYLAND,1
+# Ozone
+env = OZONE_PLATFORM,wayland
+env = ELECTRON_OZONE_PLATFORM_HINT,wayland
+# Extra
+env = WINIT_UNIX_BACKEND,wayland
+env = GTK_THEME,adw-gtk3-dark
+env = WLR_DRM_NO_ATOMIC,1
+env = WLR_NO_HARDWARE_CURSORS,1
+# Virtual machine display scaling
+env = QT_SCALE_FACTOR_ROUNDING_POLICY=PassThrough
+# For better VM performance
+env = QEMU_AUDIO_DRV=pa
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                           Keyboard                          ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+input {
+    kb_layout = us
+    kb_variant = 
+    kb_model =
+    kb_options =
+    numlock_by_default = true
+    mouse_refocus = false
+
+    follow_mouse = 1
+    touchpad {
+        # for desktop
+        natural_scroll = false
+
+        # for laptop
+        # natural_scroll = yes
+        # middle_button_emulation = true
+        # clickfinger_behavior = false
+        scroll_factor = 1.0  # Touchpad scroll factor
+    }
+    sensitivity = 0 # Pointer speed: -1.0 - 1.0, 0 means no modification.
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                             Layout                          ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+general {
+    gaps_in = 6
+    gaps_out = 8	
+    gaps_workspaces = 50    # Gaps between workspaces
+    border_size = 3
+    col.active_border = $source_color
+    col.inactive_border = $background
+    layout = dwindle
+    resize_on_border = true
+    allow_tearing = true
+}
+
+group {
+    col.border_active =  $source_color
+    col.border_inactive = $background
+    col.border_locked_active =  $primary_fixed_dim
+    col.border_locked_inactive = $background
+    
+    groupbar {
+    font_size = 12
+    text_color = $inverse_primary
+    col.active =  $primary_fixed_dim
+    col.inactive = $background
+    col.locked_active =  $primary_fixed_dim
+    col.locked_inactive = $background
+    }
+}
+
+dwindle {
+    pseudotile = true
+    preserve_split = true
+}
+
+master {
+    new_status = slave
+    new_on_active = after
+    smart_resizing = true
+    drop_at_cursor = true
+}
+
+gesture = 3, horizontal, workspace
+gesture = 4, swipe, move,
+gesture = 2, pinch, float
+gestures {
+    workspace_swipe_distance = 700
+    workspace_swipe_cancel_ratio = 0.2
+    workspace_swipe_min_speed_to_force = 5
+    workspace_swipe_direction_lock = true
+    workspace_swipe_direction_lock_threshold = 10
+    workspace_swipe_create_new = true
+}
+
+binds {
+  workspace_back_and_forth = true
+  allow_workspace_cycles = true
+  pass_mouse_when_bound = false
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                          Decorations                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+decoration {
+    rounding = 15
+    rounding_power = 2
+    active_opacity = 0.85
+    inactive_opacity = 0.85
+    fullscreen_opacity = 1.0
+
+    blur {
+    enabled = true
+    size = 2
+    passes = 4
+    new_optimizations = on
+    ignore_opacity = true
+        xray = false
+        vibrancy = 0.24999999999999933
+        noise = 0
+    popups = true
+    popups_ignorealpha = 0.8
+        brightness = 1.0000000000000002
+        contrast = 0.9999999999999997
+        special = false
+        vibrancy_darkness = 0.5000000000000002
+    }
+
+    shadow {
+        enabled = true
+        range = 12
+        render_power = 4
+        color = $scrim
+    }
+    dim_strength = 0.19999999999999973
+    dim_inactive = false
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                          Decorations                        ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+decoration {
+    rounding = 15
+    rounding_power = 2
+    active_opacity = 0.8499999999999999
+    inactive_opacity = 0.8499999999999999
+    fullscreen_opacity = 1.0
+
+    blur {
+    enabled = true
+    size = 2
+    passes = 4
+    new_optimizations = on
+    ignore_opacity = true
+        xray = true
+        vibrancy = 0.24999999999999933
+        noise = 0
+    popups = true
+    popups_ignorealpha = 0.8
+        brightness = 1.0000000000000002
+        contrast = 0.9999999999999997
+        special = false
+        vibrancy_darkness = 0.5000000000000002
+    }
+
+    shadow {
+        enabled = true
+        range = 12
+        render_power = 4
+        color = $scrim
+    }
+    dim_strength = 0.19999999999999973
+    dim_inactive = false
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                      Window & layer rules                   ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+windowrule = move 73% 75,match:class (Candy.SystemMonitor)
+windowrule = move 32% 75,match:class (Candy.Media)
+windowrule = move 1% 75,match:class (Candy.Weather)
+windowrule = opacity 0.85 0.85,match:class ^(kitty|kitty-scratchpad|Alacritty|floating-installer|clock)$
+windowrule = float on, center on,size 800 500,match:class (kitty-scratchpad)
+windowrule = suppress_event maximize, match:class .* #nofocus,match:class ^$,match:title ^$,xwayland:1,floating:1,fullscreen:0,pinned:0
+# Pavucontrol floating
+windowrule = float on,match:class (.*org.pulseaudio.pavucontrol.*)
+windowrule = size 700 600,match:class (.*org.pulseaudio.pavucontrol.*)
+windowrule = center on,match:class (.*org.pulseaudio.pavucontrol.*)
+#windowrule = pin on,match:class (.*org.pulseaudio.pavucontrol.*)
+# Browser Picture in Picture
+windowrule = float on, match:title ^(Picture-in-Picture)$
+windowrule = pin on, match:title ^(Picture-in-Picture)$
+windowrule = move 69.5% 4%, match:title ^(Picture-in-Picture)$
+# Waypaper
+windowrule = float on,match:class (.*waypaper.*)
+windowrule = size 800 600,match:class (.*waypaper.*)
+windowrule = center on,match:class (.*waypaper.*)
+#windowrule = pin on,match:class (.*waypaper.*)
+# Blueman Manager
+windowrule = float on,match:class (blueman-manager)
+windowrule = size 800 600,match:class (blueman-manager)
+windowrule = center on,match:class (blueman-manager)
+# Weather
+windowrule = float on,match:class (org.gnome.Weather)
+windowrule = size 700 600,match:class (org.gnome.Weather)
+windowrule = center on,match:class (org.gnome.Weather)
+#windowrule = pin on,match:class (org.gnome.Weather)
+# Calendar
+windowrule = float on,match:class (org.gnome.Calendar)
+windowrule = size 820 600,match:class (org.gnome.Calendar)
+windowrule = center on,match:class (org.gnome.Calendar)
+#windowrule = pin on,match:class (org.gnome.Calendar)
+# System Monitor
+windowrule = float on,match:class (org.gnome.SystemMonitor)
+windowrule = size 820 625,match:class (org.gnome.SystemMonitor)
+windowrule = center on,match:class (org.gnome.SystemMonitor)
+#windowrule = pin on,match:class (org.gnome.SystemMonitor)
+# Files
+windowrule = float on,match:title (Open Files)
+windowrule = size 700 600,match:title (Open Files)
+windowrule = center on,match:title (Open Files)
+#windowrule = pin on,match:title (Open Files)
+
+windowrule = float on,match:title (Select Copy Destination)
+windowrule = size 700 600,match:title (Select Copy Destination)
+windowrule = center on,match:title (Select Copy Destination)
+#windowrule = pin on,match:title (Select Copy Destination)
+
+windowrule = float on,match:title (Select Move Destination)
+windowrule = size 700 600,match:title (Select Move Destination)
+windowrule = center on,match:title (Select Move Destination)
+#windowrule = pin on,match:title (Select Move Destination)
+
+windowrule = float on,match:title (Save As)
+windowrule = size 700 600,match:title (Save As)
+windowrule = center on,match:title (Save As)
+#windowrule = pin on,match:title (Save As)
+
+windowrule = float on,match:title (Select files to send)
+windowrule = size 700 600,match:title (Select files to send)
+windowrule = center on,match:title (Select files to send)
+#windowrule = pin on,match:title (Select files to send)
+
+windowrule = float on,match:title (Bluetooth File Transfer)
+#windowrule = pin on,match:title (Bluetooth File Transfer)
+# nwg-look
+windowrule = float on,match:class (nwg-look)
+windowrule = size 700 600,match:class (nwg-look)
+windowrule = center on,match:class (nwg-look)
+#windowrule = pin on,match:class (nwg-look)
+# CachyOS Hello
+windowrule = float on,match:class (CachyOSHello)
+windowrule = size 700 600,match:class (CachyOSHello)
+windowrule = center on,match:class (CachyOSHello)
+#windowrule = pin on,match:class (CachyOSHello)
+# nwg-displays
+windowrule = float on,match:class (nwg-displays)
+windowrule = size 990 600,match:class (nwg-displays)
+windowrule = center on,match:class (nwg-displays)
+#windowrule = pin on,match:class (nwg-displays)
+# System Mission Center
+windowrule = float on, match:class (io.missioncenter.MissionCenter)
+#windowrule = pin on, match:class (io.missioncenter.MissionCenter)
+windowrule = center on, match:class (io.missioncenter.MissionCenter)
+windowrule = size 900 600, match:class (io.missioncenter.MissionCenter)
+# System Mission Center Preference Window
+windowrule = float on, match:class (missioncenter), match:title ^(Preferences)$
+#windowrule = pin on, match:class (missioncenter), match:title ^(Preferences)$
+windowrule = center on, match:class (missioncenter), match:title ^(Preferences)$
+# Gnome Calculator
+windowrule = float on,match:class (org.gnome.Calculator)
+windowrule = size 700 600,match:class (org.gnome.Calculator)
+windowrule = center on,match:class (org.gnome.Calculator)
+# Emoji Picker Smile
+windowrule = float on,match:class (it.mijorus.smile)
+#windowrule = pin on, match:class (it.mijorus.smile)
+windowrule = move 100%-w-40 90,match:class (it.mijorus.smile)
+# Hyprland Share Picker
+windowrule = float on, match:class (hyprland-share-picker)
+#windowrule = pin on, match:class (hyprland-share-picker)
+windowrule = center on, match:title match:class (hyprland-share-picker)
+windowrule = size 600 400,match:class (hyprland-share-picker)
+# Hyprland Settings App
+windowrule = float on,match:title (hyprviz)
+windowrule = size 1000 625,match:title (hyprviz)
+windowrule = center on,match:title (hyprviz)
+# General floating
+windowrule = float on,match:class (dotfiles-floating)
+windowrule = size 1000 700,match:class (dotfiles-floating)
+windowrule = center on,match:class (dotfiles-floating)
+# Float Necessary Windows
+windowrule = float on, match:class ^(org.pulseaudio.pavucontrol)
+windowrule = float on, match:class ^()$,match:title ^(Picture in picture)$
+windowrule = float on, match:class ^()$,match:title ^(Save File)$
+windowrule = float on, match:class ^()$,match:title ^(Open File)$
+windowrule = float on, match:class ^(LibreWolf)$,match:title ^(Picture-in-Picture)$
+##windowrule = float on, match:class ^(blueman-manager)$
+windowrule = float on, match:class ^(xdg-desktop-portal-hyprland|xdg-desktop-portal-gtk|xdg-desktop-portal-kde)(.*)$
+windowrule = float on, match:class ^(hyprpolkitagent|polkit-gnome-authentication-agent-1|org.org.kde.polkit-kde-authentication-agent-1)(.*)$
+windowrule = float on, match:class ^(CachyOSHello)$
+windowrule = float on, match:class ^(zenity)$
+windowrule = float on, match:class ^()$,match:title ^(Steam - Self Updater)$
+# Increase the opacity
+windowrule = opacity 1.0, match:class ^(zen)$
+# # windowrule = opacity 1.0, match:class ^(discord|armcord|webcord)$
+# # windowrule = opacity 1.0, match:title ^(QQ|Telegram)$
+# # windowrule = opacity 1.0, match:title ^(NetEase Cloud Music Gtk4)$
+# General window rules
+windowrule = float on, match:title ^(Picture-in-Picture)$
+windowrule = size 460 260, match:title ^(Picture-in-Picture)$
+windowrule = move 65%- 10%-, match:title ^(Picture-in-Picture)$
+windowrule = float on, match:title ^(imv|mpv|danmufloat|termfloat|nemo|ncmpcpp)$
+windowrule = move 25%-, match:title ^(imv|mpv|danmufloat|termfloat|nemo|ncmpcpp)$
+windowrule = size 960 540, match:title ^(imv|mpv|danmufloat|termfloat|nemo|ncmpcpp)$
+#windowrule = pin on, match:title ^(danmufloat)$
+windowrule = rounding 5, match:title ^(danmufloat|termfloat)$
+windowrule = animation slide right, match:class ^(kitty|Alacritty)$
+#windowrule = no_blur on, match:class ^(org.mozilla.firefox)$
+# Decorations related to floating windows on workspaces 1 to 10
+##windowrule = bordersize 2, floating:1, onworkspace:w[fv1-10]
+workspace = w[fv1-10], border_color c $source_color, float on #$on_primary_fixed_variant 90deg
+##windowrule = rounding 8, floating:1, onworkspace:w[fv1-10]
+# Decorations related to tiling windows on workspaces 1 to 10
+##windowrule = bordersize 3, floating:0, onworkspace:f[1-10]
+##windowrule = rounding 4, floating:0, onworkspace:f[1-10]
+#windowrule = tile, match:title ^(Microsoft-edge)$
+vwindowrule = tile, match:title ^(Brave-browser)$
+#windowrule = tile, match:title ^(Chromium)$
+windowrule = float on, match:title ^(pavucontrol)$
+windowrule = float on, match:title ^(blueman-manager)$
+windowrule = float on, match:title ^(nm-connection-editor)$
+windowrule = float on, match:title ^(qalculate-gtk)$
+# idleinhibit
+windowrule = idle_inhibit fullscreen,match:class ([window]) # Available modes: none, always, focus, fullscreen
+### no blur for specific classes
+##windowrule = noblur,match:class ^(?!(nautilus|nwg-look|nwg-displays|zen))
+## Windows Rules End #
+
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(nautilus)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(zen)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(Brave-browser)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(code-oss)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^([Cc]ode)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(code-url-handler)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(code-insiders-url-handler)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(org.kde.dolphin)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(org.kde.ark)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(nwg-look)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(qt5ct)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(qt6ct)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(kvantummanager)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(org.pulseaudio.pavucontrol)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(blueman-manager)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(nm-applet)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(nm-connection-editor)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(org.kde.polkit-kde-authentication-agent-1)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(polkit-gnome-authentication-agent-1)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(org.freedesktop.impl.portal.desktop.gtk)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(org.freedesktop.impl.portal.desktop.hyprland)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^([Ss]team)$
+# # windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^(steamwebhelper)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:class ^([Ss]potify)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:title ^(Spotify Free)$
+windowrule = opacity 1.0 $& 1.0 $& 1,match:title ^(Spotify Premium)$
+# # 
+# # windowrule = opacity 1.0 1.0,match:class ^(com.github.rafostar.Clapper)$ # Clapper-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(com.github.tchx84.Flatseal)$ # Flatseal-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(hu.kramo.Cartridges)$ # Cartridges-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(com.obsproject.Studio)$ # Obs-Qt
+# # windowrule = opacity 1.0 1.0,match:class ^(gnome-boxes)$ # Boxes-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(vesktop)$ # Vesktop
+# # windowrule = opacity 1.0 1.0,match:class ^(discord)$ # Discord-Electron
+# # windowrule = opacity 1.0 1.0,match:class ^(WebCord)$ # WebCord-Electron
+# # windowrule = opacity 1.0 1.0,match:class ^(ArmCord)$ # ArmCord-Electron
+# # windowrule = opacity 1.0 1.0,match:class ^(app.drey.Warp)$ # Warp-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(net.davidotek.pupgui2)$ # ProtonUp-Qt
+# # windowrule = opacity 1.0 1.0,match:class ^(yad)$ # Protontricks-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(Signal)$ # Signal-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(io.github.alainm23.planify)$ # planify-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(io.gitlab.theevilskeleton.Upscaler)$ # Upscaler-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(com.github.unrud.VideoDownloader)$ # VideoDownloader-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(io.gitlab.adhami3310.Impression)$ # Impression-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(io.missioncenter.MissionCenter)$ # MissionCenter-Gtk
+# # windowrule = opacity 1.0 1.0,match:class ^(io.github.flattool.Warehouse)$ # Warehouse-Gtk
+windowrule = float on,match:class ^(org.kde.dolphin)$,match:title ^(Progress Dialog — Dolphin)$
+windowrule = float on,match:class ^(org.kde.dolphin)$,match:title ^(Copying — Dolphin)$
+windowrule = float on,match:title ^(About Mozilla Firefox)$
+windowrule = float on,match:class ^(firefox)$,match:title ^(Picture-in-Picture)$
+windowrule = float on,match:class ^(firefox)$,match:title ^(Library)$
+windowrule = float on,match:class ^(kitty)$,match:title ^(top)$
+windowrule = float on,match:class ^(kitty)$,match:title ^(btop)$
+windowrule = float on,match:class ^(kitty)$,match:title ^(htop)$
+windowrule = float on,match:class ^(vlc)$
+windowrule = float on,match:class ^(eww-main-window)$
+windowrule = float on,match:class ^(eww-notifications)$
+windowrule = float on,match:class ^(kvantummanager)$
+windowrule = float on,match:class ^(qt5ct)$
+windowrule = float on,match:class ^(qt6ct)$
+windowrule = float on,match:class ^(nwg-look)$
+windowrule = float on,match:class ^(org.kde.ark)$
+windowrule = float on,match:class ^(org.pulseaudio.pavucontrol)$
+windowrule = float on,match:class ^(blueman-manager)$
+windowrule = float on,match:class ^(nm-applet)$
+windowrule = float on,match:class ^(nm-connection-editor)$
+windowrule = float on,match:class ^(org.kde.polkit-kde-authentication-agent-1)$
+
+windowrule = float on,match:class ^(Signal)$ # Signal-Gtk
+windowrule = float on,match:class ^(com.github.rafostar.Clapper)$ # Clapper-Gtk
+windowrule = float on,match:class ^(app.drey.Warp)$ # Warp-Gtk
+windowrule = float on,match:class ^(net.davidotek.pupgui2)$ # ProtonUp-Qt
+windowrule = float on,match:class ^(yad)$ # Protontricks-Gtk
+windowrule = float on,match:class ^(eog)$ # Imageviewer-Gtk
+windowrule = float on,match:class ^(io.github.alainm23.planify)$ # planify-Gtk
+windowrule = float on,match:class ^(io.gitlab.theevilskeleton.Upscaler)$ # Upscaler-Gtk
+windowrule = float on,match:class ^(com.github.unrud.VideoDownloader)$ # VideoDownloader-Gkk
+windowrule = float on,match:class ^(io.gitlab.adhami3310.Impression)$ # Impression-Gtk
+windowrule = float on,match:class ^(io.missioncenter.MissionCenter)$ # MissionCenter-Gtk
+windowrule = float on,match:class (clipse) # ensure you have a floating window class set if you want this behavior
+windowrule = size 622 652,match:class (clipse) # set the size of the window as necessary
+#windowrule = noborder, fullscreen:1
+
+# common modals
+#windowrule = float on,match:title ^(Open File)$
+#windowrule = layer:top,match:class hyprpolkitagent
+windowrule = float on,match:title ^(Choose Files)$
+windowrule = float on,match:title ^(Save As)$
+windowrule = float on,match:title ^(Confirm to replace files)$
+windowrule = float on,match:title ^(File Operation Progress)$
+windowrule = float on,match:class ^(xdg-desktop-portal-gtk)$
+
+# installer
+windowrule = float on, match:class (floating-installer)
+windowrule = center on, match:class (floating-installer)
+
+# clock
+windowrule = float on, center on, size 400 200, match:class (clock)
+
+# Extra workspace & window rules 
+# Workspaces Rules https://wiki.hyprland.org/0.45.0/Configuring/Workspace-Rules/ #
+# workspace = 1, default:true, monitor:$priMon
+# workspace = 6, default:true, monitor:$secMon
+# Workspace selectors https://wiki.hyprland.org/0.45.0/Configuring/Workspace-Rules/#workspace-selectors
+# workspace = r[1-5], monitor:$priMon
+# workspace = r[6-10], monitor:$secMon
+# workspace = special:scratchpad, on-created-empty:$applauncher
+# no_gaps_when_only deprecated instead workspaces rules with selectors can do the same
+# Smart gaps from 0.45.0 https://wiki.hyprland.org/0.45.0/Configuring/Workspace-Rules/#smart-gaps
+#workspace = w[t1], gapsout:0, gapsin:0
+#workspace = w[tg1], gapsout:0, gapsin:0
+workspace = f[1], gapsout:0, gapsin:0
+#windowrule = bordersize 2, floating:0, onworkspace:w[t1]
+#windowrule = rounding 10, floating:0, onworkspace:w[t1]
+#windowrule = bordersize 2, floating:0, onworkspace:w[tg1]
+#windowrule = rounding 10, floating:0, onworkspace:w[tg1]
+#windowrule = bordersize 2, floating:0, onworkspace:f[1]
+#windowrule = rounding 10, floating:0, onworkspace:f[1]
+windowrule = rounding 0, fullscreen true, border_size 0
+#workspace = w[tv1-10], gapsout:6, gapsin:2
+#workspace = f[1], gapsout:6, gapsin:2
+
+workspace = 1, layoutopt:orientation:left
+workspace = 2, layoutopt:orientation:right
+workspace = 3, layoutopt:orientation:left
+workspace = 4, layoutopt:orientation:right
+workspace = 5, layoutopt:orientation:left
+workspace = 6, layoutopt:orientation:right
+workspace = 7, layoutopt:orientation:left
+workspace = 8, layoutopt:orientation:right
+workspace = 9, layoutopt:orientation:left
+workspace = 10, layoutopt:orientation:right
+# Workspaces Rules End #
+
+# Layers Rules #
+layerrule = animation slide top, match:namespace logout_dialog
+layerrule = blur on,xray on,match:namespace rofi
+layerrule = ignore_alpha 0.01,match:namespace rofi
+layerrule = blur on,match:namespace notifications
+layerrule = ignore_alpha 0.01,match:namespace notifications
+layerrule = blur on,match:namespace swaync-notification-window
+layerrule = ignore_alpha 0.01,match:namespace swaync-notification-window
+layerrule = blur on,xray on,no_anim on,match:namespace swaync-control-center
+layerrule = ignore_alpha 0.01,match:namespace swaync-control-center
+layerrule = blur on,no_anim on,match:namespace nwg-dock
+layerrule = ignore_alpha 0.01,match:namespace nwg-dock
+layerrule = blur on,match:namespace logout_dialog
+layerrule = ignore_alpha 0.01,match:namespace logout_dialog
+layerrule = blur on,match:namespace gtk-layer-shell
+layerrule = ignore_alpha 0.01,match:namespace gtk-layer-shell
+layerrule = blur on,no_anim on,match:namespace waybar
+layerrule = ignore_alpha 0.01,match:namespace waybar
+layerrule = blur on,match:namespace dashboardmenu
+layerrule = ignore_alpha 0.01,match:namespace dashboardmenu
+layerrule = blur on,match:namespace calendarmenu
+layerrule = ignore_alpha 0.01,match:namespace calendarmenu
+layerrule = blur on,match:namespace notificationsmenu
+layerrule = ignore_alpha 0.01,match:namespace notificationsmenu
+layerrule = blur on,match:namespace networkmenu
+layerrule = ignore_alpha 0.01,match:namespace networkmenu
+layerrule = blur on,match:namespace mediamenu
+layerrule = ignore_alpha 0.01,match:namespace mediamenu
+layerrule = blur on,match:namespace energymenu
+layerrule = ignore_alpha 0.01,match:namespace energymenu
+layerrule = blur on,match:namespace bluetoothmenu
+layerrule = ignore_alpha 0.01,match:namespace bluetoothmenu
+layerrule = blur on,match:namespace audiomenu
+layerrule = ignore_alpha 0.01,match:namespace audiomenu
+layerrule = blur on,match:namespace hyprmenu
+layerrule = ignore_alpha 0.01,match:namespace hyprmenu
+# layerrule = animation popin 50%, waybar
+# Layers Rules End #
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                         Misc-settings                       ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+misc {
+    disable_hyprland_logo = true
+    disable_splash_rendering = false
+    initial_workspace_tracking = 1
+}
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                            Plugins                          ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+#plugin {
+#    hyprexpo {
+#        #general 
+#        columns = 3
+#        gaps_in = 8
+#        gaps_out = 10
+#        bg_col = $inverse_primary
+#        workspace = first 1
+#        
+#        #borders
+#        border_style = hyprland
+#        border_grad_current = $scrim
+#        border_grad_focus   = $inverse_primary
+#
+#        #labels
+#        label_enable = 1
+#        label_bg_shape = circle
+#        label_position = center-center
+#        label_offset_x = 10
+#        label_offset_y = 10
+#        label_color_default = $inverse_primary
+#        label_color_hover   = $primary_fixed_dim
+#        label_scale_hover = 1.0
+#        label_scale_focus = 1.0
+#        label_bg_enable = 1
+#        label_bg_color = rgba(00000088)
+#        label_bg_rounding = 15
+#        # label_padding = 1
+#
+#        label_font_size = 25
+#        label_font_family = FantasqueSansM Nerd Font Propo Regular
+#        label_font_bold = 1
+#        label_font_italic = 0
+#        label_text_underline = 0
+#        label_text_strikethrough = 0
+#    }
+#    
+#    hyprbars {
+#        bar_height = 25
+#        bar_color = $source_color
+#        bar_blur = true
+#        
+#        bar_title_enabled = false
+#        bar_text_size = 10
+#        bar_text_font = FantasqueSansM Nerd Font Propo Regular
+#        
+#        bar_text_align = center
+#        bar_buttons_alignment = left
+#        
+#        bar_padding = 15
+#        bar_button_padding = 6
+#        
+#        color_text = white
+#        
+#        hyprbars-button = $on_secondary, 15, , hyprctl dispatch killactive
+#        hyprbars-button = $primary_container, 15, , bash "$HOME/.config/hypr/scripts/hyprbars-minimize.sh"
+#        hyprbars-button = $surface_tint, 15, 󰺖, hyprctl dispatch fullscreen 1
+#        
+#        on_double_click = hyprctl dispatch fullscreen 1
+#    }
+#}
+#
+#submap = hyprexpo
+#bind = CTRL ALT, down, hyprexpo:expo, close
+#
+#bind = , left,  hyprexpo:kb_focus, left
+#bind = , right, hyprexpo:kb_focus, right
+#bind = , up,    hyprexpo:kb_focus, up
+#bind = , down,  hyprexpo:kb_focus, down
+#bind = , return, hyprexpo:kb_confirm
+#
+## tokens 1..10: digits
+#
+#bind = , 1, hyprexpo:kb_selecti, 1
+#bind = , 2, hyprexpo:kb_selecti, 2
+#bind = , 3, hyprexpo:kb_selecti, 3
+#bind = , 4, hyprexpo:kb_selecti, 4
+#bind = , 5, hyprexpo:kb_selecti, 5
+#bind = , 6, hyprexpo:kb_selecti, 6
+#bind = , 7, hyprexpo:kb_selecti, 7
+#bind = , 8, hyprexpo:kb_selecti, 8
+#bind = , 9, hyprexpo:kb_selecti, 9
+#bind = , 0, hyprexpo:kb_selecti, 0
+#
+## tokens 11..20: SHIFT+digits (update args to match your layout symbols)
+#
+#bind = SHIFT, 1, hyprexpo:kb_selecti, 11
+#bind = SHIFT, 2, hyprexpo:kb_selecti, 12
+#bind = SHIFT, 3, hyprexpo:kb_selecti, 13
+#bind = SHIFT, 4, hyprexpo:kb_selecti, 14
+#bind = SHIFT, 5, hyprexpo:kb_selecti, 15
+#bind = SHIFT, 6, hyprexpo:kb_selecti, 16
+#bind = SHIFT, 7, hyprexpo:kb_selecti, 17
+#bind = SHIFT, 8, hyprexpo:kb_selecti, 18
+#bind = SHIFT, 9, hyprexpo:kb_selecti, 19
+#bind = SHIFT, 0, hyprexpo:kb_selecti, 20
+#
+## tokens 21..46: alpha
+#
+#bind = , a, hyprexpo:kb_selecti, 21
+#bind = , b, hyprexpo:kb_selecti, 22
+#bind = , c, hyprexpo:kb_selecti, 23
+#bind = , d, hyprexpo:kb_selecti, 24
+#bind = , e, hyprexpo:kb_selecti, 25
+#bind = , f, hyprexpo:kb_selecti, 26
+#bind = , g, hyprexpo:kb_selecti, 27
+#bind = , h, hyprexpo:kb_selecti, 28
+#bind = , i, hyprexpo:kb_selecti, 29
+#bind = , j, hyprexpo:kb_selecti, 30
+#bind = , k, hyprexpo:kb_selecti, 31
+#bind = , l, hyprexpo:kb_selecti, 32
+#bind = , m, hyprexpo:kb_selecti, 33
+#bind = , n, hyprexpo:kb_selecti, 34
+#bind = , o, hyprexpo:kb_selecti, 35
+#bind = , p, hyprexpo:kb_selecti, 36
+#bind = , q, hyprexpo:kb_selecti, 37
+#bind = , r, hyprexpo:kb_selecti, 38
+#bind = , s, hyprexpo:kb_selecti, 39
+#bind = , t, hyprexpo:kb_selecti, 40
+#bind = , u, hyprexpo:kb_selecti, 41
+#bind = , v, hyprexpo:kb_selecti, 42
+#bind = , w, hyprexpo:kb_selecti, 43
+#bind = , x, hyprexpo:kb_selecti, 44
+#bind = , y, hyprexpo:kb_selecti, 45
+#bind = , z, hyprexpo:kb_selecti, 46
+#submap = reset
+
+# ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃                           Userprefs                         ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+# [NOTE!!] Add you personal settings from here and incase of an update copy them to the new file once this is changed to a backup

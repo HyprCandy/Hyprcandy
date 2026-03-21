@@ -7,6 +7,8 @@ const { Gtk, Gio, GLib, Gdk } = imports.gi;
 const scriptDir = GLib.path_get_dirname(imports.system.programInvocationName);
 imports.searchPath.unshift(scriptDir);
 
+const Weather = imports.weather;
+
 function createCandyUtilsBox() {
     // --- Hyprsunset state persistence setup ---
     const hyprsunsetStateDir = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'hyprcandy']);
@@ -57,7 +59,7 @@ function createCandyUtilsBox() {
         button {
             background-color: @inverse_primary;
             border:0.5px solid @background;
-            box-shadow: 0 0 0 0 @primary_fixed_dim, 0 0 0 2px @primary_fixed_dim inset;
+            box-shadow: 0 0 2px 2px @primary_fixed_dim, 0 0 0 2px @on_secondary inset;
             color: @primary;
             transition: all 0.2s ease;
             opacity: 1;
@@ -69,13 +71,13 @@ function createCandyUtilsBox() {
         button:hover {
             background-color: @blur_background;
             border: 0.5px solid @inverse_primary;
-            box-shadow: 0 0 0 0 @primary_fixed_dim, 0 0 0 2px @on_secondary inset;
+            box-shadow: 0 0 2px 2px @primary_fixed_dim, 0 0 0 2px @on_secondary inset;
         }
 
         .neon-highlight, button:active {
             background-color: @blur-background;
             border:0.5px solid @background;
-            box-shadow: 0 0 0 0 @primary_fixed_dim, 0 0 0 2px @primary_fixed_dim inset;
+            box-shadow: 0 0 2px 2px @primary_fixed_dim, 0 0 0 2px @primary_fixed_dim inset;
         }
     `;
     cssProvider.load_from_data(css, css.length);
@@ -245,7 +247,7 @@ function createCandyUtilsBox() {
                         let newValueStr = newValue.toFixed(2);
                         GLib.spawn_command_line_async(`sed -i 's/active_opacity = .*/active_opacity = ${newValueStr}/' "${configFile}"`);
                         GLib.spawn_command_line_async('hyprctl reload');
-                        //GLib.spawn_command_line_async(`notify-send "Opacity" "Scale: ${newValueStr}" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Opacity" "Scale: ${newValueStr}" -t 2000`);
                     }
                 }
             } catch (e) {}
@@ -291,7 +293,7 @@ function createCandyUtilsBox() {
                             // Use a simpler sed command that targets the specific line
                             GLib.spawn_command_line_async(`sed -i '/blur {/,/}/{s/size = ${currentValue}/size = ${newValue}/}' '${configFile}'`);
                             GLib.spawn_command_line_async('hyprctl reload');
-                            //GLib.spawn_command_line_async(`notify-send "Blur Size" "Size: ${newValue}" -t 2000`);
+                            GLib.spawn_command_line_async(`notify-send "Blur Size" "Size: ${newValue}" -t 2000`);
                         }
                     }
                 }
@@ -339,7 +341,7 @@ function createCandyUtilsBox() {
                             // Use a simpler sed command that targets the specific line
                             GLib.spawn_command_line_async(`sed -i 's/passes = ${currentValue}/passes = ${newValue}/' '${configFile}'`);
                             GLib.spawn_command_line_async('hyprctl reload');
-                            //GLib.spawn_command_line_async(`notify-send "Blur Pass" "Passes: ${newValue}" -t 2000`);
+                            GLib.spawn_command_line_async(`notify-send "Blur Pass" "Passes: ${newValue}" -t 2000`);
                         }
                     }
                 }
@@ -382,7 +384,7 @@ function createCandyUtilsBox() {
                         let currentValue = parseInt(borderMatch[1]);
                         let newValue = Math.max(0, currentValue + increment);
                         GLib.spawn_command_line_async(`sed -i 's/border-width: ${currentValue}px/border-width: ${newValue}px/' '${rofiBorderFile}'`);
-                        //GLib.spawn_command_line_async(`notify-send "Rofi Border" "Border: ${newValue}px" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Rofi Border" "Border: ${newValue}px" -t 2000`);
                     }
                 }
             } catch (e) {
@@ -424,7 +426,7 @@ function createCandyUtilsBox() {
                         let newValue = Math.max(0, Math.min(5, currentValue + increment));
                         let newValueStr = newValue.toFixed(1);
                         GLib.spawn_command_line_async(`sed -i 's/border-radius: ${radiusMatch[1]}em/border-radius: ${newValueStr}em/' '${rofiRadiusFile}'`);
-                        //GLib.spawn_command_line_async(`notify-send "Rofi Radius" "Radius: ${newValueStr}em" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Rofi Radius" "Radius: ${newValueStr}em" -t 2000`);
                     }
                 }
             } catch (e) {
@@ -490,11 +492,11 @@ function createCandyUtilsBox() {
         if (isIslands) {
             // Change to islands mode: no background, no border
             GLib.spawn_command_line_async(`sed -i '25s/background: @blur_background;/background: none;/' '${waybarStyleFile}'`);
-            GLib.spawn_command_line_async(`sed -i '32s/border: ${currentBorderSize}px solid @on_primary_fixed_variant;/border: 0px solid @on_primary_fixed_variant;/' '${waybarStyleFile}'`);
+            GLib.spawn_command_line_async(`sed -i '32s/border: ${currentBorderSize}px solid @inverse_primary;/border: 0px solid @inverse_primary;/' '${waybarStyleFile}'`);
         } else {
             // Change to bar mode: restore background and border
             GLib.spawn_command_line_async(`sed -i '25s/background: none;/background: @blur_background;/' '${waybarStyleFile}'`);
-            GLib.spawn_command_line_async(`sed -i '32s/border: 0px solid @on_primary_fixed_variant;/border: ${currentBorderSize}px solid @on_primary_fixed_variant;/' '${waybarStyleFile}'`);
+            GLib.spawn_command_line_async(`sed -i '32s/border: 0px solid @inverse_primary;/border: ${currentBorderSize}px solid @inverse_primary;/' '${waybarStyleFile}'`);
         }
         // Reload waybar
         //GLib.spawn_command_line_async('killall waybar');
@@ -608,6 +610,22 @@ function createCandyUtilsBox() {
         presetBox.append(btn);
     });
     leftBox.append(presetBox);
+
+    // Weather box at the bottom of left box
+    const weatherBox = Weather.createWeatherBoxForEmbed();
+    // Add neon to temp label if possible
+    try {
+        // Find the temp label by class
+        let children = weatherBox.get_children ? weatherBox.get_children() : weatherBox.get_children;
+        if (children && children.length > 0) {
+            for (let child of children) {
+                if (child.get_css_classes && child.get_css_classes().indexOf('weather-temp') !== -1) {
+                    child.add_css_class('weather-temp');
+                }
+            }
+        }
+    } catch (e) {}
+    //leftBox.append(weatherBox);
     
     mainRow.append(leftBox);
     
@@ -654,8 +672,8 @@ function createCandyUtilsBox() {
     
     function updateMatugenScheme(schemeName) {
         const waypaperIntegrationFile = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'hyprcandy', 'hooks', 'waypaper_integration.sh']);
-        const gtk3File = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'matugen', 'templates', 'gtk3.css']);
-        const gtk4File = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'matugen', 'templates', 'gtk4.css']);
+        const gtk3File = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'gtk-3.0', 'gtk.css']);
+        const gtk4File = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'gtk-4.0', 'gtk.css']);
         const hyprFile = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'hypr', 'hyprviz.conf']);
         const utilsFile = GLib.build_filenamev([GLib.get_home_dir(), '.ultracandy', 'GJS', 'src', 'candy-utils.js']);
         const waybarFile = GLib.build_filenamev([GLib.get_home_dir(), '.config', 'waybar', 'style.css']);
@@ -684,166 +702,347 @@ function createCandyUtilsBox() {
         // Handle monochrome vs other schemes for GTK CSS
         if (schemeName === 'Dark') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_secondary/@on_primary_fixed_variant/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_primary_fixed_variant;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_secondary/@on_primary_fixed_variant/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_primary_fixed_variant;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_secondary/@on_primary_fixed_variant/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_secondary/@on_primary_fixed_variant/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_primary_fixed_variant/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_primary_fixed_variant/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-
+        
         if (schemeName === 'Light') {
             GLib.spawn_command_line_async(`sed -i 's/-m dark/-m light/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @primary_fixed_dim;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @inverse_primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @primary_fixed_dim;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @inverse_primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            /*GLib.spawn_command_line_async(`sed -i 's/@on_secondary/@primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_secondary/@primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@primary_fixed_dim/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@primary_fixed_dim/g' '${gtk4File}'`);*/
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color white/window_fg_color black/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color white/view_fg_color black/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color white/headerbar_fg_color black/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color white/sidebar_fg_color black/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color white/card_fg_color black/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color white/dialog_fg_color black/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: white;/color: black;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color white;/fg_color black;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color white/window_fg_color black/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color white/view_fg_color black/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color white/headerbar_fg_color black/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color white/sidebar_fg_color black/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color white/card_fg_color black/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color white/dialog_fg_color black/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: white;/color: black;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color white;/fg_color black;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @main-fg;/color: @primary;/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/color: @primary_fixed_dim;/color: @primary;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @inverse_primary;/solid @primary_fixed_dim;/g; 487s/solid @inverse_primary;/solid @primary_fixed_dim;/g; 2382s/solid @inverse_primary;/solid @primary_fixed_dim;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @scrim/@inverse_primary, @primary_fixed_dim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@background;/@buttoncolor;/g; 68s/@bordercolor;/@background;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @secondary_container;/color: @primary_fixed_dim;/g; 184s/color: @secondary_container;/color: @primary_fixed_dim;/g; 292s/color: @secondary_container;/color: @primary_fixed_dim;/g; 667s/color: @secondary_container;/color: @primary_fixed_dim;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@background;/@buttoncolor;/g; 68s/@bordercolor;/@background;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-
+        
         if (schemeName === 'Content') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-
+        
         if (schemeName === 'Expressive') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-
+        
         if (schemeName === 'Fruit-salad') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-
+        
         if (schemeName === 'Neutral') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-
+        
         if (schemeName === 'Rainbow') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-
+        
         if (schemeName === 'Tonal-spot') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`); 
         }
-
+        
         if (schemeName === 'Vibrant') {
             GLib.spawn_command_line_async(`sed -i 's/-m light/-m dark/g' '${waypaperIntegrationFile}'`);
-            GLib.file_set_contents('/tmp/hyprcandy-gtk.sh',
-                `#!/bin/sh\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk3File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk3File}'\n` +
-                `sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_bg_color .*;/@define-color dialog_bg_color @on_secondary;/' '${gtk4File}'\n` +
-                `sed -i 's/@define-color dialog_fg_color .*;/@define-color dialog_fg_color @primary;/' '${gtk4File}'\n`
-            );
-            GLib.spawn_command_line_async('sh /tmp/hyprcandy-gtk.sh');
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@on_primary_fixed_variant/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/@primary_fixed_dim/@on_secondary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/window_fg_color black/window_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/view_fg_color black/view_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/headerbar_fg_color black/headerbar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/sidebar_fg_color black/sidebar_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/card_fg_color black/card_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/dialog_fg_color black/dialog_fg_color white/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: black;/color: white;/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/fg_color black;/fg_color white;/g' '${gtk3File}'`);
+            /*GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk4File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_color @primary/accent_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_bg_color @primary/accent_bg_color @on_primary/g' '${gtk3File}'`);
+            GLib.spawn_command_line_async(`sed -i 's/accent_fg_color @on_primary/accent_fg_color @primary/g' '${gtk3File}'`);*/
+            GLib.spawn_command_line_async(`sed -i '44s/color: @primary;/color: @main-fg;/g' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i 's/color: @primary;/color: @primary_fixed_dim;/g' '${waybarFile}'`);
+            //GLib.spawn_command_line_async(`sed -i '483s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 487s/solid @primary_fixed_dim;/solid @inverse_primary;/g; 2382s/solid @primary_fixed_dim;/solid @inverse_primary;/g' '${utilsFile}'`);
             GLib.spawn_command_line_async(`sed -i 's/@inverse_primary, @primary_fixed_dim/@inverse_primary, @scrim/g' '${waybarFile}'`);
             GLib.spawn_command_line_async(`sed -i '8s/@primary_fixed_dim;/@inverse_primary;/g' '${dockFile}'`);
-            GLib.spawn_command_line_async(`sed -i '60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
-            GLib.spawn_command_line_async(`sed -i '127s/color: @primary_fixed_dim;/color: @secondary_container;/g; 184s/color: @primary_fixed_dim;/color: @secondary_container;/g; 292s/color: @primary_fixed_dim;/color: @secondary_container;/g; 667s/color: @primary_fixed_dim;/color: @secondary_container;/g;' '${waybarFile}'`);
+            GLib.spawn_command_line_async(`sed -i '7s/@primary_fixed_dim;/@inverse_primary;/g; 60s/@buttoncolor;/@background;/g; 68s/@background;/@bordercolor;/g'  '${swayncFile}'`);
+            //GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/scripts/toggle-dock.sh --relaunch'`);
+            GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
         }
-        GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/hooks/waypaper_integration.sh'`);
+        GLib.spawn_command_line_async(`bash -c '$HOME/.config/hyprcandy/hooks/restart_waybar.sh'`);
+        GLib.spawn_command_line_async(`systemctl --user restart waypaper-watcher.service`);
         // Save the new state
         saveMatugenState(matugenScheme);
         currentMatugenScheme = matugenScheme;
@@ -953,7 +1152,7 @@ function createCandyUtilsBox() {
                         let newValueStr = newValue.toFixed(2);
                         GLib.spawn_command_line_async(`sed -i 's/active_opacity = .*/active_opacity = ${newValueStr}/' "${configFile}"`);
                         GLib.spawn_command_line_async('hyprctl reload');
-                        //GLib.spawn_command_line_async(`notify-send "Opacity" "Scale: ${newValueStr}" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Opacity" "Scale: ${newValueStr}" -t 2000`);
                     }
                 }
             } catch (e) {}
@@ -998,7 +1197,7 @@ function createCandyUtilsBox() {
                             // Use a simpler sed command that targets the specific line
                             GLib.spawn_command_line_async(`sed -i '/blur {/,/}/{s/size = ${currentValue}/size = ${newValue}/}' '${configFile}'`);
                             GLib.spawn_command_line_async('hyprctl reload');
-                            //GLib.spawn_command_line_async(`notify-send "Blur Size" "Size: ${newValue}" -t 2000`);
+                            GLib.spawn_command_line_async(`notify-send "Blur Size" "Size: ${newValue}" -t 2000`);
                         }
                     }
                 }
@@ -1046,7 +1245,7 @@ function createCandyUtilsBox() {
                             // Use a simpler sed command that targets the specific line
                             GLib.spawn_command_line_async(`sed -i 's/passes = ${currentValue}/passes = ${newValue}/' '${configFile}'`);
                             GLib.spawn_command_line_async('hyprctl reload');
-                            //GLib.spawn_command_line_async(`notify-send "Blur Pass" "Passes: ${newValue}" -t 2000`);
+                            GLib.spawn_command_line_async(`notify-send "Blur Pass" "Passes: ${newValue}" -t 2000`);
                         }
                     }
                 }
@@ -1088,7 +1287,7 @@ function createCandyUtilsBox() {
                         let currentValue = parseInt(borderMatch[1]);
                         let newValue = Math.max(0, currentValue + increment);
                         GLib.spawn_command_line_async(`sed -i 's/border-width: ${currentValue}px/border-width: ${newValue}px/' '${rofiBorderFile}'`);
-                        //GLib.spawn_command_line_async(`notify-send "Rofi Border" "Border: ${newValue}px" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Rofi Border" "Border: ${newValue}px" -t 2000`);
                     }
                 }
             } catch (e) {
@@ -1130,7 +1329,7 @@ function createCandyUtilsBox() {
                         let newValue = Math.max(0, Math.min(5, currentValue + increment));
                         let newValueStr = newValue.toFixed(1);
                         GLib.spawn_command_line_async(`sed -i 's/border-radius: ${radiusMatch[1]}em/border-radius: ${newValueStr}em/' '${rofiRadiusFile}'`);
-                        //GLib.spawn_command_line_async(`notify-send "Rofi Radius" "Radius: ${newValueStr}em" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Rofi Radius" "Radius: ${newValueStr}em" -t 2000`);
                     }
                 }
             } catch (e) {
@@ -1206,7 +1405,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newSize);
                 if (isNaN(numValue) || numValue < 16 || numValue > 64) {
-                    //GLib.spawn_command_line_async(`notify-send "Dock" "Invalid value: ${newSize}. Use 16-64" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Dock" "Invalid value: ${newSize}. Use 16-64" -t 2000`);
                     return;
                 }
                 
@@ -1225,7 +1424,7 @@ function createCandyUtilsBox() {
                     bash -c "${toggleScript} --relaunch" > /dev/null 2>&1 &
                 '`);
                 
-                //GLib.spawn_command_line_async(`notify-send "Dock" "Icon Size: ${numValue}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Dock" "Icon Size: ${numValue}px" -t 2000`);
             } catch (e) {
                 print('Error updating dock icon size: ' + e.message);
             }
@@ -1296,7 +1495,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newRadius);
                 if (isNaN(numValue) || numValue < 0 || numValue > 50) {
-                    //GLib.spawn_command_line_async(`notify-send "Dock" "Invalid value: ${newRadius}. Use 0-50" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Dock" "Invalid value: ${newRadius}. Use 0-50" -t 2000`);
                     return;
                 }
                 
@@ -1327,7 +1526,7 @@ function createCandyUtilsBox() {
                     bash -c "${toggleScript} --relaunch" > /dev/null 2>&1 &
                 '`);
                 
-                //GLib.spawn_command_line_async(`notify-send "Dock" "Border Radius: ${numValue}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Dock" "Border Radius: ${numValue}px" -t 2000`);
             } catch (e) {
                 print('Error updating dock radius: ' + e.message);
             }
@@ -1398,7 +1597,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newWidth);
                 if (isNaN(numValue) || numValue < 0 || numValue > 10) {
-                    //GLib.spawn_command_line_async(`notify-send "Dock" "Invalid value: ${newWidth}. Use 0-10" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Dock" "Invalid value: ${newWidth}. Use 0-10" -t 2000`);
                     return;
                 }
                 
@@ -1429,7 +1628,7 @@ function createCandyUtilsBox() {
                     bash -c "${toggleScript} --relaunch" > /dev/null 2>&1 &
                 '`);
                 
-                //GLib.spawn_command_line_async(`notify-send "Dock" "Border Width: ${numValue}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Dock" "Border Width: ${numValue}px" -t 2000`);
             } catch (e) {
                 print('Error updating dock width: ' + e.message);
             }
@@ -1487,7 +1686,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newRounding);
                 if (isNaN(numValue) || numValue < 0 || numValue > 50) {
-                    //GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newRounding}. Use 0-50" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newRounding}. Use 0-50" -t 2000`);
                     return;
                 }
                 
@@ -1498,7 +1697,7 @@ function createCandyUtilsBox() {
                 GLib.spawn_command_line_async(`hyprctl keyword decoration:rounding ${numValue}`);
                 GLib.spawn_command_line_async('hyprctl reload');
                 
-                //GLib.spawn_command_line_async(`notify-send "Hyprland" "Rounding: ${numValue}" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Hyprland" "Rounding: ${numValue}" -t 2000`);
             } catch (e) {
                 print('Error updating rounding: ' + e.message);
             }
@@ -1556,7 +1755,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newGapsOut);
                 if (isNaN(numValue) || numValue < 0 || numValue > 100) {
-                    //GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newGapsOut}. Use 0-100" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newGapsOut}. Use 0-100" -t 2000`);
                     return;
                 }
                 
@@ -1567,7 +1766,7 @@ function createCandyUtilsBox() {
                 GLib.spawn_command_line_async(`hyprctl keyword general:gaps_out ${numValue}`);
                 GLib.spawn_command_line_async('hyprctl reload');
                 
-                //GLib.spawn_command_line_async(`notify-send "Hyprland" "Gaps OUT: ${numValue}" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Hyprland" "Gaps OUT: ${numValue}" -t 2000`);
             } catch (e) {
                 print('Error updating gaps out: ' + e.message);
             }
@@ -1622,7 +1821,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newGapsIn);
                 if (isNaN(numValue) || numValue < 0 || numValue > 50) {
-                    //GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newGapsIn}. Use 0-50" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newGapsIn}. Use 0-50" -t 2000`);
                     return;
                 }
                 
@@ -1633,7 +1832,7 @@ function createCandyUtilsBox() {
                 GLib.spawn_command_line_async(`hyprctl keyword general:gaps_in ${numValue}`);
                 GLib.spawn_command_line_async('hyprctl reload');
                 
-                //GLib.spawn_command_line_async(`notify-send "Hyprland" "Gaps IN: ${numValue}" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Hyprland" "Gaps IN: ${numValue}" -t 2000`);
             } catch (e) {
                 print('Error updating gaps in: ' + e.message);
             }
@@ -1692,7 +1891,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newBorder);
                 if (isNaN(numValue) || numValue < 0 || numValue > 10) {
-                    //GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newBorder}. Use 0-10" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Hyprland" "Invalid value: ${newBorder}. Use 0-10" -t 2000`);
                     return;
                 }
                 
@@ -1703,7 +1902,7 @@ function createCandyUtilsBox() {
                 GLib.spawn_command_line_async(`hyprctl keyword general:border_size ${numValue}`);
                 GLib.spawn_command_line_async('hyprctl reload');
                 
-                //GLib.spawn_command_line_async(`notify-send "Hyprland" "Border: ${numValue}" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Hyprland" "Border: ${numValue}" -t 2000`);
             } catch (e) {
                 print('Error updating border: ' + e.message);
             }
@@ -1764,7 +1963,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newSize);
                 if (isNaN(numValue) || numValue < 0 || numValue > 20) {
-                    //GLib.spawn_command_line_async(`notify-send "Blur" "Invalid value: ${newSize}. Use 0-20" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Blur" "Invalid value: ${newSize}. Use 0-20" -t 2000`);
                     return;
                 }
                 
@@ -1780,7 +1979,7 @@ function createCandyUtilsBox() {
                             // Use the exact sed command from existing logic
                             GLib.spawn_command_line_async(`sed -i '/blur {/,/}/{s/size = ${currentValue}/size = ${numValue}/}' '${configFile}'`);
                             GLib.spawn_command_line_async('hyprctl reload');
-                            //GLib.spawn_command_line_async(`notify-send "Blur" "Size: ${numValue}" -t 2000`);
+                            GLib.spawn_command_line_async(`notify-send "Blur" "Size: ${numValue}" -t 2000`);
                         }
                     }
                 }
@@ -1844,7 +2043,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newPass);
                 if (isNaN(numValue) || numValue < 0 || numValue > 10) {
-                    //GLib.spawn_command_line_async(`notify-send "Blur" "Invalid value: ${newPass}. Use 0-10" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Blur" "Invalid value: ${newPass}. Use 0-10" -t 2000`);
                     return;
                 }
                 
@@ -1860,7 +2059,7 @@ function createCandyUtilsBox() {
                             // Use the exact sed command from existing logic
                             GLib.spawn_command_line_async(`sed -i 's/passes = ${currentValue}/passes = ${numValue}/' '${configFile}'`);
                             GLib.spawn_command_line_async('hyprctl reload');
-                            //GLib.spawn_command_line_async(`notify-send "Blur" "Passes: ${numValue}" -t 2000`);
+                            GLib.spawn_command_line_async(`notify-send "Blur" "Passes: ${numValue}" -t 2000`);
                         }
                     }
                 }
@@ -1920,7 +2119,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newBorder);
                 if (isNaN(numValue) || numValue < 0 || numValue > 10) {
-                    //GLib.spawn_command_line_async(`notify-send "Rofi" "Invalid value: ${newBorder}. Use 0-10" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Rofi" "Invalid value: ${newBorder}. Use 0-10" -t 2000`);
                     return;
                 }
                 
@@ -1933,7 +2132,7 @@ function createCandyUtilsBox() {
                         let currentValue = parseInt(borderMatch[1]);
                         // Use the exact sed command from existing logic
                         GLib.spawn_command_line_async(`sed -i 's/border-width: ${currentValue}px/border-width: ${numValue}px/' '${rofiBorderFile}'`);
-                        //GLib.spawn_command_line_async(`notify-send "Rofi" "Border: ${numValue}px" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Rofi" "Border: ${numValue}px" -t 2000`);
                     }
                 }
             } catch (e) {
@@ -1992,7 +2191,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(newRadius);
                 if (isNaN(numValue) || numValue < 0 || numValue > 5.0) {
-                    //GLib.spawn_command_line_async(`notify-send "Rofi" "Invalid value: ${newRadius}. Use 0.0-5.0" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Rofi" "Invalid value: ${newRadius}. Use 0.0-5.0" -t 2000`);
                     return;
                 }
                 
@@ -2005,7 +2204,7 @@ function createCandyUtilsBox() {
                         let newValueStr = numValue.toFixed(1);
                         // Use the exact sed command from existing logic
                         GLib.spawn_command_line_async(`sed -i 's/border-radius: ${radiusMatch[1]}em/border-radius: ${newValueStr}em/' '${rofiRadiusFile}'`);
-                        //GLib.spawn_command_line_async(`notify-send "Rofi" "Radius: ${newValueStr}em" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Rofi" "Radius: ${newValueStr}em" -t 2000`);
                     }
                 }
             } catch (e) {
@@ -2064,7 +2263,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(newOpacity);
                 if (isNaN(numValue) || numValue < 0.0 || numValue > 1.0) {
-                    //GLib.spawn_command_line_async(`notify-send "Opacity" "Invalid value: ${newOpacity}. Use 0.0-1.0" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Opacity" "Invalid value: ${newOpacity}. Use 0.0-1.0" -t 2000`);
                     return;
                 }
                 
@@ -2072,7 +2271,7 @@ function createCandyUtilsBox() {
                 let newValueStr = numValue.toFixed(2);
                 GLib.spawn_command_line_async(`sed -i 's/active_opacity = .*/active_opacity = ${newValueStr}/' "${configFile}"`);
                 GLib.spawn_command_line_async('hyprctl reload');
-                //GLib.spawn_command_line_async(`notify-send "Opacity" "Scale: ${newValueStr}" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Opacity" "Scale: ${newValueStr}" -t 2000`);
             } catch (e) {
                 print('Error updating opacity scale: ' + e.message);
             }
@@ -2140,7 +2339,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(newPadding);
                 if (isNaN(numValue) || numValue < 0.0 || numValue > 10.0) {
-                    //GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${newPadding}. Use 0.0-10.0" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${newPadding}. Use 0.0-10.0" -t 2000`);
                     return;
                 }
                 
@@ -2159,7 +2358,7 @@ function createCandyUtilsBox() {
                         GLib.file_set_contents(waybarPaddingStateFile, newValueStr);
                         
                         // Send notification
-                        //GLib.spawn_command_line_async(`notify-send "Waybar" "Padding: ${newValueStr}px" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Waybar" "Padding: ${newValueStr}px" -t 2000`);
                     }
                 }
             } catch (e) {
@@ -2210,8 +2409,8 @@ function createCandyUtilsBox() {
                 let [cssOk, cssContents] = GLib.file_get_contents(waybarStyleFile);
                 if (cssOk && cssContents) {
                     let content = imports.byteArray.toString(cssContents);
-                    // Look for border with @on_primary_fixed_variant (exact logic from existing function)
-                    let borderMatch = content.match(/border:\s*([0-9]+)px\s*solid\s*@on_primary_fixed_variant;/);
+                    // Look for border with @inverse_primary (exact logic from existing function)
+                    let borderMatch = content.match(/border:\s*([0-9]+)px\s*solid\s*@inverse_primary;/);
                     if (borderMatch) {
                         return borderMatch[1];
                     }
@@ -2229,7 +2428,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newBorderSize);
                 if (isNaN(numValue) || numValue < 0 || numValue > 10) {
-                    //GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${newBorderSize}. Use 0-10" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${newBorderSize}. Use 0-10" -t 2000`);
                     return;
                 }
                 
@@ -2239,24 +2438,24 @@ function createCandyUtilsBox() {
                     let content = imports.byteArray.toString(contents);
                     
                     // Look specifically for the border in the window#waybar > box section (exact logic)
-                    let borderMatch = content.match(/window#waybar > box\s*\{[\s\S]*?border:\s*([0-9]+)px\s*solid\s*@on_primary_fixed_variant;[\s\S]*?\}/);
+                    let borderMatch = content.match(/window#waybar > box\s*\{[\s\S]*?border:\s*([0-9]+)px\s*solid\s*@inverse_primary;[\s\S]*?\}/);
                     
                     if (!borderMatch) {
-                        // Fallback: try to find any border with @on_primary_fixed_variant
-                        borderMatch = content.match(/border:\s*([0-9]+)px\s*solid\s*@on_primary_fixed_variant;/);
+                        // Fallback: try to find any border with @inverse_primary
+                        borderMatch = content.match(/border:\s*([0-9]+)px\s*solid\s*@inverse_primary;/);
                     }
                     
                     if (borderMatch) {
                         let currentValue = parseInt(borderMatch[1]);
                         
                         // Update CSS file using the exact current value (exact sed command from existing logic)
-                        GLib.spawn_command_line_async(`sed -i '32s/border: ${currentValue}px solid @on_primary_fixed_variant;/border: ${numValue}px solid @on_primary_fixed_variant;/' '${waybarStyleFile}'`);
+                        GLib.spawn_command_line_async(`sed -i '32s/border: ${currentValue}px solid @inverse_primary;/border: ${numValue}px solid @inverse_primary;/' '${waybarStyleFile}'`);
                         
                         // Update state file
                         GLib.file_set_contents(waybarBorderSizeStateFile, numValue.toString());
                         
                         // Send notification
-                        //GLib.spawn_command_line_async(`notify-send "Waybar" "Border Size: ${numValue}px" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Waybar" "Border Size: ${numValue}px" -t 2000`);
                     } else {
                         print('Could not find border pattern in CSS file');
                     }
@@ -2308,7 +2507,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(value);
                 if (isNaN(numValue) || numValue < 0 || numValue > 200) {
-                    //GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-200" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-200" -t 2000`);
                     return;
                 }
 
@@ -2322,7 +2521,7 @@ function createCandyUtilsBox() {
                 GLib.file_set_contents(waybarSideMarginsStateFile, valueStr);
 
                 // Send notification
-                //GLib.spawn_command_line_async(`notify-send "Waybar" "Side-margins: ${valueStr}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Waybar" "Side-margins: ${valueStr}px" -t 2000`);
             } catch (e) {
                 print('Error updating waybar side margins: ' + e.message);
             }
@@ -2343,7 +2542,7 @@ function createCandyUtilsBox() {
         lbl.set_size_request(110, -1);
 
         const entry = new Gtk.Entry({
-            placeholder_text: '0-260',
+            placeholder_text: '0-200',
             width_chars: 8,
             halign: Gtk.Align.CENTER
         });
@@ -2366,8 +2565,8 @@ function createCandyUtilsBox() {
 
             try {
                 let numValue = parseFloat(value);
-                if (isNaN(numValue) || numValue < 0 || numValue > 260) {
-                    //GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-260" -t 2000`);
+                if (isNaN(numValue) || numValue < 0 || numValue > 200) {
+                    GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-200" -t 2000`);
                     return;
                 }
 
@@ -2380,7 +2579,7 @@ function createCandyUtilsBox() {
                 GLib.file_set_contents(waybarRightSideMarginsStateFile, valueStr);
 
                 // Send notification
-                //GLib.spawn_command_line_async(`notify-send "Waybar" "Right Side-margin: ${valueStr}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Waybar" "Right Side-margin: ${valueStr}px" -t 2000`);
             } catch (e) {
                 print('Error updating waybar side margin: ' + e.message);
             }
@@ -2426,7 +2625,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(value);
                 if (isNaN(numValue) || numValue < 0 || numValue > 20) {
-                    //GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-20" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-20" -t 2000`);
                     return;
                 }
                 
@@ -2439,7 +2638,7 @@ function createCandyUtilsBox() {
                 GLib.file_set_contents(waybarTopMarginStateFile, valueStr);
                 
                 // Send notification
-                //GLib.spawn_command_line_async(`notify-send "Waybar" "Top-margin: ${valueStr}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Waybar" "Top-margin: ${valueStr}px" -t 2000`);
             } catch (e) {
                 print('Error updating waybar top margin: ' + e.message);
             }
@@ -2485,7 +2684,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(value);
                 if (isNaN(numValue) || numValue < 0 || numValue > 20) {
-                    //GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-20" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-20" -t 2000`);
                     return;
                 }
                 
@@ -2499,7 +2698,7 @@ function createCandyUtilsBox() {
                 GLib.file_set_contents(waybarOuterRadiusStateFile, valueStr);
                 
                 // Send notification
-                //GLib.spawn_command_line_async(`notify-send "Waybar" "Radius: ${valueStr}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Waybar" "Radius: ${valueStr}px" -t 2000`);
             } catch (e) {
                 print('Error updating waybar outer radius: ' + e.message);
             }
@@ -2545,7 +2744,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(value);
                 if (isNaN(numValue) || numValue < 0 || numValue > 20) {
-                    //GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-20" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Waybar" "Invalid value: ${value}. Use 0-20" -t 2000`);
                     return;
                 }
                 
@@ -2558,7 +2757,7 @@ function createCandyUtilsBox() {
                 GLib.file_set_contents(waybarBottomMarginStateFile, valueStr);
                 
                 // Send notification
-                //GLib.spawn_command_line_async(`notify-send "Waybar" "Bottom-margin: ${valueStr}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Waybar" "Bottom-margin: ${valueStr}px" -t 2000`);
             } catch (e) {
                 print('Error updating waybar bottom margin: ' + e.message);
             }
@@ -2630,7 +2829,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseInt(newBorderSize);
                 if (isNaN(numValue) || numValue < 0 || numValue > 10) {
-                    //GLib.spawn_command_line_async(`notify-send "Swaync" "Invalid value: ${newBorderSize}. Use 0-10" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Swaync" "Invalid value: ${newBorderSize}. Use 0-10" -t 2000`);
                     return;
                 }
 
@@ -2658,7 +2857,7 @@ function createCandyUtilsBox() {
 
                         // Send notification and refresh
                         GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
-                        //GLib.spawn_command_line_async(`notify-send "Swaync" "Border Size: ${numValue}px" -t 2000`);
+                        GLib.spawn_command_line_async(`notify-send "Swaync" "Border Size: ${numValue}px" -t 2000`);
                     } else {
                         print('Could not find border pattern in CSS file');
                     }
@@ -2710,7 +2909,7 @@ function createCandyUtilsBox() {
             try {
                 let numValue = parseFloat(value);
                 if (isNaN(numValue) || numValue < 0 || numValue > 20) {
-                    //GLib.spawn_command_line_async(`notify-send "Swaync" "Invalid value: ${value}. Use 0-20" -t 2000`);
+                    GLib.spawn_command_line_async(`notify-send "Swaync" "Invalid value: ${value}. Use 0-20" -t 2000`);
                     return;
                 }
 
@@ -2725,7 +2924,7 @@ function createCandyUtilsBox() {
 
                 // Send notification and refresh
                 GLib.spawn_command_line_async(`bash -c 'swaync-client -rs'`);
-                //GLib.spawn_command_line_async(`notify-send "Swaync" "Radius: ${valueStr}px" -t 2000`);
+                GLib.spawn_command_line_async(`notify-send "Swaync" "Radius: ${valueStr}px" -t 2000`);
             } catch (e) {
                 print('Error updating swaync outer radius: ' + e.message);
             }

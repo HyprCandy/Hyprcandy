@@ -1,7 +1,7 @@
 #!/bin/bash
 # hyprlock-watcher.sh - Watches for hyprlock unlock and refreshes waybar
 
-WEATHER_CACHE_FILE="/tmp/astal-weather-cache.json"
+WEATHER_CACHE_FILE="/tmp/waybar-weather-cache.json"
 
 # Wait for Hyprland to start
 while [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]; do

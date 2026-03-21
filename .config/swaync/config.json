@@ -2,7 +2,7 @@
     "$schema": "/etc/xdg/swaync/configSchema.json",
     "positionX": "right",
     "positionY": "top",
-    "layer": "top",
+    "layer": "overlay",
     "control-center-layer": "top",
     "layer-shell": true,
     "cssPriority": "user",
@@ -38,7 +38,7 @@
     ],
     "widget-config": {
         "title": {
-            "text": "󱏩",
+            "text": "󰎟",
             "clear-all-button": true,
             "button-text": "󰩺"
         },
@@ -58,20 +58,20 @@
         "buttons-grid": {
             "actions": [
                 {
-                    "label": "",
+                    "label": "󰹑",
                     "command": "bash -c $HOME/.config/hypr/scripts/screenshot.sh"
                 },
                 {
-                    "label": "",
+                    "label": "",
                     "command": "bash -c $HOME/.config/swaync/recorder.sh"
                 },
                 {
-                    "label": "",
-                    "command": "bash $HOME/.ultracandy/GJS/toggle-hyprland-settings.sh"
+                    "label": "󰂯",
+                    "command": "bash -c $HOME/.config/waybar/scripts/bluetooth-menu.sh"
                 },
                 {
-                    "label": "",
-                    "command": "DRI_PRIME=1 equibop"
+                    "label": "󰝚",
+                    "command": "bash -c $HOME/.ultracandy/GJS/toggle-media-player.sh"
                 },
                 {
                     "label": "󰖁",

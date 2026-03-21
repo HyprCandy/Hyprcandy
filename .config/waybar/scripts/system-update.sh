@@ -41,17 +41,20 @@ export -f pkg_installed
 clean_cache() {
     echo
     print_warning "Clearing the cache frees disk space but requires redownloading if you need to downgrade later."
-    echo -e "${YELLOW}󰩺 Would you like to clear your $aur_helper package cache? (n/Y)${NC}"
+    echo -e "${YELLOW}Would you like to clear the package cache? (n/Y)${NC}"
     read -r clean_choice
     case "$clean_choice" in
         [nN][oO]|[nN])
             print_status "Cache cleaning skipped."
             ;;
         *)
+            print_status "Cleaning pacman cache..."
+            # -Sc removes packages not currently installed, and old versions of installed packages
+            sudo pacman -Sc
+            
             if [ -n "$aur_helper" ]; then
-                print_status "󰩺 Cleaning $aur_helper cache..."
-                $aur_helper -Scc
-                print_status "󰸞 $aur_helper cache cleared."
+                print_status "Cleaning $aur_helper cache..."
+                $aur_helper -Sc
             fi
             ;;
     esac
@@ -61,14 +64,14 @@ prompt_reboot() {
     echo
     print_warning "A reboot is recommended to ensure all changes take effect properly."
     echo
-    echo -e "${YELLOW}󰜉 Would you like to reboot now? (n/Y)${NC}"
+    echo -e "${YELLOW}Would you like to reboot now? (n/Y)${NC}"
     read -r reboot_choice
     case "$reboot_choice" in
         [nN][oO]|[nN])
             print_status "Reboot skipped. Please reboot manually when convenient."
             ;;
         *)
-            print_status "󰜉 Rebooting system..."
+            print_status "Rebooting system..."
             sudo reboot
             ;;
     esac
@@ -103,6 +106,8 @@ if [ "$1" == "up" ]; then
         fi
     fi
 
+    hyprpm update
+    hyprpm reload
     hyprctl reload
     if pkg_installed flatpak; then flatpak update; fi
     

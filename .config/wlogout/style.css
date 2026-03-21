@@ -27,7 +27,7 @@ by Stephan Raabe (2023)
 }
 
 window {
-	background-image: url("/home/$USERNAME/.config/background.png");
+	background-image: url("/home/king/.config/background.png");
 	background-size: cover;
 	font-size: 16pt;
 	color: #cdd6f4;
@@ -58,7 +58,7 @@ button:focus {
 button:hover {
     background-color: @on_primary;
 	opacity: 0.95;
-    color: @scrim;
+    color: @primary_fixed_dim;
     background-size: 25%;
     margin: 30px;
     border-radius: 80px;

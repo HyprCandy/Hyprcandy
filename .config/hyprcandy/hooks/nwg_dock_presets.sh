@@ -12,12 +12,12 @@ case "$1" in
         BORDER_WIDTH=1
         ;;
     "balanced")
-        ICON_SIZE=24
+        ICON_SIZE=30
         BORDER_RADIUS=20
         BORDER_WIDTH=2
         ;;
     "prominent")
-        ICON_SIZE=30
+        ICON_SIZE=40
         BORDER_RADIUS=20
         BORDER_WIDTH=3
         ;;

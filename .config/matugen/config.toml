@@ -1,14 +1,6 @@
 [config]
 version_check = false
 
-[templates.gtk3css]
-input_path = '~/.config/matugen/templates/gtk3.css'
-output_path = '~/.config/gtk-3.0/gtk.css'
-
-[templates.gtk4css]
-input_path = '~/.config/matugen/templates/gtk4.css'
-output_path = '~/.config/gtk-4.0/gtk.css'
-
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
@@ -60,22 +52,19 @@ post_hook = 'pkill -SIGUSR1 cava'
 input_path = '~/.config/matugen/templates/Appearance.colors.qml'
 output_path = '~/.config/quickshell/overview/common/Appearance.colors.qml'
 
-[templates.qt5ct]
-input_path = '~/.config/matugen/templates/qtct-colors.conf'
-output_path = '~/.config/qt5ct/colors/matugen.conf'
-
-[templates.qt6ct]
-input_path = '~/.config/matugen/templates/qtct-colors.conf'
-output_path = '~/.config/qt6ct/colors/matugen.conf'
-
-[templates.kdescheme]
-input_path = '~/.config/matugen/templates/kde-colors.colors'
-output_path = '~/.config/kdeglobals'
-
-[templates.kcolorscheme]
-input_path = '~/.config/matugen/templates/kde-colors.colors'
-output_path = '~/.local/share/color-schemes/UltraCandy.colors'
-
 [templates.sequences]
 input_path = '~/.config/matugen/templates/sequences'
 output_path = '~/.cache/wal/sequences'
+
+#[templates.pywalfox]
+#input_path = '~/.config/matugen/templates/pywalfox-colors.json'
+#output_path = '~/.cache/wal/colors.json'
+#post_hook = 'pywalfox update'
+
+#[templates.qt5ct]
+#input_path = '~/.config/matugen/templates/darker.conf'
+#output_path = '~/.config/qt5ct/colors/matugen.conf'
+
+#[templates.qt6ct]
+#input_path = '~/.config/matugen/templates/darker.conf'
+#output_path = '~/.config/qt6ct/colors/matugen.conf'

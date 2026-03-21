@@ -44,6 +44,52 @@ CITY=$(echo "$IPINFO" | jq -r '.city // "Unknown"')
 LAT=$(echo "$COORDINATES" | cut -d',' -f1)
 LON=$(echo "$COORDINATES" | cut -d',' -f2)
 DISPLAY_LOCATION="$CITY"
+#!/bin/bash
+
+# Waybar Weather Module - Accurate Location Detection
+# Uses Open-Meteo with local environmental overrides for high humidity
+
+# --- CONFIGURATION ---
+UNIT_STATE_FILE="/tmp/waybar-weather-unit"
+WEATHER_CACHE_FILE="/tmp/astal-weather-cache.json"
+LOCATION_CACHE_FILE="/tmp/waybar-weather-location"
+IPINFO_CACHE_FILE="/tmp/waybar-weather-ipinfo.json"
+CACHE_MAX_AGE=300  # 5 minutes
+LOCATION_MAX_AGE=3600  # 1 hour
+
+# Get current unit
+CURRENT_UNIT=$(cat "$UNIT_STATE_FILE" 2>/dev/null || echo "metric")
+
+# Get precise location from ipinfo
+get_location() {
+    if [ -f "$IPINFO_CACHE_FILE" ]; then
+        CACHE_AGE=$(( $(date +%s) - $(stat -c %Y "$IPINFO_CACHE_FILE") ))
+        if [ $CACHE_AGE -lt $LOCATION_MAX_AGE ]; then
+            cat "$IPINFO_CACHE_FILE"
+            return
+        fi
+    fi
+    
+    IPINFO_DATA=$(curl -s https://ipinfo.io/json)
+    if [ -n "$IPINFO_DATA" ]; then
+        echo "$IPINFO_DATA" > "$IPINFO_CACHE_FILE"
+        echo "$IPINFO_DATA"
+    else
+        if [ -f "$IPINFO_CACHE_FILE" ]; then
+            cat "$IPINFO_CACHE_FILE"
+        else
+            echo '{"loc":"0,0","city":"Unknown"}'
+        fi
+    fi
+}
+
+IPINFO=$(get_location)
+COORDINATES=$(echo "$IPINFO" | jq -r '.loc // "0,0"')
+CITY=$(echo "$IPINFO" | jq -r '.city // "Unknown"')
+
+LAT=$(echo "$COORDINATES" | cut -d',' -f1)
+LON=$(echo "$COORDINATES" | cut -d',' -f2)
+DISPLAY_LOCATION="$CITY"
 
 # Open-Meteo API URL
 WEATHER_URL="https://api.open-meteo.com/v1/forecast?latitude=${LAT}&longitude=${LON}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,weather_code,wind_speed_10m,precipitation&daily=weather_code,temperature_2m_max,temperature_2m_min&forecast_days=7&timezone=auto"
@@ -82,10 +128,10 @@ jq --arg unit "$CURRENT_UNIT" \
         
         # CODE 3 OVERRIDE: If Overcast + High Humidity (85%+), trigger Rain Icon
         elif (code == 3) then 
-            (if humidity >= 85 then {text: "Overcast (Rainy)", icon: "󰖖"} 
-             else {text: "Overcast", icon: "󰼰"} end)
+            (if humidity >= 85 then {text: "Overcast (Rainy)", icon: (if is_day == 1 then "" else "" end)} 
+             else {text: "Overcast", icon: (if is_day == 1 then "󰼰" else "󰖑" end)} end)
         
-        elif (code == 45 or code == 48) then {text: "Fog", icon: "󰖑"}
+        elif (code == 45 or code == 48) then {text: "Fog", icon: (if is_day == 1 then "" else "" end)}
         elif (code == 51 or code == 53 or code == 55) then {text: "Drizzle", icon: "󰖗"}
         elif (code == 56 or code == 57) then {text: "Freezing Drizzle", icon: "󰖒"}
         elif (code == 61) then {text: "Slight Rain", icon: "󰖗"}

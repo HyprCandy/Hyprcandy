@@ -10,42 +10,62 @@
   // ──────────────────────────────────────────────────────────┤ positions ├───
 
   "modules-left": [
+    //"custom/theme",       // theme switcher
+    //"custom/left1",
+
     "hyprland/workspaces",  // workspaces
-    "custom/overview",
     "custom/weather",
-    "mpris"               // media info
+    //"custom/right1",
+
+    "custom/paddw",
+    //"custom/right1",
+    "mpris",               // media info
+    "custom/cava"           // cava visualizer
   ],
 
   "modules-center": [
-    "custom/cava-left",           // cava visualizer
+    //"rofi",
+    "custom/paddc",
+    //"custom/left2",
+    
+    //"custom/temperature",   // temperature
+
+    //"custom/left3",
+    
+    //"memory",               // memory
+
+    //"custom/left4",
+    
     "clock#date",           // date
+    //"cpu",                  // cpu
+    //"rofi",		    // rofi
+    //"custom/leftin1",
+
+    "custom/left5",
     "custom/distro",        // distro icon
-    "clock#time",           // time
-    "custom/cava-right"           // cava visualizer
+    "custom/right2",
+
+    //"custom/rightin1",
+    "clock#time"           // time
+    //"custom/right3",
+    //"custom/right5"
   ],
 
   "modules-right": [
     "hyprland/window",
-    "tray",
-    "group/toggles",      // ← singular island containing all 6
-    "battery",
-    "custom/power"
+    "tray",       	    // system tray
+    "custom/notification",         // swaync
+    "idle_inhibitor",       // idle inhibitor
+    "custom/rofi",
+    //"custom/player",
+    "custom/update",        // system update
+    "power-profiles-daemon",        // power profiles
+    //"bluetooth",            // bluetooth
+    "custom/wifi",          // wi-fi
+    "battery",              // battery
+    "custom/power"          // power button
   ],
 
-  // ────────────────────────────────────────────────────────┤ toggles group ├───
-  "group/toggles": {
-      "orientation": "horizontal",
-      "modules": [
-          "custom/update",
-          "custom/wifi",
-          "power-profiles-daemon",
-          "idle_inhibitor",
-          "custom/media-player",
-          "custom/rofi",
-          "custom/notification"
-      ]
-  },
-  
   // ─────────────────────────────────────────────────────┤ theme switcher ├───
 
   "custom/theme": {
@@ -82,17 +102,6 @@
   },
 },
 
-  // ────────────────────────────────────────────────────────┤ overview ├───
-
-  "custom/overview": {
-    "format": "󰋶",
-    "tooltip": true,
-    "tooltip-format": "Launch Workspace Overview",
-    "on-click": "~/.config/hyprcandy/scripts/overview.sh",
-    "min-length": 1,
-    "max-length": 7
-  },
-
   // ─────────────────────────────────────────────────────────┤ media info ├───
 
   "mpris": {
@@ -108,48 +117,28 @@
       "paused": "<span color='#b7bdf8'>\u200A\u200A󰏤\u2009\u2009</span>"
     },
 
-    "tooltip-format": "Playing: {title} - {artist}\n\nLeft-click: Play/Pause\nRight-click: Next",
+    "tooltip-format": "Playing: {title} - {artist}",
     "tooltip-format-paused": "Paused: {title} - {artist}",
-    "min-length": 15,
+    "min-length": 5,
     "max-length": 25
   },
   
   // ──────────────────────────────────────────────────────────────┤ cava ├───
 
-  "custom/cava-left": {
-    "exec": "python3 ~/.config/waybar/scripts/cava.py waybar --json --left --transparent-when-inactive",
+  "custom/cava": {
+    "exec": "python3 ~/.config/waybar/scripts/cava.py waybar --json --hide-when-inactive",
     "return-type": "json",
     "format": "{}",
     "restart-interval": 0,
     "tooltip": false,
-    "min-length": 10,
+    "min-length": 0,
     "max-length": 50
-  },
-  
-  // ──────────────────────────────────────────────────────────────┤ cava ├───
-
-  "custom/cava-right": {
-    "exec": "python3 ~/.config/waybar/scripts/cava.py waybar --json --right --transparent-when-inactive",
-    "return-type": "json",
-    "format": "{}",
-    "restart-interval": 0,
-    "tooltip": false,
-    "min-length": 10,
-    "max-length": 50
-  },
-  
-  // ────────────────────────────────────────────────────────┤ space ├───
-  
-  "custom/space": {
-    "format": " ",
-    "min-length": 1,
-    "max-length": 7
   },
   
   // ────────────────────────────────────────────────────────┤ rofi ├───
 
   "custom/rofi": {
-    "format": "󱙪",
+    "format": "󰝹",
     "tooltip": true,
     "tooltip-format": "Utilities",
     "on-click": "DRI_PRIME=1 ~/.config/hypr/scripts/rofi-menus.sh",
@@ -161,19 +150,16 @@
 
   "custom/weather": {
     "exec": "~/.config/waybar/scripts/waybar-weather.sh",
-    //"exec": "~/.config/waybar/scripts/waybar-weather-astal.sh",
     "return-type": "json",
     "format": "{}",
-    "icon-size": 12,
     "tooltip": true,
-    "tooltip-format": "Click: Launch Weather App";
-    "interval": 300,
+    "interval": 1800,
     "signal": 8,
     "on-click": "gnome-weather",
-    //"on-click": "~/.hyprcandy/GJS/toggle-weather-widget.sh",
+    //"on-click-right": "~/.ultracandy/GJS/toggle-weather-widget.sh",
     "on-scroll-up": "~/.config/waybar/scripts/toggle-weather-format.sh -c",
     "on-scroll-down": "~/.config/waybar/scripts/toggle-weather-format.sh -f",
-    "min-length": 7,
+    "min-length": 1,
     "max-length": 30
   },
 
@@ -183,7 +169,7 @@
     "format": "󰝚 ",
     "tooltip": true,
     "tooltip-format": "Media-Player",
-    "on-click": "~/.hyprcandy/GJS/toggle-media-player.sh",
+    "on-click": "~/.ultracandy/GJS/toggle-media-player.sh",
     "min-length": 1,
     "max-length": 7
   },
@@ -223,9 +209,9 @@
       "default": " ",
     },
     "tooltip": true,
-    "tooltip-format": "Click: Candy-Settings, // \nRight-click: Hyprland-Settings",
-    "on-click": "~/.hyprcandy/GJS/toggle-control-center.sh",
-    //"on-click-right": "DRI_PRIME=1 ~/.hyprcandy/GJS/toggle-hyprland-settings.sh",
+    "tooltip-format": "Left-click: Extra-Settings\nRight-click: Hyprland-Settings",
+    "on-click": "~/.ultracandy/GJS/toggle-control-center.sh",
+    "on-click-right": "~/.ultracandy/GJS/toggle-hyprland-settings.sh",
   },
 
   // ─────────────────────────────────────────────────────┤ idle inhibitor ├───
@@ -250,7 +236,7 @@
     "tooltip": true,
     //"tooltip-format": "Standard Time: {:%I:%M %p}",
     "tooltip-format": "Launch tty-clock",
-    "min-length": 7,
+    "min-length": 6,
     "max-length": 7,
     "on-click": "bash ~/.config/hypr/scripts/tty-clock.sh",
   },
@@ -262,7 +248,7 @@
     "tooltip": true,
     "tooltip-format": "Left-click: Calendar-App",
     "on-click": "gnome-calendar",
-    "min-length": 7,
+    "min-length": 1,
     "max-length": 7
   },
 
@@ -332,557 +318,8 @@
   // ──────────────────────────────────────────────────────────────┤ tray ├───
 
   "tray": {
-    "icon-size": 15,
-    "spacing": 4,
-    "show-passive-items": true,
-    "reverse-direction": false
-  },
-  
-  // ──────────────────────────────────────────────────────┤ media-player ├───
-
-  "custom/media-player": {
-    "format": "󰝚",
-    "tooltip": true,
-    "tooltip-format": "media-player",
-    "on-click": "~/.hyprcandy/GJS/toggle-media-player.sh",
-    "min-length": 1,
-    "max-length": 7
-  },
-  
-  // ───────────────────────────────────────────────────────────┤ SwayNC ├───
-  "custom/notification": {
-    "tooltip-format": "Left-click: Control-Center\nRight-click: Do not disturb",
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "󰅸",
-      "none": "",
-      "dnd-notification": "󱅫",
-      "dnd-none": "󰂠",
-      "inhibited-notification": "󰅸",
-      "inhibited-none": "󱏬",
-      "dnd-inhibited-notification": "󱅫",
-      "dnd-inhibited-none": "󱏫"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-  
-  // ────────────────────────────────────────────────────┤ power-profiles ├───
-  "power-profiles-daemon": {
-    "format": "{icon}",
-    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-    "tooltip": true,
-    "format-icons": {
-      "default": "",
-      "performance": "󰠠",
-      "balanced": "󰽣",
-      "power-saver": "󰽥"
-    }
-  }, 
-
-  // ──────────────────────────────────────────────────────┤ output device ├───
-
-  "pulseaudio": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟 {volume}%",
-
-    "format-icons": {
-      "default": ["󰕿", "󰖀", "󰕾"],
-      "headphone": "󰋋",
-      "headset": "󰋋"
-    },
-
-    "tooltip": false,
-    "tooltip-format": "Device: {desc}",
-    "on-click": "~/.config/waybar/scripts/volume-control.sh -o m",
-    "on-scroll-up": "~/.config/waybar/scripts/volume-control.sh -o i",
-    "on-scroll-down": "~/.config/waybar/scripts/volume-control.sh -o d",
-    "min-length": 6,
-    "max-length": 6
-  },
-
-  // ─────────────────────────────────────────────────────────┤ brightness ├───
-
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
-    "tooltip": false,
-    "on-scroll-up": "~/.config/waybar/scripts/brightness-control.sh -o i",
-    "on-scroll-down": "~/.config/waybar/scripts/brightness-control.sh -o d",
-    "min-length": 6,
-    "max-length": 6
-  },
-
-  // ────────────────────────────────────────────────────────────┤ battery ├───
-
-  "battery": {
-    "states": {
-      "warning": 20,
-      "critical": 10
-    },
-
-    "format": "{icon} {capacity}%",
-    "format-icons": ["󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    "format-charging": " {capacity}%",
-
-    "tooltip-format": "Discharging: {time}\n\nLeft-click: System-Monitor-App\nRight-click: System-Monitor-Widget",
-    "tooltip-format-charging": "Charging: {time}\n\nClick: System-Monitor-App",
-    "interval": 1,
-    "min-length": 6,
-    "max-length": 6,
-    "on-click": "gnome-system-monitor"
-    //"on-click": "~/.hyprcandy/GJS/toggle-system-monitor.sh"
-  },
-
-  // ───────────────────────────────────────────────────────┤ power button ├───
-
-  "custom/power": {
-    "format": "",
-    "tooltip": true,
-    "tooltip-format": "Left-click: rofi-logout\nRight-click: wlogout",
-    "on-click": "~/.config/waybar/scripts/power-menu.sh",
-    "on-click-right": "~/.config/waybar/scripts/wlogout.sh"
-  },
-
-  // ────────────────────────────────────────────────────────────┤ padding ├───
-
-  "custom/paddw": {
-    "format": " ",
-    "tooltip": false
-  },
-
-  "custom/paddc": {
-    "format": " ",
-    "tooltip": false
-  },
-
-  // ────────────────────────────────────────────────────────┤ left arrows ├───
-
-  "custom/left1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left2": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left3": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left4": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left5": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left6": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left7": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/left8": {
-    "format": "",
-    "tooltip": false
-  },
-
-  // ───────────────────────────────────────────────────────┤ right arrows ├───
-
-  "custom/right1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right2": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right3": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right4": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/right5": {
-    "format": "",
-    "tooltip": false
-  },
-
-  // ───────────────────────────────────────────────────────┤ left inverse ├───
-
-  "custom/leftin1": {
-    "format": "",
-    "tooltip": false
-  },
-  "custom/leftin2": {
-    "format": "",
-    "tooltip": false
-  },
-
-  // ──────────────────────────────────────────────────────┤ right inverse ├───
-
-  "custom/rightin1": {
-    "format": "",
-    "tooltip": false
-  }
-}{
-  // ─────────────────────────────────────────────────────────────┤ header ├───
-
-  "layer": "top",
-  "position": "top",
-  "mode": "dock",
-  "reload_style_on_change": true,
-  "gtk-layer-shell": true,  // for waybar to be on top of other windows
-
-  // ──────────────────────────────────────────────────────────┤ positions ├───
-
-  "modules-left": [
-    "hyprland/workspaces",  // workspaces
-    "custom/overview",
-    "custom/weather",
-    "mpris"               // media info
-  ],
-
-  "modules-center": [
-    "custom/cava-left",           // cava visualizer
-    "clock#date",           // date
-    "custom/distro",        // distro icon
-    "clock#time",           // time
-    "custom/cava-right"           // cava visualizer
-  ],
-
-  "modules-right": [
-    "hyprland/window",
-    "tray",
-    "group/toggles",      // ← singular island containing all 6
-    "battery",
-    "custom/power"
-  ],
-
-  // ────────────────────────────────────────────────────────┤ toggles group ├───
-  "group/toggles": {
-      "orientation": "horizontal",
-      "modules": [
-          "custom/update",
-          "custom/wifi",
-          "power-profiles-daemon",
-          "idle_inhibitor",
-          "custom/media-player",
-          "custom/rofi",
-          "custom/notification"
-      ]
-  },
-  
-  // ─────────────────────────────────────────────────────┤ theme switcher ├───
-
-  "custom/theme": {
-    "exec": "~/.config/waybar/scripts/current-theme.sh",
-    "return-type": "json",
-    "format": " 󰍜 ",
-    "on-click": "~/.config/waybar/scripts/theme-switcher.sh",
-    "min-length": 3,
-    "max-length": 3
-  },
-
-  // ─────────────────────────────────────────────────────────┤ workspaces ├───
-
-"hyprland/workspaces": {
-  "on-scroll-up": "hyprctl dispatch workspace -1",
-  "on-scroll-down": "hyprctl dispatch workspace +1",
-  "persistent-workspaces": {
-    "1": [],
-    "2": [],
-    "3": [],
-    "4": [],
-    "5": []
-  },
-  "format": "{icon}",
-  "format-icons": {
-    "6": "",
-    "7": "",
-    "8": "",
-    "9": "",
-    "10": "",
-    "active": " ",
-    "empty": "",
-    "persistent": ""
-  },
-},
-
-  // ────────────────────────────────────────────────────────┤ overview ├───
-
-  "custom/overview": {
-    "format": "󰋶",
-    "tooltip": true,
-    "tooltip-format": "Launch Workspace Overview",
-    "on-click": "~/.config/hyprcandy/scripts/overview.sh",
-    "min-length": 1,
-    "max-length": 7
-  },
-
-  // ─────────────────────────────────────────────────────────┤ media info ├───
-
-  "mpris": {
-    "format": "{player_icon} {title} - {artist}",
-    "format-paused": "{status_icon} {title} - {artist}",
-
-    "player-icons": {
-      "default": "󰝚 ",
-      "spotify": "<span foreground='#a6da95'>󰓇 </span>",
-      "firefox": "<span foreground='#ed8796'>󰗃 </span>"
-    },
-    "status-icons": {
-      "paused": "<span color='#b7bdf8'>\u200A\u200A󰏤\u2009\u2009</span>"
-    },
-
-    "tooltip-format": "Playing: {title} - {artist}\n\nLeft-click: Play/Pause\nRight-click: Next",
-    "tooltip-format-paused": "Paused: {title} - {artist}",
-    "min-length": 15,
-    "max-length": 25
-  },
-  
-  // ──────────────────────────────────────────────────────────────┤ cava ├───
-
-  "custom/cava-left": {
-    "exec": "python3 ~/.config/waybar/scripts/cava.py waybar --json --left --transparent-when-inactive",
-    "return-type": "json",
-    "format": "{}",
-    "restart-interval": 0,
-    "tooltip": false,
-    "min-length": 10,
-    "max-length": 50
-  },
-  
-  // ──────────────────────────────────────────────────────────────┤ cava ├───
-
-  "custom/cava-right": {
-    "exec": "python3 ~/.config/waybar/scripts/cava.py waybar --json --right --transparent-when-inactive",
-    "return-type": "json",
-    "format": "{}",
-    "restart-interval": 0,
-    "tooltip": false,
-    "min-length": 10,
-    "max-length": 50
-  },
-  
-  // ────────────────────────────────────────────────────────┤ space ├───
-  
-  "custom/space": {
-    "format": " ",
-    "min-length": 1,
-    "max-length": 7
-  },
-  
-  // ────────────────────────────────────────────────────────┤ rofi ├───
-
-  "custom/rofi": {
-    "format": "󱙪",
-    "tooltip": true,
-    "tooltip-format": "Utilities",
-    "on-click": "DRI_PRIME=1 ~/.config/hypr/scripts/rofi-menus.sh",
-    "min-length": 1,
-    "max-length": 7
-  },
-  
-  // ────────────────────────────────────────────────────────┤ weather ├───
-
-  "custom/weather": {
-    "exec": "~/.config/waybar/scripts/waybar-weather.sh",
-    //"exec": "~/.config/waybar/scripts/waybar-weather-astal.sh",
-    "return-type": "json",
-    "format": "{}",
     "icon-size": 12,
-    "tooltip": true,
-    "interval": 300,
-    "signal": 8,
-    //"on-click": "gnome-weather",
-    "on-click": "~/.hyprcandy/GJS/toggle-weather-widget.sh",
-    "on-scroll-up": "~/.config/waybar/scripts/toggle-weather-format.sh -c",
-    "on-scroll-down": "~/.config/waybar/scripts/toggle-weather-format.sh -f",
-    "min-length": 7,
-    "max-length": 30
-  },
-
-  // ────────────────────────────────────────────────────────┤ player ├───
-
-  "custom/player": {
-    "format": "󰝚 ",
-    "tooltip": true,
-    "tooltip-format": "Media-Player",
-    "on-click": "~/.hyprcandy/GJS/toggle-media-player.sh",
-    "min-length": 1,
-    "max-length": 7
-  },
-
-  // ─────────────────────────────────────────────────────────────┤ memory ├───
-
-  //"memory": {
-    //"states": {
-     // "warning": 75,
-     // "critical": 90
-   // },
-
-   // "format": "󰘚 {percentage}%",
-   // "format-critical": "󰀦 {percentage}%",
-   // "tooltip": false,
-    // "tooltip-format": "Memory Used: {used:0.1f} GB / {total:0.1f} GB",
-   // "interval": 5,
-   // "min-length": 7,
-   // "max-length": 7
- // },
-
-  // ────────────────────────────────────────────────────────────────┤ cpu ├───
-
-  //"cpu": {
-   // "format": "󰍛 {usage}%",
-   // "tooltip": true,
-   // "interval": 5,
-   // "min-length": 6,
-   // "max-length": 6
- // },
-
-  // ──────────────────────────────────────────────────────────────┤ distro ├───
-
-  "custom/distro": {
-    "format": "{icon}",
-    "format-icons": {
-      "default": " ",
-    },
-    "tooltip": true,
-    "tooltip-format": "Click: Candy-Settings, // \nRight-click: Hyprland-Settings",
-    "on-click": "~/.hyprcandy/GJS/toggle-control-center.sh",
-    //"on-click-right": "DRI_PRIME=1 ~/.hyprcandy/GJS/toggle-hyprland-settings.sh",
-  },
-
-  // ─────────────────────────────────────────────────────┤ idle inhibitor ├───
-
-  "idle_inhibitor": {
-    "format": "{icon}",
-
-    "format-icons": {
-      "activated": "󰅶 ",
-      "deactivated": "󰾪 "
-    },
-
-    "tooltip-format-activated": "Caffeine Mode On",
-    "tooltip-format-deactivated": "Caffeine Mode Off",
-    "start-activated": false
-  },
-
-  // ───────────────────────────────────────────────────────────────┤ time ├───
-
-  "clock#time": {
-    "format": "󰅐 {:%H:%M}",
-    "tooltip": true,
-    //"tooltip-format": "Standard Time: {:%I:%M %p}",
-    "tooltip-format": "Launch tty-clock",
-    "min-length": 7,
-    "max-length": 7,
-    "on-click": "bash ~/.config/hypr/scripts/tty-clock.sh",
-  },
-
-  // ───────────────────────────────────────────────────────────────┤ date ├───
-
-  "clock#date": {
-    "format": "󰸗 {:%m-%d}",
-    "tooltip": true,
-    "tooltip-format": "Left-click: Calendar-App",
-    "on-click": "gnome-calendar",
-    "min-length": 7,
-    "max-length": 7
-  },
-
-  // ──────────────────────────────────────────────────────────────┤ wi-fi ├───
-
-  "custom/wifi": {
-    "exec": "~/.config/waybar/scripts/wifi-status.sh",
-    "return-type": "json",
-    "format": "{}",
-    "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
-    "on-click-right": "kitty --title '󰤨  Network Manager TUI' bash -c nmtui",
-    "interval": 300,
-    "min-length": 1,
-    "max-length": 1
-  },
-
-  // ──────────────────────────────────────────────────────────┤ bluetooth ├───
-
-  "bluetooth": {
-    "format": "󰂰",
-    "format-disabled": "󰂲",
-    "format-connected": "󰂱",
-    "format-connected-battery": "󰂱",
-
-    "tooltip-format": 
-      "{num_connections} connected",
-    "tooltip-format-disabled": 
-      "Bluetooth Disabled",
-    "tooltip-format-connected": 
-      "{device_enumerate}",
-    "tooltip-format-enumerate-connected": 
-      "{device_alias}",
-    "tooltip-format-enumerate-connected-battery": 
-      ":: {device_alias}: 󱊣 {device_battery_percentage}%",
-
-    "on-click": "~/.config/waybar/scripts/bluetooth-menu.sh",
-    "on-click-right": "kitty --title '󰂯  Bluetooth TUI' bash -c bluetui",
-    "interval": 1,
-    "min-length": 1,
-    "max-length": 1
-  },
-
-  // ──────────────────────────────────────────────────────┤ system update ├───
-
-  "custom/update": {
-    "exec": "~/.config/waybar/scripts/system-update.sh",
-    "return-type": "json",
-    "format": "{}",
-    "on-click": "~/.config/waybar/scripts/system-update.sh up",
-    "interval": 3600,
-    "min-length": 1,
-    "max-length": 1
-  },
-
-  // ─────────────────────────────────────────────────────────────┤ window ├───
-
-  "hyprland/window": {
-    "swap-icon-label": false,
-    "format": "",
-    "icon": true,
-    "icon-size": 16,
-    "tooltip": false,
-    "min-length": 0,
-    "max-length": 0,
-  }, 
-  
-  // ──────────────────────────────────────────────────────────────┤ tray ├───
-
-  "tray": {
-    "icon-size": 15,
-    "spacing": 4,
-    "show-passive-items": true,
-    "reverse-direction": false
-  },
-  
-  // ──────────────────────────────────────────────────────┤ media-player ├───
-
-  "custom/media-player": {
-    "format": "󰝚",
-    "tooltip": true,
-    "tooltip-format": "media-player",
-    "on-click": "~/.hyprcandy/GJS/toggle-media-player.sh",
-    "min-length": 1,
-    "max-length": 7
+    "spacing": 6
   },
   
   // ───────────────────────────────────────────────────────────┤ SwayNC ├───
@@ -891,7 +328,7 @@
     "format": "{icon}",
     "format-icons": {
       "notification": "󰅸",
-      "none": "",
+      "none": "󰎟",
       "dnd-notification": "󱅫",
       "dnd-none": "󰂠",
       "inhibited-notification": "󰅸",
@@ -965,13 +402,13 @@
     "format-icons": ["󰂎", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     "format-charging": " {capacity}%",
 
-    "tooltip-format": "Discharging: {time}\n\nLeft-click: System-Monitor-App\nRight-click: System-Monitor-Widget",
-    "tooltip-format-charging": "Charging: {time}\n\nLeft-click: System-Monitor-App\nRight-click: System-Monitor-App",
+    "tooltip-format": "Discharging: {time}\nLeft-click: System-Monitor-Widget\nRight-click: Gnome-System-Monitor-App",
+    "tooltip-format-charging": "Charging: {time}\nLeft-click: Gnome-System-Monitor-App\nRight-click: System-Monitor-Widget",
     "interval": 1,
     "min-length": 6,
     "max-length": 6,
-    "on-click-right": "gnome-system-monitor",
-    "on-click": "~/.hyprcandy/GJS/toggle-system-monitor.sh"
+    "on-click": "gnome-system-monitor",
+    "on-click-right": "~/.ultracandy/GJS/toggle-system-monitor.sh"
   },
 
   // ───────────────────────────────────────────────────────┤ power button ├───
@@ -979,9 +416,9 @@
   "custom/power": {
     "format": "",
     "tooltip": true,
-    "tooltip-format": "Left-click: rofi-logout\nRight-click: wlogout",
-    "on-click": "~/.config/waybar/scripts/power-menu.sh",
-    "on-click-right": "~/.config/waybar/scripts/wlogout.sh"
+    "tooltip-format": "Left-click: wlogout\nRight-click: rofi-logout",
+    "on-click": "~/.config/waybar/scripts/wlogout.sh",
+    "on-click-right": "~/.config/waybar/scripts/power-menu.sh"
   },
 
   // ────────────────────────────────────────────────────────────┤ padding ├───

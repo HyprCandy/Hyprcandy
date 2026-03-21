@@ -5,109 +5,34 @@
 #  ___) | (__| | |  __/  __/ | | \__ \ | | | (_) | |_
 # |____/ \___|_|  \___|\___|_| |_|___/_| |_|\___/ \__|
 #
-# Screenshot script
+# Based on https://github.com/hyprwm/contrib/blob/main/grimblast/screenshot.sh
+# -----------------------------------------------------
 
-# -----------------------------------------------------
-# Environment
-# -----------------------------------------------------
-export WAYLAND_DISPLAY="${WAYLAND_DISPLAY:-wayland-1}"
-export XDG_CURRENT_DESKTOP="${XDG_CURRENT_DESKTOP:-Hyprland}"
-export XDG_SESSION_TYPE="${XDG_SESSION_TYPE:-wayland}"
+# Screenshots will be stored in $HOME by default.
+# The screenshot will be moved into the screenshot directory
 
-# Debug
-DEBUG_LOG="/tmp/grim-debug.log"
-echo "=== $(date) ===" >> "$DEBUG_LOG"
+# Add this to ~/.config/user-dirs.dirs to save screenshots in a custom folder:
+XDG_SCREENSHOTS_DIR="$HOME/Pictures/Screenshots"
 
-# -----------------------------------------------------
-# Configuration
-# -----------------------------------------------------
-source ~/.config/hyprcandy/settings/screenshot-filename.sh 2>/dev/null || NAME="screenshot-$(date +%Y%m%d-%H%M%S).png"
-source ~/.config/hyprcandy/settings/screenshot-folder.sh 2>/dev/null || screenshot_folder="$HOME/Pictures/Screenshots"
-export GRIMBLAST_EDITOR="$(cat ~/.config/hyprcandy/settings/screenshot-editor.sh 2>/dev/null)"
+prompt='Screenshot'
+mesg="DIR: ~/Pictures/Screenshots"
 
-mkdir -p "$screenshot_folder"
+# Screenshot Filename
+source ~/.config/hyprcandy/settings/screenshot-filename.sh
 
-# -----------------------------------------------------
-# Notification with thumbnail
-# Usage: notify_with_thumb "Title" "Message" "/path/to/image.png"
-# -----------------------------------------------------
-notify_with_thumb() {
-    local title="$1"
-    local message="$2"
-    local image_path="$3"
-    local urgency="${4:-normal}"
-    
-    # Check which notification daemon is running
-    if pgrep -x "swaync" >/dev/null 2>&1; then
-        # SwayNC - uses standard icon path but supports image preview
-        if [ -f "$image_path" ]; then
-            notify-send -i "$image_path" -u "$urgency" "$title" "$message"
-        else
-            notify-send -i camera-photo-symbolic -u "$urgency" "$title" "$message"
-        fi
-        
-    elif pgrep -x "mako" >/dev/null 2>&1; then
-        # Mako - uses icon-data hint with base64
-        if [ -f "$image_path" ]; then
-            # Convert image to base64 for mako
-            local icon_data
-            icon_data=$(base64 -w 0 "$image_path" 2>/dev/null)
-            if [ -n "$icon_data" ]; then
-                notify-send -u "$urgency" \
-                    -h "string:x-canonical-private-synchronous:anything" \
-                    -h "string:icon-data:image/png;base64,$icon_data" \
-                    "$title" "$message"
-            else
-                notify-send -i camera-photo-symbolic -u "$urgency" "$title" "$message"
-            fi
-        else
-            notify-send -i camera-photo-symbolic -u "$urgency" "$title" "$message"
-        fi
-        
-    elif pgrep -x "dunst" >/dev/null 2>&1; then
-        # Dunst - supports inline images via icon
-        if [ -f "$image_path" ]; then
-            notify-send -i "$image_path" -u "$urgency" "$title" "$message"
-        else
-            notify-send -i camera-photo-symbolic -u "$urgency" "$title" "$message"
-        fi
-        
-    else
-        # Generic fallback - try icon path directly
-        if [ -f "$image_path" ]; then
-            notify-send -i "$image_path" -u "$urgency" "$title" "$message"
-        else
-            notify-send -i camera-photo-symbolic -u "$urgency" "$title" "$message"
-        fi
-    fi
-}
+# Screenshot Folder
+source ~/.config/hyprcandy/settings/screenshot-folder.sh
 
-# Simple notification without image (for errors/cancellations)
-notify_simple() {
-    notify-send -i camera-photo-symbolic -u normal "$1" "$2"
-}
+# Screenshot Editor
+export GRIMBLAST_EDITOR="$(cat ~/.config/hyprcandy/settings/screenshot-editor.sh)"
 
-# -----------------------------------------------------
-# Dependencies check
-# -----------------------------------------------------
-check_deps() {
-    local missing=()
-    command -v grim &>/dev/null || missing+=("grim")
-    command -v slurp &>/dev/null || missing+=("slurp")
-    command -v hyprctl &>/dev/null || missing+=("hyprland")
-    command -v wl-copy &>/dev/null || missing+=("wl-clipboard")
-    
-    if [ ${#missing[@]} -ne 0 ]; then
-        notify_simple "Screenshot Error" "Missing: ${missing[*]}"
-        exit 1
-    fi
-}
+# Example for keybindings
+# bind = SUPER, p, exec, grimblast save active
+# bind = SUPER SHIFT, p, exec, grimblast save area
+# bind = SUPER ALT, p, exec, grimblast save output
+# bind = SUPER CTRL, p, exec, grimblast save screen
 
-check_deps
-
-# -----------------------------------------------------
-# Rofi Menus
-# -----------------------------------------------------
+# Options
 option_1="Immediate"
 option_2="Delayed"
 
@@ -120,225 +45,162 @@ option_time_2="10s"
 option_time_3="20s"
 option_time_4="30s"
 option_time_5="60s"
+#option_time_4="Custom (in seconds)" # Roadmap or someone contribute :)
+
+list_col='1'
+list_row='2'
 
 copy='Copy'
 save='Save'
 copy_save='Copy & Save'
 edit='Edit'
 
+# Rofi CMD
 rofi_cmd() {
     rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 2 -width 30 -p "Take screenshot"
 }
 
+# Pass variables to rofi dmenu
 run_rofi() {
     echo -e "$option_1\n$option_2" | rofi_cmd
 }
 
+####
+# Choose Timer
+# CMD
 timer_cmd() {
     rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 5 -width 30 -p "Choose timer"
 }
 
+# Ask for confirmation
 timer_exit() {
     echo -e "$option_time_1\n$option_time_2\n$option_time_3\n$option_time_4\n$option_time_5" | timer_cmd
 }
 
+# Confirm and execute
 timer_run() {
     selected_timer="$(timer_exit)"
-    case "$selected_timer" in
-        "$option_time_1") countdown=5 ;;
-        "$option_time_2") countdown=10 ;;
-        "$option_time_3") countdown=20 ;;
-        "$option_time_4") countdown=30 ;;
-        "$option_time_5") countdown=60 ;;
-        *) exit ;;
-    esac
-    ${1}
+    if [[ "$selected_timer" == "$option_time_1" ]]; then
+        countdown=5
+        ${1}
+    elif [[ "$selected_timer" == "$option_time_2" ]]; then
+        countdown=10
+        ${1}
+    elif [[ "$selected_timer" == "$option_time_3" ]]; then
+        countdown=20
+        ${1}
+    elif [[ "$selected_timer" == "$option_time_4" ]]; then
+        countdown=30
+        ${1}
+    elif [[ "$selected_timer" == "$option_time_5" ]]; then
+        countdown=60
+        ${1}
+    else
+        exit
+    fi
 }
+###
 
+####
+# Chose Screenshot Type
+# CMD
 type_screenshot_cmd() {
     rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 3 -width 30 -p "Type of screenshot"
 }
 
+# Ask for confirmation
 type_screenshot_exit() {
     echo -e "$option_capture_1\n$option_capture_2\n$option_capture_3" | type_screenshot_cmd
 }
 
+# Confirm and execute
 type_screenshot_run() {
     selected_type_screenshot="$(type_screenshot_exit)"
-    case "$selected_type_screenshot" in
-        "$option_capture_1") option_type_screenshot="output" ;;
-        "$option_capture_2") option_type_screenshot="active" ;;
-        "$option_capture_3") option_type_screenshot="region" ;;
-        *) exit ;;
-    esac
-    echo "Mode: $option_type_screenshot" >> "$DEBUG_LOG"
-    ${1}
+    if [[ "$selected_type_screenshot" == "$option_capture_1" ]]; then
+        option_type_screenshot=screen
+        ${1}
+    elif [[ "$selected_type_screenshot" == "$option_capture_2" ]]; then
+        option_type_screenshot=output
+        ${1}
+    elif [[ "$selected_type_screenshot" == "$option_capture_3" ]]; then
+        option_type_screenshot=area
+        ${1}
+    else
+        exit
+    fi
 }
+###
 
+####
+# Choose to save or copy photo
+# CMD
 copy_save_editor_cmd() {
     rofi -dmenu -replace -config ~/.config/rofi/config-screenshot.rasi -i -no-show-icons -l 4 -width 30 -p "How to save"
 }
 
+# Ask for confirmation
 copy_save_editor_exit() {
     echo -e "$copy\n$save\n$copy_save\n$edit" | copy_save_editor_cmd
 }
 
+# Confirm and execute
 copy_save_editor_run() {
     selected_chosen="$(copy_save_editor_exit)"
-    case "$selected_chosen" in
-        "$copy") option_chosen="copy" ;;
-        "$save") option_chosen="save" ;;
-        "$copy_save") option_chosen="copysave" ;;
-        "$edit") option_chosen="edit" ;;
-        *) exit ;;
-    esac
-    echo "Save: $option_chosen" >> "$DEBUG_LOG"
-    ${1}
+    if [[ "$selected_chosen" == "$copy" ]]; then
+        option_chosen=copy
+        ${1}
+    elif [[ "$selected_chosen" == "$save" ]]; then
+        option_chosen=save
+        ${1}
+    elif [[ "$selected_chosen" == "$copy_save" ]]; then
+        option_chosen=copysave
+        ${1}
+    elif [[ "$selected_chosen" == "$edit" ]]; then
+        option_chosen=edit
+        ${1}
+    else
+        exit
+    fi
 }
+###
 
-# -----------------------------------------------------
-# Timer
-# -----------------------------------------------------
 timer() {
     if [[ $countdown -gt 10 ]]; then
-        notify_simple "Screenshot" "Taking screenshot in ${countdown} seconds"
-        sleep $((countdown - 10))
+        notify-send -t 1000 "Taking screenshot in ${countdown} seconds"
+        countdown_less_10=$((countdown - 10))
+        sleep $countdown_less_10
         countdown=10
     fi
-    while [[ $countdown -gt 0 ]]; do
-        notify_simple "Screenshot" "Taking screenshot in ${countdown} seconds"
+    while [[ $countdown -ne 0 ]]; do
+        notify-send -t 1000 "Taking screenshot in ${countdown} seconds"
+        countdown=$((countdown - 1))
         sleep 1
-        ((countdown--))
     done
 }
 
-# -----------------------------------------------------
-# Core Screenshot Logic
-# -----------------------------------------------------
+# take shots
 takescreenshot() {
-    sleep 0.2
-    local output_file="$screenshot_folder/$NAME"
-    local temp_file="/tmp/screenshot-$$.png"
-    local geometry=""
-    
-    echo "Starting capture: type=$option_type_screenshot" >> "$DEBUG_LOG"
-    
-    # Get geometry based on type
-    case "$option_type_screenshot" in
-        "output")
-            geometry=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | "\(.x),\(.y) \(.width)x\(.height)"')
-            echo "Monitor geometry: $geometry" >> "$DEBUG_LOG"
-            ;;
-        "active")
-            geometry=$(hyprctl activewindow -j | jq -r '"\(.at[0]),\(.at[1]) \(.size[0])x\(.size[1])"')
-            echo "Window geometry: $geometry" >> "$DEBUG_LOG"
-            ;;
-        "region")
-            geometry=$(slurp)
-            if [[ -z "$geometry" ]]; then
-                notify_simple "Screenshot" "Selection cancelled"
-                return 1
-            fi
-            echo "Region geometry: $geometry" >> "$DEBUG_LOG"
-            ;;
-    esac
-    
-    # Validate geometry
-    if [[ -z "$geometry" ]] || [[ "$geometry" == "null,null nullxnull" ]]; then
-        notify_simple "Screenshot Error" "Could not determine capture area"
-        echo "Invalid geometry" >> "$DEBUG_LOG"
-        return 1
+    sleep 1
+    grimblast --notify "$option_chosen" "$option_type_screenshot" $NAME
+    if [ -f $HOME/$NAME ]; then
+        if [ -d $screenshot_folder ]; then
+            mv $HOME/$NAME $screenshot_folder/
+        fi
     fi
-    
-    # Take screenshot with grim
-    if ! grim -c -g "$geometry" "$temp_file" 2>>"$DEBUG_LOG"; then
-        notify_simple "Screenshot Error" "grim failed to capture"
-        echo "grim failed" >> "$DEBUG_LOG"
-        return 1
-    fi
-    
-    # Verify file exists and has content
-    if [[ ! -s "$temp_file" ]]; then
-        notify_simple "Screenshot Error" "Screenshot file is empty"
-        echo "Empty file: $temp_file" >> "$DEBUG_LOG"
-        rm -f "$temp_file"
-        return 1
-    fi
-    
-    echo "Screenshot saved to temp: $temp_file ($(stat -c%s "$temp_file") bytes)" >> "$DEBUG_LOG"
-    
-    # Process based on save mode
-    case "$option_chosen" in
-        "copy")
-            if wl-copy < "$temp_file"; then
-                # Show thumbnail of the copied image
-                notify_with_thumb "Screenshot Copied" "Image copied to clipboard" "$temp_file"
-                rm -f "$temp_file"
-            else
-                # Fallback to save if copy fails
-                mv "$temp_file" "$output_file"
-                notify_with_thumb "Screenshot Saved" "Copy failed, saved to $output_file" "$output_file"
-            fi
-            ;;
-        "save")
-            if mv "$temp_file" "$output_file"; then
-                notify_with_thumb "Screenshot Saved" "$output_file" "$output_file"
-            else
-                notify_simple "Screenshot Error" "Failed to save screenshot"
-                rm -f "$temp_file"
-                return 1
-            fi
-            ;;
-        "copysave")
-            wl-copy < "$temp_file"
-            if mv "$temp_file" "$output_file"; then
-                notify_with_thumb "Screenshot Saved & Copied" "$output_file" "$output_file"
-            else
-                notify_simple "Screenshot" "Save failed (copied only)"
-                rm -f "$temp_file"
-            fi
-            ;;
-        "edit")
-            local editor="${GRIMBLAST_EDITOR:-satty}"
-            local editor_name="${editor%% *}"
-    
-            case "$editor_name" in
-                "satty")
-                    mv "$temp_file" "$output_file"
-                    # Check if editor string already contains --filename
-                    if [[ "$editor" == *"--filename"* ]]; then
-                        # User included flags in editor setting
-                        $editor "$output_file" &
-                    else
-                        # Add --filename flag
-                        satty --filename "$output_file" &
-                    fi
-                    notify_with_thumb "Screenshot" "Opened in satty" "$output_file"
-                    ;;
-                "swappy")
-                    cat "$temp_file" | swappy -f - -o "$output_file" &
-                    rm -f "$temp_file"
-                    notify_simple "Screenshot" "Opened in swappy"
-                    ;;
-                *)
-                    # Generic image viewer
-                    mv "$temp_file" "$output_file"
-                    $editor "$output_file" &
-                    notify_with_thumb "Screenshot" "Opened in $editor_name..." "$output_file"
-                    ;;
-            esac
-            ;;
-    esac
 }
 
 takescreenshot_timer() {
+    sleep 1
     timer
-    takescreenshot
+    grimblast --notify "$option_chosen" "$option_type_screenshot" $NAME
+    if [ -f $HOME/$NAME ]; then
+        if [ -d $screenshot_folder ]; then
+            mv $HOME/$NAME $screenshot_folder/
+        fi
+    fi
 }
 
-# -----------------------------------------------------
-# Main
-# -----------------------------------------------------
+# Execute Command
 run_cmd() {
     if [[ "$1" == '--opt1' ]]; then
         type_screenshot_run
@@ -350,8 +212,13 @@ run_cmd() {
     fi
 }
 
+# Actions
 chosen="$(run_rofi)"
 case ${chosen} in
-    $option_1) run_cmd --opt1 ;;
-    $option_2) run_cmd --opt2 ;;
+    $option_1)
+        run_cmd --opt1
+        ;;
+    $option_2)
+        run_cmd --opt2
+        ;;
 esac

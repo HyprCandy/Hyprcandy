@@ -84,8 +84,8 @@ update_animation() {
         exit 1
     fi
     
-    # Update the animation source line
-    sed -i 's|source = ~/.config/hypr/conf/animations/.*|source = ~/.config/hypr/conf/animations/'"$selected_file"'|' "$CUSTOM_CONF"
+    # Update the animation source line (line 57)
+    sed -i '57s|source = ~/.config/hypr/conf/animations/.*|source = ~/.config/hypr/conf/animations/'"$selected_file"'|' "$CUSTOM_CONF"
     
     # Verify the change was made
     if grep -q "source = ~/.config/hypr/conf/animations/$selected_file" "$CUSTOM_CONF"; then
