@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # wallpaper-cycle.sh
-# Cycles through wallpapers in the waypaper folder using swww (or configured backend)
+# Cycles through wallpapers in the waypaper folder using awww (or configured backend)
 # and updates the waypaper config with the new wallpaper path.
 
 # ── Config ────────────────────────────────────────────────────────────────────
@@ -25,11 +25,11 @@ FOLDER="$(get_ini_value folder)"
 BACKEND="$(get_ini_value backend)"
 CURRENT="$(get_ini_value wallpaper)"
 FILL="$(get_ini_value fill)"
-TRANSITION_TYPE="$(get_ini_value swww_transition_type)"
-TRANSITION_STEP="$(get_ini_value swww_transition_step)"
-TRANSITION_ANGLE="$(get_ini_value swww_transition_angle)"
-TRANSITION_DURATION="$(get_ini_value swww_transition_duration)"
-TRANSITION_FPS="$(get_ini_value swww_transition_fps)"
+TRANSITION_TYPE="$(get_ini_value awww_transition_type)"
+TRANSITION_STEP="$(get_ini_value awww_transition_step)"
+TRANSITION_ANGLE="$(get_ini_value awww_transition_angle)"
+TRANSITION_DURATION="$(get_ini_value awww_transition_duration)"
+TRANSITION_FPS="$(get_ini_value awww_transition_fps)"
 
 # ── Validate folder ───────────────────────────────────────────────────────────
 if [[ ! -d "$FOLDER" ]]; then
@@ -70,15 +70,15 @@ echo "Next    : $NEXT"
 echo "Backend : $BACKEND"
 
 # ── Apply wallpaper via backend ───────────────────────────────────────────────
-apply_swww() {
-  # Ensure swww daemon is running
-  if ! swww query &>/dev/null; then
-    echo "Starting swww daemon..."
-    swww-daemon &
+apply_awww() {
+  # Ensure awww daemon is running
+  if ! awww query &>/dev/null; then
+    echo "Starting awww daemon..."
+    awww-daemon &
     sleep 0.5
   fi
 
-  swww img "$NEXT" \
+  awww img "$NEXT" \
     --transition-type  "${TRANSITION_TYPE:-any}" \
     --transition-step  "${TRANSITION_STEP:-90}" \
     --transition-angle "${TRANSITION_ANGLE:-0}" \
@@ -101,7 +101,7 @@ apply_hyprpaper() {
 }
 
 case "$BACKEND" in
-  swww)      apply_swww      ;;
+  awww)      apply_awww      ;;
   feh)       apply_feh       ;;
   swaybg)    apply_swaybg    ;;
   hyprpaper) apply_hyprpaper ;;
