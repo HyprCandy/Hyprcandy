@@ -2,7 +2,7 @@
 
 Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD) - no posts on YouTube yet
 
-HyprCandy is a Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) with extra quality of life features. It's the free version of HyprCandy+ where I aim to make an even more unified Hyprland workflow experience with more custom made packages and services.
+HyprCandy is a Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) and [pywal]((https://github.com/eylles/pywal16.git)) with extra quality of life features. It's the free version of HyprCandy+ where I aim to make an even more unified Hyprland workflow experience with more custom made packages and services.
 
 ---
 
@@ -10,7 +10,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 
 | Feature | 🍬 HyprCandy (Free) | 🍬✨ HyprCandy+ (Paid) |
 |---|:---:|:---:|
-| **System-wide theming** | [Matugen](https://github.com/InioX/matugen-themes.git)✅ | Matugen+[Pywal](https://github.com/eylles/pywal16.git)✅ |
+| **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
 | ** Bar** | Waybar / Hyprpanel | Quickshell |
 | **Lockscreen** | Hyprlock | Candylock |
 | **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
