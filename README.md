@@ -10,19 +10,17 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 
 | Feature | 🍬 HyprCandy (Free) | 🍬✨ HyprCandy+ (Paid) |
 |---|:---:|:---:|
-| **Matugen system-wide theming** | ✅ | ✅ |
-| **Rofi menus** (wifi, bt, clipboard, emoji, glyphs…) | ✅ | ✅ |
-| **Waybar / Hyprpanel integration** | ✅ | ✅ |
-| **Hyprlock & wlogout themes** | ✅ | ✅ |
+| **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
+| ** Bar** | Waybar / Hyprpanel | Quickshell |
+| **Lockscreen** | Hyprlock | Candylock |
 | **Hyprviz settings integration** | ✅ | ✅ |
-| **Hyprexpo-plus overview** *(optional plugin)* | ✅ | ✅ |
 | **Dock** | nwg-dock-hyprland | hyprcandy-dock |
 | **App-launcher** | rofi | hyprcandy-launcher |
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
 | **Media player widget** | Basic | ✨ Advanced |
 | **Weather widget** | ❌ | ✅ |
-| **Quickshell overview** (dwindle / master / monocle) | ✅ | ✅ |
+| **Quickshell overview** | (dwindle / master / monocle) | (scrolling/dwindle / master / monocle) |
 | **Quickshell overview** — Hyprland **scrolling** layout | ❌ | ✅ |
 | **Live GTK4 & QT color reloads** on wallpaper change | ❌ | ✅ |
 | **hyprcandy-dock** — icon drag-to-rearrange | ❌ | ✅ |
