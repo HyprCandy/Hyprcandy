@@ -85,7 +85,7 @@ You can also grab bits and bops from the [main repo](https://github.com/HyprCand
 </table>
 
 ### HyprCandy+ screenshots
-
+Login preview; desktop icons and cohesive theming; Lock-screen
 <table>
   <tr>
     <td><img width="638" alt="screenshot_16052026_024826" src="https://github.com/user-attachments/assets/445de53a-d953-4bdf-9025-10c42a7ff9fd" /></td>
@@ -93,14 +93,14 @@ You can also grab bits and bops from the [main repo](https://github.com/HyprCand
     <td><img width="638" alt="screenshot_16052026_045505" src="https://github.com/user-attachments/assets/196914c9-b51d-4474-b1bb-0ffc485aaaae" /></td>
   </tr>
 </table>
-
+Dock and app-launcher popup menus
 <table>
   <tr>
     <td><img width="638" alt="screenshot-20260526-191652" src="https://github.com/user-attachments/assets/30747ed1-d37d-41a5-8e81-d18c711db1d8" /></td>
     <td><img width="638" alt="screenshot-20260526-191722" src="https://github.com/user-attachments/assets/43e57c9f-4f8c-41b1-8b9c-19da41364c93" /></td>
   </tr>
 </table>
-
+Available functional panels
 <table>
   <tr>
     <td><img width="638" alt="screenshot_15052026_214429" src="https://github.com/user-attachments/assets/f465325f-6193-4142-abb8-a2da4fb8b59a" /></td>
@@ -122,14 +122,14 @@ You can also grab bits and bops from the [main repo](https://github.com/HyprCand
     <td><img width="638" alt="screenshot-20260526-214239" src="https://github.com/user-attachments/assets/3ab3b1a7-4e6c-45c8-a2d8-5bc623e07a43" /></td>
   </tr>
 </table>
-
+Light-theme from matuegn dark-themes
 <table>
   <tr>
     <td><img width="638" alt="screenshot_05052026_004921" src="https://github.com/user-attachments/assets/3365278f-2ed3-4a0c-93a6-7e049cab5315" /></td>
     <td><img width="638" alt="screenshot_05052026_004935" src="https://github.com/user-attachments/assets/9881321c-71d3-4f87-a49a-4054472c02b0" /></td>
   </tr>
 </table>
-
+Extra: bar and dock positions can also be cycled with panels tracking the bar and app-launcher position tracking the dock 
 <table>
   <tr>
     <td><img width="638" alt="screenshot_05052026_013328" src="https://github.com/user-attachments/assets/c8e64ee0-0baf-4aa3-bb75-cfe955b222c7" /></td>
@@ -138,7 +138,7 @@ You can also grab bits and bops from the [main repo](https://github.com/HyprCand
   </tr>
 </table>
 
-### Older HyprCandy (Free) screenshots below to be updated soon
+### Older HyprCandy (Free) screenshots below yet to be updated
 
 ### With optional hyprbars + hyprexpo-plus plugins
 
