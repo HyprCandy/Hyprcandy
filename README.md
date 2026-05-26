@@ -15,7 +15,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **Lockscreen** | Hyprlock | Candylock |
 | **Desktop icons** — icon drag-to-rearrange | ❌ | icon drag-to-rearrange support + all icons can be hidden✅ |
 | **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
-| **Dock** | nwg-dock-hyprland | hyprcandy-dock: icon drag-to-rearrange + switcheroo dGPU launch + minize-wndow |
+| **Dock** | [nwg-dock-hyprland](https://github.com/nwg-piotr/nwg-dock-hyprland.git) | hyprcandy-dock: icon drag-to-rearrange + switcheroo dGPU launch + minize-wndow + trash |
 | **App-launcher** | rofi | hyprcandy-launcher: favorites & groups support + clipboard + icons + websearch |
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
@@ -25,6 +25,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **Quickshell overview** — Hyprland **scrolling** layout | ❌ | ✅ |
 | **Live GTK4 & QT color reloads** on wallpaper change | ❌ | ✅ |
 | **SDDM live-background support** | ❌ | ✅ |
+| **Wallpaper picker** | [waypaper](https://github.com/anufrievroman/waypaper.git) | hyprcandy-picker |
 
 ### 🍬 HyprCandy+ exclusive highlights
 
