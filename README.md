@@ -13,8 +13,9 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
 | **Bar** | Waybar / Hyprpanel | Quickshell |
 | **Lockscreen** | Hyprlock | Candylock |
+| **Desktop icons** — icon drag-to-rearrange | ❌ | icon drag-to-rearrange support + all icons can be hidden✅ |
 | **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
-| **Dock** | nwg-dock-hyprland | hyprcandy-dock |
+| **Dock** | nwg-dock-hyprland | hyprcandy-dock: icon drag-to-rearrange + switcheroo dGPU launch + minize-wndow |
 | **App-launcher** | rofi | hyprcandy-launcher |
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
@@ -23,15 +24,13 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **Quickshell overview** | (dwindle / master / monocle) | (scrolling/dwindle / master / monocle) |
 | **Quickshell overview** — Hyprland **scrolling** layout | ❌ | ✅ |
 | **Live GTK4 & QT color reloads** on wallpaper change | ❌ | ✅ |
-| **hyprcandy-dock** — icon drag-to-rearrange | ❌ | ✅ |
-| **hyprcandy-dock** — switcheroo dGPU launch | ❌ | ✅ |
-| **SDDM live background sync** | ❌ | ✅ |
+| **SDDM live-background support** | ❌ | ✅ |
 
 ### 🍬 HyprCandy+ exclusive highlights
 
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
 
-  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****web-search**** via the DuckDuckGo API.
+  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****web-search**** via the DuckDuckGo API. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are intearlly connected.
 - **Scrolling layout support** in Quickshell overview — the only HyprCandy overview variant that supports the new Hyprland scrolling layout alongside dwindle, master and monocle
 - **Live reloads** — bar, dock, panels, GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes with matugen and pywal16 integration
 - **SDDM background sync** — your login screen always matches your desktop wallpaper
