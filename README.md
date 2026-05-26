@@ -17,6 +17,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **Hyprviz settings integration** | ✅ | ✅ |
 | **Hyprexpo-plus overview** *(optional plugin)* | ✅ | ✅ |
 | **Dock** | nwg-dock-hyprland | hyprcandy-dock |
+| **App-launcher** | rofi | hyprcandy-launcher |
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
 | **Media player widget** | Basic | ✨ Advanced |
@@ -31,16 +32,32 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 ### 🍬 HyprCandy+ exclusive highlights
 
 - **Custom GJS dock** — hot color reloads, icon drag-to-rearrange, right-click switcheroo-control for hybrid GPU devices, trash button
-- **Advanced widgets** — richer media player, deeper system monitor, weather widget
+- **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
+
+  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****web-search**** via the DuckDuckGo API.
 - **Scrolling layout support** in Quickshell overview — the only HyprCandy overview variant that supports the new Hyprland scrolling layout alongside dwindle, master and monocle
-- **Live reloads** — GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes
+- **Live reloads** — bar, dock, panels, GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes with matugen and pywal16 integration
 - **SDDM background sync** — your login screen always matches your desktop wallpaper
+- **Candylock** — custom advanced lockscreen that supports live backgrounds, media-playback, weather and a system-monitor.
 
 ---
 
-## 🍬 HyprCandy (Free version) Installation
+## 🍬 HyprCandy (Plus) Installation
 
 I recommend running the script from Hyprland but it will also work from other DEs or the TTY.
+
+Needed packages via your AUR helper e.g paru or yay: `git` · `hyprland` · `kitty` · `hyprcandy-install`
+```
+$AUR_HELPER -S git hyprland hyprcandy-install kitty
+```
+Start a Hyprland session and launch kitty with SUPER + Q then run
+```
+hc-install
+```
+
+## 🍬 HyprCandy (Free version) Installation
+
+Just like the plus version I recommend running the script from Hyprland but it will also work from other DEs or the TTY but its installation involves manual cloning of the installer.
 
 Needed packages: `git` · `hyprland` · `kitty`
 
@@ -51,12 +68,8 @@ bash HyprCandy_Install.sh
 ```
 
 ## Support
-➡ ❣️ If you like my project, your [support](https://ko-fi.com/ianmking) will mean a lot ⬅
-You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/UltraCandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
-
-> NOTE: I wrote systemd services for these features so you'd have to run the script for them to work, but other configs should work fine without my setup if you don't want it.
-
-Since I'm an aeronautics graduate and not a programmer it took me ages to learn how to set up everything during my free time before creating this repo. It was stressful but worthwhile in the end. Anyway checkout the little showcase below:
+➡ ❣️ If you use the free version and like my project, your [support](https://ko-fi.com/ianmking) is also appreciated ⬅
+You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/HyprCandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
 ---
 
@@ -71,11 +84,55 @@ Since I'm an aeronautics graduate and not a programmer it took me ages to learn 
   </tr>
   <tr>
     <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="image" src="https://github.com/user-attachments/assets/cac77fd6-bb3d-4b59-b210-b997f54bdbfe" /></td>
+    <td><img width="683" alt="screenshot-20260526-203830" src="https://github.com/user-attachments/assets/0673cad5-793b-498b-9069-cf1603575393" /></td>
+
   </tr>
 </table>
 
-### Older screenshots below to be updated soon
+### HyprCandy+ screenshots
+
+<table>
+  <tr>
+    <td><img width="638" alt="screenshot_16052026_024826" src="https://github.com/user-attachments/assets/445de53a-d953-4bdf-9025-10c42a7ff9fd" /></td>
+    <td><img width="638" alt="screenshot-20260526-205640" src="https://github.com/user-attachments/assets/59df1fe8-1514-4977-a46b-eeaf895fed85" /></td>
+    <td><img width="638" alt="screenshot_16052026_045505" src="https://github.com/user-attachments/assets/196914c9-b51d-4474-b1bb-0ffc485aaaae" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img width="638" alt="screenshot-20260526-191652" src="https://github.com/user-attachments/assets/30747ed1-d37d-41a5-8e81-d18c711db1d8" /></td>
+    <td><img width="638" alt="screenshot-20260526-191722" src="https://github.com/user-attachments/assets/43e57c9f-4f8c-41b1-8b9c-19da41364c93" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img width="638" alt="screenshot_15052026_214429" src="https://github.com/user-attachments/assets/f465325f-6193-4142-abb8-a2da4fb8b59a" /></td>
+    <td><img width="638" alt="screenshot_15052026_214506" src="https://github.com/user-attachments/assets/a4cf0687-73ca-49d3-90cb-9573759d283b" /></td>
+  </tr>
+  <tr>
+    <td><img width="638" alt="screenshot_15052026_214517" src="https://github.com/user-attachments/assets/539c08c8-96e3-4498-82ad-a8aee9dae39e" /></td>
+    <td><img width="638" alt="screenshot_15052026_214538" src="https://github.com/user-attachments/assets/f513ed4a-fe47-4b05-9fed-b823d5b8a34a" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img width="638" alt="screenshot_05052026_004921" src="https://github.com/user-attachments/assets/3365278f-2ed3-4a0c-93a6-7e049cab5315" /></td>
+    <td><img width="638" alt="screenshot_05052026_004935" src="https://github.com/user-attachments/assets/9881321c-71d3-4f87-a49a-4054472c02b0" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img width="638" alt="screenshot_05052026_013328" src="https://github.com/user-attachments/assets/c8e64ee0-0baf-4aa3-bb75-cfe955b222c7" /></td>
+    <td><img width="638" alt="screenshot_05052026_001623" src="https://github.com/user-attachments/assets/f930facd-0223-4e9e-8277-5c2d4129fa63" /></td>
+    <td><img width="638" alt="screenshot_05052026_002228" src="https://github.com/user-attachments/assets/7980ebbd-adbb-4914-b574-4049400d01d3" /></td>
+  </tr>
+</table>
+
+### Older HyprCandy (Free) screenshots below to be updated soon
 
 ### With optional hyprbars + hyprexpo-plus plugins
 
