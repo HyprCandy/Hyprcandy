@@ -56,7 +56,10 @@ hc-install
 Just like the plus version I recommend running the script from Hyprland but it will also work from other DEs or the TTY but its installation involves manual cloning of the installer.
 
 Needed packages: `git` · `hyprland` · `kitty`
-
+```
+$AUR_HELPER -S git hyprland kitty
+```
+Start a Hyprland session and launch kitty with SUPER + Q then run
 ```shell
 git clone https://github.com/HyprCandy/hyprcandyinstall.git &&
 cd hyprcandyinstall && 
