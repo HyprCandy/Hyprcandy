@@ -29,7 +29,6 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 
 ### 🍬 HyprCandy+ exclusive highlights
 
-- **Custom GJS dock** — hot color reloads, icon drag-to-rearrange, right-click switcheroo-control for hybrid GPU devices, trash button
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
 
   ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****web-search**** via the DuckDuckGo API.
@@ -73,8 +72,6 @@ You can also grab bits and bops from the [main repo](https://github.com/HyprCand
 
 ## 📸 Screenshots
 
-### Waybar option — with swaync, dock, settings & themed apps
-
 <table>
   <tr>
     <th>HyprCandy Screenshot</th>
@@ -112,6 +109,17 @@ You can also grab bits and bops from the [main repo](https://github.com/HyprCand
   <tr>
     <td><img width="638" alt="screenshot_15052026_214517" src="https://github.com/user-attachments/assets/539c08c8-96e3-4498-82ad-a8aee9dae39e" /></td>
     <td><img width="638" alt="screenshot_15052026_214538" src="https://github.com/user-attachments/assets/f513ed4a-fe47-4b05-9fed-b823d5b8a34a" /></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img width="638" alt="screenshot-20260526-220342" src="https://github.com/user-attachments/assets/5dd0ee4e-b397-4cb9-8086-3bf50f5e76fe" /></td>
+    <td><img width="638" alt="screenshot-20260526-215308" src="https://github.com/user-attachments/assets/01776032-c12b-4f6b-a65b-0af944fdb415" /></td>
+  </tr>
+  <tr>
+    <td><img width="638" alt="screenshot-20260526-214204" src="https://github.com/user-attachments/assets/2e137631-c9b8-4cb5-8d8e-a0a17733bd42" /></td>
+    <td><img width="638" alt="screenshot-20260526-214239" src="https://github.com/user-attachments/assets/3ab3b1a7-4e6c-45c8-a2d8-5bc623e07a43" /></td>
   </tr>
 </table>
 
