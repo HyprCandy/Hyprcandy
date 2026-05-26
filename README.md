@@ -136,7 +136,7 @@ Extra: bar and dock positions can also be cycled with panels tracking the bar an
 
 ### Older HyprCandy (Free) screenshots below yet to be updated
 
-### With optional hyprbars + hyprexpo-plus plugins
+### With the optional hyprbars + hyprexpo-plus plugins setup (only in these screenshots - if you like them ou'll have to set them up yourself)
 
 > SwayNC screenshots below are outdated
 
