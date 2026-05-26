@@ -31,11 +31,12 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
 
-  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****web-search**** via the DuckDuckGo API. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are intearlly connected.
+  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****web-search**** via the DuckDuckGo API. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are intearlly connected
 - **Scrolling layout support** in Quickshell overview — the only HyprCandy overview variant that supports the new Hyprland scrolling layout alongside dwindle, master and monocle
 - **Live reloads** — bar, dock, panels, GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes with matugen and pywal16 integration
 - **SDDM background sync** — your login screen always matches your desktop wallpaper
-- **Candylock** — custom advanced lockscreen that supports live backgrounds, media-playback, weather and a system-monitor.
+- **Candylock** — custom advanced lockscreen that supports live backgrounds, media-playback, weather and a system-monitor
+- **Advanced start-menu** — a replacement for swaync from the free setup, with integrated screen-capture for recordings and screenshots, network and ***Bluetooth (with file sharing support)***
 
 ---
 
