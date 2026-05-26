@@ -16,7 +16,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | **Desktop icons** — icon drag-to-rearrange | ❌ | icon drag-to-rearrange support + all icons can be hidden✅ |
 | **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
 | **Dock** | nwg-dock-hyprland | hyprcandy-dock: icon drag-to-rearrange + switcheroo dGPU launch + minize-wndow |
-| **App-launcher** | rofi | hyprcandy-launcher |
+| **App-launcher** | rofi | hyprcandy-launcher: favorites & groups support + clipboard + icons + websearch |
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
 | **Media player widget** | Basic | ✨ Advanced |
