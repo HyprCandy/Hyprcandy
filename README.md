@@ -10,10 +10,10 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 
 | Feature | 🍬 HyprCandy (Free) | 🍬✨ HyprCandy+ (Paid) |
 |---|:---:|:---:|
-| **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
+| **System-wide theming** | [Matugen](https://github.com/InioX/matugen-themes.git)✅ | Matugen+[Pywal](https://github.com/eylles/pywal16.git)✅ |
 | ** Bar** | Waybar / Hyprpanel | Quickshell |
 | **Lockscreen** | Hyprlock | Candylock |
-| **Hyprviz settings integration** | ✅ | ✅ |
+| **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
 | **Dock** | nwg-dock-hyprland | hyprcandy-dock |
 | **App-launcher** | rofi | hyprcandy-launcher |
 | **Control center** | Basic | ✨ Advanced |
@@ -63,10 +63,6 @@ git clone https://github.com/HyprCandy/hyprcandyinstall.git &&
 cd hyprcandyinstall && 
 bash HyprCandy_Install.sh
 ```
-
-## Support
-➡ ❣️ If you use the free version and like my project, your [support](https://ko-fi.com/ianmking) is also appreciated ⬅
-You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
 ---
 
@@ -311,6 +307,12 @@ Extra: bar and dock positions can also be cycled with panels tracking the bar an
        width="1366" controls autoplay muted loop>
 </video>
 -->
+
+---
+
+## Support
+➡ ❣️ If you use the free version and like my project, your [support](https://ko-fi.com/ianmking) is also appreciated ⬅
+You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
 ---
 
