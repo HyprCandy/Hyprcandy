@@ -11,7 +11,7 @@ HyprCandy is a Hyprland configuration cohesively themed entirely through [matuge
 | Feature | 🍬 HyprCandy (Free) | 🍬✨ HyprCandy+ (Paid) |
 |---|:---:|:---:|
 | **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
-| ** Bar** | Waybar / Hyprpanel | Quickshell |
+| **Bar** | Waybar / Hyprpanel | Quickshell |
 | **Lockscreen** | Hyprlock | Candylock |
 | **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
 | **Dock** | nwg-dock-hyprland | hyprcandy-dock |
