@@ -66,7 +66,7 @@ bash HyprCandy_Install.sh
 
 ## Support
 ➡ ❣️ If you use the free version and like my project, your [support](https://ko-fi.com/ianmking) is also appreciated ⬅
-You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/HyprCandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
+You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
 ---
 
