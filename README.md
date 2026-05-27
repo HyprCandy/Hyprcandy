@@ -40,9 +40,9 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 ---
 
-## 🍬 HyprCandy (Plus) Installation
+## 🍬 HyprCandy+ Installation (Ongoing 1 week free trial when you get a product-key) 
 
-I recommend running the script from Hyprland but it will also work from other DEs or the TTY.
+I recommend running the HyprCandyPlus installer from Hyprland but it will also work from other DEs or the TTY.
 
 Needed packages via your AUR helper e.g paru or yay: `git` · `hyprland` · `kitty` · `hyprcandy-install`
 ```
@@ -55,7 +55,7 @@ hc-install
 
 ## 🍬 HyprCandy (Free version) Installation
 
-Just like the plus version I recommend running the script from Hyprland but it will also work from other DEs or the TTY but its installation involves manual cloning of the installer.
+Just like the plus version I recommend running the install script from Hyprland but it will also work from other DEs or the TTY but its installation involves manual cloning of the installer.
 
 Needed packages: `git` · `hyprland` · `kitty`
 ```
