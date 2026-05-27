@@ -25,6 +25,7 @@ HyprCandy+ is a Hyprland configuration cohesively themed entirely through [matug
 | **Live GTK4 & QT color reloads** on wallpaper change | ❌ | ✅ |
 | **SDDM live-background support** | ❌ | ✅ |
 | **Wallpaper picker** | [waypaper](https://github.com/anufrievroman/waypaper.git) | hyprcandy-picker |
+| **DE-Updates** | Manual update(frontend script) | Authorized backend update - preserves user settings |
 
 ### 🍬 HyprCandy+ exclusive highlights
 
