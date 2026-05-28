@@ -1,6 +1,6 @@
 # HyprCandy x HyprCandy+
 
-Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD) - no posts on YouTube yet
+Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
 [HyprCandy+](https://mirukai.gumroad.com/l/mmnrfq) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) and [pywal](https://github.com/eylles/pywal16.git) with an incredible amount of extra quality of life features over the familiar free HyprCandy setup. 
 ---
