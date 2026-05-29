@@ -10,7 +10,7 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 | Feature | 🍬 HyprCandy | 🍬✨ HyprCandy+ |
 |---|:---:|:---:|
 | **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
-| **Bar** | Waybar / Hyprpanel | Quickshell |
+| **Bar** | Waybar / Hyprpanel | HyprCandy-bar |
 | **Lockscreen** | Hyprlock | Candylock |
 | **Desktop icons** — icon drag-to-rearrange | ❌ | icon drag-to-rearrange support + all icons can be hidden✅ |
 | **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
