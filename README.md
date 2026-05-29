@@ -7,7 +7,7 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 
 ## ✦ HyprCandy vs HyprCandy+
 
-| Feature | 🍬 HyprCandy (Free) | 🍬✨ HyprCandy+ (May become FREE in future) |
+| Feature | 🍬 HyprCandy | 🍬✨ HyprCandy+ |
 |---|:---:|:---:|
 | **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
 | **Bar** | Waybar / Hyprpanel | Quickshell |
