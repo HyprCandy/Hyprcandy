@@ -71,7 +71,7 @@ bash HyprCandy_Install.sh
 ---
 
 ## 📸 Screenshots
-
+Most recent
 <table>
   <tr>
     <th>HyprCandy Screenshot</th>
@@ -79,7 +79,7 @@ bash HyprCandy_Install.sh
   </tr>
   <tr>
     <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="screenshot-20260526-203830" src="https://github.com/user-attachments/assets/0673cad5-793b-498b-9069-cf1603575393" /></td>
+    <td><img width="683" alt="screenshot-20260531-013851" src="https://github.com/user-attachments/assets/4a4d0c95-2674-40d3-90d6-407b1142a3d4" /></td>
 
   </tr>
 </table>
