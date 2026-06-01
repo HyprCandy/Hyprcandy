@@ -79,17 +79,16 @@ Most recent
   </tr>
   <tr>
     <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="screenshot-20260601-141619" src="https://github.com/user-attachments/assets/26c2f14f-449c-4c4c-a8e3-9e1a1def00c6" /></td>
+    <td><img width="683" alt="screenshot-20260601-142541" src="https://github.com/user-attachments/assets/4b9e2265-1069-458c-8f71-062b46e07715" /></td>
   </tr>
 </table>
 
 ### HyprCandy+ screenshots
-Login preview; desktop icons and cohesive theming; Lock-screen
+SDDM-Login preview & Lock-screen
 <table>
   <tr>
-    <td><img width="638" alt="screenshot_16052026_024826" src="https://github.com/user-attachments/assets/445de53a-d953-4bdf-9025-10c42a7ff9fd" /></td>
-    <td><img width="638" alt="screenshot-20260526-205640" src="https://github.com/user-attachments/assets/59df1fe8-1514-4977-a46b-eeaf895fed85" /></td>
-    <td><img width="638" alt="screenshot_16052026_045505" src="https://github.com/user-attachments/assets/196914c9-b51d-4474-b1bb-0ffc485aaaae" /></td>
+    <td><img width="638" alt="screenshot-20260601-133652" src="https://github.com/user-attachments/assets/7a1e2efa-199a-4d3f-98e1-7f024018e009" /></td>
+    <td><img width="638" alt="screenshot-20260601-143030" src="https://github.com/user-attachments/assets/9050e3aa-c586-4ab2-bfb2-be484c8f0b18" /></td>
   </tr>
 </table>
 Dock and app-launcher popup menus
