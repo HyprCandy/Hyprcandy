@@ -2,7 +2,7 @@
 
 Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
-[HyprCandy+](https://mirukai.gumroad.com/l/cxsyj) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) and [pywal](https://github.com/eylles/pywal16.git) with an incredible amount of extra quality of life features over the simpler HyprCandy setup.
+[HyprCandy+](https://mirukai.gumroad.com/l/cxsyj) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) and [pywal](https://github.com/eylles/pywal16.git) with an incredible amount of extra quality of life features over the simpler legacy HyprCandy setup.
 ---
 
 ## ✦ HyprCandy vs HyprCandy+
@@ -10,15 +10,15 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 | Feature | 🍬 HyprCandy | 🍬✨ HyprCandy+ |
 |---|:---:|:---:|
 | **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
-| **Bar** | Waybar / Hyprpanel | HyprCandy-bar |
-| **Lockscreen** | Hyprlock | Candylock |
-| **Desktop icons** — icon drag-to-rearrange | ❌ | icon drag-to-rearrange support + all icons can be hidden✅ |
+| **Bar** | Waybar / Hyprpanel | HyprCandy-bar with modular auto-hide in tri-island mode plus extensive configuation options |
+| **Lockscreen** | Hyprlock | Candylock: has notifications support, media-player, system-monitor(includes battery on mobile devices) & weather  |
 | **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
 | **Dock** | [nwg-dock-hyprland](https://github.com/nwg-piotr/nwg-dock-hyprland.git) | hyprcandy-dock: icon drag-to-rearrange + switcheroo dGPU launch + minize-wndow + trash |
 | **App-launcher** | rofi | hyprcandy-launcher: favorites & groups support + clipboard + icons + websearch |
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
 | **Media player widget** | Basic | ✨ Advanced |
+| **Desktop icons** — icon drag-to-rearrange | ❌ | icon drag-to-rearrange support + all icons can be hidden✅ |
 | **Weather widget** | ❌ | ✅ |
 | **Quickshell overview** | (dwindle / master / monocle) | (scrolling / dwindle / master / monocle) |
 | **Quickshell overview** — Hyprland **scrolling** layout | ❌ | ✅ |
@@ -79,45 +79,38 @@ Most recent
   </tr>
   <tr>
     <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="screenshot-20260601-233650" src="https://github.com/user-attachments/assets/ff38f5c7-9f3b-419e-aeef-26975fd09201" /></td>
+    <td><img width="683" alt="screenshot-20260608-181148" src="https://github.com/user-attachments/assets/19bc86d0-16bd-4c91-bca0-f6d66c277771" /></td>
   </tr>
 </table>
 
 ### HyprCandy+ screenshots
-SDDM-Login preview & Lock-screen
+SDDM-Greeter & Lock-screen
 <table>
   <tr>
-    <td><img width="638" alt="screenshot-20260601-133652" src="https://github.com/user-attachments/assets/7a1e2efa-199a-4d3f-98e1-7f024018e009" /></td>
-    <td><img width="638" alt="screenshot-20260601-143030" src="https://github.com/user-attachments/assets/9050e3aa-c586-4ab2-bfb2-be484c8f0b18" /></td>
-  </tr>
-</table>
-Dock and app-launcher popup menus
-<table>
-  <tr>
-    <td><img width="638" alt="screenshot-20260526-191652" src="https://github.com/user-attachments/assets/30747ed1-d37d-41a5-8e81-d18c711db1d8" /></td>
-    <td><img width="638" alt="screenshot-20260526-191722" src="https://github.com/user-attachments/assets/43e57c9f-4f8c-41b1-8b9c-19da41364c93" /></td>
+    <td><img width="638" alt="screenshot-20260608-182308" src="https://github.com/user-attachments/assets/d57c7c17-b05c-433b-ac29-a53700126c61" /></td>
+    <td><img width="638" alt="screenshot-20260608-151723" src="https://github.com/user-attachments/assets/492b364c-5497-472d-ba77-f7603fed89c1" /></td>
   </tr>
 </table>
 Available functional panels
 <table>
   <tr>
-    <td><img width="638" alt="screenshot_15052026_214429" src="https://github.com/user-attachments/assets/f465325f-6193-4142-abb8-a2da4fb8b59a" /></td>
-    <td><img width="638" alt="screenshot_15052026_214506" src="https://github.com/user-attachments/assets/a4cf0687-73ca-49d3-90cb-9573759d283b" /></td>
+    <td><img width="638" alt="screenshot-20260608-150633" src="https://github.com/user-attachments/assets/cff53c63-bc5d-4aff-a686-282d33e5fe4b" /></td>
+    <td><img width="638" alt="screenshot-20260608-152638" src="https://github.com/user-attachments/assets/32292dbf-280b-4182-b33b-88f71d349f9e" /></td>
   </tr>
   <tr>
-    <td><img width="638" alt="screenshot_15052026_214517" src="https://github.com/user-attachments/assets/539c08c8-96e3-4498-82ad-a8aee9dae39e" /></td>
-    <td><img width="638" alt="screenshot_15052026_214538" src="https://github.com/user-attachments/assets/f513ed4a-fe47-4b05-9fed-b823d5b8a34a" /></td>
+    <td><img width="638" alt="screenshot-20260608-182533" src="https://github.com/user-attachments/assets/b8e937a6-91ec-45f5-8dfd-ede2ff237c56" /></td>
+    <td><img width="638" alt="screenshot-20260608-164828" src="https://github.com/user-attachments/assets/dd7f95e5-ef62-4529-b8e2-12bcb2f0837a" /></td>
+  </tr>
+  <tr>
+    <td><img width="638" alt="screenshot-20260608-164517" src="https://github.com/user-attachments/assets/05f923fc-db96-46cf-8088-9c92d569cefd" /></td>
+    <td><img width="638" alt="screenshot-20260608-180557" src="https://github.com/user-attachments/assets/a20ca1b2-37c0-4473-ad9d-e55ee0d55284" /></td>
   </tr>
 </table>
-
+Dock and app-launcher popup menus (Older HC+ screenshots pre minor changes)
 <table>
   <tr>
-    <td><img width="638" alt="screenshot-20260526-220342" src="https://github.com/user-attachments/assets/5dd0ee4e-b397-4cb9-8086-3bf50f5e76fe" /></td>
-    <td><img width="638" alt="screenshot-20260526-215308" src="https://github.com/user-attachments/assets/01776032-c12b-4f6b-a65b-0af944fdb415" /></td>
-  </tr>
-  <tr>
-    <td><img width="638" alt="screenshot-20260526-214204" src="https://github.com/user-attachments/assets/2e137631-c9b8-4cb5-8d8e-a0a17733bd42" /></td>
-    <td><img width="638" alt="screenshot-20260526-214239" src="https://github.com/user-attachments/assets/3ab3b1a7-4e6c-45c8-a2d8-5bc623e07a43" /></td>
+    <td><img width="638" alt="screenshot-20260526-191652" src="https://github.com/user-attachments/assets/30747ed1-d37d-41a5-8e81-d18c711db1d8" /></td>
+    <td><img width="638" alt="screenshot-20260526-191722" src="https://github.com/user-attachments/assets/43e57c9f-4f8c-41b1-8b9c-19da41364c93" /></td>
   </tr>
 </table>
 Light-theme from matuegn dark-themes
