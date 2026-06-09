@@ -18,7 +18,7 @@ Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https:
 | **Control center** | Basic | ✨ Advanced |
 | **System monitor widget** | Basic | ✨ Advanced |
 | **Media player widget** | Basic | ✨ Advanced |
-| **Desktop icons** — icon drag-to-rearrange | ❌ | icon drag-to-rearrange support + all icons can be hidden✅ |
+| **Desktop icons** — icon drag-to-rearrange | ❌ | target workspace dispatch + icon drag-to-rearrange support + all icons can be hidden✅ |
 | **Weather widget** | ❌ | ✅ |
 | **Quickshell overview** | (dwindle / master / monocle) | (scrolling / dwindle / master / monocle) |
 | **Quickshell overview** — Hyprland **scrolling** layout | ❌ | ✅ |
