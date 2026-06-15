@@ -79,7 +79,7 @@ Most recent
   </tr>
   <tr>
     <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="screenshot-20260608-181148" src="https://github.com/user-attachments/assets/19bc86d0-16bd-4c91-bca0-f6d66c277771" /></td>
+    <td><img width="683" alt="screenshot-20260615-184913" src="https://github.com/user-attachments/assets/9b3605bc-8614-4741-bde4-62d8769525d3" /></td>
   </tr>
 </table>
 
@@ -98,12 +98,12 @@ Available functional panels
     <td><img width="638" alt="screenshot-20260608-152638" src="https://github.com/user-attachments/assets/32292dbf-280b-4182-b33b-88f71d349f9e" /></td>
   </tr>
   <tr>
-    <td><img width="638" alt="screenshot-20260608-182533" src="https://github.com/user-attachments/assets/b8e937a6-91ec-45f5-8dfd-ede2ff237c56" /></td>
+    <td><img width="638" alt="screenshot-20260615-185544" src="https://github.com/user-attachments/assets/f4aa75cc-0505-484b-b844-a83a7338e5c0" /></td>
     <td><img width="638" alt="screenshot-20260608-164828" src="https://github.com/user-attachments/assets/dd7f95e5-ef62-4529-b8e2-12bcb2f0837a" /></td>
   </tr>
   <tr>
     <td><img width="638" alt="screenshot-20260608-164517" src="https://github.com/user-attachments/assets/05f923fc-db96-46cf-8088-9c92d569cefd" /></td>
-    <td><img width="638" alt="screenshot-20260608-180557" src="https://github.com/user-attachments/assets/a20ca1b2-37c0-4473-ad9d-e55ee0d55284" /></td>
+    <td><img width="638" alt="screenshot-20260615-190254" src="https://github.com/user-attachments/assets/1ba183d5-6c4a-4ff6-a9c2-43bd9401da16" /></td>
   </tr>
 </table>
 Dock and app-launcher popup menus (Older HC+ screenshots pre minor changes)
