@@ -91,7 +91,7 @@ SDDM-Greeter & Lock-screen
     <td><img width="638" alt="screenshot-20260608-151723" src="https://github.com/user-attachments/assets/492b364c-5497-472d-ba77-f7603fed89c1" /></td>
   </tr>
 </table>
-Available functional panels
+Additional screenshots
 <table>
   <tr>
     <td><img width="638" alt="screenshot-20260608-150633" src="https://github.com/user-attachments/assets/cff53c63-bc5d-4aff-a686-282d33e5fe4b" /></td>
