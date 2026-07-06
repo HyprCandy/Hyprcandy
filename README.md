@@ -1,8 +1,8 @@
 # HyprCandy x HyprCandy+
 
-Connect: [Discord Server](https://bit.ly/Candy-Discord-Server) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
+Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.gg/6rjN8DfyDn)) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
-[HyprCandy+](https://mirukai.gumroad.com/l/cxsyj) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git) and [pywal](https://github.com/eylles/pywal16.git) with an incredible amount of extra quality of life features over the simpler legacy HyprCandy setup.
+[HyprCandy+](https://mirukai.gumroad.com/l/cxsyj) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with an incredible amount of extra quality of life features over the simpler legacy HyprCandy setup.
 ---
 
 ## ✦ HyprCandy vs HyprCandy+
@@ -79,7 +79,7 @@ Most recent
   </tr>
   <tr>
     <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="screenshot-20260615-184913" src="https://github.com/user-attachments/assets/9b3605bc-8614-4741-bde4-62d8769525d3" /></td>
+    <td><img width="683" alt="screenshot-20260706-181620" src="https://github.com/user-attachments/assets/d519c502-b11c-4787-8f50-89a82f9cd46b" /></td>
   </tr>
 </table>
 
