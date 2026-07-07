@@ -79,7 +79,7 @@ Most recent
   </tr>
   <tr>
     <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="screenshot-20260706-211732" src="https://github.com/user-attachments/assets/37d33768-01db-4df2-820b-d4acaae67da0" /></td>
+    <td><img width="683" alt="screenshot-20260707-162939" src="https://github.com/user-attachments/assets/23a57add-1602-4a53-957b-7437ca7813df" /></td>
   </tr>
 </table>
 
