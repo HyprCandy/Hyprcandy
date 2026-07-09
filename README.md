@@ -42,7 +42,7 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 
 ## 🍬 HyprCandy+ Installation (Ongoing 1 week free trial when you get a product-key) 
 
-I recommend running the HyprCandyPlus installer from Hyprland but it will also work from other DEs or the TTY.
+I recommend running the HyprCandyPlus installer from Hyprland but it will also work from other DEs or the TTY. Install an AUR helper like paru or yay.
 
 Needed packages via your AUR helper e.g paru or yay: `git` · `hyprland` · `kitty` · `hyprcandy-install`
 ```
