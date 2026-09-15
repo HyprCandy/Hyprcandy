@@ -5,6 +5,7 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 [🍬 Features](#hyprCandy-features) [🍬 Installation](#installation) [🍬 Screenshots](#screenshots)
 
 [HyprCandy+](hypr-c-plus.vercel.app) is a stylish and functional Hyprland configuration cohesively themed through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with extra quality of life features.
+
 ---
 
 ## HyprCandy Features
@@ -82,42 +83,7 @@ hc-install
   </tr>
 </table>
 
-***Legacy screenshots***
-<table>
-  <tr>
-    <td><img width="638" alt="screenshot-20260608-150633" src="https://github.com/user-attachments/assets/cff53c63-bc5d-4aff-a686-282d33e5fe4b" /></td>
-    <td><img width="638" alt="screenshot-20260608-152638" src="https://github.com/user-attachments/assets/32292dbf-280b-4182-b33b-88f71d349f9e" /></td>
-  </tr>
-  <tr>
-    <td><img width="638" alt="screenshot-20260615-185544" src="https://github.com/user-attachments/assets/f4aa75cc-0505-484b-b844-a83a7338e5c0" /></td>
-    <td><img width="638" alt="screenshot-20260608-164828" src="https://github.com/user-attachments/assets/dd7f95e5-ef62-4529-b8e2-12bcb2f0837a" /></td>
-  </tr>
-  <tr>
-    <td><img width="638" alt="screenshot-20260608-164517" src="https://github.com/user-attachments/assets/05f923fc-db96-46cf-8088-9c92d569cefd" /></td>
-    <td><img width="638" alt="screenshot-20260615-190254" src="https://github.com/user-attachments/assets/1ba183d5-6c4a-4ff6-a9c2-43bd9401da16" /></td>
-  </tr>
-</table>
-Dock and app-launcher popup menus (Older HC+ screenshots pre minor changes)
-<table>
-  <tr>
-    <td><img width="638" alt="screenshot-20260526-191652" src="https://github.com/user-attachments/assets/30747ed1-d37d-41a5-8e81-d18c711db1d8" /></td>
-    <td><img width="638" alt="screenshot-20260526-191722" src="https://github.com/user-attachments/assets/43e57c9f-4f8c-41b1-8b9c-19da41364c93" /></td>
-  </tr>
-</table>
-Light-theme from matuegn dark-themes
-<table>
-  <tr>
-    <td><img width="638" alt="screenshot_05052026_004921" src="https://github.com/user-attachments/assets/3365278f-2ed3-4a0c-93a6-7e049cab5315" /></td>
-    <td><img width="638" alt="screenshot_05052026_004935" src="https://github.com/user-attachments/assets/9881321c-71d3-4f87-a49a-4054472c02b0" /></td>
-  </tr>
-</table>
-
-## 🪟 Stylized Group Mode
-
-<img width="1366" height="768" alt="screenshot_07092025_145715" src="https://github.com/user-attachments/assets/5bd9a009-d767-417d-82bc-844f3d0ee433" />
-
 ---
-
 
 ## 🎬 Video Showcase
 
