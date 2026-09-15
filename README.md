@@ -2,14 +2,12 @@
 
 Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.gg/6rjN8DfyDn)) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
-[Features](#hyprCandy-features) [Installation](
-#🍬-installation) [Screenshots](
-#-🍬-screenshots)
+[🍬 Features](#🍬-hyprCandy-features) [🍬 Installation](#🍬-installation) [🍬 Screenshots](#🍬-screenshots)
 
 [HyprCandy+](hypr-c-plus.vercel.app) is a stylish and functional Hyprland configuration cohesively themed through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with extra quality of life features.
 ---
 
-## HyprCandy Features
+## 🍬 HyprCandy Features
 
 | Feature | 🍬 HyprCandy+ |
 |---|:---:|
