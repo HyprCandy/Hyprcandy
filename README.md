@@ -1,46 +1,45 @@
-# HyprCandy x HyprCandy+
+# HyprCandy
 
 Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.gg/6rjN8DfyDn)) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
-[HyprCandy+](https://mirukai.gumroad.com/l/cxsyj) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with an incredible amount of extra quality of life features over the simpler legacy HyprCandy setup.
+[HyprCandy+](https://mirukai.gumroad.com/l/cxsyj) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with extra quality of life features.
 ---
 
-## ✦ HyprCandy vs HyprCandy+
+## ✦ HyprCandyPlus
 
-| Feature | 🍬 HyprCandy | 🍬✨ HyprCandy+ |
-|---|:---:|:---:|
-| **System-wide theming** | Matugen✅ | Matugen+Pywal✅ |
-| **Bar** | Waybar / Hyprpanel | HyprCandy-bar with modular auto-hide in tri-island mode plus extensive configuation options |
-| **Lockscreen** | Hyprlock | Candylock: has notifications support, media-player, system-monitor(includes battery on mobile devices) & weather  |
-| **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ | ✅ |
-| **Dock** | [nwg-dock-hyprland](https://github.com/nwg-piotr/nwg-dock-hyprland.git) | hyprcandy-dock: icon drag-to-rearrange + switcheroo dGPU launch + minize-wndow + trash |
-| **App-launcher** | rofi | hyprcandy-launcher: favorites & groups support + clipboard + icons + websearch |
-| **Control center** | Basic | ✨ Advanced |
-| **System monitor widget** | Basic | ✨ Advanced |
-| **Media player widget** | Basic | ✨ Advanced |
-| **Desktop icons** — icon drag-to-rearrange | ❌ | target workspace dispatch + icon drag-to-rearrange support + all icons can be hidden✅ |
-| **Weather widget** | ❌ | ✅ |
-| **Quickshell overview** | (dwindle / master / monocle) | (scrolling / dwindle / master / monocle) |
-| **Quickshell overview** — Hyprland **scrolling** layout | ❌ | ✅ |
-| **Live GTK4 & QT color reloads** on wallpaper change | ❌ | ✅ |
-| **SDDM live-background support** | ❌ | ✅ |
-| **Wallpaper picker** | [waypaper](https://github.com/anufrievroman/waypaper.git) | hyprcandy-picker |
-| **DE-Updates** | Manual update(frontend script) | Authorized backend update - preserves user settings |
+| Feature | 🍬 HyprCandyPlus |
+|---|:---:|
+| **System-wide theming** | Matugen+Pywal + Wallust✅ |
+| **Bar** | HyprCandy-bar with modular auto-hide in tri-island mode plus extensive configuation options |
+| **Lockscreen** | Candylock: has notifications support, media-player, system-monitor(includes battery on mobile devices) & weather  |
+| **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ |
+| **Dock** | hyprcandy-dock: icon drag-to-rearrange + switcheroo-control for dGPU app launch + minize-wndow + trash |
+| **App-launcher** | hyprcandy-launcher: favorites & groups support + clipboard + icons + [SearXNG](https://github.com/searxng/searxng.git) websearch + agentic workspace|
+| **Control center** | High system-wide customization with more planned features to come |
+| **System monitor widget** |  ✅ |
+| **Media player widget** |  ✅ |
+| **Desktop icons** | icon drag-to-rearrange + target workspace dispatch + icon drag-to-rearrange support + all icons can be hidden |
+| **Weather widget** | ✅ |
+| **Quickshell overview** | (scrolling / dwindle / master / monocle) |
+| **Live GTK4 & QT color reloads** on wallpaper change | ✅ |
+| **SDDM live-background support** | ✅ |
+| **Wallpaper picker** | ✅ |
+| **DE-Updates** | Authorized backend update - preserves user settings |
 
 ### 🍬 HyprCandy+ exclusive highlights
 
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
 
-  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****web-search**** via the DuckDuckGo API. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are intearlly connected
+  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****[SearXNG](https://github.com/searxng/searxng.git) web-search**** preventing tracking and profiling plus a powerful coding workspaces. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are connected
 - **Scrolling layout support** in Quickshell overview — the only HyprCandy overview variant that supports the new Hyprland scrolling layout alongside dwindle, master and monocle
 - **Live reloads** — bar, dock, panels, GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes with matugen and pywal16 integration
 - **SDDM background sync** — your login screen always matches your desktop wallpaper
-- **Candylock** — custom advanced lockscreen that supports live backgrounds, media-playback, weather and a system-monitor
+- **Candylock** — custom advanced lockscreen that supports notifications, live backgrounds, media-playback, weather and a system-monitor
 - **Advanced start-menu** — a replacement for swaync from the free setup, with integrated screen-capture for recordings and screenshots, network and ***Bluetooth (with file sharing support)***
 
 ---
 
-## 🍬 HyprCandy+ Installation (Ongoing 1 week free trial when you get a product-key) 
+## 🍬 HyprCandyPlus
 
 I recommend running the HyprCandyPlus installer from Hyprland but it will also work from other DEs or the TTY. Install an AUR helper like paru or yay.
 
@@ -53,45 +52,31 @@ Start a Hyprland session and launch kitty with SUPER + Q then run
 hc-install
 ```
 
-## 🍬 HyprCandy (Free version) Installation
-
-Just like the plus version I recommend running the install script from Hyprland but it will also work from other DEs or the TTY but its installation involves manual cloning of the installer.
-
-Needed packages: `git` · `hyprland` · `kitty`
-```
-$AUR_HELPER -S git hyprland kitty
-```
-Start a Hyprland session and launch kitty with SUPER + Q then run
-```shell
-git clone https://github.com/HyprCandy/hyprcandyinstall.git &&
-cd hyprcandyinstall && 
-bash HyprCandy_Install.sh
-```
 
 ---
 
 ## 📸 Screenshots
-Most recent
+***HyprCandy+ Latest***
 <table>
   <tr>
-    <th>HyprCandy Screenshot</th>
-    <th>HyprCandy+ Screenshot</th>
+    <td><img width="683"  alt="image" src="https://github.com/user-attachments/assets/2c4be4e9-c38d-4e8a-999a-1e0c2e91ae63" /></td>
+    <td><img width="683"  alt="image" src="https://github.com/user-attachments/assets/e7c8edac-e457-456d-94f3-25ac089135bd" /></td>
   </tr>
   <tr>
-    <td><img width="683" alt="screenshot_16022026_001736" src="https://github.com/user-attachments/assets/13b878b0-866c-4c58-864a-e1dd96e6280d" /></td>
-    <td><img width="683" alt="screenshot-20260707-162939" src="https://github.com/user-attachments/assets/23a57add-1602-4a53-957b-7437ca7813df" /></td>
+    <td><img width="683" alt="image" src="https://github.com/user-attachments/assets/7cd1d302-ff9d-4fbf-b894-c2369ef0aafb" /></td>
+    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/1da27cf8-3c9a-44bc-9e17-a350ae607a04" /></td>
+  </tr>
+  <tr>
+    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/cc66525f-d14e-4f84-ad2b-306cd3d05bfa" /></td>
+    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/51336cea-eef3-4474-9e83-e7c86c0771b8" /></td>
+  </tr>
+  <tr>
+     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/55f025e3-4d4f-4819-aed1-a91c209e9ef3" /></td>
+     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/47e5e6a3-3668-4a60-82ac-089c947f0820" /></td>
   </tr>
 </table>
 
-### HyprCandy+ screenshots
-SDDM-Greeter & Lock-screen
-<table>
-  <tr>
-    <td><img width="638" alt="screenshot-20260608-182308" src="https://github.com/user-attachments/assets/d57c7c17-b05c-433b-ac29-a53700126c61" /></td>
-    <td><img width="638" alt="screenshot-20260608-151723" src="https://github.com/user-attachments/assets/492b364c-5497-472d-ba77-f7603fed89c1" /></td>
-  </tr>
-</table>
-Additional screenshots
+***Legacy screenshots***
 <table>
   <tr>
     <td><img width="638" alt="screenshot-20260608-150633" src="https://github.com/user-attachments/assets/cff53c63-bc5d-4aff-a686-282d33e5fe4b" /></td>
@@ -120,83 +105,6 @@ Light-theme from matuegn dark-themes
     <td><img width="638" alt="screenshot_05052026_004935" src="https://github.com/user-attachments/assets/9881321c-71d3-4f87-a49a-4054472c02b0" /></td>
   </tr>
 </table>
-Extra: bar and dock positions can also be cycled with panels tracking the bar and app-launcher position tracking the dock 
-<table>
-  <tr>
-    <td><img width="638" alt="screenshot_05052026_013328" src="https://github.com/user-attachments/assets/c8e64ee0-0baf-4aa3-bb75-cfe955b222c7" /></td>
-    <td><img width="638" alt="screenshot_05052026_001623" src="https://github.com/user-attachments/assets/f930facd-0223-4e9e-8277-5c2d4129fa63" /></td>
-    <td><img width="638" alt="screenshot_05052026_002228" src="https://github.com/user-attachments/assets/7980ebbd-adbb-4914-b574-4049400d01d3" /></td>
-  </tr>
-</table>
-
-### Older HyprCandy (Free) screenshots below yet to be updated
-
-### With the optional hyprbars + hyprexpo-plus plugins setup (only in these screenshots - if you like them ou'll have to set them up yourself)
-
-> SwayNC screenshots below are outdated
-
-<table>
-  <tr>
-    <td><img width="455" alt="screenshot_25102025_163437" src="https://github.com/user-attachments/assets/58eb1e0f-2640-4119-9dce-d1e8d48f0ef6" /></td>
-    <td><img width="455" alt="screenshot_20102025_114707" src="https://github.com/user-attachments/assets/a784edd1-b4de-4c5c-ba11-0acbad195546" /></td>
-    <td><img width="455" alt="screenshot_20102025_114946" src="https://github.com/user-attachments/assets/f5e7bc6a-63ec-4d01-8cd1-b918acda0200" /></td>
-  </tr>
-  <tr>
-    <td><img width="455" alt="screenshot_21102025_234327" src="https://github.com/user-attachments/assets/6d1033f7-e779-430d-b3f5-04c866bfb9e9" /></td>
-    <td><img width="455" alt="screenshot_20102025_115629" src="https://github.com/user-attachments/assets/026c597f-6ba6-4a6c-b39a-567498b0430b" /></td>
-    <td><img width="455" alt="screenshot_21102025_232817" src="https://github.com/user-attachments/assets/270f7dd0-7c5c-4995-9bba-032d73fb904a" /></td>
-  </tr>
-  <tr>
-    <td colspan="3"><img width="683" alt="screenshot_21102025_232846" src="https://github.com/user-attachments/assets/29ae2d4f-aa92-497e-87a0-ec10c9799e6a" /></td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td><img width="455" alt="screenshot_13102025_050902" src="https://github.com/user-attachments/assets/17bd99e5-21d7-4961-a532-aff8b2b35737" /></td>
-    <td><img width="455" alt="screenshot_13102025_051227" src="https://github.com/user-attachments/assets/f68c7534-eec0-4195-8712-4572a79a9290" /></td>
-  </tr>
-  <tr>
-    <td><img width="455" alt="screenshot_06102025_130126" src="https://github.com/user-attachments/assets/fdd0c264-83a9-4dfc-84f7-ae73923e7485" /></td>
-    <td><img width="455" alt="screenshot_06102025_125959" src="https://github.com/user-attachments/assets/84a02980-eadd-403a-814e-1de2f5f6082a" /></td>
-  </tr>
-</table>
-
-### Dark mode — Matugen-Monochrome (onyx/graphite on any wallpaper)
-
-<table>
-  <tr>
-    <td><img width="683" alt="screenshot_06102025_130548" src="https://github.com/user-attachments/assets/138d1803-b061-4239-bcd8-292a44f33994" /></td>
-    <td><img width="683" alt="screenshot_06102025_130642" src="https://github.com/user-attachments/assets/439792ce-4dc6-4206-96f6-39e8546bd4bc" /></td>
-  </tr>
-</table>
-
-### Hyprpanel option
-
-> NOTE: Some features available in the waybar control center are set directly from hyprpanel's own UI.
-
-<img width="1366" height="768" alt="screenshot_20082025_113347" src="https://github.com/user-attachments/assets/b950ec0c-e9c6-44ac-958a-c433b9a5e057" />
-
----
-
-## 🎛 Control Center · Media Player · System Monitor · Weather
-
-<img width="1366" height="768" alt="screenshot_12092025_183441" src="https://github.com/user-attachments/assets/f37ea08a-47d2-4634-b0a6-673f2e56869f" />
-
----
-
-## 🗂 Workspaces Overview
-
-- Replaced *hyprexpo* with *hyprexpo-plus*
-- Current workspace highlighting
-- Workspace cycling and selection with arrow keys and Return
-- Submap keybinds: digits `1–0` → WS 1–10 · `SHIFT+1–0` → WS 11–20 · `a–z` → WS 21–46
-- Launch with `SUPER+SPACE`
-- Submap keys can be edited in `~/.config/hyprcustom/custom.conf` (plugins section before `userprefs`)
-
-<img width="1366" height="768" alt="screenshot_11102025_001520" src="https://github.com/user-attachments/assets/19642c12-300e-4311-a5e3-cc55be1a7722" />
-
----
 
 ## 🪟 Stylized Group Mode
 
@@ -204,67 +112,6 @@ Extra: bar and dock positions can also be cycled with panels tracking the bar an
 
 ---
 
-## 🚪 Wlogout Theme
-
-![pic8](https://github.com/user-attachments/assets/a172e160-5a2f-425c-bb4c-98dcbf68d743)
-
----
-
-## 🔒 Hyprlock
-
-<img width="1366" height="768" alt="screenshot_21102025_233423" src="https://github.com/user-attachments/assets/cf3197dc-abeb-4dff-8dc9-1185bf31127a" />
-
----
-
-## 🔍 Rofi Menus
-
-<table>
-  <tr>
-    <th>Application Finder</th>
-    <th>Utilities Launcher</th>
-  </tr>
-  <tr>
-    <td><img width="683" alt="screenshot_14092025_232710" src="https://github.com/user-attachments/assets/75a55cb5-bcb9-403b-9131-440db59fd0bf" /></td>
-    <td><img width="683" alt="screenshot_14092025_232552" src="https://github.com/user-attachments/assets/ad566d39-2952-4ea1-9c86-cd30a272a130" /></td>
-  </tr>
-</table>
-
-> NOTE: Excluding wifi and bluetooth, the following menus use a dark border color.
-
-<table>
-  <tr>
-    <th>Keybinds</th>
-    <th>Animations Switcher</th>
-    <th>Clipboard</th>
-  </tr>
-  <tr>
-    <td><img width="455" alt="keybinds" src="https://github.com/user-attachments/assets/fe1ade33-a6d3-4ee6-a90f-3d88027ffdd0" /></td>
-    <td><img width="455" alt="animations" src="https://github.com/user-attachments/assets/a6fff59e-315e-4f30-b651-0c329ce538c0" /></td>
-    <td><img width="455" alt="clipboard" src="https://github.com/user-attachments/assets/59f5edfe-ae7e-496a-bf72-2eb6ddef25b8" /></td>
-  </tr>
-  <tr>
-    <th>Emoji Picker</th>
-    <th>Glyph Picker</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><img width="455" alt="emoji" src="https://github.com/user-attachments/assets/4d406778-4ec9-48c6-8d81-c59f41c9107d" /></td>
-    <td><img width="455" alt="glyph" src="https://github.com/user-attachments/assets/101fa6a4-4ab9-43d1-88c5-1eb4d28cf9ab" /></td>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Wifi</th>
-    <th>Bluetooth</th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><img width="455" alt="wifi" src="https://github.com/user-attachments/assets/7e20d461-9111-48e3-a063-dcbb8a8dbb16" /></td>
-    <td><img width="455" alt="bluetooth" src="https://github.com/user-attachments/assets/446e10f0-854a-441c-bc41-353e299623dd" /></td>
-    <td></td>
-  </tr>
-</table>
-
----
 
 ## 🎬 Video Showcase
 
@@ -289,21 +136,7 @@ Extra: bar and dock positions can also be cycled with panels tracking the bar an
 
   TIP — keep clips short and under 10 MB for best compatibility:
     ffmpeg -i input.mp4 -vf scale=1366:-2 -cfs v 0 -t 30 -an output.mp4
-
-  SDDM SHOWCASE PLACEHOLDER — replace the src URL once uploaded:
 -->
-
-### SDDM Live Background Sync *(HyprCandy+ exclusive)*
-
-> Video coming soon — replace the placeholder below once uploaded via GitHub Issues.
-
-<!-- 
-<video src="https://github.com/user-attachments/assets/REPLACE-WITH-YOUR-UUID" 
-       width="1366" controls autoplay muted loop>
-</video>
--->
-
----
 
 ## Support
 ➡ ❣️ If you use the free version and like my project, your [support](https://ko-fi.com/ianmking) is also appreciated ⬅
