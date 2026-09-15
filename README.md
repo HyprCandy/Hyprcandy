@@ -2,12 +2,12 @@
 
 Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.gg/6rjN8DfyDn)) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
-[🍬 Features](#🍬-hyprCandy-features) [🍬 Installation](#🍬-installation) [🍬 Screenshots](#🍬-screenshots)
+[🍬 Features](#hyprCandy-features) [🍬 Installation](#installation) [🍬 Screenshots](#screenshots)
 
 [HyprCandy+](hypr-c-plus.vercel.app) is a stylish and functional Hyprland configuration cohesively themed through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with extra quality of life features.
 ---
 
-## 🍬 HyprCandy Features
+## HyprCandy Features
 
 | Feature | 🍬 HyprCandy+ |
 |---|:---:|
@@ -28,7 +28,7 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 | **Wallpaper picker** | ✅ |
 | **DE-Updates** | Authorized backend update - preserves user settings |
 
-### HyprCandy+ exclusive highlights
+### 🍬 HyprCandy+ exclusive highlights
 
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
 
@@ -41,7 +41,7 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 
 ---
 
-## 🍬 Installation
+## Installation
 
 I recommend running the HyprCandyPlus installer from Hyprland but it will also work from other DEs or the TTY. Install an AUR helper like paru or yay.
 
@@ -57,7 +57,7 @@ hc-install
 
 ---
 
-## 🍬 Screenshots
+## Screenshots
 ***HyprCandy+ Latest***
 <table>
   <tr>
