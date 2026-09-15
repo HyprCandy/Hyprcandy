@@ -66,16 +66,32 @@ hc-install
 ***HyprCandy+ Latest***
 <table>
   <tr>
+    <th>SearXNG powered web-search</th>
+    <th>HyprCandy workspace</th>
+  </tr>
+  <tr>
     <td><img width="683"  alt="image" src="https://github.com/user-attachments/assets/2c4be4e9-c38d-4e8a-999a-1e0c2e91ae63" /></td>
     <td><img width="683"  alt="image" src="https://github.com/user-attachments/assets/e7c8edac-e457-456d-94f3-25ac089135bd" /></td>
+  </tr>
+  <tr>
+    <th>Stylish advanced widgets and panel</th>
+    <th>HC+ lock-screen</th>
   </tr>
   <tr>
     <td><img width="683" alt="image" src="https://github.com/user-attachments/assets/7cd1d302-ff9d-4fbf-b894-c2369ef0aafb" /></td>
     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/1da27cf8-3c9a-44bc-9e17-a350ae607a04" /></td>
   </tr>
   <tr>
+    <th>Synched SDDM greeter</th>
+    <th>Control-Center</th>
+  </tr>
+  <tr>
     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/cc66525f-d14e-4f84-ad2b-306cd3d05bfa" /></td>
     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/51336cea-eef3-4474-9e83-e7c86c0771b8" /></td>
+  </tr>
+  <tr>
+    <th>Walpaper picker</th>
+    <th>Workspace overview</th>
   </tr>
   <tr>
      <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/55f025e3-4d4f-4819-aed1-a91c209e9ef3" /></td>
