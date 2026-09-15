@@ -85,6 +85,7 @@ hc-install
 
 ---
 
+<!-- 
 ## 🎬 Video Showcase
 
 <!-- 
