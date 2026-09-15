@@ -1,13 +1,17 @@
-# HyprCandy
+# HyprCandy+
 
 Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.gg/6rjN8DfyDn)) / [Reddit](https://www.reddit.com/u/I-miruka/s/TOeCgRpby6) / [YouTube channel](https://youtube.com/@i.miruka?si=_kfocBTJ0ROm4JCD)
 
-[HyprCandy+](https://mirukai.gumroad.com/l/cxsyj) is a stylish and functional Hyprland configuration cohesively themed entirely through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with extra quality of life features.
+[Features](#hyprCandy-features) [Installation](
+#🍬-installation) [Screenshots](
+#-🍬-screenshots)
+
+[HyprCandy+](hypr-c-plus.vercel.app) is a stylish and functional Hyprland configuration cohesively themed through [matugen](https://github.com/InioX/matugen.git), [wallust](https://codeberg.org/explosion-mental/wallust.git) and [pywal](https://github.com/eylles/pywal16.git) with extra quality of life features.
 ---
 
-## ✦ HyprCandyPlus
+## HyprCandy Features
 
-| Feature | 🍬 HyprCandyPlus |
+| Feature | 🍬 HyprCandy+ |
 |---|:---:|
 | **System-wide theming** | Matugen+Pywal + Wallust✅ |
 | **Bar** | HyprCandy-bar with modular auto-hide in tri-island mode plus extensive configuation options |
@@ -26,7 +30,7 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 | **Wallpaper picker** | ✅ |
 | **DE-Updates** | Authorized backend update - preserves user settings |
 
-### 🍬 HyprCandy+ exclusive highlights
+### HyprCandy+ exclusive highlights
 
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
 
@@ -39,7 +43,7 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 
 ---
 
-## 🍬 HyprCandyPlus
+## 🍬 Installation
 
 I recommend running the HyprCandyPlus installer from Hyprland but it will also work from other DEs or the TTY. Install an AUR helper like paru or yay.
 
@@ -55,7 +59,7 @@ hc-install
 
 ---
 
-## 📸 Screenshots
+## 🍬 Screenshots
 ***HyprCandy+ Latest***
 <table>
   <tr>
