@@ -116,11 +116,3 @@ hc-install
 You can also grab bits and bops from the [main repo](https://github.com/HyprCandy/Hyprcandy.git) and help spread the word of this cohesive Hyprland setup 🙂.
 
 ---
-
-## 💡 Inspirations
-
-- [END-4](https://github.com/end-4/dots-hyprland)
-- [ML4W](https://github.com/mylinuxforwork/dotfiles.git)
-- [HYDE Project](https://github.com/HyDE-Project/HyDE.git)
-
-and others...
