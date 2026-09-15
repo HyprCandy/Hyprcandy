@@ -28,16 +28,20 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 | **Wallpaper picker** | ✅ |
 | **DE-Updates** | Authorized backend update - preserves user settings |
 
-### 🍬 HyprCandy+ exclusive highlights
-
+### 🍬 HyprCandy+ highlights
+<!-- 
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
-
-  ***Dock & App-launcher*** — both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization; both dock and launcher have switcheroo-control integration; app-launcher features a clipboard, icons-picker and ****[SearXNG](https://github.com/searxng/searxng.git) web-search**** preventing tracking and profiling plus a powerful coding workspaces. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are connected
-- **Scrolling layout support** in Quickshell overview — the only HyprCandy overview variant that supports the new Hyprland scrolling layout alongside dwindle, master and monocle
-- **Live reloads** — bar, dock, panels, GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes with matugen and pywal16 integration
-- **SDDM background sync** — your login screen always matches your desktop wallpaper
-- **Candylock** — custom advanced lockscreen that supports notifications, live backgrounds, media-playback, weather and a system-monitor
-- **Advanced start-menu** — a replacement for swaync from the free setup, with integrated screen-capture for recordings and screenshots, network and ***Bluetooth (with file sharing support)***
+-->
+- **Dock & App-launcher**:
+  - ****App-launcher [SearXNG](https://github.com/searxng/searxng.git) web-search**** preventing tracking and profiling plus a powerful coding workspaces. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are connected
+  - ****App-launcher workspace**** - agentic HyprCandy workspace (still evolving)
+  - ****Switcheroo control****: Integrated for program launch on the discrete GPU on hybrid graphics devices.
+  - both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization (to hidden special workspace)
+- **Workspace overview** in Quickshell that supports all window layouts including the new Hyprland scrolling
+- **Live reloads** — bar, dock, panels, GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes with matugen, wallust and pywal16 integration
+- **Background sync** — your login screen always matches your desktop wallpaper and lock-screen
+- **Candylock** — custom advanced lock-screen that supports notifications, live backgrounds, media-playback, weather and a system-monitor
+- **Sartmenu Bluetooth** - with native file sharing support
 
 ---
 
