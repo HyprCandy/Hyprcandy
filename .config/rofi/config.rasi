@@ -8,22 +8,22 @@
 # by Stephan Raabe (2023) with my minor changes
 # ----------------------------------------------------- 
 */
-
 /* ---- Configuration ---- */
 configuration {
     modi:                       "drun,filebrowser,window,run";
     font:                       "JetBrainsMono Nerd Font Propo 11";
     show-icons:                 true;
-    icon-theme:                 "Tela circle black";
-    display-drun:               " ";
-    display-run:                " ";
-    display-filebrowser:        " ";
-    display-window:             " ";
+    icon-theme:                 "Tela-circle-black";
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
     drun-display-format:        "{name}";
     hover-select:               false;
     scroll-method:              1;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
+    kb-cancel:			"MousePrimary";
     window-format:              "{w} · {c} ·{t}";
 }
 
@@ -47,15 +47,15 @@ configuration {
 
 /* ---- Map colors ---- */
 * {
-    color11: @primary-fixed-dim;
+    color11: @primary;
     color5: @on-primary-fixed;
     foreground: @on-surface;
 }
 
 // Main //
 window {
-    height:                      35em;
-    width:                       62em;
+    height:                      32.5em;
+    width:                       60em;
     transparency:                "real";
     fullscreen:                  false;
     enabled:                     true;
@@ -71,11 +71,10 @@ window {
 mainbox {
     enabled:                     true;
     spacing:                     0em;
-    padding:                     0em;
+    padding:                     0.5em;
     orientation:                 vertical;
     children:                    [ "inputbar" , "listbox" ];
     background-color:            transparent;
-    background-image:            @current-image;
 }
 
 
@@ -83,8 +82,8 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     0em;
-    padding:                     5em;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    padding:                     1em;
+    children:                    [ "space-1", "entry", "space-2" ];
     background-color:            transparent;
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
 }
@@ -100,33 +99,49 @@ textbox-prompt-colon {
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
 }
 
+space-1 {
+    spacing:  			10em;
+    background-color:  		transparent;
+}
+
 entry {
     enabled:                     true;
-    border-radius:               0em 2em 2em 0em;
-    spacing:                     1em;
+    border-radius:               2em;
+    spacing:                     0.5em;
     padding:                     1em;
-    background-color:            @on-primary-fixed-variant;
+    background-color:            @background;
     text-color:                  @color11;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 "            Search  ";
     placeholder-color:           inherit;
+    border-color:                @color11;
+    border:			 0.1em;
+}
+
+space-2 {
+    spacing:  			10em;
+    background-color:  		transparent;
 }
 
 // Lists //
 listbox {
     padding:                     0em;
     spacing:                     0em;
+    border-radius:               1em;
     orientation:                 horizontal;
-    children:                    [ "listview" , "mode-switcher" ];
+    children:                    [ "mode-switcher", "listview" ];
     background-color:            @background;
+    background-image:            @current-image;
+    border-color:                @color11;
+    border:			 0.1em;
 }
 
 listview {
-    padding:                     1.5em;
+    padding:                     1em;
     spacing:                     0.5em;
     enabled:                     true;
     columns:                     5;
-    lines:                       4;
+    lines:                       10;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -137,24 +152,27 @@ listview {
     cursor:                      "default";
     background-color:            transparent;
     text-color:                  @foreground;
+    border-radius:               0em;
 }
 
 
 // Modes //
 mode-switcher {
     orientation:                 vertical;
-    width:                       6.6em;
+    width:                       6.5em;
     enabled:                     true;
-    padding:                     1.5em;
-    spacing:                     1.5em;
-    background-color:            transparent;
+    padding:                     2em;
+    spacing:                     4em;
+    background-color:            @background;
+    border-radius:               0em;
 }
 
 button {
+    font:                       "JetBrainsMono Nerd Font Propo 11.5";
     cursor:                      pointer;
     border-radius:               2em;
     background-color:            @color11;
-    text-color:                  @background;
+    text-color:                  @on-primary-fixed-variant;
 }
 
 button selected {
@@ -176,7 +194,7 @@ element {
 element selected.normal {
     background-color:            @on-primary-fixed-variant;
     text-color:                  @color11;
-    border-radius:               @border-radius;
+    border-radius:               0.8em;
 }
 
 element normal.normal {
@@ -220,7 +238,7 @@ element alternate.active {
 }
 
 element-icon {
-    size:                        3em;
+    size:                        1.5em;
     cursor:                      inherit;
     background-color:            transparent;
     text-color:                  inherit;

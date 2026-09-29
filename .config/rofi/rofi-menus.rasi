@@ -23,8 +23,8 @@ configuration {
     scroll-method:              1;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-    
+    kb-cancel:			"MousePrimary";
+    window-format:              "{w} · {c} ·{t}";
 }
 
 /* ---- Load font ---- */
@@ -34,7 +34,7 @@ configuration {
 @theme "~/.config/rofi/colors.rasi"
 
 /* ---- Load wallpaper ---- */
-@import "~/.config/hyprcandy/cache/current_wallpaper_height.rasi"
+//@import "~/.config/hyprcandy/cache/current_wallpaper_height.rasi"//
 
 /* ---- Border color ---- */
 @import "~/.config/rofi/rofi.rasi"
@@ -47,7 +47,7 @@ configuration {
 
 /* ---- Map colors ---- */
 * {
-    color11: @primary-fixed-dim;
+    color11: @primary;
     color5: @on-primary-fixed;
     foreground: @on-surface;
 }
@@ -55,9 +55,9 @@ configuration {
 // Main //
 window {
     width:                        11em;
-    height:                       31em;
-    x-offset:                     -2em;
-    y-offset:                     2em;
+    height:                       18.5em;
+    x-offset:                     -0.5em;
+    y-offset:                     0.5em;
     spacing:                      0px;
     padding:                      0px;
     margin:                       0px; 
@@ -81,7 +81,7 @@ mainbox {
     orientation:                 horizontal;
     children:                    [ "listbox" ];
     background-color:            transparent;
-    background-image:            @current-image;
+    //background-image:            @current-image;
 }
 
 /* ---- Imagebox ---- */
@@ -97,7 +97,7 @@ inputbar {
     enabled:                     true;
     spacing:                     0em;
     padding:                     1em;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    [ "entry" ];
     background-color:            transparent;
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
 }
@@ -115,14 +115,16 @@ textbox-prompt-colon {
 
 entry {
     enabled:                     true;
-    border-radius:               0em 2em 2em 0em;
+    border-radius:               2em;
     spacing:                     1em;
     padding:                     1em;
-    background-color:            @on-primary-fixed-variant;
+    background-color:            @background;
     text-color:                  @color11;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 "Search ";
     placeholder-color:           inherit;
+    border-color:                @color11;
+    border:			 0.1em;
 }
 
 // Lists //

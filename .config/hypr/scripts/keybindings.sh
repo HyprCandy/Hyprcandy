@@ -222,7 +222,7 @@ parse_keybinds() {
                 action=$(echo "$action" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
                 
                 # Handle variables like $mainMod
-                display_modifier=$(echo "$modifier" | sed -e 's/\$mainMod//' -e 's/SUPER//' -e 's/ALT/Alt/' -e 's/CTRL/Ctrl/' -e 's/SHIFT/Shift/')
+                display_modifier=$(echo "$modifier" | sed -e 's/\$mainMod/󰘳/' -e 's/SUPER/󰘳/' -e 's/ALT/Alt/' -e 's/CTRL/Ctrl/' -e 's/SHIFT/Shift/')
                 
                 # Format key for better display
                 display_key="$key"
@@ -264,7 +264,7 @@ fi
     
     # Add header with dynamic categories
     {
-        echo "🎮 Hyprland Keybindings |  is the SUPER key"
+        echo " Hyprland Keybindings | 󰘳 is the SUPER key"
         echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
         echo "Search for category or keybind specific keywords"
         echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"

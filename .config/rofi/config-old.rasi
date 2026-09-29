@@ -35,7 +35,7 @@ configuration {
 @theme "~/.config/rofi/colors.rasi"
 
 /* ---- Load wallpaper ---- */
-@import "~/.config/hyprcandy/cache/current_wallpaper.rasi"
+//@import "~/.config/hyprcandy/cache/current_wallpaper.rasi"//
 
 /* ---- Border color ---- */
 @import "~/.config/rofi/rofi.rasi"
@@ -48,7 +48,7 @@ configuration {
 
 /* ---- Map colors ---- */
 * {
-    color11: @primary-fixed-dim;
+    color11: @primary;
     color5: @on-primary-fixed;
     foreground: @on-surface;
 }
@@ -81,7 +81,7 @@ mainbox {
     spacing:                      0px;
     margin:                       0px;
     background-color:             @background;
-    background-image:             @current-image;
+    //background-image:             @current-image;
     children:                     ["imagebox","listbox"];
 }
 
@@ -115,7 +115,7 @@ inputbar {
     border-radius:                10px;
     border-color:                 @foreground;
     background-color:             @background;
-    children:                     [ "textbox-prompt-colon", "entry" ];
+    children:                     [ "entry" ];
 }
 
 textbox-prompt-colon {
@@ -129,11 +129,13 @@ textbox-prompt-colon {
 
 entry {
     enabled:                      true;
-    background-color:             transparent;
+    background-color:             @background;
     text-color:                   inherit;
     cursor:                       text;
-    placeholder:                  "Search";
+    placeholder:                  "Search ";
     placeholder-color:            inherit;
+    border-color:                @color11;
+    border:			 0.1em;
 }
 
 /* ---- Mode Switcher ---- */

@@ -11,11 +11,11 @@
 
 # How the image is parse, in order to get the colors:
 # full - resized - wal - thumb -  fastresize - kmeans
-backend = "wal"
+backend = "thumb"
 
 # What color space to use to produce and select the most prominent colors:
 # lab - labmixed - lch - lchmixed
-color_space = "labmixed"
+color_space = "lch"
 
 # Use the most prominent colors in a way that makes sense, a scheme color palette:
 # dark - dark16 - darkcomp - darkcomp16
@@ -23,7 +23,7 @@ color_space = "labmixed"
 # harddark - harddark16 - harddarkcomp - harddarkcomp16
 # softdark - softdark16 - softdarkcomp - softdarkcomp16
 # softlight - softlight16 - softlightcomp - softlightcomp16
-palette = "dark"
+palette = "softdark"
 
 # Ensures a "readable contrast" (OPTIONAL, disabled by default)
 # Should only be enabled when you notice an unreadable contrast frequently happening
@@ -33,11 +33,20 @@ check_contrast = true
 # Color saturation, between [1% and 100%] (OPTIONAL, disabled by default)
 # usually something higher than 50 increases the saturation and below
 # decreases it (on a scheme with strong and vivid colors)
-saturation = 85
+saturation = 50
 #thresold = 16
 # Alpha value for templating, by default 100 (no other use whatsoever)
 #alpha = 100
+#wallpaper = '~/.congig/background'
 
 [templates]
-kitty.template = 'kitty.conf'
-kitty.target = '~/.config/kitty/colors-wallust.conf'
+# NOTE: prefer '' over "" for paths, avoids escaping.
+# template: A RELATIVE path that points to `~/.config/wallust/template` (depends on platform)
+# target: ABSOLUTE path in which to place a file with generated templated values.
+# ¡ If either one is a directory, then both SHOULD be one. !
+# zathura = { template = 'zathura', target = '~/.config/zathura/zathurarc' }
+kitty = { template = 'kitty.conf', target = '~/.config/kitty/colors-wallust.conf' }
+gtk3 = { src = 'colors-wallust.css', dst = '~/.config/gtk-3.0/colors-wallust.css' }
+gtk4 = { src = 'colors-wallust.css', dst = '~/.config/gtk-4.0/colors-wallust.css' }
+overview = { src = 'Appearance.wallust.qml', dst = '~/.cache/quickshell/overview/Appearance.wallust.qml' }
+wallpaper ={ src = 'Appearance.wallust.qml', dst = '~/.cache/quickshell/wallpaper/WallustColors.qml' }

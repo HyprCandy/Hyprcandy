@@ -8,7 +8,7 @@ ViewPropsTimestamp=2026,3,3,14,25,47.415
 
 [IconsMode]
 IconSize=112
-PreviewSize=128
+PreviewSize=96
 
 [KFileDialog Settings]
 Places Icons Auto-resize=false
@@ -26,3 +26,6 @@ IconSize=16
 
 [PreviewSettings]
 Plugins=ffmpegthumbnailer,appimagethumbnail,audiothumbnail,glycin-heif,blenderthumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,fontthumbnail,imagethumbnail,glycin-image-rs,jpegthumbnail,glycin-jxl,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,mobithumbnail,opendocumentthumbnail,gsthumbnail,rawthumbnail,glycin-svg,svgthumbnail,gsf-office
+
+[UiSettings]
+ColorScheme=UltraCandy

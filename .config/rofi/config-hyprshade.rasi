@@ -24,8 +24,8 @@ configuration {
     scroll-method:              1;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-    
+    kb-cancel:			"MousePrimary";
+    window-format:              "{w} · {c} ·{t}";
 }
 
 /* ---- Load font ---- */
@@ -35,7 +35,7 @@ configuration {
 @theme "~/.config/rofi/colors.rasi"
 
 /* ---- Load wallpaper ---- */
-@import "~/.config/hyprcandy/cache/current_wallpaper.rasi"
+//@import "~/.config/hyprcandy/cache/current_wallpaper.rasi"//
 
 /* ---- Border color ---- */
 @import "~/.config/rofi/rofi.rasi"
@@ -48,7 +48,7 @@ configuration {
 
 /* ---- Map colors ---- */
 * {
-    color11: @primary-fixed-dim;
+    color11: @primary;
     color5: @on-primary-fixed;
     foreground: @on-surface;
 }
@@ -81,7 +81,7 @@ mainbox {
     orientation:                 horizontal;
     children:                    [ "listbox" ];
     background-color:            transparent;
-    background-image:            @current-image;
+    //background-image:            @current-image;
 }
 
 /* ---- Imagebox ---- */
@@ -97,7 +97,7 @@ inputbar {
     enabled:                     true;
     spacing:                     0em;
     padding:                     1em;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    [ "entry" ];
     background-color:            transparent;
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
 }
@@ -115,14 +115,16 @@ textbox-prompt-colon {
 
 entry {
     enabled:                     true;
-    border-radius:               0em 2em 2em 0em;
+    border-radius:               2em;
     spacing:                     1em;
     padding:                     1em;
-    background-color:            @color5;
+    background-color:            @background;
     text-color:                  @foreground;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 "Search ";
     placeholder-color:           inherit;
+    border-color:                @color11;
+    border:			 0.1em;
 }
 
 // Lists //

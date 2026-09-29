@@ -10,34 +10,6 @@
 # Restore last wallpaper
 # -----------------------------------------------------
 
-# -----------------------------------------------------
-# Set defaults
-# -----------------------------------------------------
-
-defaultwallpaper="$HOME/wallpaper/default.jpg"
-cachefile="$HOME/.config/hyprcandy/cache/current_wallpaper"
-
-# -----------------------------------------------------
-# Get current wallpaper
-# -----------------------------------------------------
-
-if [ -f "$cachefile" ]; then
-    sed -i "s|~|$HOME|g" "$cachefile"
-    wallpaper=$(cat $cachefile)
-    if [ -f $wallpaper ]; then
-        echo ":: Wallpaper $wallpaper exists"
-    else
-        echo ":: Wallpaper $wallpaper does not exist. Using default."
-        wallpaper=$defaultwallpaper
-    fi
-else
-    echo ":: $cachefile does not exist. Using default wallpaper."
-    wallpaper=$defaultwallpaper
-fi
-
-# -----------------------------------------------------
-# Set wallpaper
-# -----------------------------------------------------
-
-echo ":: Setting wallpaper with source image $wallpaper"
-#waypaper --wallpaper "$wallpaper"
+awww-daemon && sleep 0.5 && \
+  awww restore || \
+  awww img "$(grep '^wallpaper' ~/.config/wallpaper/wallpaper.ini | cut -d= -f2 | sed "s|^ *||;s|^~|$HOME|")"

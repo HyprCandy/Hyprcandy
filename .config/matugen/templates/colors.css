@@ -2,8 +2,12 @@
 * Css Colors
 * Generated with Matugen
 */
-@define-color blur_background  alpha({{colors.on_secondary.default.rgba}}, 0.4);
-@define-color blur_background8 alpha({{colors.surface.default.rgba}}, 0.8);
+@define-color blur  alpha({{colors.on_secondary.default.rgba}}, 0.1);
+@define-color blur_background  alpha({{colors.inverse_primary.default.rgba}}, 0.3);
+@define-color blur_background8 alpha({{colors.background.default.rgba}}, 0.65);
 <* for name, value in colors *>
+    @define-color {{name}} {{value.default.hex}};
+<* endfor *>
+<* for name, value in base16 *>
     @define-color {{name}} {{value.default.hex}};
 <* endfor *>

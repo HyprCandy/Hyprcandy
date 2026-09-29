@@ -23,8 +23,8 @@ configuration {
     scroll-method:              1;
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
-    window-format:              "{w} · {c} · {t}";
-    
+    kb-cancel:			"MousePrimary";
+    window-format:              "{w} · {c} ·{t}";
 }
 
 /* ---- Load font ---- */
@@ -34,7 +34,7 @@ configuration {
 @theme "~/.config/rofi/colors.rasi"
 
 /* ---- Load wallpaper ---- */
-@import "~/.config/hyprcandy/cache/current_wallpaper_height.rasi"
+//@import "~/.config/hyprcandy/cache/current_wallpaper_height.rasi"//
 
 /* ---- Border color ---- */
 @import "~/.config/rofi/rofi.rasi"
@@ -47,7 +47,7 @@ configuration {
 
 /* ---- Map colors ---- */
 * {
-    color11: @primary-fixed-dim;
+    color11: @primary;
     color5: @on-primary-fixed;
     foreground: @on-surface;
 }
@@ -57,7 +57,7 @@ window {
     width:                        35em;
     height:                       36em;
     x-offset:                     0em;
-    y-offset:                     2em;
+    y-offset:                     1.5em;
     spacing:                      0em;
     padding:                      0em;
     margin:                       0em; 
@@ -81,7 +81,7 @@ mainbox {
     orientation:                 horizontal;
     children:                    [ "listbox" ];
     background-color:            transparent;
-    background-image:            @current-image;
+    //background-image:            @current-image;
 }
 
 /* ---- Imagebox ---- */
@@ -97,7 +97,7 @@ inputbar {
     enabled:                     true;
     spacing:                     0em;
     padding:                     1em;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    [ "entry" ];
     background-color:            transparent;
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
 }
@@ -113,16 +113,30 @@ textbox-prompt-colon {
     background-image:            url("~/.config/hyprcandy/cache/current_wallpaper", width);
 }
 
+space-1 {
+    width:                      2em;
+    spacing:  			3em;
+    background-color:  		transparent;
+}
+
 entry {
     enabled:                     true;
-    border-radius:               0em 2em 2em 0em;
-    spacing:                     1em;
+    border-radius:               2em;
+    spacing:                     0.5em;
     padding:                     1em;
-    background-color:            @on-primary-fixed-variant;
+    background-color:            @background;
     text-color:                  @color11;
     cursor:                      text;
-    placeholder:                 "Search";
+    placeholder:                 "                          Search  ";
     placeholder-color:           inherit;
+    border-color:                @color11;
+    border:			 0.1em;
+}
+
+space-2 {
+    width:                      2em;
+    spacing:  			3em;
+    background-color:  		transparent;
 }
 
 // Lists //

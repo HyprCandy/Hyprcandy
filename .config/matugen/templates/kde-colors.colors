@@ -78,7 +78,7 @@ BackgroundAlternate={{colors.primary_container.default.red}},{{colors.primary_co
 BackgroundNormal={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
 DecorationFocus={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
 DecorationHover={{colors.primary_container.default.red}},{{colors.primary_container.default.green}},{{colors.primary_container.default.blue}}
-ForegroundActive={{colors.on_primary.default.red}}
+ForegroundActive={{colors.on_primary.default.red}},{{colors.on_primary.default.green}},{{colors.on_primary.default.blue}}
 ForegroundInactive={{colors.on_primary_container.default.red}},{{colors.on_primary_container.default.green}},{{colors.on_primary_container.default.blue}}
 ForegroundLink={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
@@ -97,7 +97,7 @@ ForegroundInactive={{colors.outline.default.red}},{{colors.outline.default.green
 ForegroundLink={{colors.primary.default.red}},{{colors.primary.default.green}},{{colors.primary.default.blue}}
 ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
 ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
-ForegroundNormal={{colors.on_primary.default.red}}
+ForegroundNormal={{colors.on_primary.default.red}},{{colors.on_primary.default.green}},{{colors.on_primary.default.blue}}
 ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
 ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
 

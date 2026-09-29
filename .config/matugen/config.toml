@@ -1,18 +1,50 @@
 [config]
 version_check = false
 
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty-colors.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
 [templates.hyprland]
 input_path = '~/.config/matugen/templates/hyprland-colors.conf'
 output_path = '~/.config/hypr/colors.conf'
 post_hook = 'hyprctl reload'
 
-[templates.waybar]
-input_path = '~/.config/matugen/templates/waybar.css'
-output_path = '~/.config/waybar/colors.css'
+[templates.hyprland_lua]
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/colors.lua'
+post_hook = 'hyprctl reload'
 
-[templates.swaync]
-input_path = '~/.config/matugen/templates/swaync.css'
-output_path = '~/.config/swaync/colors.css'
+[templates.gtk3css]
+input_path = '~/.config/matugen/templates/gtk3.css'
+output_path = '~/.config/gtk-3.0/gtk.css'
+
+[templates.gtk4css]
+input_path = '~/.config/matugen/templates/gtk4.css'
+output_path = '~/.config/gtk-4.0/gtk.css'
+
+[templates.gtk3]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/gtk-3.0/colors.css'
+
+[templates.gtk4]
+input_path = '~/.config/matugen/templates/colors.css'
+output_path = '~/.config/gtk-4.0/colors.css'
+post_hook = '~/.config/hyprcandy/scripts/reload.sh'
+
+#[templates.ghostty]
+#input_path = '~/.config/matugen/templates/ghostty'
+#output_path = '~/.config/ghostty/themes/Matugen'
+#post_hook = 'pkill -SIGUSR2 ghostty'
+
+[templates.overview]
+input_path = '~/.config/matugen/templates/Appearance.colors.qml'
+output_path = '~/.cache/quickshell/overview/Appearance.colors.qml'
+
+[templates.wallpaper]
+input_path = '~/.config/matugen/templates/Appearance.colors.qml'
+output_path = '~/.cache/quickshell/wallpaper/MatugenColors.qml'
 
 [templates.rofi]
 input_path = '~/.config/matugen/templates/rofi-colors.rasi'
@@ -22,49 +54,27 @@ output_path = '~/.config/rofi/colors.rasi'
 input_path = '~/.config/matugen/templates/rofi.rasi'
 output_path = '~/.config/rofi/rofi.rasi'
 
-[templates.kitty]
-input_path = '~/.config/matugen/templates/kitty-colors.conf'
-output_path = '~/.config/kitty/colors.conf'
-post_hook = 'pkill -SIGUSR1 kitty'
-
-[templates.wlogout]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/wlogout/colors.css'
-
-[templates.gtk3]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/gtk-3.0/colors.css'
-
-[templates.gtk4]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/gtk-4.0/colors.css'
-
-[templates.nwgdock]
-input_path = '~/.config/matugen/templates/colors.css'
-output_path = '~/.config/nwg-dock-hyprland/colors.css'
-
 [templates.cava]
 input_path = '~/.config/matugen/templates/config'
 output_path = '~/.config/cava/config'
 post_hook = 'pkill -SIGUSR1 cava'
 
-[templates.quickshell]
-input_path = '~/.config/matugen/templates/Appearance.colors.qml'
-output_path = '~/.config/quickshell/overview/common/Appearance.colors.qml'
+[templates.qt5ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt5ct/colors/matugen.conf'
+
+[templates.qt6ct]
+input_path = '~/.config/matugen/templates/qtct-colors.conf'
+output_path = '~/.config/qt6ct/colors/matugen.conf'
+
+[templates.kdescheme]
+input_path = '~/.config/matugen/templates/kde-colors.colors'
+output_path = '~/.config/kdeglobals'
+
+[templates.kcolorscheme]
+input_path = '~/.config/matugen/templates/kde-colors.colors'
+output_path = '~/.local/share/color-schemes/UltraCandy.colors'
 
 [templates.sequences]
 input_path = '~/.config/matugen/templates/sequences'
 output_path = '~/.cache/wal/sequences'
-
-#[templates.pywalfox]
-#input_path = '~/.config/matugen/templates/pywalfox-colors.json'
-#output_path = '~/.cache/wal/colors.json'
-#post_hook = 'pywalfox update'
-
-#[templates.qt5ct]
-#input_path = '~/.config/matugen/templates/darker.conf'
-#output_path = '~/.config/qt5ct/colors/matugen.conf'
-
-#[templates.qt6ct]
-#input_path = '~/.config/matugen/templates/darker.conf'
-#output_path = '~/.config/qt6ct/colors/matugen.conf'
