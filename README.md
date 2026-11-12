@@ -12,20 +12,20 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 
 | Feature | 🍬 HyprCandy+ |
 |---|:---:|
-| **System-wide theming** | Matugen+Pywal + Wallust✅ |
+| **System-wide theming** | Matugen+ Pywal + Wallust✅ |
 | **Bar** | HyprCandy-bar with modular auto-hide in tri-island mode plus extensive configuation options |
 | **Lockscreen** | Candylock: has notifications support, media-player, system-monitor(includes battery on mobile devices) & weather  |
-| **[Hyprviz](https://github.com/timasoft/hyprviz.git) settings integration** | ✅ |
 | **Dock** | hyprcandy-dock: icon drag-to-rearrange + switcheroo-control for dGPU app launch + minize-wndow + trash |
-| **App-launcher** | hyprcandy-launcher: favorites & groups support + clipboard + icons + [SearXNG](https://github.com/searxng/searxng.git) websearch + agentic workspace|
-| **Control center** | High system-wide customization with more planned features to come |
+| **App-launcher** | hyprcandy-launcher: package-handling + favorites & groups support + clipboard + icons + [SearXNG](https://github.com/searxng/searxng.git) websearch + agentic workspace|
+| **HC Workspace** | Currently only Openrouter integration with local models integration planned + system files navigation including from external storage devices |
+| **Control center** | system-wide customization + SSH support + user acc handling |
 | **System monitor widget** |  ✅ |
 | **Media player widget** |  ✅ |
 | **Desktop icons** | icon drag-to-rearrange + target workspace dispatch + icon drag-to-rearrange support + all icons can be hidden |
 | **Weather widget** | ✅ |
 | **Quickshell overview** | (scrolling / dwindle / master / monocle) |
 | **Live GTK4 & QT color reloads** on wallpaper change | ✅ |
-| **SDDM live-background support** | ✅ |
+| **SDDM based custom greeter** | ✅ |
 | **Wallpaper picker** | ✅ |
 | **DE-Updates** | Authorized backend update - preserves user settings |
 
@@ -79,14 +79,14 @@ hc-install
   </tr>
   <tr>
     <td><img width="683" alt="image" src="https://github.com/user-attachments/assets/7cd1d302-ff9d-4fbf-b894-c2369ef0aafb" /></td>
-    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/1da27cf8-3c9a-44bc-9e17-a350ae607a04" /></td>
+    <td><img width="683" alt="image" src="https://github.com/user-attachments/assets/59286717-1984-4067-9487-93d79525cb5d" /></td>
   </tr>
   <tr>
-    <th>Synched SDDM greeter</th>
+    <th>Synched SDDM HC greeter</th>
     <th>Control-Center</th>
   </tr>
   <tr>
-    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/cc66525f-d14e-4f84-ad2b-306cd3d05bfa" /></td>
+    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/ea0ee416-436f-4a8e-b5b6-1282c954fb77" /></td>
     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/51336cea-eef3-4474-9e83-e7c86c0771b8" /></td>
   </tr>
   <tr>
