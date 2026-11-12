@@ -26,7 +26,7 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 | **Quickshell overview** | (scrolling / dwindle / master / monocle) |
 | **Live GTK4 & QT color reloads** on wallpaper change | ✅ |
 | **SDDM based custom greeter** | ✅ |
-| **Wallpaper picker** | ✅ |
+| **Wallpaper picker** | Wallhaven + Bing integration✅ |
 | **DE-Updates** | Authorized backend update - preserves user settings |
 
 ### 🍬 HyprCandy+ highlights
@@ -94,7 +94,7 @@ hc-install
     <th>Workspace overview</th>
   </tr>
   <tr>
-     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/55f025e3-4d4f-4819-aed1-a91c209e9ef3" /></td>
+     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/1327c8f6-0253-4639-aec6-3227a00c189d" /></td>
      <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/47e5e6a3-3668-4a60-82ac-089c947f0820" /></td>
   </tr>
 </table>
