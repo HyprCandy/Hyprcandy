@@ -71,7 +71,7 @@ hc-install
   </tr>
   <tr>
     <td><img width="683"  alt="image" src="https://github.com/user-attachments/assets/2c4be4e9-c38d-4e8a-999a-1e0c2e91ae63" /></td>
-    <td><img width="683"  alt="image" src="https://github.com/user-attachments/assets/e7c8edac-e457-456d-94f3-25ac089135bd" /></td>
+    <td><img width="683" alt="image" src="https://github.com/user-attachments/assets/eadf5157-bd68-4a78-82ce-fecb729128a6" /></td>
   </tr>
   <tr>
     <th>Stylish advanced widgets and panel</th>
