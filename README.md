@@ -34,9 +34,10 @@ Connect: [Discord Server]([https://bit.ly/Candy-Discord-Server](https://discord.
 - **Advanced bars, panels & widgets** — richer panes launched from the advanced bar. 
 -->
 - **Dock & App-launcher**:
-  - ****App-launcher [SearXNG](https://github.com/searxng/searxng.git) web-search**** preventing tracking and profiling plus a powerful coding workspaces. Their icons can be rearranged and pinned/unpinned natively without use of config files as the desktop icons, dock and app-launcher are connected
+  - ****App-launcher [SearXNG](https://github.com/searxng/searxng.git) web-search**** preventing tracking and profiling plus a powerful coding workspaces. T
   - ****App-launcher workspace**** - agentic HyprCandy workspace (still evolving)
   - ****Switcheroo control****: Integrated for program launch on the discrete GPU on hybrid graphics devices.
+  - ****Native package handling****: find programs directly in the app launcher `Packages` tab for installation, uninstall or updates as well as native `AppImages` setup support. 
   - both have advanced right-click popups handling various actions like specified workspace launches and the dock also supports app minimization (to hidden special workspace)
 - **Workspace overview** in Quickshell that supports all window layouts including the new Hyprland scrolling
 - **Live reloads** — bar, dock, panels, GTK4 & QT6 apps recolor without needing a relaunch when the wallpaper changes with matugen, wallust and pywal16 integration
