@@ -87,7 +87,7 @@ hc-install
     <th>Control-Center</th>
   </tr>
   <tr>
-    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/ea0ee416-436f-4a8e-b5b6-1282c954fb77" /></td>
+    <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/3591abc0-906b-4a54-a98e-68c7ba0d3446" /></td>
     <td><img width="638" alt="image" src="https://github.com/user-attachments/assets/51336cea-eef3-4474-9e83-e7c86c0771b8" /></td>
   </tr>
   <tr>
